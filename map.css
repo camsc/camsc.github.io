@@ -5,14 +5,6 @@ body {
 	color: white;
 	min-width: 1100px;
 }
-ul {
-	margin: 0;
-	padding: 0;
-}
-li {
-	margin: 0;
-	list-style-type: none;
-}
 h1 {
 	text-align: center;
 	color: #222;
@@ -136,7 +128,7 @@ h3.cluster-name {
 	opacity: 1;
 }
 .standard {
-	margin: 0;
+	margin: 2px 0;
 	padding: 6px 0 6px 3em;
 	font-size: 0.8em;
 	font-weight: 100;
@@ -218,6 +210,7 @@ h3.cluster-name {
 	color: #aaa;
 	text-decoration: inherit;
 	cursor: pointer;
+	border-bottom: 1px solid #222;
 }
 
 .menu-link:hover {
