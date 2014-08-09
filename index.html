@@ -13,6 +13,61 @@ var parallelStandards = {
 	"k-cc-5": ["k-cc-6"],
 	"k-cc-6": ["k-cc-5", "k-cc-4c"]
 };
+
+var standardTypes = {
+	"skill": {
+		description: "Skill",
+		iconClass: "fa-gamepad"
+		},
+	"understanding": {
+		description: "Build understanding",
+		iconClass: "fa-cloud"
+		},
+	"new-concept": {
+		description: "New concept",
+		iconClass: "fa-lightbulb-o"
+		},
+	"variety-of-methods": {
+		description: "Employ a variety of methods",
+		iconClass: "fa-briefcase"
+		},
+	"standard-algorithm": {
+		description: "Employ the standard algorithm",
+		iconClass: "fa-wrench"
+		},
+	"capstone": {
+		description: "Capstone problems",
+		iconClass: "fa-graduation-cap"
+		},
+	"fluency": {
+		description: "Compute fluently",
+		iconClass: "fa-flash"
+		},
+	"real-world": {
+		description: "Real-world application",
+		iconClass: "fa-globe"
+		},
+	"link": {
+		description: "Link concepts",
+		iconClass: "fa-link"
+		},
+	"compare": {
+		description: "Compare or sort",
+		iconClass: "fa-filter"
+		},
+	"verify": {
+		description: "Verify",
+		iconClass: "fa-flask"
+		},
+	"justify": {
+		description: "Justify or explain",
+		iconClass: "fa-gavel"
+		},
+	"prove": {
+		description: "Prove",
+		iconClass: "fa-bank"
+		}
+};
 </script>
 
 	<script>
@@ -176,7 +231,20 @@ var parallelStandards = {
 			// Go!
 			path.style.strokeDashoffset = '0';
 		});
-	}
+	};
+
+
+	$( document ).ready(function() {
+		$.each( standardTypes, function( key, value ) {;
+			$("div[data-type='" + key + "'").each( function() {
+				var standard = $( this );
+				var html = standard.html();
+				html = "<i class='standard-icon fa " + value.iconClass + "'></i>" + html;
+				standard.html(html);
+				standard.attr("title", value.description);
+			});
+		});
+	});
 	</script>
 </head>
 <body>
@@ -233,8 +301,7 @@ var parallelStandards = {
 					</h2>
 					<div class="cluster">
 						<h3 class="cluster-name">number names &amp; counting</h3>
-						<div class="standard" data-code="k-cc-1" data-dependencies="">
-							<i class="standard-icon fa fa-lightbulb-o"></i>
+						<div class="standard" data-code="k-cc-1" data-type="new-concept" data-dependencies="">
 							Count to 100 (by ones &amp; tens)
 							<small class="standard-code"><a>k.cc.1</a></small>
 						</div>
@@ -2038,42 +2105,42 @@ var parallelStandards = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">work with ratios</h3>
-							<div class="standard" data-code="6-rp-1" data-dependencies="">
-								<i class="standard-icon fa fa-circle-o"></i>
-								Understand ratios
-								<small class="standard-code"><a>6.rp.1</a></small>
-							</div>
-							<div class="standard" data-code="6-rp-2" data-dependencies="">
-								<i class="standard-icon fa fa-circle-o"></i>
-								Link ratios to unit rates
-								<small class="standard-code"><a>6.rp.2</a></small>
-							</div>
+						
+						<div class="standard" data-code="6-rp-1" data-type="understanding" data-dependencies="">
+							Understand ratios
+							<small class="standard-code"><a>6.rp.1</a></small>
+						</div>
+						<div class="standard" data-code="6-rp-2" data-type="link" data-dependencies="">
+							Link ratios to unit rates
+							<small class="standard-code"><a>6.rp.2</a></small>
+						</div>
 
 						<div class="sub-cluster">
-								<div class="standard" data-code="6-rp-3" data-dependencies="">
-									<i class="standard-icon fa fa-flag"></i>
-									<small class="standard-code"><a>6.rp.3</a></small>
-								</div>
-								<div class="standard" data-code="6-rp-3a" data-dependencies="">
-									<i class="standard-icon fa fa-circle-o"></i>
-									Tables of equivalent ratios
-									<small class="standard-code"><a>6.rp.3a</a></small>
-								</div>
-								<div class="standard" data-code="6-rp-3b" data-dependencies="">
-									<i class="standard-icon fa fa-wrench"></i>
-									Unit rate problems
-									<small class="standard-code"><a>6.rp.3b</a></small>
-								</div>
-								<div class="standard" data-code="6-rp-3c" data-dependencies="">
-									<i class="standard-icon fa fa-circle-o"></i>
-									Percents as rates per 100
-									<small class="standard-code"><a>6.rp.3c</a></small>
-								</div>
-								<div class="standard" data-code="6-rp-3d" data-dependencies="">
-									<i class="standard-icon fa fa-circle-o"></i>
-									Ratio reasoning &#8594; unit conversion
-									<small class="standard-code"><a>6.rp.3d</a></small>
-								</div>
+							<div class="standard" data-code="6-rp-3" data-dependencies="">
+								<i class="standard-icon fa fa-flag"></i>
+								<h4>ratio &amp; rate problems</h4>
+								<small class="standard-code"><a>6.rp.3</a></small>
+							</div>
+							<div class="standard" data-code="6-rp-3a" data-type="skill" data-dependencies="">
+								<i class="standard-icon fa fa-link"></i>
+								Ratios in tables and plots
+								<small class="standard-code"><a>6.rp.3a</a></small>
+							</div>
+							<div class="standard" data-code="6-rp-3b" data-dependencies="">
+								<i class="standard-icon fa fa-wrench"></i>
+								Unit rate problems
+								<small class="standard-code"><a>6.rp.3b</a></small>
+							</div>
+							<div class="standard" data-code="6-rp-3c" data-dependencies="">
+								<i class="standard-icon fa fa-circle-o"></i>
+								Percents as rates per 100
+								<small class="standard-code"><a>6.rp.3c</a></small>
+							</div>
+							<div class="standard" data-code="6-rp-3d" data-dependencies="">
+								<i class="standard-icon fa fa-circle-o"></i>
+								Ratio reasoning &#8594; unit conversion
+								<small class="standard-code"><a>6.rp.3d</a></small>
+							</div>
 						</div>
 					</div>
 				</div>
