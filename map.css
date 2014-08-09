@@ -1,0 +1,258 @@
+body {
+	margin: 0;
+	font-family: 'Proxima Nova Semibold',sans-serif;
+	background-color: #555;
+	color: white;
+	min-width: 1100px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	margin: 0;
+	list-style-type: none;
+}
+h1 {
+	text-align: center;
+	color: #222;
+	margin-top:0;
+	font-size: 3em;
+	margin-bottom: 0;
+}
+#heading {
+	background: #ddd;
+	border-bottom: 1px solid #bbb;
+	padding: 80px 0 10px;
+	color: #222;
+	box-shadow: 0px 2px 10px #222;
+}
+#heading > h2 {
+	color: #222;
+	text-align: center;
+	margin-bottom: 40px;
+}
+#heading .fa {
+	font-size: 1.2em;
+	margin-right: 0.5em;
+}
+#heading ul {
+	text-align: center;
+	color: rgba(40,40,40,0.8);
+	margin: 8px 0;
+	padding: 0;
+}
+#heading li {
+	font-size: 0.9em;
+	display: inline-block;
+	padding: 8px 20px;
+}
+h2.strand-name {
+	font-size: 1em;
+	color: #111;
+	opacity: 0.9;
+	margin: 4px 4px;
+	height: 2em;
+}
+
+.grade-level {
+	clear: both;
+	page-break-after: always;
+	padding: 1px;
+}
+.grade-name {
+	color: #bbb;
+	font-size: 4em;
+	padding-top: 20px;
+	margin: 12px 1.5% 8px;
+}
+#number > .grade-name, #algebra > .grade-name, #functions > .grade-name, 
+#geometry > .grade-name, #statistics-and-probability > .grade-name {
+	color: #eee;
+}
+
+.strand-container {
+	width: 99%;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+}
+.strand {
+	float: left;
+	width: 19.5%;
+	padding: 6px;
+	padding-left: 0;
+	padding-right: 4px;
+	margin: 0 0.25%;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+}
+.strand-empty {
+	float: left;
+	width: 20%;
+	box-sizing: border-box;
+}
+.strand .mg {
+	float: right;
+}
+.strand-heading > h2 {
+	float:left;
+}
+.strand-icon {
+	font-size: 1.3em;
+	margin-right: 8px;
+	float: left;
+	padding-left: 4px;
+}
+
+.icon-highlighted {
+	text-shadow: 0 0 10px #fff;
+}
+
+.cc, .nf, .rp, .f, .if, .bf, .tf, .le {background-color: #19B357;}
+.oa, .ee, .sse, .ce, .rei, .apr {background-color: #94C439;}
+.nbt, .c, .ns, .rn, .q, .cn, .vm {background-color: #B8B021;}
+.md, .sp, .ic, .id, .cp {background-color: #BF8E22;}
+.g, .gmd, .mg, .co, .srt, .c, .gpe {background-color: #C46E2B;}
+
+.cluster {
+	background-color: rgba(0,0,0,0.15);
+	position: relative;
+	margin-top: 40px;
+	padding: 4px 0 0;
+	clear: both;
+	border-left: 1px solid rgba(255,255,255,0.3);
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	border-right: 1px solid rgba(0,0,0,0.3);
+}
+
+h3.cluster-name {
+	font-size: 0.8em;
+	text-align: right;
+	font-weight: normal;
+	opacity: 0.8;
+	position: absolute;
+	top: -28px;
+	right: 0;
+	color: #111;
+}
+.standard-info {
+	float: left;
+	margin-left: 8px;
+}
+.standard-code {
+	font-size: 1.1em;
+	text-decoration: underline;
+	text-shadow: none;
+	display: block;
+}
+.standard-code > a {
+	cursor: pointer;
+	color: #000;
+	opacity: 0.6;
+	font-weight: 100;
+}
+.standard-code > a:hover {
+	opacity: 0.8;
+}
+.standard-code > a:active {
+	opacity: 1;
+}
+.standard {
+	margin: 0;
+	padding: 6px 0 6px 28px;
+	font-size: 0.8em;
+	font-weight: 100;
+	position: relative;
+}
+.plus {
+	color: #111;
+	text-shadow: none;
+}
+
+/* GLOBE LINKS TO ANIMATE DEPENDENCIES */
+.standard-link {
+	color: #000;
+	opacity: 0.4;
+	display: block;
+	position: absolute;
+	left: 6px;
+	z-index: 10;
+	text-shadow: none;
+	font-size: 1em;
+}
+.click {
+	opacity: 0.7;
+	cursor: pointer;
+}
+.click:hover {
+	opacity: 1;
+}
+
+/* SUB CLUSTERS */
+.sub-cluster {
+	margin: 4px 0 8px;
+	background-color: rgba(0,0,0,0.07);
+	padding: 1px 0;
+	margin-right: 4px;
+	border-left: 1px solid rgba(255,255,255,0.3);
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	border-right: 1px solid rgba(0,0,0,0.3);
+	margin-top: 24px;
+}
+.sub-cluster h4 {
+	color: #111;
+	text-shadow: none;
+	margin: 0;
+	font-weight: 100;
+	position: absolute;
+	font-weight: 100;
+	top: -16px;
+	left: 8px;
+}
+
+/* SVG OVERLAY */
+#svg-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 100;
+	pointer-events: none;
+}
+
+#fixed-menu {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	width: 100%;
+	z-index: 200;
+}
+
+.menu-link {
+	display: block;
+	float:left;
+	padding: 4px 12px;
+	text-align: center;
+	width: 7.142857%;
+	box-sizing: border-box;
+	background: rgba(0,0,0,0.7);
+	color: #aaa;
+	text-decoration: inherit;
+	cursor: pointer;
+}
+
+.menu-link:hover {
+	color: #fff;
+	background-color: rgba(0,0,0,0.9);
+	border-bottom: 1px solid #fff;
+}
+
+.khan-map, .im {
+	padding-left: 6px;
+	opacity: 0.6;
+	color: #333;
+}
