@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	font-family: 'Proxima Nova Semibold',sans-serif;
-	background-color: #555;
+	background-color: #333;
 	color: white;
 	min-width: 1100px;
 }
@@ -60,21 +60,6 @@ h2.strand-name {
 	float:left;
 }
 
-#kinder {background-color: #808080}
-#first {background-color: #7a7a7a}
-#second {background-color: #757575}
-#third {background-color: #707070}
-#fourth {background-color: #6a6a6a}
-#fifth {background-color: #656565}
-#sixth {background-color: #606060}
-#seventh {background-color: #5a5a5a}
-#eighth {background-color: #555555}
-#number-and-quantity {background-color: #505050}
-#algebra {background-color: #4a4a4a}
-#functions {background-color: #454545}
-#geometry {background-color: #404040}
-#statistics-and-probability {background-color: #3a3a3a}
-
 .cc, .nf, .rp, .f, .if, .bf, .tf, .le {background-color: #19B357;}
 .oa, .ee, .sse, .ce, .rei, .apr {background-color: #94C439;}
 .nbt, .c, .ns, .rn, .q, .cn, .vm {background-color: #B8B021;}
@@ -119,8 +104,7 @@ h3.cluster-name {
 	opacity: 1;
 }
 .standard {
-	margin: 2px 0;
-	padding: 6px 4px 6px 3em;
+	padding: 8px 4px 8px 3em;
 	font-size: 0.8em;
 	font-weight: 100;
 	position: relative;
@@ -165,7 +149,7 @@ h3.cluster-name {
 	text-shadow: 1px 1px #222;
 }
 .icon-on {
-	background-color: rgba(0,101,185,0.6);
+	background-color: rgba(0,101,185,0.5);
 }
 
 /* SUB CLUSTERS */
