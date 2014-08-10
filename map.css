@@ -21,7 +21,7 @@ h2.strand-name {
 	font-size: 1em;
 	color: #111;
 	opacity: 0.9;
-	margin: 4px 4px;
+	margin: 4px 8px;
 	height: 2em;
 }
 
@@ -35,26 +35,18 @@ h2.strand-name {
 	font-size: 4em;
 	padding-top: 20px;
 	margin: 12px 1.5% 8px;
-}
-#number > .grade-name, #algebra > .grade-name, #functions > .grade-name, 
-#geometry > .grade-name, #statistics-and-probability > .grade-name {
 	color: #eee;
-}
-
-.strand-container {
-	width: 99%;
-	margin-right: 0.5%;
-	margin-left: 0.5%;
 }
 .strand {
 	float: left;
-	width: 19.5%;
-	padding: 6px;
-	padding-left: 0;
-	padding-right: 4px;
-	margin: 0 0.25%;
+	width: 19.6%;
+	padding: 6px 0;
+	margin: 0 0.2%;
 	box-sizing: border-box;
 	margin-bottom: 40px;
+}
+.strand-container {
+	margin: 0 0.1%;
 }
 .strand-empty {
 	float: left;
@@ -67,16 +59,6 @@ h2.strand-name {
 .strand-heading > h2 {
 	float:left;
 }
-.strand-icon {
-	font-size: 1.3em;
-	margin-right: 8px;
-	float: left;
-	padding-left: 4px;
-}
-
-.icon-highlighted {
-	text-shadow: 0 0 10px #fff;
-}
 
 .cc, .nf, .rp, .f, .if, .bf, .tf, .le {background-color: #19B357;}
 .oa, .ee, .sse, .ce, .rei, .apr {background-color: #94C439;}
@@ -88,11 +70,9 @@ h2.strand-name {
 	background-color: rgba(0,0,0,0.15);
 	position: relative;
 	margin-top: 40px;
-	padding: 4px 0 0;
+	padding: 4px 0 0 0;
 	clear: both;
 	border-left: 1px solid rgba(255,255,255,0.3);
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-	border-right: 1px solid rgba(0,0,0,0.3);
 }
 
 h3.cluster-name {
@@ -102,37 +82,43 @@ h3.cluster-name {
 	opacity: 0.8;
 	position: absolute;
 	top: -28px;
-	right: 0;
+	right: 4px;
 	color: #111;
 }
-.standard-info {
-	float: left;
-	margin-left: 8px;
-}
 .standard-code {
-	font-size: 1.1em;
 	text-decoration: underline;
 	text-shadow: none;
 	display: block;
 }
-.standard-code > a {
+.standard-code {
 	cursor: pointer;
 	color: #000;
 	opacity: 0.6;
 	font-weight: 100;
+	font-size: 1.1em;
 }
-.standard-code > a:hover {
+.standard-code:hover {
 	opacity: 0.8;
 }
-.standard-code > a:active {
+.standard-code:active {
 	opacity: 1;
 }
 .standard {
 	margin: 2px 0;
-	padding: 6px 0 6px 3em;
+	padding: 6px 4px 6px 3em;
 	font-size: 0.8em;
 	font-weight: 100;
 	position: relative;
+	min-height: 1em;
+}
+.parent-standard {
+	padding: 6px 0 0 8px;
+	font-size: 0.8em;
+	min-height: 1em;
+	margin-bottom: 0;
+}
+.parent-standard > .standard-code {
+	margin-right: 0.5em;
 }
 .plus {
 	color: #111;
@@ -151,35 +137,27 @@ h3.cluster-name {
 	font-size: 1.4em;
 	text-align: center;
 	width: 1em;
-}
-.click {
 	opacity: 0.7;
-	cursor: pointer;
 }
-.click:hover {
-	opacity: 1;
+.standard-icon:hover {
+	text-shadow: 1px 1px #ddd;
+}
+.icon-on > i {
+	color: #fff;
+}
+.icon-on > i:hover {
+	color: #fff;
+	text-shadow: 1px 1px #222;
+}
+.icon-on {
+	background-color: rgba(0,101,185,0.6);
 }
 
 /* SUB CLUSTERS */
 .sub-cluster {
-	margin: 4px 0 8px;
 	background-color: rgba(0,0,0,0.07);
 	padding: 1px 0;
-	margin-right: 4px;
 	border-left: 1px solid rgba(255,255,255,0.3);
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-	border-right: 1px solid rgba(0,0,0,0.3);
-	margin-top: 24px;
-}
-.sub-cluster h4 {
-	color: #111;
-	text-shadow: none;
-	margin: 0;
-	font-weight: 100;
-	position: absolute;
-	font-weight: 100;
-	top: -16px;
-	left: 8px;
 }
 
 /* SVG OVERLAY */
@@ -211,6 +189,7 @@ h3.cluster-name {
 	text-decoration: inherit;
 	cursor: pointer;
 	border-bottom: 1px solid #222;
+	border-top: 1px solid #222;
 }
 
 .menu-link:hover {
