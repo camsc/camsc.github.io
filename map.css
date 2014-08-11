@@ -7,7 +7,7 @@ body {
 }
 h1 {
 	text-align: center;
-	color: #222;
+	color: #333;
 	margin: 0;
 	padding: 1em;
 	font-size: 3em;
@@ -17,9 +17,12 @@ h1 {
 	border-bottom: 1px solid #bbb;
 	color: #222;
 }
+#heading > p {
+	text-align: center;
+}
 h2.strand-name {
 	font-size: 1em;
-	color: #111;
+	color: #222;
 	opacity: 0.9;
 	margin: 4px 8px;
 	height: 2em;
@@ -67,10 +70,10 @@ h2.strand-name {
 .g, .gmd, .mg, .co, .srt, .c, .gpe {background-color: #C46E2B;}
 
 .cluster {
-	background-color: rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.2);
 	position: relative;
 	margin-top: 40px;
-	padding: 4px 0 1px;
+	padding: 4px 0;
 	clear: both;
 	border-left: 1px solid rgba(255,255,255,0.3);
 }
@@ -112,7 +115,7 @@ h3.cluster-name {
 	font-size: 0.8em;
 	min-height: 1em;
 	margin-bottom: 0;
-	margin-top: 1em;
+	margin-top: 4px;
 	color: #111;
 }
 .parent-standard > .standard-code {
@@ -158,7 +161,7 @@ h3.cluster-name {
 
 /* SUB CLUSTERS */
 .sub-cluster {
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.15);
 	padding: 4px 0;
 	margin-bottom: 4px;
 	border-left: 1px solid rgba(255,255,255,0.3);
