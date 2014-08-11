@@ -9,13 +9,14 @@ h1 {
 	text-align: center;
 	color: #333;
 	margin: 0;
-	padding: 1em;
+	padding: 1em 1em 0;
 	font-size: 3em;
 }
 #heading {
 	background: #ddd;
 	border-bottom: 1px solid #bbb;
 	color: #222;
+	padding-bottom: 20px;
 }
 #heading > p {
 	text-align: center;
