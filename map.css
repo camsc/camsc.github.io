@@ -213,6 +213,9 @@ h3.cluster-name {
 
 .fa-youtube-play {
 	color: #222;
+	display: block;
+	float: right;
+	margin: 0 3px;
 }
 
 .fa-youtube-play:hover {
