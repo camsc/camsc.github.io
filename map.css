@@ -210,3 +210,11 @@ h3.cluster-name {
 	opacity: 0.6;
 	color: #333;
 }
+
+.fa-youtube-play {
+	color: #222;
+}
+
+.fa-youtube-play:hover {
+	text-shadow: 1px 1px #ddd;
+}
