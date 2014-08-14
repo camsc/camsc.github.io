@@ -10,6 +10,7 @@
 
 
 	<script src="jquery-1.11.1.min.js"></script>
+	<script src="ccmath.js"></script>
 
 <script>
 var parallelStandards = {
@@ -87,15 +88,9 @@ var standardTypes = {
 						var text = code.text();
 						var codeParts = text.split(".");
 
-						var cc_url = "http://www.corestandards.org/Math/Content/" +
-							codeParts[0].toUpperCase() + "/" +
-							codeParts[1].toUpperCase() + "/" +
-							letter.toUpperCase() + "/";
-
-						var im_url = "https://www.illustrativemathematics.org/" +
-							codeParts[0].toUpperCase() + "." +
-							codeParts[1].toUpperCase() + "." +
-							letter.toUpperCase() + ".";
+						var c = codeParts[0] + "." +
+							codeParts[1] + "." +
+							letter + ".";
 
 						var ending = codeParts[2];
 						if (alphabetString.indexOf(ending.substring(ending.length-1, ending.length)) > -1) {
@@ -103,14 +98,14 @@ var standardTypes = {
 							var indexInCluster = ending.substring(0, ending.length-1);
 							var subClusterLetter = ending.substring(ending.length-1, ending.length);
 
-							cc_url = cc_url + indexInCluster + "/" + subClusterLetter + "/";
-							im_url = im_url + indexInCluster;
-						} else {
-							cc_url = cc_url + ending + "/";
-							im_url = im_url + ending;
+							c = c + indexInCluster + subClusterLetter;
+						} else {;
+							c = c + ending;
 						}
 
-						code.attr("href", cc_url);
+						if (ccmath[c]) {
+							code.attr("title", ccmath[c].text);
+						}
 					});
 				});
 			});
@@ -2934,34 +2929,34 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">function notation</h3>
 
-						<div class="standard" data-code="hf-if-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-code="hsf-if-1" data-type="skill" data-dependencies="">
 							Domain, range, function notation, and graphs of y = f(x)
-							<br><a class="standard-code">hsa.if.1</a>
+							<br><a class="standard-code">hsf.if.1</a>
 						</div>
-						<div class="standard" data-code="hf-if-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-code="hsf-if-2" data-type="skill" data-dependencies="">
 							Input &#8594; output
-							<br><a class="standard-code">hsa.if.2</a>
+							<br><a class="standard-code">hsf.if.2</a>
 						</div>
-						<div class="standard" data-code="hf-if-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-code="hsf-if-3" data-type="skill" data-dependencies="">
 							Recursive functions and sequences
-							<br><a class="standard-code">hsa.if.3</a>
+							<br><a class="standard-code">hsf.if.3</a>
 						</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">interpret functions</h3>
 
-						<div class="standard" data-code="hf-if-4" data-type="real-world" data-dependencies="">
+						<div class="standard" data-code="hsf-if-4" data-type="real-world" data-dependencies="">
 							Features of functions
-							<br><a class="standard-code">hsa.if.4</a>
+							<br><a class="standard-code">hsf.if.4</a>
 						</div>
-						<div class="standard" data-code="hf-if-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-code="hsf-if-5" data-type="real-world" data-dependencies="">
 							Explain domain and range for a given context
-							<br><a class="standard-code">hsa.if.5</a>
+							<br><a class="standard-code">hsf.if.5</a>
 						</div>
-						<div class="standard" data-code="hf-if-6" data-type="real-world" data-dependencies="">
+						<div class="standard" data-code="hsf-if-6" data-type="real-world" data-dependencies="">
 							Average rate of change
-							<br><a class="standard-code">hsa.if.6</a>
+							<br><a class="standard-code">hsf.if.6</a>
 						</div>
 					</div>
 
@@ -2969,46 +2964,46 @@ var standardTypes = {
 						<h3 class="cluster-name">function representations</h3>
 
 						<div class="sub-cluster">
-							<div class="standard" data-code="hf-if-7" data-type="" data-dependencies="">
+							<div class="standard" data-code="hsf-if-7" data-type="" data-dependencies="">
 								functions, graphs, key features
-								<br><a class="standard-code">hsa.if.7</a>
+								<br><a class="standard-code">hsf.if.7</a>
 							</div>
-							<div class="standard" data-code="hf-if-7a" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hsf-if-7a" data-type="real-world" data-dependencies="">
 								Linear and quadratic
-								<br><a class="standard-code">hsa.if.7a</a>
+								<br><a class="standard-code">hsf.if.7a</a>
 							</div>
-							<div class="standard" data-code="hf-if-7b" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hsf-if-7b" data-type="real-world" data-dependencies="">
 								Square root, cube root, piecewise, and absolute value
-								<br><a class="standard-code">hsa.if.7b</a>
+								<br><a class="standard-code">hsf.if.7b</a>
 							</div>
-							<div class="standard" data-code="hf-if-7c" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hsf-if-7c" data-type="real-world" data-dependencies="">
 								Polynomial
-								<br><a class="standard-code">hsa.if.7c</a>
+								<br><a class="standard-code">hsf.if.7c</a>
 							</div>
-							<div class="standard" data-code="hf-if-7d" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hsf-if-7d" data-type="real-world" data-dependencies="">
 								Exponential, logarithmic, and trig
-								<br><a class="standard-code">hsa.if.7d</a>
+								<br><a class="standard-code">hsf.if.7d</a>
 							</div>
 						</div>
 
 						<div class="sub-cluster">
-							<div class="standard" data-code="hf-if-8" data-type="" data-dependencies="">
+							<div class="standard" data-code="hsf-if-8" data-type="" data-dependencies="">
 								reveal function properties
-								<br><a class="standard-code">hsa.if.8</a>
+								<br><a class="standard-code">hsf.if.8</a>
 							</div>
-							<div class="standard" data-code="hf-if-8a" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hsf-if-8a" data-type="real-world" data-dependencies="">
 								Polynomials: factor and complete the square
-								<br><a class="standard-code">hsa.if.8a</a>
+								<br><a class="standard-code">hsf.if.8a</a>
 							</div>
-							<div class="standard" data-code="hf-if-8b" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hsf-if-8b" data-type="real-world" data-dependencies="">
 								Rewrite exponentials
-								<br><a class="standard-code">hsa.if.8b</a>
+								<br><a class="standard-code">hsf.if.8b</a>
 							</div>
 						</div>
 
-						<div class="standard" data-code="hf-if-9" data-type="skill" data-dependencies="">
+						<div class="standard" data-code="hsf-if-9" data-type="skill" data-dependencies="">
 							Compare properties of functions
-							<br><a class="standard-code">hsa.if.9</a>
+							<br><a class="standard-code">hsf.if.9</a>
 						</div>
 					</div>
 				</div>
@@ -3031,63 +3026,63 @@ var standardTypes = {
 						<h3 class="cluster-name">model with functions</h3>
 
 						<div class="sub-cluster">
-							<div class="standard" data-code="f-bf-1" data-type="" data-dependencies="">
+							<div class="standard" data-code="hsf-bf-1" data-type="" data-dependencies="">
 								relate two quantities
-								<br><a class="standard-code">f.bf.1</a>
+								<br><a class="standard-code">hsf.bf.1</a>
 							</div>
-							<div class="standard" data-code="f-bf-1a" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hsf-bf-1a" data-type="real-world" data-dependencies="">
 								Build functions to model contexts
-								<br><a class="standard-code">f.bf.1a</a>
+								<br><a class="standard-code">hsf.bf.1a</a>
 							</div>
-							<div class="standard" data-code="f-bf-1b" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hsf-bf-1b" data-type="real-world" data-dependencies="">
 								Combine functions
-								<br><a class="standard-code">f.bf.1b</a>
+								<br><a class="standard-code">hsf.bf.1b</a>
 							</div>
-							<div class="standard plus" id="f-bf-1c" data-type="real-world" data-dependencies="">
+							<div class="standard plus" id="hsf-bf-1c" data-type="real-world" data-dependencies="">
 								Compose functions: f(g(x))
-								<br><a class="standard-code">f.bf.1c</a>
+								<br><a class="standard-code">hsf.bf.1c</a>
 							</div>
 						</div>
-						<div class="standard" data-code="f-bf-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-code="hsf-bf-2" data-type="real-world" data-dependencies="">
 							Arithmetic and geometric sequences
-							<br><a class="standard-code">f.bf.2</a>
+							<br><a class="standard-code">hsf.bf.2</a>
 						</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">model with functions</h3>
 
-						<div class="standard" data-code="f-bf-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-code="hsf-bf-3" data-type="skill" data-dependencies="">
 							f(x) + k, f(x + k), f(kx), kf(x); even and oddd functions
-							<br><a class="standard-code">f.bf.3</a>
+							<br><a class="standard-code">hsf.bf.3</a>
 						</div>
 
 						<div class="sub-cluster">
-							<div class="standard" data-code="f-bf-4" data-type="" data-dependencies="">
+							<div class="standard" data-code="hsf-bf-4" data-type="" data-dependencies="">
 								inverse functions
-								<br><a class="standard-code">f.bf.4</a>
+								<br><a class="standard-code">hsf.bf.4</a>
 							</div>
-							<div class="standard" data-code="f-bf-4a" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hsf-bf-4a" data-type="skill" data-dependencies="">
 								Find inverse by solving
-								<br><a class="standard-code">f.bf.4a</a>
+								<br><a class="standard-code">hsf.bf.4a</a>
 							</div>
-							<div class="standard plus" id="f-bf-4b" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hsf-bf-4b" data-type="skill" data-dependencies="">
 								Verify inverse by composition
-								<br><a class="standard-code">f.bf.4b</a>
+								<br><a class="standard-code">hsf.bf.4b</a>
 							</div>
-							<div class="standard plus" id="f-bf-4c" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hsf-bf-4c" data-type="skill" data-dependencies="">
 								Inverse graphs and tables
-								<br><a class="standard-code">f.bf.4c</a>
+								<br><a class="standard-code">hsf.bf.4c</a>
 							</div>
-							<div class="standard plus" id="f-bf-4d" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hsf-bf-4d" data-type="skill" data-dependencies="">
 								restrict domain to make invertible
-								<br><a class="standard-code">f.bf.4d</a>
+								<br><a class="standard-code">hsf.bf.4d</a>
 							</div>
 						</div>
 
-						<div class="standard plus" id="f-bf-5" data-type="skill" data-dependencies="">
+						<div class="standard plus" id="hsf-bf-5" data-type="skill" data-dependencies="">
 							Exponents and logarithms
-							<br><a class="standard-code">f.bf.5</a>
+							<br><a class="standard-code">hsf.bf.5</a>
 						</div>
 					</div>
 				</div>
@@ -3110,43 +3105,43 @@ var standardTypes = {
 						<h3 class="cluster-name">construct models</h3>
 
 						<div class="sub-cluster">
-							<div class="standard" data-code="f-le-1" data-type="" data-dependencies="">
+							<div class="standard" data-code="hsf-le-1" data-type="" data-dependencies="">
 								linear vs. exponential
-								<br><a class="standard-code">f.le.1</a>
+								<br><a class="standard-code">hsf.le.1</a>
 							</div>
-							<div class="standard" data-code="f-le-1a" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hsf-le-1a" data-type="real-world" data-dependencies="">
 								Growth: equal differences vs. equal factors
-								<br><a class="standard-code">f.le.1a</a>
+								<br><a class="standard-code">hsf.le.1a</a>
 							</div>
-							<div class="standard plus" id="f-le-1b" data-type="real-world" data-dependencies="">
+							<div class="standard plus" id="hsf-le-1b" data-type="real-world" data-dependencies="">
 								Spot constant rate of change
-								<br><a class="standard-code">f.le.1b</a>
+								<br><a class="standard-code">hsf.le.1b</a>
 							</div>
-							<div class="standard plus" id="f-le-1c" data-type="real-world" data-dependencies="">
+							<div class="standard plus" id="hsf-le-1c" data-type="real-world" data-dependencies="">
 								Spot constant percent rate of change
-								<br><a class="standard-code">f.le.1c</a>
+								<br><a class="standard-code">hsf.le.1c</a>
 							</div>
 						</div>
 
-						<div class="standard" data-code="f-le-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-code="hsf-le-2" data-type="real-world" data-dependencies="">
 							Construct functions from graphs, tables, and descriptions
-							<br><a class="standard-code">f.le.2</a>
+							<br><a class="standard-code">hsf.le.2</a>
 						</div>
-						<div class="standard" data-code="f-le-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-code="hsf-le-3" data-type="real-world" data-dependencies="">
 							Exponential functions eventually surpass linear ones
-							<br><a class="standard-code">f.le.3</a>
+							<br><a class="standard-code">hsf.le.3</a>
 						</div>
-						<div class="standard" data-code="f-le-4" data-type="real-world" data-dependencies="">
+						<div class="standard" data-code="hsf-le-4" data-type="real-world" data-dependencies="">
 							Logarithmic solutions
-							<br><a class="standard-code">f.le.4</a>
+							<br><a class="standard-code">hsf.le.4</a>
 						</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">interpret expressions</h3>
-						<div class="standard" data-code="f-le-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-code="hsf-le-5" data-type="real-world" data-dependencies="">
 							Interpret function parameters
-							<br><a class="standard-code">f.le.5</a>
+							<br><a class="standard-code">hsf.le.5</a>
 						</div>
 					</div>
 				</div>
@@ -3167,49 +3162,49 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">unit circle-o trig</h3>
-							<div class="standard" data-code="f-tf-1" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hsf-tf-1" data-type="skill" data-dependencies="">
 								Radians: length of subtended arc on unit circle-o
-								<br><a class="standard-code">f.tf.1</a>
+								<br><a class="standard-code">hsf.tf.1</a>
 							</div>
-							<div class="standard" data-code="f-tf-2" data-type="justify" data-dependencies="">
+							<div class="standard" data-code="hsf-tf-2" data-type="justify" data-dependencies="">
 								Why do trig functions work for all real numbers?
-								<br><a class="standard-code">f.tf.2</a>
+								<br><a class="standard-code">hsf.tf.2</a>
 							</div>
-							<div class="standard plus" id="f-tf-3" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hsf-tf-3" data-type="skill" data-dependencies="">
 								Special triangles
-								<br><a class="standard-code">f.tf.3</a>
+								<br><a class="standard-code">hsf.tf.3</a>
 							</div>
-							<div class="standard plus" id="f-tf-4" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hsf-tf-4" data-type="skill" data-dependencies="">
 								Symmetry and periodicity
-								<br><a class="standard-code">f.tf.4</a>
+								<br><a class="standard-code">hsf.tf.4</a>
 							</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">model with trig functions</h3>
-							<div class="standard" data-code="f-tf-5" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hsf-tf-5" data-type="real-world" data-dependencies="">
 								Model periodic phenomena
-								<br><a class="standard-code">f.tf.5</a>
+								<br><a class="standard-code">hsf.tf.5</a>
 							</div>
-							<div class="standard plus" id="f-tf-6" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hsf-tf-6" data-type="skill" data-dependencies="">
 								Understand inverse trig functions
-								<br><a class="standard-code">f.tf.6</a>
+								<br><a class="standard-code">hsf.tf.6</a>
 							</div>
-							<div class="standard plus" id="f-tf-7" data-type="real-world" data-dependencies="">
+							<div class="standard plus" id="hsf-tf-7" data-type="real-world" data-dependencies="">
 								Apply inverse trig functions
-								<br><a class="standard-code">f.tf.7</a>
+								<br><a class="standard-code">hsf.tf.7</a>
 							</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">graphs</h3>
-							<div class="standard" data-code="f-tf-8" data-type="prove" data-dependencies="">
+							<div class="standard" data-code="hsf-tf-8" data-type="prove" data-dependencies="">
 								Prove the Pythagorean identity
-								<br><a class="standard-code">f.tf.8</a>
+								<br><a class="standard-code">hsf.tf.8</a>
 							</div>
-							<div class="standard plus" id="f-tf-9" data-type="prove" data-dependencies="">
+							<div class="standard plus" id="hsf-tf-9" data-type="prove" data-dependencies="">
 								Trig addition and subtraction formulas 
-								<br><a class="standard-code">f.tf.9</a>
+								<br><a class="standard-code">hsf.tf.9</a>
 							</div>
 					</div>
 				</div>
@@ -3770,47 +3765,47 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">data on one variable</h3>
 
-							<div class="standard" data-code="s-id-1" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-id-1" data-type="skill" data-dependencies="">
 								Dot plots, histograms, and box plots (2)
-								<br><a class="standard-code">s.id.1</a>
+								<br><a class="standard-code">hss.id.1</a>
 							</div>
-							<div class="standard" data-code="s-id-2" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-id-2" data-type="skill" data-dependencies="">
 								Mean, median, IQR, and standard deviation
-								<br><a class="standard-code">s.id.2</a>
+								<br><a class="standard-code">hss.id.2</a>
 							</div>
-							<div class="standard" data-code="s-id-3" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-id-3" data-type="skill" data-dependencies="">
 								Analyze shape, center, spread, and extreme data points
-								<br><a class="standard-code">s.id.3</a>
+								<br><a class="standard-code">hss.id.3</a>
 							</div>
-							<div class="standard" data-code="s-id-4" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-id-4" data-type="skill" data-dependencies="">
 								Fit a normal distribution to a data set when appropriate
-								<br><a class="standard-code">s.id.4</a>
+								<br><a class="standard-code">hss.id.4</a>
 							</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">data on two variables</h3>
 
-							<div class="standard" data-code="s-id-5" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-id-5" data-type="skill" data-dependencies="">
 								Two-way tables (2)
-								<br><a class="standard-code">s.id.5</a>
+								<br><a class="standard-code">hss.id.5</a>
 							</div>
 						<div class="sub-cluster">
-								<div class="standard" data-code="s-id-6" data-type="" data-dependencies="">
+								<div class="standard" data-code="hss-id-6" data-type="" data-dependencies="">
 									fitting functions
-									<br><a class="standard-code">s.id.6</a>
+									<br><a class="standard-code">hss.id.6</a>
 								</div>
-								<div class="standard" data-code="s-id-6a" data-type="skill" data-dependencies="">
+								<div class="standard" data-code="hss-id-6a" data-type="skill" data-dependencies="">
 									Fit linear, quadratic, and exponential functions
-									<br><a class="standard-code">s.id.6a</a>
+									<br><a class="standard-code">hss.id.6a</a>
 								</div>
-								<div class="standard" data-code="s-id-6b" data-type="skill" data-dependencies="">
+								<div class="standard" data-code="hss-id-6b" data-type="skill" data-dependencies="">
 									Residuals
-									<br><a class="standard-code">s.id.6b</a>
+									<br><a class="standard-code">hss.id.6b</a>
 								</div>
-								<div class="standard" data-code="s-id-6c" data-type="skill" data-dependencies="">
+								<div class="standard" data-code="hss-id-6c" data-type="skill" data-dependencies="">
 									Linear fit for a scatter plot
-									<br><a class="standard-code">s.id.6c</a>
+									<br><a class="standard-code">hss.id.6c</a>
 								</div>
 						</div>
 					</div>
@@ -3818,17 +3813,17 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">linear models</h3>
 
-							<div class="standard" data-code="s-id-7" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hss-id-7" data-type="real-world" data-dependencies="">
 								Interpret slope and intercept
-								<br><a class="standard-code">s.id.7</a>
+								<br><a class="standard-code">hss.id.7</a>
 							</div>
-							<div class="standard" data-code="s-id-8" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-id-8" data-type="skill" data-dependencies="">
 								Correlation coefficients of linear fits
-								<br><a class="standard-code">s.id.8</a>
+								<br><a class="standard-code">hss.id.8</a>
 							</div>
-							<div class="standard" data-code="s-id-9" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-id-9" data-type="skill" data-dependencies="">
 								Correlation vs. causation
-								<br><a class="standard-code">s.id.9</a>
+								<br><a class="standard-code">hss.id.9</a>
 							</div>
 					</div>
 				</div>
@@ -3850,34 +3845,34 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">random processes</h3>
 
-							<div class="standard" data-code="s-ic-1" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hss-ic-1" data-type="real-world" data-dependencies="">
 								Statistics = sampling &#8594; inferences
-								<br><a class="standard-code">f.ic.1</a>
+								<br><a class="standard-code">hss.ic.1</a>
 							</div>
-							<div class="standard" data-code="s-ic-2" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hss-ic-2" data-type="real-world" data-dependencies="">
 								Model vs. actual data
-								<br><a class="standard-code">f.ic.2</a>
+								<br><a class="standard-code">hss.ic.2</a>
 							</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">inferences</h3>
 
-							<div class="standard" data-code="s-ic-3" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-ic-3" data-type="skill" data-dependencies="">
 								Experiments vs. observational studies
-								<br><a class="standard-code">f.ic.3</a>
+								<br><a class="standard-code">hss.ic.3</a>
 							</div>
-							<div class="standard" data-code="s-ic-4" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-ic-4" data-type="skill" data-dependencies="">
 								Data from surveys
-								<br><a class="standard-code">f.ic.4</a>
+								<br><a class="standard-code">hss.ic.4</a>
 							</div>
-							<div class="standard" data-code="s-ic-5" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-ic-5" data-type="skill" data-dependencies="">
 								Data from randomized experiments
-								<br><a class="standard-code">f.ic.5</a>
+								<br><a class="standard-code">hss.ic.5</a>
 							</div>
-							<div class="standard" data-code="s-ic-6" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-ic-6" data-type="skill" data-dependencies="">
 								Evaluate reports based on data
-								<br><a class="standard-code">f.ic.6</a>
+								<br><a class="standard-code">hss.ic.6</a>
 							</div>
 					</div>
 				</div>
@@ -3899,46 +3894,46 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">independent vs. conditional</h3>
 
-							<div class="standard" data-code="s-cp-1" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-cp-1" data-type="skill" data-dependencies="">
 								Describing subsets of sample spaces
-								<br><a class="standard-code">s.cp.1</a>
+								<br><a class="standard-code">hss.cp.1</a>
 							</div>
-							<div class="standard" data-code="s-cp-2" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-cp-2" data-type="skill" data-dependencies="">
 								Independent events
-								<br><a class="standard-code">s.cp.2</a>
+								<br><a class="standard-code">hss.cp.2</a>
 							</div>
-							<div class="standard" data-code="s-cp-3" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-cp-3" data-type="skill" data-dependencies="">
 								P(A) given B = P(A and B)/P(B)
-								<br><a class="standard-code">s.cp.3</a>
+								<br><a class="standard-code">hss.cp.3</a>
 							</div>
-							<div class="standard" data-code="s-cp-4" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-cp-4" data-type="skill" data-dependencies="">
 								Two-way frequency table
-								<br><a class="standard-code">s.cp.4</a>
+								<br><a class="standard-code">hss.cp.4</a>
 							</div>
-							<div class="standard" data-code="s-cp-5" data-type="real-world" data-dependencies="">
+							<div class="standard" data-code="hss-cp-5" data-type="real-world" data-dependencies="">
 								Independent and conditional events in the real world
-								<br><a class="standard-code">s.cp.5</a>
+								<br><a class="standard-code">hss.cp.5</a>
 							</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">uniform probability models</h3>
 
-							<div class="standard" data-code="s-cp-6" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-cp-6" data-type="skill" data-dependencies="">
 								P(A) given B
-								<br><a class="standard-code">s.cp.6</a>
+								<br><a class="standard-code">hss.cp.6</a>
 							</div>
-							<div class="standard" data-code="s-cp-7" data-type="skill" data-dependencies="">
+							<div class="standard" data-code="hss-cp-7" data-type="skill" data-dependencies="">
 								P(A xor B) = P(A) + P(B) - P(A and B)
-								<br><a class="standard-code">s.cp.7</a>
+								<br><a class="standard-code">hss.cp.7</a>
 							</div>
-							<div class="standard plus" id="s-cp-8" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hss-cp-8" data-type="skill" data-dependencies="">
 								P(A and B) = P(A)*P(B|A) = P(B)*P(A|B)
-								<br><a class="standard-code">s.cp.8</a>
+								<br><a class="standard-code">hss.cp.8</a>
 							</div>
-							<div class="standard plus" id="s-cp-9" data-type="real-world" data-dependencies="">
+							<div class="standard plus" id="hss-cp-9" data-type="real-world" data-dependencies="">
 								Permutations and combinations
-								<br><a class="standard-code">s.cp.9</a>
+								<br><a class="standard-code">hss.cp.9</a>
 							</div>
 					</div>
 				</div>
@@ -3959,21 +3954,21 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">expected value</h3>
-							<div class="standard plus" id="s-md-1" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hss-md-1" data-type="skill" data-dependencies="">
 								Define random variable &#8594; graph probability distribution
-								<br><a class="standard-code">s.md.1</a>
+								<br><a class="standard-code">hss.md.1</a>
 							</div>
-							<div class="standard plus" id="s-md-2" data-type="justify" data-dependencies="">
+							<div class="standard plus" id="hss-md-2" data-type="justify" data-dependencies="">
 								Expected value = mean of probability distribution
-								<br><a class="standard-code">s.md.2</a>
+								<br><a class="standard-code">hss.md.2</a>
 							</div>
-							<div class="standard plus" id="s-md-3" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hss-md-3" data-type="skill" data-dependencies="">
 								Theoretical probability distribution
-								<br><a class="standard-code">s.md.3</a>
+								<br><a class="standard-code">hss.md.3</a>
 							</div>
-							<div class="standard plus" id="s-md-4" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hss-md-4" data-type="skill" data-dependencies="">
 								Empirical probability distribution
-								<br><a class="standard-code">s.md.4</a>
+								<br><a class="standard-code">hss.md.4</a>
 							</div>
 					</div>
 
@@ -3981,27 +3976,27 @@ var standardTypes = {
 						<h3 class="cluster-name">model with trig functions</h3>
 						
 						<div class="sub-cluster">
-								<div class="standard" data-code="s-md-5" data-type="" data-dependencies="">
+								<div class="standard" data-code="hss-md-5" data-type="" data-dependencies="">
 									possible outcomes
 									<br><a class="standard-code">t.md.5</a>
 								</div>
-								<div class="standard" data-code="s-md-5a" data-type="skill" data-dependencies="">
+								<div class="standard" data-code="hss-md-5a" data-type="skill" data-dependencies="">
 									Expected value for games of chance
 									<br><a class="standard-code">t.md.5a</a>
 								</div>
-								<div class="standard" data-code="s-md-5b" data-type="skill" data-dependencies="">
+								<div class="standard" data-code="hss-md-5b" data-type="skill" data-dependencies="">
 									Expected values of differening strategies
 									<br><a class="standard-code">t.md.5b</a>
 								</div>
 						</div>
 
-							<div class="standard plus" id="s-md-6" data-type="skill" data-dependencies="">
+							<div class="standard plus" id="hss-md-6" data-type="skill" data-dependencies="">
 								Make fair decisions
-								<br><a class="standard-code">s.md.6</a>
+								<br><a class="standard-code">hss.md.6</a>
 							</div>
-							<div class="standard plus" id="s-md-7" data-type="real-world" data-dependencies="">
+							<div class="standard plus" id="hss-md-7" data-type="real-world" data-dependencies="">
 								Use probability to analyze decisions and strategies
-								<br><a class="standard-code">s.md.7</a>
+								<br><a class="standard-code">hss.md.7</a>
 							</div>
 					</div>
 				</div>
