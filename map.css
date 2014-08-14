@@ -218,3 +218,20 @@ h3.cluster-name {
 .fa-youtube-play:hover {
 	text-shadow: 1px 1px #ddd;
 }
+
+#standard-text {
+	width: 75%;
+	font-size: 1.2em;
+	z-index: 100;
+	background-color: rgba(30,30,30,30.8);
+	border: 1px solid #555;
+	box-sizing: border-box;
+	border-radius: 2em;
+	padding: 2em;
+	color: #ddd;
+	position: fixed;
+	bottom: -100px;
+	left: 12.5%;
+	right: 12.5%;
+	text-align: center;
+}

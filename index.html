@@ -65,6 +65,22 @@ var standardTypes = {
 	var standardData = [];
 	var svgOverlay;
 
+	var showStandard = function(text) {
+		var standardText = $( "#standard-text" );
+		standardText.html(text);
+		standardText.css("bottom", "-100");
+		standardText.animate({
+			bottom: "50"
+		}, 200);
+	}
+
+	var hideStandard = function(text) {
+		$( "#standard-text" ).html(text);
+		$( "#standard-text" ).animate({
+			bottom: "-100"
+		}, 80);
+	}
+
 	$( document ).ready(function() {
 
 		//Make links go to standards pages
@@ -103,7 +119,9 @@ var standardTypes = {
 						}
 
 						if (ccmath[c]) {
-							$( this ).attr("title", ccmath[c].text);
+							$( this ).click(function(){
+								showStandard(ccmath[c].text);
+							});
 						}
 					});
 				});
@@ -254,6 +272,10 @@ var standardTypes = {
 			$('[title]').qtip();
 		});
 	</script>
+
+	<div id="standard-text">
+		
+	</div>
 
 	<svg id="svg-overlay"></svg>
 
