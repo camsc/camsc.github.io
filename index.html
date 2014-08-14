@@ -83,10 +83,9 @@ var standardTypes = {
 				$( this ).find(".cluster").each( function() {
 					var letter = alphabet[clusterNumber];
 					clusterNumber++;
-					$( this ).find(".standard-code").each( function() {
-						var code = $( this );
-						var text = code.text();
-						var codeParts = text.split(".");
+					$( this ).find(".standard").each( function() {
+						var text = $( this ).data("code");
+						var codeParts = text.split("-");
 
 						var c = codeParts[0] + "." +
 							codeParts[1] + "." +
@@ -104,7 +103,7 @@ var standardTypes = {
 						}
 
 						if (ccmath[c]) {
-							code.attr("title", ccmath[c].text);
+							$( this ).attr("title", ccmath[c].text);
 						}
 					});
 				});
@@ -261,20 +260,20 @@ var standardTypes = {
 	<div id="heading">
 		<h1>Common Core Math</h1>
 		<!-- <div class="grade-menu">
-			<a class="menu-link" href="#kinder">K</a>
-			<a class="menu-link" href="#first">1</a>
-			<a class="menu-link" href="#second">2</a>
-			<a class="menu-link" href="#third">3</a>
-			<a class="menu-link" href="#fourth">4</a>
-			<a class="menu-link" href="#fifth">5</a>
-			<a class="menu-link" href="#sixth">6</a>
-			<a class="menu-link" href="#seventh">7</a>
-			<a class="menu-link" href="#eighth">8</a>
-			<a class="menu-link" href="#number">N</a>
-			<a class="menu-link" href="#algebra">A</a>
-			<a class="menu-link" href="#functions">F</a>
-			<a class="menu-link" href="#geometry">G</a>
-			<a class="menu-link" href="#statistics-and-probability">SP</a>
+			<a class="menu-link" href="#kinder">K</span>
+			<a class="menu-link" href="#first">1</span>
+			<a class="menu-link" href="#second">2</span>
+			<a class="menu-link" href="#third">3</span>
+			<a class="menu-link" href="#fourth">4</span>
+			<a class="menu-link" href="#fifth">5</span>
+			<a class="menu-link" href="#sixth">6</span>
+			<a class="menu-link" href="#seventh">7</span>
+			<a class="menu-link" href="#eighth">8</span>
+			<a class="menu-link" href="#number">N</span>
+			<a class="menu-link" href="#algebra">A</span>
+			<a class="menu-link" href="#functions">F</span>
+			<a class="menu-link" href="#geometry">G</span>
+			<a class="menu-link" href="#statistics-and-probability">SP</span>
 		</div> -->
 
 		<p><a href="https://github.com/camsc/camsc.github.io" style="color: #555"><i class="fa fa-github"></i>camsc</a></p>
@@ -312,15 +311,15 @@ var standardTypes = {
 						<h3 class="cluster-name">number names and counting</h3>
 						<div class="standard" data-code="k-cc-1" data-type="skill" data-dependencies="">
 							Count to 100 (by ones and tens)
-							<br><a class="standard-code">k.cc.1</a>
+							<span class="standard-code">k.cc.1</span>
 						</div>
 						<div class="standard" data-code="k-cc-2" data-type="skill" data-dependencies="k-cc-1">
 							Count up from a number
-							<br><a class="standard-code">k.cc.2</a>
+							<span class="standard-code">k.cc.2</span>
 						</div>
 						<div class="standard" data-code="k-cc-3" data-type="skill" data-dependencies="">
 							Write numbers within 20
-							<br><a class="standard-code">k.cc.3</a>
+							<span class="standard-code">k.cc.3</span>
 						</div>
 					</div>
 
@@ -329,25 +328,25 @@ var standardTypes = {
 
 						<div class="standard parent-standard" data-code="k-cc-4" data-dependencies="">
 							Counting and quantities
-							<a class="standard-code">k.cc.4</a>
+							<span class="standard-code">k.cc.4</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="k-cc-4a" data-type="skill" data-dependencies="k-cc-1">
 								Count objects aloud
-								<br><a class="standard-code">k.cc.4a</a>
+								<span class="standard-code">k.cc.4a</span>
 							</div>
 							<div class="standard" data-code="k-cc-4b" data-type="understand" data-dependencies="k-cc-4a">
 								Last number counted = number of objects
-								<br><a class="standard-code">k.cc.4b</a>
+								<span class="standard-code">k.cc.4b</span>
 							</div>
 							<div class="standard" data-code="k-cc-4c" data-type="understand" data-dependencies="">
 								The next number is always one larger
-								<br><a class="standard-code">k.cc.4c</a>
+								<span class="standard-code">k.cc.4c</span>
 							</div>
 						</div>
 						<div class="standard" data-code="k-cc-5" data-type="real-world" data-dependencies="k-cc-4b">
 							How many?
-							<br><a class="standard-code">k.cc.5</a>
+							<span class="standard-code">k.cc.5</span>
 						</div>
 					</div>
 
@@ -355,11 +354,11 @@ var standardTypes = {
 						<h3 class="cluster-name">comparing numbers</h3>
 						<div class="standard" data-code="k-cc-6" data-type="compare" data-dependencies="">
 							Which group has more?
-							<br><a class="standard-code">k.cc.6</a>
+							<span class="standard-code">k.cc.6</span>
 						</div>
 						<div class="standard" data-code="k-cc-7" data-type="compare" data-dependencies="k-cc-6">
 							One-digit comparison
-							<br><a class="standard-code">k.cc.7</a>
+							<span class="standard-code">k.cc.7</span>
 						</div>
 					</div>
 				</div>
@@ -383,23 +382,23 @@ var standardTypes = {
 						<h3 class="cluster-name">addition and subtraction</h3>
 						<div class="standard" data-code="k-oa-1" data-type="skill" data-dependencies="">
 							Add and subtract using a variety of strategies
-							<br><a class="standard-code">k.oa.1</a>
+							<span class="standard-code">k.oa.1</span>
 						</div>
 						<div class="standard" data-code="k-oa-2" data-type="real-world" data-dependencies="k-oa-1">
 							Add and subtract within 10
-							<br><a class="standard-code">k.oa.2</a>
+							<span class="standard-code">k.oa.2</span>
 						</div>
 						<div class="standard" data-code="k-oa-3" data-type="skill" data-dependencies="k-oa-2">
 							Decompose numbers
-							<br><a class="standard-code">k.oa.3</a>
+							<span class="standard-code">k.oa.3</span>
 						</div>
 						<div class="standard" data-code="k-oa-4" data-type="skill" data-dependencies="k-oa-3">
 							Make 10
-							<br><a class="standard-code">k.oa.4</a>
+							<span class="standard-code">k.oa.4</span>
 						</div>
-						<div class="standard fluency" id="k-oa-5" data-type="fluency" data-dependencies="k-oa-3">
+						<div class="standard fluency" data-code="k-oa-5" data-type="fluency" data-dependencies="k-oa-3">
 							Fluently add and subtract within 5
-							<br><a class="standard-code">k.oa.5</a>
+							<span class="standard-code">k.oa.5</span>
 						</div>
 					</div>
 				</div>
@@ -422,7 +421,7 @@ var standardTypes = {
 						<h3 class="cluster-name">place value foundation</h3>
 						<div class="standard" data-code="k-nbt-1" data-type="skill" data-dependencies="k-oa-3">
 							Teens from ten (1)
-							<br><a class="standard-code">k.nbt.1</a>
+							<span class="standard-code">k.nbt.1</span>
 						</div>
 					</div>
 				</div>
@@ -446,11 +445,11 @@ var standardTypes = {
 						<h3 class="cluster-name">compare objects</h3>
 						<div class="standard" data-code="k-md-1" data-type="skill" data-dependencies="">
 							Describe measurable attributes of objects
-							<br><a class="standard-code">k.md.1</a>
+							<span class="standard-code">k.md.1</span>
 						</div>
 						<div class="standard" data-code="k-md-2" data-type="compare" data-dependencies="k-md-1">
 							Directly compare objects
-							<br><a class="standard-code">k.md.2</a>
+							<span class="standard-code">k.md.2</span>
 						</div>
 					</div>
 
@@ -458,7 +457,7 @@ var standardTypes = {
 						<h3 class="cluster-name">sorting</h3>
 						<div class="standard" data-code="k-md-3" data-type="real-world" data-dependencies="k-md-2 k-cc-6">
 							Categorize, count, then sort
-							<br><a class="standard-code">k.md.3</a>
+							<span class="standard-code">k.md.3</span>
 						</div>
 					</div>
 				</div>
@@ -482,15 +481,15 @@ var standardTypes = {
 						<h3 class="cluster-name">identify and describe shapes</h3>
 						<div class="standard" data-code="k-g-1" data-type="skill" data-dependencies="real-world">
 							Describe relative positions of objects
-							<br><a class="standard-code">k.g.1</a>
+							<span class="standard-code">k.g.1</span>
 						</div>
 						<div class="standard" data-code="k-g-2" data-type="skill" data-dependencies="k-g-3 k-g-4">
 							Name shapes
-							<br><a class="standard-code">k.g.2</a>
+							<span class="standard-code">k.g.2</span>
 						</div>
 						<div class="standard" data-code="k-g-3" data-type="compare" data-dependencies="k-g-1 k-g-2">
 							2D vs 3D
-							<br><a class="standard-code">k.g.3</a>
+							<span class="standard-code">k.g.3</span>
 						</div>
 					</div>
 
@@ -498,15 +497,15 @@ var standardTypes = {
 						<h3 class="cluster-name">compare, create, and compose</h3>
 						<div class="standard" data-code="k-g-4" data-type="compare" data-dependencies="k-g-1 k-g-2">
 							Compare shapes
-							<br><a class="standard-code">k.g.4</a>
+							<span class="standard-code">k.g.4</span>
 						</div>
 						<div class="standard" data-code="k-g-5" data-type="real-world" data-dependencies="">
 							Make shapes
-							<br><a class="standard-code">k.g.5</a>
+							<span class="standard-code">k.g.5</span>
 						</div>
 						<div class="standard" data-code="k-g-6" data-type="skill" data-dependencies="k-g-2">
 							Compose shapes
-							<br><a class="standard-code">k.g.6</a>
+							<span class="standard-code">k.g.6</span>
 						</div>
 					</div>
 				</div>
@@ -547,11 +546,11 @@ var standardTypes = {
 						<h3 class="cluster-name">addition and subtraction problems</h3>
 						<div class="standard" data-code="1-oa-1" data-type="real-world" data-dependencies="1-oa-6 k-oa-2 1-oa-8">
 							Add and subtract within 20
-							<br><a class="standard-code">1.oa.1</a>
+							<span class="standard-code">1.oa.1</span>
 						</div>
 						<div class="standard" data-code="1-oa-2" data-type="real-world" data-dependencies="1-oa-1 1-oa-8">
 							Add 3 numbers within 20
-							<br><a class="standard-code">1.oa.2</a>
+							<span class="standard-code">1.oa.2</span>
 						</div>
 					</div>
 
@@ -559,11 +558,11 @@ var standardTypes = {
 						<h3 class="cluster-name">understand addition and subtraction</h3>
 						<div class="standard" data-code="1-oa-3" data-type="skill" data-dependencies="1-oa-4 k-oa-2">
 							Apply properties of addition and subtraction
-							<br><a class="standard-code">1.oa.3</a>
+							<span class="standard-code">1.oa.3</span>
 						</div>
 						<div class="standard" data-code="1-oa-4" data-type="understand" data-dependencies="1-oa-3 k-oa-3">
 							Link subtraction to addition
-							<br><a class="standard-code">1.oa.4</a>
+							<span class="standard-code">1.oa.4</span>
 						</div>
 					</div>
 
@@ -571,11 +570,11 @@ var standardTypes = {
 						<h3 class="cluster-name">fluency in addition and subtraction</h3>
 						<div class="standard" data-code="1-oa-5" data-type="understand" data-dependencies="k-cc-4c">
 							Link counting to addition and subtraction
-							<br><a class="standard-code">1.oa.5</a>
+							<span class="standard-code">1.oa.5</span>
 						</div>
 						<div class="standard" data-code="1-oa-6" data-type="fluency" data-dependencies="1-oa-5 1-oa-3 1-oa-4 1-oa-1 k-oa-2 k-oa-4 k-oa-5 k-oa-3">
 							Fluently add and subtract within 10
-							<br><a class="standard-code">1.oa.6</a>
+							<span class="standard-code">1.oa.6</span>
 						</div>
 					</div>
 
@@ -583,11 +582,11 @@ var standardTypes = {
 						<h3 class="cluster-name">equations and unknowns</h3>
 						<div class="standard" data-code="1-oa-7" data-type="understand" data-dependencies="">
 							Equals sign
-							<br><a class="standard-code">1.oa.7</a>
+							<span class="standard-code">1.oa.7</span>
 						</div>
 						<div class="standard" data-code="1-oa-8" data-type="skill" data-dependencies="1-oa-1">
 							Find the unknown (1)
-							<br><a class="standard-code">1.oa.8</a>
+							<span class="standard-code">1.oa.8</span>
 						</div>
 					</div>
 				</div>
@@ -611,7 +610,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="1-nbt-1" data-type="skill" data-dependencies="k-cc-1">
 							Count and write to 120
-							<br><a class="standard-code">1.nbt.1</a>
+							<span class="standard-code">1.nbt.1</span>
 						</div>
 					</div>
 
@@ -620,26 +619,26 @@ var standardTypes = {
 
 						<div class="standard parent-standard" data-code="1-nbt-2" data-dependencies="k-nbt-1 1-nbt-1">
 							2-digit place value
-							<a class="standard-code">1.nbt.2</a>
+							<span class="standard-code">1.nbt.2</span>
 						</div>
 
 						<div class="sub-cluster">
 							<div class="standard" data-code="1-nbt-2a" data-type="understand" data-dependencies="">
 								Bundles of 10
-								<br><a class="standard-code">1.nbt.2a</a>
+								<span class="standard-code">1.nbt.2a</span>
 							</div>
 							<div class="standard" data-code="1-nbt-2b" data-type="understand" data-dependencies="">
 								Teens from ten (2)
-								<br><a class="standard-code">1.nbt.2b</a>
+								<span class="standard-code">1.nbt.2b</span>
 							</div>
 							<div class="standard" data-code="1-nbt-2c" data-type="understand" data-dependencies="">
 								Multiples of 10
-								<br><a class="standard-code">1.nbt.2c</a>
+								<span class="standard-code">1.nbt.2c</span>
 							</div>
 						</div>
 						<div class="standard" data-code="1-nbt-3" data-type="compare" data-dependencies="1-nbt-2 k-cc-7">
 							Two-digit comparison
-							<br><a class="standard-code">1.nbt.3</a>
+							<span class="standard-code">1.nbt.3</span>
 						</div>
 					</div>
 
@@ -648,15 +647,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="1-nbt-4" data-type="skill" data-dependencies="1-nbt-2 1-nbt-1">
 							Add and subtract within 100 using a variety of strategies
-							<br><a class="standard-code">1.nbt.4</a>
+							<span class="standard-code">1.nbt.4</span>
 						</div>
 						<div class="standard" data-code="1-nbt-5" data-type="skill" data-dependencies="1-nbt-2">
 							Mentally add and subtract by 10
-							<br><a class="standard-code">1.nbt.5</a>
+							<span class="standard-code">1.nbt.5</span>
 						</div>
 						<div class="standard" data-code="1-nbt-6" data-type="skill" data-dependencies="1-nbt-2">
 							Subtract multiples of 10 using a variety of strategies
-							<br><a class="standard-code">1.nbt.6</a>
+							<span class="standard-code">1.nbt.6</span>
 						</div>
 					</div>
 				</div>
@@ -681,11 +680,11 @@ var standardTypes = {
 
 						<div class="standard" data-code="1-md-1" data-type="compare" data-dependencies="k-md-1">
 							Compare lengths indirectly
-							<br><a class="standard-code">1.md.1</a>
+							<span class="standard-code">1.md.1</span>
 						</div>
 						<div class="standard" data-code="1-md-2" data-type="skill" data-dependencies="1-md-1">
 							Measure lengths by stacking
-							<br><a class="standard-code">1.md.2</a>
+							<span class="standard-code">1.md.2</span>
 						</div>
 					</div>
 
@@ -694,7 +693,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="1-md-3" data-type="skill" data-dependencies="">
 							Time by half hours
-							<br><a class="standard-code">1.md.3</a>
+							<span class="standard-code">1.md.3</span>
 						</div>
 					</div>
 
@@ -703,7 +702,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="1-md-4" data-type="compare" data-dependencies="1-oa-1 1-oa-2 k-md-3">
 							Categorize &#8594; compare
-							<br><a class="standard-code">1.md.4</a>
+							<span class="standard-code">1.md.4</span>
 						</div>
 					</div>
 				</div>
@@ -728,15 +727,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="1-g-1" data-type="compare" data-dependencies="k-g-2 k-g-3 k-g-4">
 							Attributes that define shapes vs. other attributes of shapes
-							<br><a class="standard-code">1.g.1</a>
+							<span class="standard-code">1.g.1</span>
 						</div>
 						<div class="standard" data-code="1-g-2" data-type="skill" data-dependencies="k-g-6">
 							Compose 2D and 3D shapes
-							<br><a class="standard-code">1.g.2</a>
+							<span class="standard-code">1.g.2</span>
 						</div>
 						<div class="standard" data-code="1-g-3" data-type="skill" data-dependencies="1-g-1">
 							Make fractions of shapes (1)
-							<br><a class="standard-code">1.g.3</a>
+							<span class="standard-code">1.g.3</span>
 						</div>
 					</div>
 				</div>
@@ -778,7 +777,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="2-oa-1" data-type="real-world" data-dependencies="">
 							Addition and subtraction word problems within 100
-							<br><a class="standard-code">2.oa.1</a>
+							<span class="standard-code">2.oa.1</span>
 						</div>
 					</div>
 
@@ -787,7 +786,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="2-oa-1" data-type="fluency" data-dependencies="">
 							Fluently add and subtract within 20
-							<br><a class="standard-code">2.oa.2</a>
+							<span class="standard-code">2.oa.2</span>
 						</div>
 					</div>
 
@@ -796,11 +795,11 @@ var standardTypes = {
 
 						<div class="standard" data-code="2-oa-3" data-type="skill" data-dependencies="">
 							Odds and evens
-							<br><a class="standard-code">2.oa.3</a>
+							<span class="standard-code">2.oa.3</span>
 						</div>
 						<div class="standard" data-code="2-oa-4" data-type="skill" data-dependencies="">
 							Work with rows of objects
-							<br><a class="standard-code">2.oa.4</a>
+							<span class="standard-code">2.oa.4</span>
 						</div>
 					</div>
 				</div>
@@ -824,53 +823,53 @@ var standardTypes = {
 						
 						<div class="standard parent-standard" data-code="2-nbt-1" data-type="" data-dependencies="">
 							3-digit place value
-							<a class="standard-code">2.nbt.1</a>
+							<span class="standard-code">2.nbt.1</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="2-nbt-1a" data-type="understand" data-dependencies="">
 								Bundles of 10 tens
-								<br><a class="standard-code">2.nbt.1a</a>
+								<span class="standard-code">2.nbt.1a</span>
 							</div>
 							<div class="standard" data-code="2-nbt-1b" data-type="understand" data-dependencies="">
 								Multiples of 100
-								<br><a class="standard-code">2.nbt.1b</a>
+								<span class="standard-code">2.nbt.1b</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="2-nbt-2" data-type="skill" data-dependencies="">
 							Count by 5s, 10s, and 100s
-							<br><a class="standard-code">2.nbt.2</a>
+							<span class="standard-code">2.nbt.2</span>
 						</div>
 						<div class="standard" data-code="2-nbt-3" data-type="skill" data-dependencies="">
 							Numerals, number names, and expanded form (whole numbers)
-							<br><a class="standard-code">2.nbt.3</a>
+							<span class="standard-code">2.nbt.3</span>
 						</div>
 						<div class="standard" data-code="2-nbt-4" data-type="compare" data-dependencies="">
 							Compare 3-Digit numbers
-							<br><a class="standard-code">2.nbt.4</a>
+							<span class="standard-code">2.nbt.4</span>
 						</div>
 					</div>
 
 					<div class="cluster"><h3 class="cluster-name">addition and subtraction</h3>
 						<div class="standard" data-code="2-nbt-5" data-type="fluency" data-dependencies="">
 							Fluently add and subtract within 100
-							<br><a class="standard-code">2.nbt.5</a>
+							<span class="standard-code">2.nbt.5</span>
 						</div>
 						<div class="standard" data-code="2-nbt-6" data-type="skill" data-dependencies="">
 							Add several 2-digit numbers
-							<br><a class="standard-code">2.nbt.6</a>
+							<span class="standard-code">2.nbt.6</span>
 						</div>
 						<div class="standard" data-code="2-nbt-7" data-type="skill" data-dependencies="">
 							Add and subtract within 1000 using a variety of strategies
-							<br><a class="standard-code">2.nbt.7</a>
+							<span class="standard-code">2.nbt.7</span>
 						</div>
 						<div class="standard" data-code="2-nbt-8" data-type="skill" data-dependencies="">
 							Mentally add and subtract by 10 and 100
-							<br><a class="standard-code">2.nbt.8</a>
+							<span class="standard-code">2.nbt.8</span>
 						</div>
 						<div class="standard" data-code="2-nbt-9" data-type="justify" data-dependencies="">
 							Explain addition and subtraction strategies
-							<br><a class="standard-code">2.nbt.9</a>
+							<span class="standard-code">2.nbt.9</span>
 						</div>
 					</div>
 				</div>
@@ -895,19 +894,19 @@ var standardTypes = {
 
 						<div class="standard" data-code="2-md-1" data-type="skill" data-dependencies="">
 							Measure lengths of objects
-							<br><a class="standard-code">2.md.1</a>
+							<span class="standard-code">2.md.1</span>
 						</div>
 						<div class="standard" data-code="2-md-2" data-type="skill" data-dependencies="">
 							Measure with different units
-							<br><a class="standard-code">2.md.2</a>
+							<span class="standard-code">2.md.2</span>
 						</div>
 						<div class="standard" data-code="2-md-3" data-type="skill" data-dependencies="">
 							Estimate lengths
-							<br><a class="standard-code">2.md.3</a>
+							<span class="standard-code">2.md.3</span>
 						</div>
 						<div class="standard" data-code="2-md-4" data-type="compare" data-dependencies="">
 							Measure &#8594; compare lengths
-							<br><a class="standard-code">2.md.4</a>
+							<span class="standard-code">2.md.4</span>
 						</div>
 					</div>
 
@@ -916,11 +915,11 @@ var standardTypes = {
 
 						<div class="standard" data-code="2-md-5" data-type="real-world" data-dependencies="">
 							Add and subtract lengths within 1000
-							<br><a class="standard-code">2.md.5</a>
+							<span class="standard-code">2.md.5</span>
 						</div>
 						<div class="standard" data-code="2-md-6" data-type="skill" data-dependencies="">
 							Number line
-							<br><a class="standard-code">2.md.6</a>
+							<span class="standard-code">2.md.6</span>
 						</div>
 					</div>
 
@@ -929,11 +928,11 @@ var standardTypes = {
 
 						<div class="standard" data-code="2-md-7" data-type="skill" data-dependencies="">
 							Time in 5-minute intervals
-							<br><a class="standard-code">2.md.7</a>
+							<span class="standard-code">2.md.7</span>
 						</div>
 						<div class="standard" data-code="2-md-8" data-type="skill" data-dependencies="">
 							Working with money
-							<br><a class="standard-code">2.md.8</a>
+							<span class="standard-code">2.md.8</span>
 						</div>
 					</div>
 
@@ -942,11 +941,11 @@ var standardTypes = {
 
 						<div class="standard" data-code="2-md-9" data-type="skill" data-dependencies="">
 							Line plot with whole numbers
-							<br><a class="standard-code">2.md.9</a>
+							<span class="standard-code">2.md.9</span>
 						</div>
 						<div class="standard" data-code="2-md-10" data-type="real-world" data-dependencies="">
 							Picture and bar graphs (1)
-							<br><a class="standard-code">2.md.10</a>
+							<span class="standard-code">2.md.10</span>
 						</div>
 					</div>
 				</div>
@@ -971,15 +970,15 @@ var standardTypes = {
 						
 						<div class="standard" data-code="2-g-1" data-type="skill" data-dependencies="">
 							Recognize and draw shapes
-							<br><a class="standard-code">2.g.1</a>
+							<span class="standard-code">2.g.1</span>
 						</div>
 						<div class="standard" data-code="2-g-2" data-type="skill" data-dependencies="">
 							Split rectangle into row and columns
-							<br><a class="standard-code">2.g.2</a>
+							<span class="standard-code">2.g.2</span>
 						</div>
 						<div class="standard" data-code="2-g-3" data-type="skill" data-dependencies="">
 							Make fractions of shapes (2)
-							<br><a class="standard-code">2.g.3</a>
+							<span class="standard-code">2.g.3</span>
 						</div>
 					</div>
 				</div>
@@ -1019,44 +1018,44 @@ var standardTypes = {
 						
 						<div class="standard" data-code="3-nf-1" data-type="understand" data-dependencies="">
 							Understand fractions
-							<br><a class="standard-code">3.nf.1</a>
+							<span class="standard-code">3.nf.1</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="3-nf-2" data-type="" data-dependencies="">
 							number line and fractions
-							<a class="standard-code">3.nf.2</a>
+							<span class="standard-code">3.nf.2</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="3-nf-2a" data-type="skill" data-dependencies="">
 								1/b on the number line
-								<br><a class="standard-code">3.nf.2a</a>
+								<span class="standard-code">3.nf.2a</span>
 							</div>
 							<div class="standard" data-code="3-nf-2b" data-type="skill" data-dependencies="">
 								a/b on the number line
-								<br><a class="standard-code">3.nf.2b</a>
+								<span class="standard-code">3.nf.2b</span>
 							</div>
 						</div>
 						
 						<div class="standard parent-standard" data-code="3-nf-3" data-type="" data-dependencies="">
 							equivalent fractions
-							<a class="standard-code">3.nf.3</a>
+							<span class="standard-code">3.nf.3</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="3-nf-3a" data-type="understand" data-dependencies="">
 								Understand equivalent fractions
-								<br><a class="standard-code">3.nf.3a</a>
+								<span class="standard-code">3.nf.3a</span>
 							</div>
 							<div class="standard" data-code="3-nf-3b" data-type="skill" data-dependencies="">
 								Generate equivalent fractions
-								<br><a class="standard-code">3.nf.3b</a>
+								<span class="standard-code">3.nf.3b</span>
 							</div>
 							<div class="standard" data-code="3-nf-3c" data-type="skill" data-dependencies="">
 								Express whole numbers as fractions
-								<br><a class="standard-code">3.nf.3c</a>
+								<span class="standard-code">3.nf.3c</span>
 							</div>
 							<div class="standard" data-code="3-nf-3d" data-type="compare" data-dependencies="">
 								Compare fractions of like numerators or like denominators
-								<br><a class="standard-code">3.nf.3d</a>
+								<span class="standard-code">3.nf.3d</span>
 							</div>
 						</div>
 					</div>
@@ -1082,19 +1081,19 @@ var standardTypes = {
 						
 						<div class="standard" data-code="3-oa-1" data-type="understand" data-dependencies="">
 							Multiplicitive comparisons (1)
-							<br><a class="standard-code">3.oa.1</a>
+							<span class="standard-code">3.oa.1</span>
 						</div>
 						<div class="standard" data-code="3-oa-2" data-type="understand" data-dependencies="">
 							Understand whole-number division
-							<br><a class="standard-code">3.oa.2</a>
+							<span class="standard-code">3.oa.2</span>
 						</div>
 						<div class="standard" data-code="3-oa-3" data-type="real-world" data-dependencies="">
 							Multiply and divide within 100
-							<br><a class="standard-code">3.oa.3</a>
+							<span class="standard-code">3.oa.3</span>
 						</div>
 						<div class="standard" data-code="3-oa-4" data-type="skill" data-dependencies="">
 							Find the unknown (2)
-							<br><a class="standard-code">3.oa.4</a>
+							<span class="standard-code">3.oa.4</span>
 						</div>
 					</div>
 
@@ -1103,11 +1102,11 @@ var standardTypes = {
 						
 						<div class="standard" data-code="3-oa-5" data-type="skill" data-dependencies="">
 							Apply properties of multiplication and division
-							<br><a class="standard-code">3.oa.5</a>
+							<span class="standard-code">3.oa.5</span>
 						</div>
 						<div class="standard" data-code="3-oa-6" data-type="understand" data-dependencies="">
 							Understand division as an unknown-factor problem
-							<br><a class="standard-code">3.oa.6</a>
+							<span class="standard-code">3.oa.6</span>
 						</div>
 					</div>
 
@@ -1116,7 +1115,7 @@ var standardTypes = {
 						
 						<div class="standard" data-code="3-oa-7" data-type="fluency" data-dependencies="">
 							Fluently multiply and divide within 100
-							<br><a class="standard-code">3.oa.7</a>
+							<span class="standard-code">3.oa.7</span>
 						</div>
 					</div>
 
@@ -1125,11 +1124,11 @@ var standardTypes = {
 						
 						<div class="standard" data-code="3-oa-8" data-type="real-world" data-dependencies="">
 							2-step word problems
-							<br><a class="standard-code">3.oa.8</a>
+							<span class="standard-code">3.oa.8</span>
 						</div>
 						<div class="standard" data-code="3-oa-9" data-type="skill" data-dependencies="">
 							Arithmetic patterns (1)
-							<br><a class="standard-code">3.oa.9</a>
+							<span class="standard-code">3.oa.9</span>
 						</div>
 					</div>
 				</div>
@@ -1153,15 +1152,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="3-nbt-1" data-type="skill" data-dependencies="">
 							Round to the nearest 10 or 100
-							<br><a class="standard-code">3.nbt.1</a>
+							<span class="standard-code">3.nbt.1</span>
 						</div>
 						<div class="standard" data-code="3-nbt-2" data-type="fluency" data-dependencies="">
 							Fluently add and subtract within 1000
-							<br><a class="standard-code">3.nbt.2</a>
+							<span class="standard-code">3.nbt.2</span>
 						</div>
 						<div class="standard" data-code="3-nbt-3" data-type="skill" data-dependencies="">
 							Multiply by multiples of 10
-							<br><a class="standard-code">3.nbt.3</a>
+							<span class="standard-code">3.nbt.3</span>
 						</div>
 					</div>
 				</div>
@@ -1185,11 +1184,11 @@ var standardTypes = {
 						<h3 class="cluster-name">measure and estimate</h3>
 							<div class="standard" data-code="3-md-1" data-type="skill" data-dependencies="">
 								Tell time
-								<br><a class="standard-code">3.md.1</a>
+								<span class="standard-code">3.md.1</span>
 							</div>
 							<div class="standard" data-code="3-md-2" data-type="real-world" data-dependencies="">
 								Volume and mass
-								<br><a class="standard-code">3.md.2</a>
+								<span class="standard-code">3.md.2</span>
 							</div>
 					</div>
 
@@ -1197,11 +1196,11 @@ var standardTypes = {
 						<h3 class="cluster-name">work with data</h3>
 							<div class="standard" data-code="3-md-3" data-type="real-world" data-dependencies="">
 								Picture and bar graphs (2)
-								<br><a class="standard-code">3.md.3</a>
+								<span class="standard-code">3.md.3</span>
 							</div>
 							<div class="standard" data-code="3-md-4" data-type="skill" data-dependencies="">
 								Line plot with fractions (1)
-								<br><a class="standard-code">3.md.4</a>
+								<span class="standard-code">3.md.4</span>
 							</div>
 					</div>
 
@@ -1210,44 +1209,44 @@ var standardTypes = {
 
 						<div class="standard parent-standard" data-code="3-md-5" data-type="" data-dependencies="">
 							understand area
-							<a class="standard-code">3.md.5</a>
+							<span class="standard-code">3.md.5</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="3-md-5a" data-type="understand" data-dependencies="">
 								Length with unit squares
-								<br><a class="standard-code">3.md.5a</a>
+								<span class="standard-code">3.md.5a</span>
 							</div>
 							<div class="standard" data-code="3-md-5b" data-type="understand" data-dependencies="">
 								Area with unit squares
-								<br><a class="standard-code">3.md.5b</a>
+								<span class="standard-code">3.md.5b</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="3-md-3" data-type="skill" data-dependencies="">
 							Find area by counting unit squares
-							<br><a class="standard-code">3.md.6</a>
+							<span class="standard-code">3.md.6</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="3-md-7" data-type="" data-dependencies="">
 							area to multiplication
-							<a class="standard-code">3.md.7</a>
+							<span class="standard-code">3.md.7</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="3-md-7a" data-type="verify" data-dependencies="">
 								Verify A = l*w
-								<br><a class="standard-code">3.md.7a</a>
+								<span class="standard-code">3.md.7a</span>
 							</div>
 							<div class="standard" data-code="3-md-7b" data-type="real-world" data-dependencies="">
 								Multiply to find area
-								<br><a class="standard-code">3.md.7b</a>
+								<span class="standard-code">3.md.7b</span>
 							</div>
 							<div class="standard" data-code="3-md-7c" data-type="verify" data-dependencies="">
 								Verify the distributive property using area models
-								<br><a class="standard-code">3.md.7c</a>
+								<span class="standard-code">3.md.7c</span>
 							</div>
 							<div class="standard" data-code="3-md-7d" data-type="skill" data-dependencies="">
 								Decompose complex shapes to find area
-								<br><a class="standard-code">3.md.7d</a>
+								<span class="standard-code">3.md.7d</span>
 							</div>
 						</div>
 					</div>
@@ -1257,7 +1256,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="3-md-8" data-type="real-world" data-dependencies="">
 							Perimeters of polygons
-							<br><a class="standard-code">3.md.8</a>
+							<span class="standard-code">3.md.8</span>
 						</div>
 					</div>
 				</div>
@@ -1281,11 +1280,11 @@ var standardTypes = {
 						<h3 class="cluster-name">shapes and their attributes</h3>
 							<div class="standard" data-code="3-g-1" data-type="understand" data-dependencies="">
 								Different shapes may share attributes
-								<br><a class="standard-code">3.g.1</a>
+								<span class="standard-code">3.g.1</span>
 							</div>
 							<div class="standard" data-code="3-g-2" data-type="skill" data-dependencies="">
 								Make fractions of shapes (3)
-								<br><a class="standard-code">3.g.2</a>
+								<span class="standard-code">3.g.2</span>
 							</div>
 					</div>
 				</div>
@@ -1325,11 +1324,11 @@ var standardTypes = {
 						
 							<div class="standard" data-code="4-nf-1" data-type="justify" data-dependencies="">
 								a/b = (n*a)/(n*b)
-								<br><a class="standard-code">4.nf.1</a>
+								<span class="standard-code">4.nf.1</span>
 							</div>
 							<div class="standard" data-code="4-nf-2" data-type="compare" data-dependencies="">
 								Compare unlike fractions
-								<br><a class="standard-code">4.nf.2</a>
+								<span class="standard-code">4.nf.2</span>
 							</div>
 					</div>
 
@@ -1338,43 +1337,43 @@ var standardTypes = {
 						
 						<div class="standard parent-standard" data-code="4-nf-3" data-type="" data-dependencies="">
 							addition and subtraction
-							<a class="standard-code">4.nf.3</a>
+							<span class="standard-code">4.nf.3</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="4-nf-3a" data-type="understand" data-dependencies="">
 								Joining and separating fractions
-								<br><a class="standard-code">4.nf.3a</a>
+								<span class="standard-code">4.nf.3a</span>
 							</div>
 							<div class="standard" data-code="4-nf-3b" data-type="skill" data-dependencies="k-oa-3">
 								Decompose fractions
-								<br><a class="standard-code">4.nf.3b</a>
+								<span class="standard-code">4.nf.3b</span>
 							</div>
 							<div class="standard" data-code="4-nf-3c" data-type="skill" data-dependencies="">
 								Add and subtract mixed numbers
-								<br><a class="standard-code">4.nf.3c</a>
+								<span class="standard-code">4.nf.3c</span>
 							</div>
 							<div class="standard" data-code="4-nf-3d" data-type="real-world" data-dependencies="">
 								Add and subtract fractions
-								<br><a class="standard-code">4.nf.3d</a>
+								<span class="standard-code">4.nf.3d</span>
 							</div>
 						</div>
 
 						<div class="standard parent-standard" data-code="4-nf-4" data-type="" data-dependencies="">
 							multiplication and division
-							<a class="standard-code">4.nf.4</a>
+							<span class="standard-code">4.nf.4</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="4-nf-4a" data-type="understand" data-dependencies="">
 								Understand fractions as multiples of unit fractions
-								<br><a class="standard-code">4.nf.4a</a>
+								<span class="standard-code">4.nf.4a</span>
 							</div>
 							<div class="standard" data-code="4-nf-4b" data-type="understand" data-dependencies="">
 								Understand a * b/c as a*b * 1/c
-								<br><a class="standard-code">4.nf.4b</a>
+								<span class="standard-code">4.nf.4b</span>
 							</div>
 							<div class="standard" data-code="4-nf-4c" data-type="real-world" data-dependencies="">
 								Multiply fractions by whole numbers
-								<br><a class="standard-code">4.nf.4c</a>
+								<span class="standard-code">4.nf.4c</span>
 							</div>
 						</div>
 					</div>
@@ -1384,15 +1383,15 @@ var standardTypes = {
 						
 						<div class="standard" data-code="4-nf-5" data-type="skill" data-dependencies="">
 							Express a/10 as 10a/100
-							<br><a class="standard-code">4.nf.5</a>
+							<span class="standard-code">4.nf.5</span>
 						</div>
 						<div class="standard" data-code="4-nf-6" data-type="skill" data-dependencies="">
 							Decimal notation
-							<br><a class="standard-code">4.nf.6</a>
+							<span class="standard-code">4.nf.6</span>
 						</div>
 						<div class="standard" data-code="4-nf-7" data-type="compare" data-dependencies="">
 							Compare decimals to hundredths
-							<br><a class="standard-code">4.nf.7</a>
+							<span class="standard-code">4.nf.7</span>
 						</div>
 					</div>
 				</div>
@@ -1416,15 +1415,15 @@ var standardTypes = {
 						<h3 class="cluster-name">four operations</h3>
 						<div class="standard" data-code="4-oa-1" data-type="understand" data-dependencies="">
 							Multiplicitive comparisons (2)
-							<br><a class="standard-code">4.oa.1</a>
+							<span class="standard-code">4.oa.1</span>
 						</div>
 						<div class="standard" data-code="4-oa-2" data-type="real-world" data-dependencies="">
 							Multiplication and division problems
-							<br><a class="standard-code">4.oa.2</a>
+							<span class="standard-code">4.oa.2</span>
 						</div>
 						<div class="standard" data-code="4-oa-3" data-type="capstone" data-dependencies="">
 							Multi-step problems with whole numbers
-							<br><a class="standard-code">4.oa.3</a>
+							<span class="standard-code">4.oa.3</span>
 						</div>
 					</div>
 
@@ -1432,7 +1431,7 @@ var standardTypes = {
 						<h3 class="cluster-name">factors and multiples</h3>
 						<div class="standard" data-code="4-oa-4" data-type="skill" data-dependencies="">
 							Factors, multiples, and primes
-							<br><a class="standard-code">4.oa.4</a>
+							<span class="standard-code">4.oa.4</span>
 						</div>
 					</div>
 
@@ -1440,7 +1439,7 @@ var standardTypes = {
 						<h3 class="cluster-name">patterms</h3>
 						<div class="standard" data-code="4-oa-5" data-type="skill" data-dependencies="">
 							Arithmetic patterns (2)
-							<br><a class="standard-code">4.oa.5</a>
+							<span class="standard-code">4.oa.5</span>
 						</div>
 					</div>
 				</div>
@@ -1464,15 +1463,15 @@ var standardTypes = {
 						
 						<div class="standard" data-code="4-nbt-1" data-type="understand" data-dependencies="">
 							Whole number place value and multiples of 10
-							<br><a class="standard-code">4.nbt.1</a>
+							<span class="standard-code">4.nbt.1</span>
 						</div>
 						<div class="standard" data-code="4-nbt-2" data-type="compare" data-dependencies="">
 							Compare whole numbers
-							<br><a class="standard-code">4.nbt.2</a>
+							<span class="standard-code">4.nbt.2</span>
 						</div>
 						<div class="standard" data-code="4-nbt-3" data-type="skill" data-dependencies="">
 							Round whole numbers
-							<br><a class="standard-code">4.nbt.3</a>
+							<span class="standard-code">4.nbt.3</span>
 						</div>
 					</div>
 
@@ -1481,15 +1480,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="4-nbt-4" data-type="fluency" data-dependencies="">
 							Fluently add and subtract whole numbers using the standard algorithm
-							<br><a class="standard-code">4.nbt.4</a>
+							<span class="standard-code">4.nbt.4</span>
 						</div>
 						<div class="standard" data-code="4-nbt-5" data-type="real-world" data-dependencies="">
 							Multiply multi-digit numbers
-							<br><a class="standard-code">4.nbt.5</a>
+							<span class="standard-code">4.nbt.5</span>
 						</div>
 						<div class="standard" data-code="4-nbt-6" data-type="skill" data-dependencies="">
 							Multi-digit dividends and 1-digit divisors
-							<br><a class="standard-code">4.nbt.6</a>
+							<span class="standard-code">4.nbt.6</span>
 						</div>
 					</div>
 				</div>
@@ -1514,15 +1513,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="4-md-1" data-type="skill" data-dependencies="">
 							Measure with different units
-							<br><a class="standard-code">4.md.1</a>
+							<span class="standard-code">4.md.1</span>
 						</div>
 						<div class="standard" data-code="4-md-2" data-type="capstone" data-dependencies="">
 							Solve problems involving measurements
-							<br><a class="standard-code">4.md.2</a>
+							<span class="standard-code">4.md.2</span>
 						</div>
 						<div class="standard" data-code="4-md-3" data-type="real-world" data-dependencies="">
 							Area and perimeter
-							<br><a class="standard-code">4.md.3</a>
+							<span class="standard-code">4.md.3</span>
 						</div>
 					</div>
 
@@ -1530,7 +1529,7 @@ var standardTypes = {
 						<h3 class="cluster-name">work with data</h3>
 						<div class="standard" data-code="4-md-4" data-type="skill" data-dependencies="">
 							Line plot with fractions (2)
-							<br><a class="standard-code">4.md.4</a>
+							<span class="standard-code">4.md.4</span>
 						</div>
 					</div>
 
@@ -1539,26 +1538,26 @@ var standardTypes = {
 
 						<div class="standard parent-standard" data-code="4-md-5" data-type="" data-dependencies="">
 							angles and degrees
-							<a class="standard-code">4.md.5</a>
+							<span class="standard-code">4.md.5</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="4-md-5a" data-type="understand" data-dependencies="">
 								Angles
-								<br><a class="standard-code">4.md.5a</a>
+								<span class="standard-code">4.md.5a</span>
 							</div>
 							<div class="standard" data-code="4-md-5b" data-type="understand" data-dependencies="">
 								Degrees
-								<br><a class="standard-code">4.md.5b</a>
+								<span class="standard-code">4.md.5b</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="4-md-6" data-type="skill" data-dependencies="">
 							Protractors
-							<br><a class="standard-code">4.md.6</a>
+							<span class="standard-code">4.md.6</span>
 						</div>
 						<div class="standard" data-code="4-md-7" data-type="real-world" data-dependencies="">
 							Add and subtract angles
-							<br><a class="standard-code">4.md.7</a>
+							<span class="standard-code">4.md.7</span>
 						</div>
 					</div>
 				</div>
@@ -1583,15 +1582,15 @@ var standardTypes = {
 						
 						<div class="standard" data-code="4-g-1" data-type="skill" data-dependencies="">
 							Point, line, segment, ray, angle, perpendicular, and parallel
-							<br><a class="standard-code">4.g.1</a>
+							<span class="standard-code">4.g.1</span>
 						</div>
 						<div class="standard" data-code="4-g-2" data-type="compare" data-dependencies="">
 							Parallel and perpendicular
-							<br><a class="standard-code">4.g.2</a>
+							<span class="standard-code">4.g.2</span>
 						</div>
 						<div class="standard" data-code="4-g-3" data-type="understand" data-dependencies="">
 							Shape symmetry
-							<br><a class="standard-code">4.g.3</a>
+							<span class="standard-code">4.g.3</span>
 						</div>
 					</div>
 				</div>
@@ -1631,11 +1630,11 @@ var standardTypes = {
 						
 						<div class="standard" data-code="5-nf-1" data-type="skill" data-dependencies="">
 							Add and subtract fractions with unlike denominators
-							<br><a class="standard-code">5.nf.1</a>
+							<span class="standard-code">5.nf.1</span>
 						</div>
 						<div class="standard" data-code="5-nf-2" data-type="real-world" data-dependencies="">
 							Add and subtract fractions
-							<br><a class="standard-code">5.nf.2</a>
+							<span class="standard-code">5.nf.2</span>
 						</div>
 					</div>
 
@@ -1644,60 +1643,60 @@ var standardTypes = {
 						
 						<div class="standard" data-code="5-nf-3" data-type="real-world" data-dependencies="">
 							Understand a/b as a &divide; b
-							<br><a class="standard-code">5.nf.3</a>
+							<span class="standard-code">5.nf.3</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="5-nf-4" data-type="" data-dependencies="">
 							multiplying with fractions
-							<a class="standard-code">5.nf.4</a>
+							<span class="standard-code">5.nf.4</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="5-nf-4a" data-type="understand" data-dependencies="">
 								Understand (a/b)*c and (a*c)/b
-								<br><a class="standard-code">5.nf.4a</a>
+								<span class="standard-code">5.nf.4a</span>
 							</div>
 							<div class="standard" data-code="5-nf-4b" data-type="verify" data-dependencies="">
 								Verify A = l*w for fractional side lengths
-								<br><a class="standard-code">5.nf.4b</a>
+								<span class="standard-code">5.nf.4b</span>
 							</div>
 						</div>
 
 						<div class="standard parent-standard" data-code="5-nf-5" data-type="" data-dependencies="">
 							scaling with fractions
-							<a class="standard-code">5.nf.5</a>
+							<span class="standard-code">5.nf.5</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="5-nf-5a" data-type="compare" data-dependencies="">
 								Compare products without multiplying the factors
-								<br><a class="standard-code">5.nf.5a</a>
+								<span class="standard-code">5.nf.5a</span>
 							</div>
 							<div class="standard" data-code="5-nf-5b" data-type="justify" data-dependencies="">
 								Fraction multiplication as scaling
-								<br><a class="standard-code">5.nf.5b</a>
+								<span class="standard-code">5.nf.5b</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="5-nf-6" data-type="real-world" data-dependencies="">
 							Fraction multiplication problems
-							<br><a class="standard-code">5.nf.6</a>
+							<span class="standard-code">5.nf.6</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="5-nf-7" data-type="" data-dependencies="">
 							dividing with fractions
-							<a class="standard-code">5.nf.7</a>
+							<span class="standard-code">5.nf.7</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="5-nf-7a" data-type="skill" data-dependencies="">
 								Divide a unit fraction by a whole number
-								<br><a class="standard-code">5.nf.7a</a>
+								<span class="standard-code">5.nf.7a</span>
 							</div>
 							<div class="standard" data-code="5-nf-7b" data-type="skill" data-dependencies="">
 								Divide a whole number by a unit fraction
-								<br><a class="standard-code">5.nf.7b</a>
+								<span class="standard-code">5.nf.7b</span>
 							</div>
 							<div class="standard" data-code="5-nf-7c" data-type="real-world" data-dependencies="">
 								Fraction division problems
-								<br><a class="standard-code">5.nf.7c</a>
+								<span class="standard-code">5.nf.7c</span>
 							</div>
 						</div>
 					</div>
@@ -1720,22 +1719,22 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">numerical expressions</h3>
-							<div class="standard" data-code="5-oa-1" data-type="skill" data-dependencies="">
-								Evaluate expressions with parenthesis
-								<br><a class="standard-code">5.oa.1</a>
-							</div>
-							<div class="standard" data-code="5-oa-2" data-type="real-world" data-dependencies="">
-								Create expressions with parenthesis
-								<br><a class="standard-code">5.oa.2</a>
-							</div>
+						<div class="standard" data-code="5-oa-1" data-type="skill" data-dependencies="">
+							Evaluate expressions with parenthesis
+							<span class="standard-code">5.oa.1</span>
+						</div>
+						<div class="standard" data-code="5-oa-2" data-type="real-world" data-dependencies="">
+							Create expressions with parenthesis
+							<span class="standard-code">5.oa.2</span>
+						</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">patterns</h3>
-							<div class="standard" data-code="5-oa-3" data-type="skill" data-dependencies="">
-								Analyze patterns and relationships
-								<br><a class="standard-code">5.oa.3</a>
-							</div>
+						<div class="standard" data-code="5-oa-3" data-type="skill" data-dependencies="">
+							Analyze patterns and relationships
+							<span class="standard-code">5.oa.3</span>
+						</div>
 					</div>
 				</div>
 
@@ -1758,31 +1757,31 @@ var standardTypes = {
 
 						<div class="standard" data-code="5-nbt-1" data-type="understand" data-dependencies="">
 							Decimal number place value and multiples of 10
-							<br><a class="standard-code">5.nbt.1</a>
+							<span class="standard-code">5.nbt.1</span>
 						</div>
 						<div class="standard" data-code="5-nbt-2" data-type="justify" data-dependencies="">
 							Explain patters when multiplying by powers of 10
-							<br><a class="standard-code">5.nbt.2</a>
+							<span class="standard-code">5.nbt.2</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="5-nbt-3" data-type="" data-dependencies="">
 							thousandths
-							<a class="standard-code">5.nbt.3</a>
+							<span class="standard-code">5.nbt.3</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="5-nbt-3a" data-type="skill" data-dependencies="">
 								Numerals, number names, and expanded form (decimal numbers)
-								<br><a class="standard-code">5.nbt.3a</a>
+								<span class="standard-code">5.nbt.3a</span>
 							</div>
 							<div class="standard" data-code="5-nbt-3b" data-type="compare" data-dependencies="">
 								Compare decimals to thousandths
-								<br><a class="standard-code">5.nbt.3b</a>
+								<span class="standard-code">5.nbt.3b</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="5-nbt-4" data-type="skill" data-dependencies="">
 							Round to any place
-							<br><a class="standard-code">5.nbt.4</a>
+							<span class="standard-code">5.nbt.4</span>
 						</div>
 					</div>
 
@@ -1791,15 +1790,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="5-nbt-5" data-type="fluency" data-dependencies="">
 							Fluently multiply whole numbers using the standard algorithm
-							<br><a class="standard-code">5.nbt.5</a>
+							<span class="standard-code">5.nbt.5</span>
 						</div>
 						<div class="standard" data-code="5-nbt-6" data-type="skill" data-dependencies="">
 							Divide whole numbers
-							<br><a class="standard-code">5.nbt.6</a>
+							<span class="standard-code">5.nbt.6</span>
 						</div>
 						<div class="standard" data-code="5-nbt-7" data-type="skill" data-dependencies="">
 							Operate on decimals to hundredths
-							<br><a class="standard-code">5.nbt.7</a>
+							<span class="standard-code">5.nbt.7</span>
 						</div>
 					</div>
 				</div>
@@ -1824,7 +1823,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="5-md-1" data-type="real-world" data-dependencies="">
 							Convert units (1)
-							<br><a class="standard-code">5.md.1</a>
+							<span class="standard-code">5.md.1</span>
 						</div>
 					</div>
 
@@ -1833,7 +1832,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="5-md-2" data-type="real-world" data-dependencies="">
 							Line plot with fractions (3)
-							<br><a class="standard-code">5.md.2</a>
+							<span class="standard-code">5.md.2</span>
 						</div>
 					</div>
 
@@ -1842,40 +1841,40 @@ var standardTypes = {
 
 						<div class="standard parent-standard" data-code="5-md-3" data-type="" data-dependencies="">
 							volume
-							<a class="standard-code">5.md.3</a>
+							<span class="standard-code">5.md.3</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="5-md-3a" data-type="understand" data-dependencies="">
 								Length with unit cubes
-								<br><a class="standard-code">5.md.3a</a>
+								<span class="standard-code">5.md.3a</span>
 							</div>
 							<div class="standard" data-code="5-md-3b" data-type="understand" data-dependencies="">
 								Volume with unit cubes
-								<br><a class="standard-code">5.md.3b</a>
+								<span class="standard-code">5.md.3b</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="5-md-4" data-type="skill" data-dependencies="">
 							Find volume by counting cubes
-							<br><a class="standard-code">5.md.4</a>
+							<span class="standard-code">5.md.4</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="5-md-5" data-type="" data-dependencies="">
 							volume and multiplication
-							<a class="standard-code">5.md.5</a>
+							<span class="standard-code">5.md.5</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="5-md-5a" data-type="verify" data-dependencies="">
 								Verify V = l*w*h
-								<br><a class="standard-code">5.md.5a</a>
+								<span class="standard-code">5.md.5a</span>
 							</div>
 							<div class="standard" data-code="5-md-5b" data-type="real-world" data-dependencies="">
 								Use the formulas V = l*w*h and V = b*h
-								<br><a class="standard-code">5.md.5b</a>
+								<span class="standard-code">5.md.5b</span>
 							</div>
 							<div class="standard" data-code="5-md-5c" data-type="real-world" data-dependencies="">
 								Volume addition and subtraction problems
-								<br><a class="standard-code">5.md.5c</a>
+								<span class="standard-code">5.md.5c</span>
 							</div>
 						</div>
 
@@ -1902,11 +1901,11 @@ var standardTypes = {
 
 						<div class="standard" data-code="5-g-1" data-type="skill" data-dependencies="">
 							Make a coordinate system
-							<br><a class="standard-code">5.g.1</a>
+							<span class="standard-code">5.g.1</span>
 						</div>
 						<div class="standard" data-code="5-g-2" data-type="real-world" data-dependencies="">
 							First quadrant problems
-							<br><a class="standard-code">5.g.2</a>
+							<span class="standard-code">5.g.2</span>
 						</div>
 					</div>
 
@@ -1915,11 +1914,11 @@ var standardTypes = {
 
 						<div class="standard" data-code="5-g-3" data-type="understand" data-dependencies="">
 							Subcategories of shapes
-							<br><a class="standard-code">5.g.3</a>
+							<span class="standard-code">5.g.3</span>
 						</div>
 						<div class="standard" data-code="5-g-2=4" data-type="skill" data-dependencies="">
 							Hierarchy of 2D shapes
-							<br><a class="standard-code">5.g.4</a>
+							<span class="standard-code">5.g.4</span>
 						</div>
 					</div>
 				</div>
@@ -1960,33 +1959,33 @@ var standardTypes = {
 						
 						<div class="standard" data-code="6-rp-1" data-type="skill" data-type="" data-dependencies="">
 							Use ratios to describe relationships
-							<br><a class="standard-code">6.rp.1</a>
+							<span class="standard-code">6.rp.1</span>
 						</div>
 						<div class="standard" data-code="6-rp-2" data-type="understand" data-type="" data-dependencies="">
 							Ratios to unit rates
-							<br><a class="standard-code">6.rp.2</a>
+							<span class="standard-code">6.rp.2</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="6-rp-3" data-type="" data-dependencies="">
 							ratio and rate
-							<a class="standard-code">6.rp.3</a>
+							<span class="standard-code">6.rp.3</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="6-rp-3a" data-type="skill" data-type="link" data-dependencies="">
 								Ratios in tables and coordinate planes
-								<br><a class="standard-code">6.rp.3a</a>
+								<span class="standard-code">6.rp.3a</span>
 							</div>
 							<div class="standard" data-code="6-rp-3b" data-type="real-world" data-dependencies="">
 								Unit rate problems
-								<br><a class="standard-code">6.rp.3b</a>
+								<span class="standard-code">6.rp.3b</span>
 							</div>
 							<div class="standard" data-code="6-rp-3c" data-type="skill" data-dependencies="">
 								Percents as rates per 100
-								<br><a class="standard-code">6.rp.3c</a>
+								<span class="standard-code">6.rp.3c</span>
 							</div>
 							<div class="standard" data-code="6-rp-3d" data-type="skill" data-dependencies="">
 								Convert units (2)
-								<br><a class="standard-code">6.rp.3d</a>
+								<span class="standard-code">6.rp.3d</span>
 							</div>
 						</div>
 					</div>
@@ -2011,35 +2010,35 @@ var standardTypes = {
 
 						<div class="standard" data-code="6-ee-1" data-type="skill" data-dependencies="">
 							Numerical expressions with exponents
-							<br><a class="standard-code">6.ee.1</a>
+							<span class="standard-code">6.ee.1</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="6-ee-2" data-type="" data-dependencies="">
 							algebraic expressions
-							<a class="standard-code">6.ee.2</a>
+							<span class="standard-code">6.ee.2</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="6-ee-2a" data-type="skill" data-dependencies="">
 								Write simple algebraic expressions
-								<br><a class="standard-code">6.ee.2a</a>
+								<span class="standard-code">6.ee.2a</span>
 							</div>
 							<div class="standard" data-code="6-ee-2b" data-type="skill" data-dependencies="">
 								Identify parts of algebraic expressions
-								<br><a class="standard-code">6.ee.2b</a>
+								<span class="standard-code">6.ee.2b</span>
 							</div>
 							<div class="standard" data-code="6-ee-2c" data-type="real-world" data-dependencies="">
 								Evaluate expressions
-								<br><a class="standard-code">6.ee.2c</a>
+								<span class="standard-code">6.ee.2c</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="6-ee-3" data-type="skill" data-dependencies="">
 							Generate equivalent expressions
-							<br><a class="standard-code">6.ee.3</a>
+							<span class="standard-code">6.ee.3</span>
 						</div>
 						<div class="standard" data-code="6-ee-4" data-type="skill" data-dependencies="">
 							Identify equivalent expressions
-							<br><a class="standard-code">6.ee.4</a>
+							<span class="standard-code">6.ee.4</span>
 						</div>
 					</div>
 
@@ -2048,19 +2047,19 @@ var standardTypes = {
 
 						<div class="standard" data-code="6-ee-5" data-type="understand" data-dependencies="">
 							Solutions make equations and inequalities true
-							<br><a class="standard-code">6.ee.5</a>
+							<span class="standard-code">6.ee.5</span>
 						</div>
 						<div class="standard" data-code="6-ee-6" data-type="real-world" data-dependencies="">
 							Write expressions to solve problems
-							<br><a class="standard-code">6.ee.6</a>
+							<span class="standard-code">6.ee.6</span>
 						</div>
 						<div class="standard" data-code="6-ee-7" data-type="real-world" data-dependencies="">
 							Solve x+p = q and px = q for (non-negative p, q, and x)
-							<br><a class="standard-code">6.ee.7</a>
+							<span class="standard-code">6.ee.7</span>
 						</div>
 						<div class="standard" data-code="6-ee-8" data-type="real-world" data-dependencies="">
 							Write inequalities as constraint conditions
-							<br><a class="standard-code">6.ee.8</a>
+							<span class="standard-code">6.ee.8</span>
 						</div>
 					</div>
 
@@ -2069,7 +2068,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="6-ee-9" data-type="real-world" data-dependencies="">
 							Dependent and independent variables
-							<br><a class="standard-code">6.ee.9</a>
+							<span class="standard-code">6.ee.9</span>
 						</div>
 					</div>
 				</div>
@@ -2094,7 +2093,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="6-ns-1" data-type="real-world" data-dependencies="">
 							Divide fractions by fractions
-							<br><a class="standard-code">6.ns.1</a>
+							<span class="standard-code">6.ns.1</span>
 						</div>
 					</div>
 
@@ -2103,15 +2102,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="6-ns-2" data-type="fluency" data-dependencies="">
 							Fluently divide using the standard algorithm
-							<br><a class="standard-code">6.ns.2</a>
+							<span class="standard-code">6.ns.2</span>
 						</div>
 						<div class="standard" data-code="6-ns-3" data-type="fluency" data-dependencies="">
 							Fluently operate on decimals using the standard algorithms
-							<br><a class="standard-code">6.ns.3</a>
+							<span class="standard-code">6.ns.3</span>
 						</div>
 						<div class="standard" data-code="6-ns-4" data-type="skill" data-dependencies="">
 							GCF, LCM, and the distributive property
-							<br><a class="standard-code">6.ns.4</a>
+							<span class="standard-code">6.ns.4</span>
 						</div>
 					</div>
 
@@ -2120,54 +2119,54 @@ var standardTypes = {
 
 						<div class="standard" data-code="6-ns-5" data-type="real-world" data-dependencies="">
 							Positive and negative numbers
-							<br><a class="standard-code">6.ns.5</a>
+							<span class="standard-code">6.ns.5</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="6-ns-6" data-type="" data-dependencies="">
 							rationals on number lines
-							<a class="standard-code">6.ns.6</a>
+							<span class="standard-code">6.ns.6</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="6-ns-6a" data-type="understand" data-dependencies="">
 								Understand the negative sign as the "opposite sign"
-								<br><a class="standard-code">6.ns.6a</a>
+								<span class="standard-code">6.ns.6a</span>
 							</div>
 							<div class="standard" data-code="6-ns-6b" data-type="understand" data-dependencies="">
 								Ordered pairs, points, and reflection over an axis
-								<br><a class="standard-code">6.ns.6b</a>
+								<span class="standard-code">6.ns.6b</span>
 							</div>
 							<div class="standard" data-code="6-ns-6c" data-type="skill" data-dependencies="">
 								Plot points with integer coordinates
-								<br><a class="standard-code">6.ns.6c</a>
+								<span class="standard-code">6.ns.6c</span>
 							</div>
 						</div>
 
 						<div class="standard parent-standard" data-code="6-ns-7" data-type="" data-dependencies="">
 							absolute value
-							<a class="standard-code">6.ns.7</a>
+							<span class="standard-code">6.ns.7</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="6-ns-7a" data-type="skill" data-dependencies="">
 								Inequalities and relative position
-								<br><a class="standard-code">6.ns.7a</a>
+								<span class="standard-code">6.ns.7a</span>
 							</div>
 							<div class="standard" data-code="6-ns-7b" data-type="justify" data-dependencies="">
 								Explain inequalities
-								<br><a class="standard-code">6.ns.7b</a>
+								<span class="standard-code">6.ns.7b</span>
 							</div>
 							<div class="standard" data-code="6-ns-7c" data-type="understand" data-dependencies="">
 								Understand absolute value
-								<br><a class="standard-code">6.ns.7c</a>
+								<span class="standard-code">6.ns.7c</span>
 							</div>
 							<div class="standard" data-code="6-ns-7d" data-type="skill" data-dependencies="">
 								Absolute value comparisons vs. statements of order
-								<br><a class="standard-code">6.ns.7d</a>
+								<span class="standard-code">6.ns.7d</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="6-ns-8" data-type="real-world" data-dependencies="">
 							All four quadrants
-							<br><a class="standard-code">6.ns.8</a>
+							<span class="standard-code">6.ns.8</span>
 						</div>
 					</div>
 				</div>
@@ -2192,15 +2191,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="6-sp-1" data-type="understand" data-dependencies="">
 							Statistical question
-							<br><a class="standard-code">6.sp.1</a>
+							<span class="standard-code">6.sp.1</span>
 						</div>
 						<div class="standard" data-code="6-sp-2" data-type="understand" data-dependencies="">
 							Data distribution basics
-							<br><a class="standard-code">6.sp.2</a>
+							<span class="standard-code">6.sp.2</span>
 						</div>
 						<div class="standard" data-code="6-sp-3" data-type="understand" data-dependencies="">
 							Center vs. variability
-							<br><a class="standard-code">6.sp.3</a>
+							<span class="standard-code">6.sp.3</span>
 						</div>
 					</div>
 
@@ -2209,29 +2208,29 @@ var standardTypes = {
 
 						<div class="standard" data-code="6-sp-4" data-type="skill" data-dependencies="">
 							Dot plots, histograms, and box plots (1)
-							<br><a class="standard-code">6.sp.4</a>
+							<span class="standard-code">6.sp.4</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="6-sp-5" data-type="" data-dependencies="">
 							summarize data sets
-							<a class="standard-code">6.sp.5</a>
+							<span class="standard-code">6.sp.5</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="6-sp-5a" data-type="skill" data-dependencies="">
 								Report the number of observations
-								<br><a class="standard-code">6.sp.5a</a>
+								<span class="standard-code">6.sp.5a</span>
 							</div>
 							<div class="standard" data-code="6-sp-5b" data-type="skill" data-dependencies="">
 								Describe the attribute being observed
-								<br><a class="standard-code">6.sp.5b</a>
+								<span class="standard-code">6.sp.5b</span>
 							</div>
 							<div class="standard" data-code="6-sp-5c" data-type="real-world" data-dependencies="">
 								Measures of center and variability
-								<br><a class="standard-code">6.sp.5c</a>
+								<span class="standard-code">6.sp.5c</span>
 							</div>
 							<div class="standard" data-code="6-sp-5d" data-type="real-world" data-dependencies="">
 								Data distribution shapes
-								<a class="standard-code">6.sp.5d</a>
+								<span class="standard-code">6.sp.5d</span>
 							</div>
 						</div>
 					</div>
@@ -2256,19 +2255,19 @@ var standardTypes = {
 						<h3 class="cluster-name">area, surface area, and volume</h3>
 						<div class="standard" data-code="6-g-1" data-type="real-world" data-dependencies="">
 							Areas of shapes
-							<br><a class="standard-code">6.g.1</a>
+							<span class="standard-code">6.g.1</span>
 						</div>
 						<div class="standard" data-code="6-g-2" data-type="verify" data-dependencies="">
 							Verify V=l*w*h for fractional side lengths
-							<br><a class="standard-code">6.g.2</a>
+							<span class="standard-code">6.g.2</span>
 						</div>
 						<div class="standard" data-code="6-g-3" data-type="real-world" data-dependencies="">
 							Shapes on the coordinate plane
-							<br><a class="standard-code">6.g.3</a>
+							<span class="standard-code">6.g.3</span>
 						</div>
 						<div class="standard" data-code="6-g-4" data-type="real-world" data-dependencies="">
 							2D nets &#8594; 3D figures
-							<br><a class="standard-code">6.g.4</a>
+							<span class="standard-code">6.g.4</span>
 						</div>
 					</div>
 				</div>
@@ -2308,35 +2307,35 @@ var standardTypes = {
 
 						<div class="standard" data-code="7-rp-1" data-type="real-world" data-dependencies="">
 							Unit rates from ratios of fractions
-							<br><a class="standard-code">7.rp.1</a>
+							<span class="standard-code">7.rp.1</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="7-rp-2" data-type="" data-dependencies="">
 							proportional relationships
-							<a class="standard-code">7.rp.2</a>
+							<span class="standard-code">7.rp.2</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="7-rp-2a" data-type="verify" data-dependencies="">
 								Verify proportional relationships
-								<br><a class="standard-code">7.rp.2a</a>
+								<span class="standard-code">7.rp.2a</span>
 							</div>
 							<div class="standard" data-code="7-rp-2b" data-type="skill" data-dependencies="">
 								Identify the constant of proportionality
-								<br><a class="standard-code">7.rp.2b</a>
+								<span class="standard-code">7.rp.2b</span>
 							</div>
 							<div class="standard" data-code="7-rp-2c" data-type="skill" data-dependencies="">
 								Proportion equations: a = pb
-								<br><a class="standard-code">7.rp.2c</a>
+								<span class="standard-code">7.rp.2c</span>
 							</div>
 							<div class="standard" data-code="7-rp-2d" data-type="justify" data-dependencies="">
 								Explain graphs of proportional relationships
-								<br><a class="standard-code">7.rp.2d</a>
+								<span class="standard-code">7.rp.2d</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="7-rp-3" data-type="real-world" data-dependencies="">
 							Proportional relationship problems
-							<br><a class="standard-code">7.rp.3</a>
+							<span class="standard-code">7.rp.3</span>
 						</div>
 					</div>
 				</div>
@@ -2359,11 +2358,11 @@ var standardTypes = {
 						<h3 class="cluster-name">equivalent expressions</h3>
 						<div class="standard" data-code="7-ee-1" data-type="skill" data-dependencies="">
 							Add, subtract, factor, and expand
-							<br><a class="standard-code">7.ee.1</a>
+							<span class="standard-code">7.ee.1</span>
 						</div>
 						<div class="standard" data-code="7-ee-2" data-type="skill" data-dependencies="">
 							Rewrite to shed Llight
-							<br><a class="standard-code">7.ee.2</a>
+							<span class="standard-code">7.ee.2</span>
 						</div>
 					</div>
 
@@ -2371,21 +2370,21 @@ var standardTypes = {
 						<h3 class="cluster-name">problem solving</h3>
 						<div class="standard" data-code="7-ee-3" data-type="capstone" data-dependencies="">
 							Multi-step problems
-							<br><a class="standard-code">7.ee.3</a>
+							<span class="standard-code">7.ee.3</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="7-ee-4" data-type="" data-dependencies="">
 							equations and inequalities
-							<a class="standard-code">7.ee.4</a>
+							<span class="standard-code">7.ee.4</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="7-ee-4a" data-type="real-world" data-dependencies="">
 								Solve equations (1)
-								<br><a class="standard-code">7.ee.4a</a>
+								<span class="standard-code">7.ee.4a</span>
 							</div>
 							<div class="standard" data-code="7-ee-4b" data-type="real-world" data-dependencies="">
 								Solve inequalities
-								<br><a class="standard-code">7.ee.4b</a>
+								<span class="standard-code">7.ee.4b</span>
 							</div>
 						</div>
 					</div>
@@ -2411,53 +2410,53 @@ var standardTypes = {
 
 						<div class="standard parent-standard" data-code="7-ns-1" data-type="" data-dependencies="">
 							addition and subtraction
-							<a class="standard-code">7.ns.1</a>
+							<span class="standard-code">7.ns.1</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="7-ns-1a" data-type="skill" data-dependencies="">
 								Opposites combine to zero
-								<br><a class="standard-code">7.ns.1a</a>
+								<span class="standard-code">7.ns.1a</span>
 							</div>
 							<div class="standard" data-code="7-ns-1b" data-type="understand" data-dependencies="">
 								p + q is located |q| units from p
-								<br><a class="standard-code">7.ns.1b</a>
+								<span class="standard-code">7.ns.1b</span>
 							</div>
 							<div class="standard" data-code="7-ns-1c" data-type="real-world" data-dependencies="">
 								Understand and apply p - q = p + (-q)
-								<br><a class="standard-code">7.ns.1c</a>
+								<span class="standard-code">7.ns.1c</span>
 							</div>
 							<div class="standard" data-code="7-ns-1d" data-type="skill" data-dependencies="">
 								Add and subtract rational numbers
-								<br><a class="standard-code">7.ns.1d</a>
+								<span class="standard-code">7.ns.1d</span>
 							</div>
 						</div>
 
 						<div class="standard parent-standard" data-code="7-ns-2" data-type="" data-dependencies="">
 							multiplication and division
-							<a class="standard-code">7.ns.2</a>
+							<span class="standard-code">7.ns.2</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="7-ns-2a" data-type="understand" data-dependencies="">
 								(-1)(-1) = 1 because distributive property
-								<br><a class="standard-code">7.ns.2a</a>
+								<span class="standard-code">7.ns.2a</span>
 							</div>
 							<div class="standard" data-code="7-ns-2b" data-type="understand" data-dependencies="">
 								-(p/q) = (-p)/q = p/(-q)
-								<br><a class="standard-code">7.ns.2b</a>
+								<span class="standard-code">7.ns.2b</span>
 							</div>
 							<div class="standard" data-code="7-ns-2c" data-type="skill" data-dependencies="">
 								Multiply and divide rational numbers
-								<br><a class="standard-code">7.ns.2c</a>
+								<span class="standard-code">7.ns.2c</span>
 							</div>
 							<div class="standard" data-code="7-ns-2d" data-type="skill" data-dependencies="">
 								Convert fractions to decimals
-								<br><a class="standard-code">7.ns.2d</a>
+								<span class="standard-code">7.ns.2d</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="7-ns-3" data-type="real-world" data-dependencies="">
 							Rational number problems
-							<br><a class="standard-code">7.ns.3</a>
+							<span class="standard-code">7.ns.3</span>
 						</div>
 					</div>
 				</div>
@@ -2482,11 +2481,11 @@ var standardTypes = {
 						
 						<div class="standard" data-code="7-sp-1" data-type="understand" data-dependencies="">
 							Random samples
-							<br><a class="standard-code">7.sp.1</a>
+							<span class="standard-code">7.sp.1</span>
 						</div>
 						<div class="standard" data-code="7-sp-2" data-type="skill" data-dependencies="">
 							Work with multiple samples of a single population
-							<br><a class="standard-code">7.sp.2</a>
+							<span class="standard-code">7.sp.2</span>
 						</div>
 					</div>
 
@@ -2495,11 +2494,11 @@ var standardTypes = {
 
 						<div class="standard" data-code="7-sp-3" data-type="skill" data-dependencies="">
 							Assess overlap of data distributions
-							<br><a class="standard-code">7.sp.3</a>
+							<span class="standard-code">7.sp.3</span>
 						</div>
 						<div class="standard" data-code="7-sp-4" data-type="real-world" data-dependencies="">
 							Use samples to compare different populations
-							<br><a class="standard-code">7.sp.4</a>
+							<span class="standard-code">7.sp.4</span>
 						</div>
 					</div>
 
@@ -2508,44 +2507,44 @@ var standardTypes = {
 
 						<div class="standard" data-code="7-sp-5" data-type="understand" data-dependencies="">
 							0 = never, 1 = always
-							<br><a class="standard-code">7.sp.5</a>
+							<span class="standard-code">7.sp.5</span>
 						</div>
 						<div class="standard" data-code="7-sp-6" data-type="verify" data-dependencies="">
 							Verify probability experimentally
-							<br><a class="standard-code">7.sp.6</a>
+							<span class="standard-code">7.sp.6</span>
 						</div>
 
 						<div class="standard parent-standard" data-code="7-sp-7" data-type="" data-dependencies="">
 							probability models
-							<a class="standard-code">7.sp.7</a>
+							<span class="standard-code">7.sp.7</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="7-sp-7a" data-type="skill" data-dependencies="">
 								Develop a uniform probability model
-								<br><a class="standard-code">7.sp.7a</a>
+								<span class="standard-code">7.sp.7a</span>
 							</div>
 							<div class="standard" data-code="7-sp-7b" data-type="skill" data-dependencies="">
 								Develop a probability model from frequency data
-								<br><a class="standard-code">7.sp.7b</a>
+								<span class="standard-code">7.sp.7b</span>
 							</div>
 						</div>
 
 						<div class="standard parent-standard" data-code="7-sp-8" data-type="" data-dependencies="">
 							compound events
-							<a class="standard-code">7.sp.8</a>
+							<span class="standard-code">7.sp.8</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="7-sp-8a" data-type="understand" data-dependencies="">
 								Compound events and sample spaces
-								<br><a class="standard-code">7.sp.8a</a>
+								<span class="standard-code">7.sp.8a</span>
 							</div>
 							<div class="standard" data-code="7-sp-8b" data-type="skill" data-dependencies="">
 								Work with sample spaces
-								<br><a class="standard-code">7.sp.8b</a>
+								<span class="standard-code">7.sp.8b</span>
 							</div>
 							<div class="standard" data-code="7-sp-8c" data-type="skill" data-dependencies="">
 								Simulate compound events
-								<br><a class="standard-code">7.sp.8c</a>
+								<span class="standard-code">7.sp.8c</span>
 							</div>
 						</div>
 					</div>
@@ -2571,15 +2570,15 @@ var standardTypes = {
 						
 						<div class="standard" data-code="7-g-1" data-type="skill" data-dependencies="">
 							Problems involving scale drawings
-							<br><a class="standard-code">7.g.1</a>
+							<span class="standard-code">7.g.1</span>
 						</div>
 						<div class="standard" data-code="7-g-2" data-type="skill" data-dependencies="">
 							Given 3 sides lengths or 3 angle measures, draw a triangle
-							<br><a class="standard-code">7.g.2</a>
+							<span class="standard-code">7.g.2</span>
 						</div>
 						<div class="standard" data-code="7-g-3" data-type="skill" data-dependencies="">
 							Cross sections of 3D figures
-							<br><a class="standard-code">7.g.3</a>
+							<span class="standard-code">7.g.3</span>
 						</div>
 					</div>
 
@@ -2588,15 +2587,15 @@ var standardTypes = {
 						
 						<div class="standard" data-code="7-g-4" data-type="justify" data-dependencies="">
 							Area and circumference of a circle
-							<br><a class="standard-code">7.g.4</a>
+							<span class="standard-code">7.g.4</span>
 						</div>
 						<div class="standard" data-code="7-g-5" data-type="skill" data-dependencies="">
 							Supplementary, complementary, vertical, and adjacent angles
-							<br><a class="standard-code">7.g.5</a>
+							<span class="standard-code">7.g.5</span>
 						</div>
 						<div class="standard" data-code="7-g-6" data-type="real-world" data-dependencies="">
 							Area, volume, and surface area
-							<br><a class="standard-code">7.g.6</a>
+							<span class="standard-code">7.g.6</span>
 						</div>
 					</div>
 				</div>
@@ -2635,15 +2634,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="8-f-1" data-type="understand" data-dependencies="">
 							A function assigns each input to a single output
-							<br><a class="standard-code">8.f.1</a>
+							<span class="standard-code">8.f.1</span>
 						</div>
 						<div class="standard" data-code="8-f-2" data-type="compare" data-dependencies="">
 							Compare properties of functions
-							<br><a class="standard-code">8.f.2</a>
+							<span class="standard-code">8.f.2</span>
 						</div>
 						<div class="standard" data-code="8-f-3" data-type="verify" data-dependencies="">
 							y = mx + b defines a linear function
-							<br><a class="standard-code">8.f.3</a>
+							<span class="standard-code">8.f.3</span>
 						</div>
 					</div>
 
@@ -2652,11 +2651,11 @@ var standardTypes = {
 
 						<div class="standard" data-code="8-f-4" data-type="real-world" data-dependencies="">
 							Model linear relationships with functions
-							<br><a class="standard-code">8.f.4</a>
+							<span class="standard-code">8.f.4</span>
 						</div>
 						<div class="standard" data-code="8-f-5" data-type="skill" data-dependencies="">
 							Qualitative descriptions of functions and graphs
-							<br><a class="standard-code">8.f.5</a>
+							<span class="standard-code">8.f.5</span>
 						</div>
 					</div>
 				</div>
@@ -2680,19 +2679,19 @@ var standardTypes = {
 
 						<div class="standard" data-code="8-ee-1" data-type="skill" data-dependencies="">
 							Properties of integer exponents
-							<br><a class="standard-code">8.ee.1</a>
+							<span class="standard-code">8.ee.1</span>
 						</div>
 						<div class="standard" data-code="8-ee-2" data-type="skill" data-dependencies="">
 							x^2 = p and x^3 = p
-							<br><a class="standard-code">8.ee.2</a>
+							<span class="standard-code">8.ee.2</span>
 						</div>
 						<div class="standard" data-code="8-ee-3" data-type="skill" data-dependencies="">
 							Multiplying by powers of 10
-							<br><a class="standard-code">8.ee.3</a>
+							<span class="standard-code">8.ee.3</span>
 						</div>
 						<div class="standard" data-code="8-ee-4" data-type="skill" data-dependencies="">
 							Scientific notation
-							<br><a class="standard-code">8.ee.4</a>
+							<span class="standard-code">8.ee.4</span>
 						</div>
 					</div>
 
@@ -2701,11 +2700,11 @@ var standardTypes = {
 
 						<div class="standard" data-code="8-ee-5" data-type="understand" data-dependencies="">
 							Unit rate to slope
-							<br><a class="standard-code">8.ee.5</a>
+							<span class="standard-code">8.ee.5</span>
 						</div>
 						<div class="standard" data-code="8-ee-6" data-type="prove" data-dependencies="">
 							Derive the equation for a line
-							<br><a class="standard-code">8.ee.6</a>
+							<span class="standard-code">8.ee.6</span>
 						</div>
 					</div>
 
@@ -2714,35 +2713,35 @@ var standardTypes = {
 
 						<div class="standard parent-standard" data-code="8-ee-7" data-type="" data-dependencies="">
 							linear, one variable
-							<a class="standard-code">8.ee.7</a>
+							<span class="standard-code">8.ee.7</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="8-ee-7a" data-type="skill" data-dependencies="">
 								One, infinite, or no solutions
-								<br><a class="standard-code">8.ee.7a</a>
+								<span class="standard-code">8.ee.7a</span>
 							</div>
 							<div class="standard" data-code="8-ee-7b" data-type="skill" data-dependencies="">
 								Solve equations (2)
-								<br><a class="standard-code">8.ee.7b</a>
+								<span class="standard-code">8.ee.7b</span>
 							</div>
 						</div>
 
 						<div class="standard parent-standard" data-code="8-ee-8" data-type="" data-dependencies="">
 							simultaneous equations
-							<a class="standard-code">8.ee.8</a>
+							<span class="standard-code">8.ee.8</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="8-ee-8a" data-type="understand" data-dependencies="">
 								Simultaneous solutions and intersection
-								<br><a class="standard-code">8.ee.8a</a>
+								<span class="standard-code">8.ee.8a</span>
 							</div>
 							<div class="standard" data-code="8-ee-8b" data-type="skill" data-dependencies="">
 								Solve simultaneous linear equations
-								<br><a class="standard-code">8.ee.8b</a>
+								<span class="standard-code">8.ee.8b</span>
 							</div>
 							<div class="standard" data-code="8-ee-8c" data-type="real-world" data-dependencies="">
 								Simultaneous equations problems
-								<br><a class="standard-code">8.ee.8c</a>
+								<span class="standard-code">8.ee.8c</span>
 							</div>
 						</div>
 					</div>
@@ -2768,11 +2767,11 @@ var standardTypes = {
 							
 						<div class="standard" data-code="8-ns-1" data-type="understand" data-dependencies="">
 							Link irrational numbers and decimals
-							<br><a class="standard-code">8.ns.1</a>
+							<span class="standard-code">8.ns.1</span>
 						</div>
 						<div class="standard" data-code="8-ns-2" data-type="compare" data-dependencies="">
 							Approximate and compare irrational numbers
-							<br><a class="standard-code">8.ns.2</a>
+							<span class="standard-code">8.ns.2</span>
 						</div>
 					</div>
 				</div>
@@ -2797,19 +2796,19 @@ var standardTypes = {
 						
 						<div class="standard" data-code="8-sp-1" data-type="skill" data-dependencies="">
 							Scatter plots
-							<br><a class="standard-code">8.sp.1</a>
+							<span class="standard-code">8.sp.1</span>
 						</div>
 						<div class="standard" data-code="8-sp-2" data-type="skill" data-dependencies="">
 							Informal line of best fit
-							<br><a class="standard-code">8.sp.2</a>
+							<span class="standard-code">8.sp.2</span>
 						</div>
 						<div class="standard" data-code="8-sp-3" data-type="real-world" data-dependencies="">
 							Linear models
-							<br><a class="standard-code">8.sp.3</a>
+							<span class="standard-code">8.sp.3</span>
 						</div>
 						<div class="standard" data-code="8-sp-4" data-type="real-world" data-dependencies="">
 							Two-way tables (1)
-							<br><a class="standard-code">8.sp.4</a>
+							<span class="standard-code">8.sp.4</span>
 						</div>
 					</div>
 				</div>
@@ -2834,38 +2833,38 @@ var standardTypes = {
 
 						<div class="standard parent-standard" data-code="8-g-1" data-type="" data-dependencies="">
 							transformation properties
-							<a class="standard-code">8.g.1</a>
+							<span class="standard-code">8.g.1</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-code="8-g-1a" data-type="verify" data-dependencies="">
 								Segments &#8594; segments of same length 
-								<br><a class="standard-code">8.g.1a</a>
+								<span class="standard-code">8.g.1a</span>
 							</div>
 							<div class="standard" data-code="8-g-1b" data-type="verify" data-dependencies="">
 								Angles &#8594; angles of same measure
-								<br><a class="standard-code">8.g.1b</a>
+								<span class="standard-code">8.g.1b</span>
 							</div>
 							<div class="standard" data-code="8-g-1b" data-type="verify" data-dependencies="">
 								Parallel lines &#8594; parallel lines
-								<br><a class="standard-code">8.g.1b</a>
+								<span class="standard-code">8.g.1b</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="8-g-2" data-type="understand" data-dependencies="">
 							Congruency
-							<br><a class="standard-code">8.g.2</a>
+							<span class="standard-code">8.g.2</span>
 						</div>
 						<div class="standard" data-code="8-g-3" data-type="skill" data-dependencies="">
 							Describe transformations on the coordinate plane
-							<br><a class="standard-code">8.g.3</a>
+							<span class="standard-code">8.g.3</span>
 						</div>
 						<div class="standard" data-code="8-g-4" data-type="understand" data-dependencies="">
 							Similarity
-							<br><a class="standard-code">8.g.4</a>
+							<span class="standard-code">8.g.4</span>
 						</div>
 						<div class="standard" data-code="8-g-5" data-type="justify" data-dependencies="">
 							Triangle angles, transversals, and AA similarity
-							<br><a class="standard-code">8.g.5</a>
+							<span class="standard-code">8.g.5</span>
 						</div>
 					</div>
 
@@ -2874,15 +2873,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="8-g-6" data-type="justify" data-dependencies="">
 							Pythagorean theorem
-							<br><a class="standard-code">8.g.6</a>
+							<span class="standard-code">8.g.6</span>
 						</div>
 						<div class="standard" data-code="8-g-7" data-type="real-world" data-dependencies="">
 							Right triangle problems
-							<br><a class="standard-code">8.g.7</a>
+							<span class="standard-code">8.g.7</span>
 						</div>
 						<div class="standard" data-code="8-g-8" data-type="skill" data-dependencies="">
 							Distance between points
-							<br><a class="standard-code">8.g.8</a>
+							<span class="standard-code">8.g.8</span>
 						</div>
 					</div>
 
@@ -2891,7 +2890,7 @@ var standardTypes = {
 
 						<div class="standard" data-code="8-g-9" data-type="real-world" data-dependencies="">
 							Volumes of cones, cylinders, and spheres
-							<br><a class="standard-code">8.g.9</a>
+							<span class="standard-code">8.g.9</span>
 						</div>
 					</div>
 				</div>
@@ -2931,15 +2930,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="hsf-if-1" data-type="skill" data-dependencies="">
 							Domain, range, function notation, and graphs of y = f(x)
-							<br><a class="standard-code">hsf.if.1</a>
+							<span class="standard-code">hsf.if.1</span>
 						</div>
 						<div class="standard" data-code="hsf-if-2" data-type="skill" data-dependencies="">
 							Input &#8594; output
-							<br><a class="standard-code">hsf.if.2</a>
+							<span class="standard-code">hsf.if.2</span>
 						</div>
 						<div class="standard" data-code="hsf-if-3" data-type="skill" data-dependencies="">
 							Recursive functions and sequences
-							<br><a class="standard-code">hsf.if.3</a>
+							<span class="standard-code">hsf.if.3</span>
 						</div>
 					</div>
 
@@ -2948,15 +2947,15 @@ var standardTypes = {
 
 						<div class="standard" data-code="hsf-if-4" data-type="real-world" data-dependencies="">
 							Features of functions
-							<br><a class="standard-code">hsf.if.4</a>
+							<span class="standard-code">hsf.if.4</span>
 						</div>
 						<div class="standard" data-code="hsf-if-5" data-type="real-world" data-dependencies="">
 							Explain domain and range for a given context
-							<br><a class="standard-code">hsf.if.5</a>
+							<span class="standard-code">hsf.if.5</span>
 						</div>
 						<div class="standard" data-code="hsf-if-6" data-type="real-world" data-dependencies="">
 							Average rate of change
-							<br><a class="standard-code">hsf.if.6</a>
+							<span class="standard-code">hsf.if.6</span>
 						</div>
 					</div>
 
@@ -2966,44 +2965,44 @@ var standardTypes = {
 						<div class="sub-cluster">
 							<div class="standard" data-code="hsf-if-7" data-type="" data-dependencies="">
 								functions, graphs, key features
-								<br><a class="standard-code">hsf.if.7</a>
+								<span class="standard-code">hsf.if.7</span>
 							</div>
 							<div class="standard" data-code="hsf-if-7a" data-type="real-world" data-dependencies="">
 								Linear and quadratic
-								<br><a class="standard-code">hsf.if.7a</a>
+								<span class="standard-code">hsf.if.7a</span>
 							</div>
 							<div class="standard" data-code="hsf-if-7b" data-type="real-world" data-dependencies="">
 								Square root, cube root, piecewise, and absolute value
-								<br><a class="standard-code">hsf.if.7b</a>
+								<span class="standard-code">hsf.if.7b</span>
 							</div>
 							<div class="standard" data-code="hsf-if-7c" data-type="real-world" data-dependencies="">
 								Polynomial
-								<br><a class="standard-code">hsf.if.7c</a>
+								<span class="standard-code">hsf.if.7c</span>
 							</div>
 							<div class="standard" data-code="hsf-if-7d" data-type="real-world" data-dependencies="">
 								Exponential, logarithmic, and trig
-								<br><a class="standard-code">hsf.if.7d</a>
+								<span class="standard-code">hsf.if.7d</span>
 							</div>
 						</div>
 
 						<div class="sub-cluster">
 							<div class="standard" data-code="hsf-if-8" data-type="" data-dependencies="">
 								reveal function properties
-								<br><a class="standard-code">hsf.if.8</a>
+								<span class="standard-code">hsf.if.8</span>
 							</div>
 							<div class="standard" data-code="hsf-if-8a" data-type="real-world" data-dependencies="">
 								Polynomials: factor and complete the square
-								<br><a class="standard-code">hsf.if.8a</a>
+								<span class="standard-code">hsf.if.8a</span>
 							</div>
 							<div class="standard" data-code="hsf-if-8b" data-type="real-world" data-dependencies="">
 								Rewrite exponentials
-								<br><a class="standard-code">hsf.if.8b</a>
+								<span class="standard-code">hsf.if.8b</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="hsf-if-9" data-type="skill" data-dependencies="">
 							Compare properties of functions
-							<br><a class="standard-code">hsf.if.9</a>
+							<span class="standard-code">hsf.if.9</span>
 						</div>
 					</div>
 				</div>
@@ -3028,24 +3027,24 @@ var standardTypes = {
 						<div class="sub-cluster">
 							<div class="standard" data-code="hsf-bf-1" data-type="" data-dependencies="">
 								relate two quantities
-								<br><a class="standard-code">hsf.bf.1</a>
+								<span class="standard-code">hsf.bf.1</span>
 							</div>
 							<div class="standard" data-code="hsf-bf-1a" data-type="real-world" data-dependencies="">
 								Build functions to model contexts
-								<br><a class="standard-code">hsf.bf.1a</a>
+								<span class="standard-code">hsf.bf.1a</span>
 							</div>
 							<div class="standard" data-code="hsf-bf-1b" data-type="real-world" data-dependencies="">
 								Combine functions
-								<br><a class="standard-code">hsf.bf.1b</a>
+								<span class="standard-code">hsf.bf.1b</span>
 							</div>
-							<div class="standard plus" id="hsf-bf-1c" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsf-bf-1c" data-type="real-world" data-dependencies="">
 								Compose functions: f(g(x))
-								<br><a class="standard-code">hsf.bf.1c</a>
+								<span class="standard-code">hsf.bf.1c</span>
 							</div>
 						</div>
 						<div class="standard" data-code="hsf-bf-2" data-type="real-world" data-dependencies="">
 							Arithmetic and geometric sequences
-							<br><a class="standard-code">hsf.bf.2</a>
+							<span class="standard-code">hsf.bf.2</span>
 						</div>
 					</div>
 
@@ -3054,35 +3053,35 @@ var standardTypes = {
 
 						<div class="standard" data-code="hsf-bf-3" data-type="skill" data-dependencies="">
 							f(x) + k, f(x + k), f(kx), kf(x); even and oddd functions
-							<br><a class="standard-code">hsf.bf.3</a>
+							<span class="standard-code">hsf.bf.3</span>
 						</div>
 
 						<div class="sub-cluster">
 							<div class="standard" data-code="hsf-bf-4" data-type="" data-dependencies="">
 								inverse functions
-								<br><a class="standard-code">hsf.bf.4</a>
+								<span class="standard-code">hsf.bf.4</span>
 							</div>
 							<div class="standard" data-code="hsf-bf-4a" data-type="skill" data-dependencies="">
 								Find inverse by solving
-								<br><a class="standard-code">hsf.bf.4a</a>
+								<span class="standard-code">hsf.bf.4a</span>
 							</div>
-							<div class="standard plus" id="hsf-bf-4b" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-bf-4b" data-type="skill" data-dependencies="">
 								Verify inverse by composition
-								<br><a class="standard-code">hsf.bf.4b</a>
+								<span class="standard-code">hsf.bf.4b</span>
 							</div>
-							<div class="standard plus" id="hsf-bf-4c" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-bf-4c" data-type="skill" data-dependencies="">
 								Inverse graphs and tables
-								<br><a class="standard-code">hsf.bf.4c</a>
+								<span class="standard-code">hsf.bf.4c</span>
 							</div>
-							<div class="standard plus" id="hsf-bf-4d" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-bf-4d" data-type="skill" data-dependencies="">
 								restrict domain to make invertible
-								<br><a class="standard-code">hsf.bf.4d</a>
+								<span class="standard-code">hsf.bf.4d</span>
 							</div>
 						</div>
 
-						<div class="standard plus" id="hsf-bf-5" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsf-bf-5" data-type="skill" data-dependencies="">
 							Exponents and logarithms
-							<br><a class="standard-code">hsf.bf.5</a>
+							<span class="standard-code">hsf.bf.5</span>
 						</div>
 					</div>
 				</div>
@@ -3107,33 +3106,33 @@ var standardTypes = {
 						<div class="sub-cluster">
 							<div class="standard" data-code="hsf-le-1" data-type="" data-dependencies="">
 								linear vs. exponential
-								<br><a class="standard-code">hsf.le.1</a>
+								<span class="standard-code">hsf.le.1</span>
 							</div>
 							<div class="standard" data-code="hsf-le-1a" data-type="real-world" data-dependencies="">
 								Growth: equal differences vs. equal factors
-								<br><a class="standard-code">hsf.le.1a</a>
+								<span class="standard-code">hsf.le.1a</span>
 							</div>
-							<div class="standard plus" id="hsf-le-1b" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsf-le-1b" data-type="real-world" data-dependencies="">
 								Spot constant rate of change
-								<br><a class="standard-code">hsf.le.1b</a>
+								<span class="standard-code">hsf.le.1b</span>
 							</div>
-							<div class="standard plus" id="hsf-le-1c" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsf-le-1c" data-type="real-world" data-dependencies="">
 								Spot constant percent rate of change
-								<br><a class="standard-code">hsf.le.1c</a>
+								<span class="standard-code">hsf.le.1c</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="hsf-le-2" data-type="real-world" data-dependencies="">
 							Construct functions from graphs, tables, and descriptions
-							<br><a class="standard-code">hsf.le.2</a>
+							<span class="standard-code">hsf.le.2</span>
 						</div>
 						<div class="standard" data-code="hsf-le-3" data-type="real-world" data-dependencies="">
 							Exponential functions eventually surpass linear ones
-							<br><a class="standard-code">hsf.le.3</a>
+							<span class="standard-code">hsf.le.3</span>
 						</div>
 						<div class="standard" data-code="hsf-le-4" data-type="real-world" data-dependencies="">
 							Logarithmic solutions
-							<br><a class="standard-code">hsf.le.4</a>
+							<span class="standard-code">hsf.le.4</span>
 						</div>
 					</div>
 
@@ -3141,7 +3140,7 @@ var standardTypes = {
 						<h3 class="cluster-name">interpret expressions</h3>
 						<div class="standard" data-code="hsf-le-5" data-type="real-world" data-dependencies="">
 							Interpret function parameters
-							<br><a class="standard-code">hsf.le.5</a>
+							<span class="standard-code">hsf.le.5</span>
 						</div>
 					</div>
 				</div>
@@ -3164,19 +3163,19 @@ var standardTypes = {
 						<h3 class="cluster-name">unit circle-o trig</h3>
 							<div class="standard" data-code="hsf-tf-1" data-type="skill" data-dependencies="">
 								Radians: length of subtended arc on unit circle-o
-								<br><a class="standard-code">hsf.tf.1</a>
+								<span class="standard-code">hsf.tf.1</span>
 							</div>
 							<div class="standard" data-code="hsf-tf-2" data-type="justify" data-dependencies="">
 								Why do trig functions work for all real numbers?
-								<br><a class="standard-code">hsf.tf.2</a>
+								<span class="standard-code">hsf.tf.2</span>
 							</div>
-							<div class="standard plus" id="hsf-tf-3" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-tf-3" data-type="skill" data-dependencies="">
 								Special triangles
-								<br><a class="standard-code">hsf.tf.3</a>
+								<span class="standard-code">hsf.tf.3</span>
 							</div>
-							<div class="standard plus" id="hsf-tf-4" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-tf-4" data-type="skill" data-dependencies="">
 								Symmetry and periodicity
-								<br><a class="standard-code">hsf.tf.4</a>
+								<span class="standard-code">hsf.tf.4</span>
 							</div>
 					</div>
 
@@ -3184,15 +3183,15 @@ var standardTypes = {
 						<h3 class="cluster-name">model with trig functions</h3>
 							<div class="standard" data-code="hsf-tf-5" data-type="real-world" data-dependencies="">
 								Model periodic phenomena
-								<br><a class="standard-code">hsf.tf.5</a>
+								<span class="standard-code">hsf.tf.5</span>
 							</div>
-							<div class="standard plus" id="hsf-tf-6" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-tf-6" data-type="skill" data-dependencies="">
 								Understand inverse trig functions
-								<br><a class="standard-code">hsf.tf.6</a>
+								<span class="standard-code">hsf.tf.6</span>
 							</div>
-							<div class="standard plus" id="hsf-tf-7" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsf-tf-7" data-type="real-world" data-dependencies="">
 								Apply inverse trig functions
-								<br><a class="standard-code">hsf.tf.7</a>
+								<span class="standard-code">hsf.tf.7</span>
 							</div>
 					</div>
 
@@ -3200,11 +3199,11 @@ var standardTypes = {
 						<h3 class="cluster-name">graphs</h3>
 							<div class="standard" data-code="hsf-tf-8" data-type="prove" data-dependencies="">
 								Prove the Pythagorean identity
-								<br><a class="standard-code">hsf.tf.8</a>
+								<span class="standard-code">hsf.tf.8</span>
 							</div>
-							<div class="standard plus" id="hsf-tf-9" data-type="prove" data-dependencies="">
+							<div class="standard plus" data-code="hsf-tf-9" data-type="prove" data-dependencies="">
 								Trig addition and subtraction formulas 
-								<br><a class="standard-code">hsf.tf.9</a>
+								<span class="standard-code">hsf.tf.9</span>
 							</div>
 					</div>
 				</div>
@@ -3243,23 +3242,23 @@ var standardTypes = {
 						<h3 class="cluster-name">interpreting structure</h3>
 
 						<div class="sub-cluster">
-							<div class="standard plus" id="hsa-sse-1" data-type="" data-dependencies="">
+							<div class="standard plus" data-code="hsa-sse-1" data-type="" data-dependencies="">
 								expressions in context
-								<br><a class="standard-code">hsa.sse.1</a>
+								<span class="standard-code">hsa.sse.1</span>
 							</div>
-							<div class="standard plus" id="hsa-sse-1a" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsa-sse-1a" data-type="real-world" data-dependencies="">
 								Terms, factors, and coefficients
-								<br><a class="standard-code">hsa.sse.1a</a>
+								<span class="standard-code">hsa.sse.1a</span>
 							</div>
-							<div class="standard plus" id="hsa-sse-1b" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsa-sse-1b" data-type="real-world" data-dependencies="">
 								Make sense of complex expressions
-								<br><a class="standard-code">hsa.sse.1b</a>
+								<span class="standard-code">hsa.sse.1b</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="hsa-sse-2" data-type="skill" data-dependencies="">
 							Rewrite to see structure
-							<br><a class="standard-code">hsa.sse.2</a>
+							<span class="standard-code">hsa.sse.2</span>
 						</div>
 					</div>
 
@@ -3267,27 +3266,27 @@ var standardTypes = {
 						<h3 class="cluster-name">rewrite &#8596; solve</h3>
 
 						<div class="sub-cluster">
-							<div class="standard plus" id="hsa-sse-3" data-type="" data-dependencies="">
+							<div class="standard plus" data-code="hsa-sse-3" data-type="" data-dependencies="">
 								see and use structure
-								<br><a class="standard-code">hsa.sse.3</a>
+								<span class="standard-code">hsa.sse.3</span>
 							</div>
-							<div class="standard plus" id="hsa-sse-3a" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsa-sse-3a" data-type="real-world" data-dependencies="">
 								Factor quadratics (reveal zeros)
-								<br><a class="standard-code">hsa.sse.3a</a>
+								<span class="standard-code">hsa.sse.3a</span>
 							</div>
-							<div class="standard plus" id="hsa-sse-3b" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsa-sse-3b" data-type="real-world" data-dependencies="">
 								Complete the square (reveal max and min)
-								<br><a class="standard-code">hsa.sse.3b</a>
+								<span class="standard-code">hsa.sse.3b</span>
 							</div>
-							<div class="standard plus" id="hsa-sse-3c" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsa-sse-3c" data-type="real-world" data-dependencies="">
 								Rewrite exponentials
-								<br><a class="standard-code">hsa.sse.3c</a>
+								<span class="standard-code">hsa.sse.3c</span>
 							</div>
 						</div>
 
 						<div class="standard" data-code="hsa-sse-4" data-type="prove" data-dependencies="">
 							Finite geometric series
-							<br><a class="standard-code">hsa.sse.4</a>
+							<span class="standard-code">hsa.sse.4</span>
 						</div>
 					</div>
 				</div>
@@ -3311,7 +3310,7 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsa-apr-1" data-type="skill" data-dependencies="">
 							Polynomials form a system
-							<br><a class="standard-code">hsa.apr.1</a>
+							<span class="standard-code">hsa.apr.1</span>
 						</div>
 					</div>
 
@@ -3320,11 +3319,11 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsa-apr-2" data-type="skill" data-dependencies="">
 							Remainder theorem
-							<br><a class="standard-code">hsa.apr.2</a>
+							<span class="standard-code">hsa.apr.2</span>
 						</div>
 						<div class="standard" data-code="hsa-apr-3" data-type="skill" data-dependencies="">
 							Find zeros --> sketch graph
-							<br><a class="standard-code">hsa.apr.3</a>
+							<span class="standard-code">hsa.apr.3</span>
 						</div>
 					</div>
 
@@ -3333,11 +3332,11 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsa-apr-4" data-type="prove" data-dependencies="">
 							Prove polynomial identities
-							<br><a class="standard-code">hsa.apr.4</a>
+							<span class="standard-code">hsa.apr.4</span>
 						</div>
-						<div class="standard plus" id="hsa-apr-5" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsa-apr-5" data-type="skill" data-dependencies="">
 							Binomial theorem
-							<br><a class="standard-code">hsa.apr.5</a>
+							<span class="standard-code">hsa.apr.5</span>
 						</div>
 					</div>
 
@@ -3346,11 +3345,11 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsa-apr-6" data-type="skill" data-dependencies="">
 							a(x)/b(x) --> q(x) + r(x)/b(x)
-							<br><a class="standard-code">hsa.apr.6</a>
+							<span class="standard-code">hsa.apr.6</span>
 						</div>
-						<div class="standard plus" id="hsa-apr-7" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsa-apr-7" data-type="skill" data-dependencies="">
 							Rational expressions form a system
-							<br><a class="standard-code">hsa.apr.7</a>
+							<span class="standard-code">hsa.apr.7</span>
 						</div>
 					</div>
 				</div>
@@ -3374,19 +3373,19 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsa-ced-1" data-type="skill" data-dependencies="">
 							Create and solve 1-variable equations
-							<br><a class="standard-code">hsa.ced.1</a>
+							<span class="standard-code">hsa.ced.1</span>
 						</div>
 						<div class="standard" data-code="hsa-ced-2" data-type="skill" data-dependencies="">
 							Create and graph 2-variable equations
-							<br><a class="standard-code">hsa.ced.2</a>
+							<span class="standard-code">hsa.ced.2</span>
 						</div>
 						<div class="standard" data-code="hsa-ced-3" data-type="real-world" data-dependencies="">
 							Constraint equations and inequalities
-							<br><a class="standard-code">hsa.ced.3</a>
+							<span class="standard-code">hsa.ced.3</span>
 						</div>
 						<div class="standard" data-code="hsa-ced-4" data-type="real-world" data-dependencies="">
 							Rearrange formulas
-							<br><a class="standard-code">hsa.ced.4</a>
+							<span class="standard-code">hsa.ced.4</span>
 						</div>
 					</div>
 				</div>
@@ -3410,11 +3409,11 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsa-rei-1" data-type="skill" data-dependencies="">
 							Solve simple equations; explain each step
-							<br><a class="standard-code">hsa.rei.1</a>
+							<span class="standard-code">hsa.rei.1</span>
 						</div>
 						<div class="standard" data-code="hsa-rei-2" data-type="justify" data-dependencies="">
 							Extraneous solutions
-							<br><a class="standard-code">hsa.rei.2</a>
+							<span class="standard-code">hsa.rei.2</span>
 						</div>
 					</div>
 
@@ -3423,21 +3422,21 @@ var standardTypes = {
 
 						<div class="standard" data-code="hsa-rei-3" data-type="skill" data-dependencies="">
 							Linear relations
-							<br><a class="standard-code">hsa.rei.3</a>
+							<span class="standard-code">hsa.rei.3</span>
 						</div>
 
 						<div class="sub-cluster">
 							<div class="standard" data-code="hsa-rei-4" data-type="" data-dependencies="">
 								quadratic equations
-								<br><a class="standard-code">hsa.rei.4</a>
+								<span class="standard-code">hsa.rei.4</span>
 							</div>
 							<div class="standard" data-code="hsa-rei-4a" data-type="prove" data-dependencies="">
 								Derive the quadratic formula
-								<br><a class="standard-code">hsa.rei.4a</a>
+								<span class="standard-code">hsa.rei.4a</span>
 							</div>
 							<div class="standard" data-code="hsa-rei-4b" data-type="skill" data-dependencies="">
 								Solve quadratic equations (many methods)
-								<br><a class="standard-code">hsa.rei.4b</a>
+								<span class="standard-code">hsa.rei.4b</span>
 							</div>
 						</div>
 					</div>
@@ -3446,23 +3445,23 @@ var standardTypes = {
 						<h3 class="cluster-name">systems of equations</h3>
 						<div class="standard" data-code="hsa-rei-5" data-type="prove" data-dependencies="">
 							Equivalent systems
-							<br><a class="standard-code">hsa.rei.5</a>
+							<span class="standard-code">hsa.rei.5</span>
 						</div>
 						<div class="standard" data-code="hsa-rei-6" data-type="skill" data-dependencies="">
 							Systems of linear equations
-							<br><a class="standard-code">hsa.rei.6</a>
+							<span class="standard-code">hsa.rei.6</span>
 						</div>
 						<div class="standard" data-code="hsa-rei-7" data-type="skill" data-dependencies="">
 							2 equations: one linear, one quadratic
-							<br><a class="standard-code">hsa.rei.7</a>
+							<span class="standard-code">hsa.rei.7</span>
 						</div>
-						<div class="standard plus" id="hsa-rei-8" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsa-rei-8" data-type="skill" data-dependencies="">
 							System &#8594; matrix
-							<br><a class="standard-code">hsa.rei.8</a>
+							<span class="standard-code">hsa.rei.8</span>
 						</div>
-						<div class="standard plus" id="hsa-rei-9" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsa-rei-9" data-type="skill" data-dependencies="">
 							Invert matrix &#8594; solve system
-							<br><a class="standard-code">hsa.rei.9</a>
+							<span class="standard-code">hsa.rei.9</span>
 						</div>
 					</div>
 
@@ -3470,15 +3469,15 @@ var standardTypes = {
 						<h3 class="cluster-name">graphs</h3>
 						<div class="standard" data-code="hsa-rei-10" data-type="skill" data-dependencies="">
 							Graph as set of solutions
-							<br><a class="standard-code">hsa.rei.10</a>
+							<span class="standard-code">hsa.rei.10</span>
 						</div>
 						<div class="standard" data-code="hsa-rei-11" data-type="justify" data-dependencies="">
 							Intersection = solution
-							<br><a class="standard-code">hsa.rei.11</a>
+							<span class="standard-code">hsa.rei.11</span>
 						</div>
 						<div class="standard" data-code="hsa-rei-12" data-type="skill" data-dependencies="">
 							Solutions to systems of linear inequalities
-							<br><a class="standard-code">hsa.rei.12</a>
+							<span class="standard-code">hsa.rei.12</span>
 						</div>
 					</div>
 				</div>
@@ -3518,11 +3517,11 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsn-rn-1" data-type="skill" data-dependencies="">
 							Properties of rational exponents
-							<br><a class="standard-code">hsn.rn.1</a>
+							<span class="standard-code">hsn.rn.1</span>
 						</div>
 						<div class="standard" data-code="hsn-rn-2" data-type="skill" data-dependencies="">
 							Expressions, radicals, and rational exponents
-							<br><a class="standard-code">hsn.rn.2</a>
+							<span class="standard-code">hsn.rn.2</span>
 						</div>
 					</div>
 
@@ -3531,7 +3530,7 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsn-rn-3" data-type="justify" data-dependencies="">
 							Sums and products of rational and irrational numbers
-							<br><a class="standard-code">hsn.rn.3</a>
+							<span class="standard-code">hsn.rn.3</span>
 						</div>
 					</div>
 				</div>
@@ -3555,15 +3554,15 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsn-q-1" data-type="real-world" data-dependencies="">
 							Scale, units, and origin in graphs
-							<br><a class="standard-code">hsn.q.1</a>
+							<span class="standard-code">hsn.q.1</span>
 						</div>
 						<div class="standard" data-code="hsn-q-2" data-type="real-world" data-dependencies="">
 							Define quantities when modeling
-							<br><a class="standard-code">hsn.q.2</a>
+							<span class="standard-code">hsn.q.2</span>
 						</div>
 						<div class="standard" data-code="hsn-q-3" data-type="real-world" data-dependencies="">
 							Appropriate accuracy
-							<br><a class="standard-code">hsn.q.3</a>
+							<span class="standard-code">hsn.q.3</span>
 						</div>
 					</div>
 				</div>
@@ -3586,32 +3585,32 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsn-cn-1" data-type="skill" data-dependencies="">
 							a + bi where i^2 = -1
-							<br><a class="standard-code">hsn.cn.1</a>
+							<span class="standard-code">hsn.cn.1</span>
 						</div>
 						<div class="standard" data-code="hsn-cn-2" data-type="skill" data-dependencies="">
 							Operate on complex numbers
-							<br><a class="standard-code">hsn.cn.2</a>
+							<span class="standard-code">hsn.cn.2</span>
 						</div>
-						<div class="standard plus" id="hsn-cn-3" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-3" data-type="skill" data-dependencies="">
 							Conjugates, moduli, and quotients
-							<br><a class="standard-code">hsn.cn.3</a>
+							<span class="standard-code">hsn.cn.3</span>
 						</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">the complex plane</h3>
 						
-						<div class="standard plus" id="hsn-cn-4" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-4" data-type="skill" data-dependencies="">
 							Rectangular and polar form
-							<br><a class="standard-code">hsn.cn.4</a>
+							<span class="standard-code">hsn.cn.4</span>
 						</div>
-						<div class="standard plus" id="hsn-cn-5" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-5" data-type="skill" data-dependencies="">
 							Represent operations on the complex plane
-							<br><a class="standard-code">hsn.cn.5</a>
+							<span class="standard-code">hsn.cn.5</span>
 						</div>
-						<div class="standard plus" id="hsn-cn-6" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-6" data-type="skill" data-dependencies="">
 							Link distance and modulus; link midpoint and average 
-							<br><a class="standard-code">hsn.cn.6</a>
+							<span class="standard-code">hsn.cn.6</span>
 						</div>
 					</div>
 
@@ -3620,15 +3619,15 @@ var standardTypes = {
 						
 						<div class="standard" data-code="hsn-cn-7" data-type="skill" data-dependencies="">
 							Quadratics with complex solutions
-							<br><a class="standard-code">hsn.cn.7</a>
+							<span class="standard-code">hsn.cn.7</span>
 						</div>
-						<div class="standard plus" id="hsn-cn-8" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-8" data-type="skill" data-dependencies="">
 							Polynomial identities with complex numbers
-							<br><a class="standard-code">hsn.cn.8</a>
+							<span class="standard-code">hsn.cn.8</span>
 						</div>
-						<div class="standard plus" id="hsn-cn-9" data-type="justify" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-9" data-type="justify" data-dependencies="">
 							The Fundament Theorem of Algebra
-							<br><a class="standard-code">hsn.cn.9</a>
+							<span class="standard-code">hsn.cn.9</span>
 						</div>
 					</div>
 				</div>
@@ -3648,17 +3647,17 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">model with vectors</h3>
-						<div class="standard plus" id="hsn-vm-1" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-1" data-type="skill" data-dependencies="">
 							Vector as magnitude and direction
-							<br><a class="standard-code">hsn.vm.1</a>
+							<span class="standard-code">hsn.vm.1</span>
 						</div>
-						<div class="standard plus" id="hsn-vm-2" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-2" data-type="skill" data-dependencies="">
 							Vector components from endpoints
-							<br><a class="standard-code">hsn.vm.2</a>
+							<span class="standard-code">hsn.vm.2</span>
 						</div>
-						<div class="standard plus" id="hsn-vm-3" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-3" data-type="real-world" data-dependencies="">
 							Vector problems
-							<br><a class="standard-code">hsn.vm.3</a>
+							<span class="standard-code">hsn.vm.3</span>
 						</div>
 					</div>
 
@@ -3666,68 +3665,68 @@ var standardTypes = {
 						<h3 class="cluster-name">work with vectors</h3>
 
 						<div class="sub-cluster">
-							<div class="standard plus" id="hsn-vm-4" data-type="" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-4" data-type="" data-dependencies="">
 								add and subbtract vectors
-								<br><a class="standard-code">hsn.vm.4</a>
+								<span class="standard-code">hsn.vm.4</span>
 							</div>
-							<div class="standard plus" id="hsn-vm-4a" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-4a" data-type="skill" data-dependencies="">
 								Add vectors by components
-								<br><a class="standard-code">hsn.vm.4a</a>
+								<span class="standard-code">hsn.vm.4a</span>
 							</div>
-							<div class="standard plus" id="hsn-vm-4b" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-4b" data-type="skill" data-dependencies="">
 								Components &#8596; magnitiude-direction
-								<br><a class="standard-code">hsn.vm.4b</a>
+								<span class="standard-code">hsn.vm.4b</span>
 							</div>
-							<div class="standard plus" id="hsn-vm-4b" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-4b" data-type="skill" data-dependencies="">
 								Understand v - w as v + (-w)
-								<br><a class="standard-code">hsn.vm.4b</a>
+								<span class="standard-code">hsn.vm.4b</span>
 							</div>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard plus" id="hsn-vm-5" data-type="" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-5" data-type="" data-dependencies="">
 								scalar times vector
-								<br><a class="standard-code">hsn.vm.5</a>
+								<span class="standard-code">hsn.vm.5</span>
 							</div>
-							<div class="standard plus" id="hsn-vm-5a" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-5a" data-type="skill" data-dependencies="">
 								Visualize scalar multiplication
-								<br><a class="standard-code">hsn.vm.5a</a>
+								<span class="standard-code">hsn.vm.5a</span>
 							</div>
-							<div class="standard plus" id="hsn-vm-5b" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-5b" data-type="skill" data-dependencies="">
 								Magnitude and direction of scalar multiples
-								<br><a class="standard-code">hsn.vm.5b</a>
+								<span class="standard-code">hsn.vm.5b</span>
 							</div>
 						</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">matrices</h3>
-						<div class="standard plus" id="hsn-vm-6" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-6" data-type="real-world" data-dependencies="">
 							Represent data with matrices
-							<br><a class="standard-code">hsn.vm.6</a>
+							<span class="standard-code">hsn.vm.6</span>
 						</div>
-						<div class="standard plus" id="hsn-vm-7" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-7" data-type="real-world" data-dependencies="">
 							Scalar times matrix
-							<br><a class="standard-code">hsn.vm.7</a>
+							<span class="standard-code">hsn.vm.7</span>
 						</div>
-						<div class="standard plus" id="hsn-vm-8" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-8" data-type="skill" data-dependencies="">
 							Operations with matrices
-							<br><a class="standard-code">hsn.vm.8</a>
+							<span class="standard-code">hsn.vm.8</span>
 						</div>
-						<div class="standard plus" id="hsn-vm-9" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-9" data-type="skill" data-dependencies="">
 							AB != BA, A(BC) = (AB)C, and A(B + C) = AB + BC
-							<br><a class="standard-code">hsn.vm.9</a>
+							<span class="standard-code">hsn.vm.9</span>
 						</div>
-						<div class="standard plus" id="hsn-vm-10" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-10" data-type="skill" data-dependencies="">
 							Zero and identity matrices; determinant and inverse
-							<br><a class="standard-code">hsn.vm.10</a>
+							<span class="standard-code">hsn.vm.10</span>
 						</div>
-						<div class="standard plus" id="hsn-vm-11" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-11" data-type="skill" data-dependencies="">
 							Matrices as transformations of vectors
-							<br><a class="standard-code">hsn.vm.11</a>
+							<span class="standard-code">hsn.vm.11</span>
 						</div>
-						<div class="standard plus" id="hsn-vm-12" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-12" data-type="skill" data-dependencies="">
 							2x2 matrix transformations; link determinant to area
-							<br><a class="standard-code">hsn.vm.12</a>
+							<span class="standard-code">hsn.vm.12</span>
 						</div>
 					</div>
 				</div>
@@ -3767,19 +3766,19 @@ var standardTypes = {
 
 							<div class="standard" data-code="hss-id-1" data-type="skill" data-dependencies="">
 								Dot plots, histograms, and box plots (2)
-								<br><a class="standard-code">hss.id.1</a>
+								<span class="standard-code">hss.id.1</span>
 							</div>
 							<div class="standard" data-code="hss-id-2" data-type="skill" data-dependencies="">
 								Mean, median, IQR, and standard deviation
-								<br><a class="standard-code">hss.id.2</a>
+								<span class="standard-code">hss.id.2</span>
 							</div>
 							<div class="standard" data-code="hss-id-3" data-type="skill" data-dependencies="">
 								Analyze shape, center, spread, and extreme data points
-								<br><a class="standard-code">hss.id.3</a>
+								<span class="standard-code">hss.id.3</span>
 							</div>
 							<div class="standard" data-code="hss-id-4" data-type="skill" data-dependencies="">
 								Fit a normal distribution to a data set when appropriate
-								<br><a class="standard-code">hss.id.4</a>
+								<span class="standard-code">hss.id.4</span>
 							</div>
 					</div>
 
@@ -3788,24 +3787,24 @@ var standardTypes = {
 
 							<div class="standard" data-code="hss-id-5" data-type="skill" data-dependencies="">
 								Two-way tables (2)
-								<br><a class="standard-code">hss.id.5</a>
+								<span class="standard-code">hss.id.5</span>
 							</div>
 						<div class="sub-cluster">
 								<div class="standard" data-code="hss-id-6" data-type="" data-dependencies="">
 									fitting functions
-									<br><a class="standard-code">hss.id.6</a>
+									<span class="standard-code">hss.id.6</span>
 								</div>
 								<div class="standard" data-code="hss-id-6a" data-type="skill" data-dependencies="">
 									Fit linear, quadratic, and exponential functions
-									<br><a class="standard-code">hss.id.6a</a>
+									<span class="standard-code">hss.id.6a</span>
 								</div>
 								<div class="standard" data-code="hss-id-6b" data-type="skill" data-dependencies="">
 									Residuals
-									<br><a class="standard-code">hss.id.6b</a>
+									<span class="standard-code">hss.id.6b</span>
 								</div>
 								<div class="standard" data-code="hss-id-6c" data-type="skill" data-dependencies="">
 									Linear fit for a scatter plot
-									<br><a class="standard-code">hss.id.6c</a>
+									<span class="standard-code">hss.id.6c</span>
 								</div>
 						</div>
 					</div>
@@ -3815,15 +3814,15 @@ var standardTypes = {
 
 							<div class="standard" data-code="hss-id-7" data-type="real-world" data-dependencies="">
 								Interpret slope and intercept
-								<br><a class="standard-code">hss.id.7</a>
+								<span class="standard-code">hss.id.7</span>
 							</div>
 							<div class="standard" data-code="hss-id-8" data-type="skill" data-dependencies="">
 								Correlation coefficients of linear fits
-								<br><a class="standard-code">hss.id.8</a>
+								<span class="standard-code">hss.id.8</span>
 							</div>
 							<div class="standard" data-code="hss-id-9" data-type="skill" data-dependencies="">
 								Correlation vs. causation
-								<br><a class="standard-code">hss.id.9</a>
+								<span class="standard-code">hss.id.9</span>
 							</div>
 					</div>
 				</div>
@@ -3847,11 +3846,11 @@ var standardTypes = {
 
 							<div class="standard" data-code="hss-ic-1" data-type="real-world" data-dependencies="">
 								Statistics = sampling &#8594; inferences
-								<br><a class="standard-code">hss.ic.1</a>
+								<span class="standard-code">hss.ic.1</span>
 							</div>
 							<div class="standard" data-code="hss-ic-2" data-type="real-world" data-dependencies="">
 								Model vs. actual data
-								<br><a class="standard-code">hss.ic.2</a>
+								<span class="standard-code">hss.ic.2</span>
 							</div>
 					</div>
 
@@ -3860,19 +3859,19 @@ var standardTypes = {
 
 							<div class="standard" data-code="hss-ic-3" data-type="skill" data-dependencies="">
 								Experiments vs. observational studies
-								<br><a class="standard-code">hss.ic.3</a>
+								<span class="standard-code">hss.ic.3</span>
 							</div>
 							<div class="standard" data-code="hss-ic-4" data-type="skill" data-dependencies="">
 								Data from surveys
-								<br><a class="standard-code">hss.ic.4</a>
+								<span class="standard-code">hss.ic.4</span>
 							</div>
 							<div class="standard" data-code="hss-ic-5" data-type="skill" data-dependencies="">
 								Data from randomized experiments
-								<br><a class="standard-code">hss.ic.5</a>
+								<span class="standard-code">hss.ic.5</span>
 							</div>
 							<div class="standard" data-code="hss-ic-6" data-type="skill" data-dependencies="">
 								Evaluate reports based on data
-								<br><a class="standard-code">hss.ic.6</a>
+								<span class="standard-code">hss.ic.6</span>
 							</div>
 					</div>
 				</div>
@@ -3896,23 +3895,23 @@ var standardTypes = {
 
 							<div class="standard" data-code="hss-cp-1" data-type="skill" data-dependencies="">
 								Describing subsets of sample spaces
-								<br><a class="standard-code">hss.cp.1</a>
+								<span class="standard-code">hss.cp.1</span>
 							</div>
 							<div class="standard" data-code="hss-cp-2" data-type="skill" data-dependencies="">
 								Independent events
-								<br><a class="standard-code">hss.cp.2</a>
+								<span class="standard-code">hss.cp.2</span>
 							</div>
 							<div class="standard" data-code="hss-cp-3" data-type="skill" data-dependencies="">
 								P(A) given B = P(A and B)/P(B)
-								<br><a class="standard-code">hss.cp.3</a>
+								<span class="standard-code">hss.cp.3</span>
 							</div>
 							<div class="standard" data-code="hss-cp-4" data-type="skill" data-dependencies="">
 								Two-way frequency table
-								<br><a class="standard-code">hss.cp.4</a>
+								<span class="standard-code">hss.cp.4</span>
 							</div>
 							<div class="standard" data-code="hss-cp-5" data-type="real-world" data-dependencies="">
 								Independent and conditional events in the real world
-								<br><a class="standard-code">hss.cp.5</a>
+								<span class="standard-code">hss.cp.5</span>
 							</div>
 					</div>
 
@@ -3921,19 +3920,19 @@ var standardTypes = {
 
 							<div class="standard" data-code="hss-cp-6" data-type="skill" data-dependencies="">
 								P(A) given B
-								<br><a class="standard-code">hss.cp.6</a>
+								<span class="standard-code">hss.cp.6</span>
 							</div>
 							<div class="standard" data-code="hss-cp-7" data-type="skill" data-dependencies="">
 								P(A xor B) = P(A) + P(B) - P(A and B)
-								<br><a class="standard-code">hss.cp.7</a>
+								<span class="standard-code">hss.cp.7</span>
 							</div>
-							<div class="standard plus" id="hss-cp-8" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hss-cp-8" data-type="skill" data-dependencies="">
 								P(A and B) = P(A)*P(B|A) = P(B)*P(A|B)
-								<br><a class="standard-code">hss.cp.8</a>
+								<span class="standard-code">hss.cp.8</span>
 							</div>
-							<div class="standard plus" id="hss-cp-9" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hss-cp-9" data-type="real-world" data-dependencies="">
 								Permutations and combinations
-								<br><a class="standard-code">hss.cp.9</a>
+								<span class="standard-code">hss.cp.9</span>
 							</div>
 					</div>
 				</div>
@@ -3954,21 +3953,21 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">expected value</h3>
-							<div class="standard plus" id="hss-md-1" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hss-md-1" data-type="skill" data-dependencies="">
 								Define random variable &#8594; graph probability distribution
-								<br><a class="standard-code">hss.md.1</a>
+								<span class="standard-code">hss.md.1</span>
 							</div>
-							<div class="standard plus" id="hss-md-2" data-type="justify" data-dependencies="">
+							<div class="standard plus" data-code="hss-md-2" data-type="justify" data-dependencies="">
 								Expected value = mean of probability distribution
-								<br><a class="standard-code">hss.md.2</a>
+								<span class="standard-code">hss.md.2</span>
 							</div>
-							<div class="standard plus" id="hss-md-3" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hss-md-3" data-type="skill" data-dependencies="">
 								Theoretical probability distribution
-								<br><a class="standard-code">hss.md.3</a>
+								<span class="standard-code">hss.md.3</span>
 							</div>
-							<div class="standard plus" id="hss-md-4" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hss-md-4" data-type="skill" data-dependencies="">
 								Empirical probability distribution
-								<br><a class="standard-code">hss.md.4</a>
+								<span class="standard-code">hss.md.4</span>
 							</div>
 					</div>
 
@@ -3978,25 +3977,25 @@ var standardTypes = {
 						<div class="sub-cluster">
 								<div class="standard" data-code="hss-md-5" data-type="" data-dependencies="">
 									possible outcomes
-									<br><a class="standard-code">t.md.5</a>
+									<span class="standard-code">t.md.5</span>
 								</div>
 								<div class="standard" data-code="hss-md-5a" data-type="skill" data-dependencies="">
 									Expected value for games of chance
-									<br><a class="standard-code">t.md.5a</a>
+									<span class="standard-code">t.md.5a</span>
 								</div>
 								<div class="standard" data-code="hss-md-5b" data-type="skill" data-dependencies="">
 									Expected values of differening strategies
-									<br><a class="standard-code">t.md.5b</a>
+									<span class="standard-code">t.md.5b</span>
 								</div>
 						</div>
 
-							<div class="standard plus" id="hss-md-6" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hss-md-6" data-type="skill" data-dependencies="">
 								Make fair decisions
-								<br><a class="standard-code">hss.md.6</a>
+								<span class="standard-code">hss.md.6</span>
 							</div>
-							<div class="standard plus" id="hss-md-7" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hss-md-7" data-type="real-world" data-dependencies="">
 								Use probability to analyze decisions and strategies
-								<br><a class="standard-code">hss.md.7</a>
+								<span class="standard-code">hss.md.7</span>
 							</div>
 					</div>
 				</div>
@@ -4036,23 +4035,23 @@ var standardTypes = {
 						<h3 class="cluster-name">transformations</h3>
 							<div class="standard" data-code="hsg-co-1" data-type="skill" data-dependencies="">
 								Precise geometry definitions
-								<br><a class="standard-code">hsg.co.1</a>
+								<span class="standard-code">hsg.co.1</span>
 							</div>
 							<div class="standard" data-code="hsg-co-2" data-type="skill" data-dependencies="">
 								Trasformations as functions
-								<br><a class="standard-code">hsg.co.2</a>
+								<span class="standard-code">hsg.co.2</span>
 							</div>
 							<div class="standard" data-code="hsg-co-3" data-type="skill" data-dependencies="">
 								Transform shapes onto themselves
-								<br><a class="standard-code">hsg.co.3</a>
+								<span class="standard-code">hsg.co.3</span>
 							</div>
 							<div class="standard" data-code="hsg-co-4" data-type="prove" data-dependencies="">
 								Define transformations
-								<br><a class="standard-code">hsg.co.4</a>
+								<span class="standard-code">hsg.co.4</span>
 							</div>
 							<div class="standard" data-code="hsg-co-5" data-type="skill" data-dependencies="">
 								Transform stuff!
-								<br><a class="standard-code">hsg.co.5</a>
+								<span class="standard-code">hsg.co.5</span>
 							</div>
 					</div>
 
@@ -4060,15 +4059,15 @@ var standardTypes = {
 						<h3 class="cluster-name">congruence by rigid motions</h3>
 							<div class="standard" data-code="hsg-co-6" data-type="skill" data-dependencies="">
 								Determine congruence via transformations
-								<br><a class="standard-code">hsg.co.6</a>
+								<span class="standard-code">hsg.co.6</span>
 							</div>
 							<div class="standard" data-code="hsg-co-7" data-type="verify" data-dependencies="">
 								Conguent figures &#8594; corresponding parts are congruent
-								<br><a class="standard-code">hsg.co.7</a>
+								<span class="standard-code">hsg.co.7</span>
 							</div>
 							<div class="standard" data-code="hsg-co-8" data-type="prove" data-dependencies="">
 								Justify ASA, SAS, and SSS
-								<br><a class="standard-code">hsg.co.8</a>
+								<span class="standard-code">hsg.co.8</span>
 							</div>
 					</div>
 
@@ -4076,15 +4075,15 @@ var standardTypes = {
 						<h3 class="cluster-name">prove theorems</h3>
 							<div class="standard" data-code="hsg-co-9" data-type="prove" data-dependencies="">
 								Prove theorems about lines and angles
-								<br><a class="standard-code">hsg.co.9</a>
+								<span class="standard-code">hsg.co.9</span>
 							</div>
 							<div class="standard" data-code="hsg-co-10" data-type="prove" data-dependencies="">
 								Prove theorems about triangles
-								<br><a class="standard-code">hsg.co.10</a>
+								<span class="standard-code">hsg.co.10</span>
 							</div>
 							<div class="standard" data-code="hsg-co-11" data-type="prove" data-dependencies="">
 								Prove theorems about parallelograms
-								<br><a class="standard-code">hsg.co.11</a>
+								<span class="standard-code">hsg.co.11</span>
 							</div>
 					</div>
 
@@ -4092,11 +4091,11 @@ var standardTypes = {
 						<h3 class="cluster-name">constructions</h3>
 							<div class="standard" data-code="hsg-co-12" data-type="fluency" data-dependencies="">
 								Geometric constructions (1)
-								<br><a class="standard-code">hsg.co.12</a>
+								<span class="standard-code">hsg.co.12</span>
 							</div>
 							<div class="standard" data-code="hsg-co-13" data-type="fluency" data-dependencies="">
 								Geometric constructions (2)
-								<br><a class="standard-code">hsg.co.13</a>
+								<span class="standard-code">hsg.co.13</span>
 							</div>
 					</div>
 				</div>
@@ -4120,24 +4119,24 @@ var standardTypes = {
 						
 						<div class="sub-cluster">
 								<div class="standard" data-code="hsg-srt-1" data-type="" data-dependencies="">
-									<br><a class="standard-code">hsg.srt.1</a>
+									<span class="standard-code">hsg.srt.1</span>
 								</div>
 								<div class="standard" data-code="hsg-srt-1a" data-type="verify" data-dependencies="">
 									Line under dilation &#8594; parallel line
-									<br><a class="standard-code">hsg.srt.1a</a>
+									<span class="standard-code">hsg.srt.1a</span>
 								</div>
 								<div class="standard" data-code="hsg-srt-1b" data-type="verify" data-dependencies="">
 									Dilations and scale factors
-									<br><a class="standard-code">hsg.srt.1b</a>
+									<span class="standard-code">hsg.srt.1b</span>
 								</div>
 						</div>
 							<div class="standard" data-code="hsg-srt-2" data-type="skill" data-dependencies="">
 								Determine similarity with transformaitons
-								<br><a class="standard-code">hsg.srt.2</a>
+								<span class="standard-code">hsg.srt.2</span>
 							</div>
 							<div class="standard" data-code="hsg-srt-3" data-type="prove" data-dependencies="">
 								Justify AA similarity
-								<br><a class="standard-code">hsg.srt.3</a>
+								<span class="standard-code">hsg.srt.3</span>
 							</div>
 					</div>
 
@@ -4145,11 +4144,11 @@ var standardTypes = {
 						<h3 class="cluster-name">similarity theorems</h3>
 							<div class="standard" data-code="hsg-srt-4" data-type="prove" data-dependencies="">
 								Prove theorems about triangles
-								<br><a class="standard-code">hsg.srt.4</a>
+								<span class="standard-code">hsg.srt.4</span>
 							</div>
 							<div class="standard" data-code="hsg-srt-5" data-type="prove" data-dependencies="">
 								Prove relationships in geometric figures
-								<br><a class="standard-code">hsg.srt.5</a>
+								<span class="standard-code">hsg.srt.5</span>
 							</div>
 					</div>
 
@@ -4157,31 +4156,31 @@ var standardTypes = {
 						<h3 class="cluster-name">right triangle trig</h3>
 							<div class="standard" data-code="hsg-srt-6" data-type="skill" data-dependencies="">
 								Link similarity and side ratios
-								<br><a class="standard-code">hsg.srt.6</a>
+								<span class="standard-code">hsg.srt.6</span>
 							</div>
 							<div class="standard" data-code="hsg-srt-7" data-type="skill" data-dependencies="">
 								Sin and cos of complimentary angles
-								<br><a class="standard-code">hsg.srt.7</a>
+								<span class="standard-code">hsg.srt.7</span>
 							</div>
 							<div class="standard" data-code="hsg-srt-8" data-type="real-world" data-dependencies="">
 								Right triangle problems
-								<br><a class="standard-code">hsg.srt.8</a>
+								<span class="standard-code">hsg.srt.8</span>
 							</div>
 					</div>
 
 					<div class="cluster">
 						<h3 class="cluster-name">non-right triangle trig</h3>
-							<div class="standard plus" id="hsg-srt-9" data-type="prove" data-dependencies="">
+							<div class="standard plus" data-code="hsg-srt-9" data-type="prove" data-dependencies="">
 								Derive A = 1/2 ab sin(C)
-								<br><a class="standard-code">hsg.srt.9</a>
+								<span class="standard-code">hsg.srt.9</span>
 							</div>
-							<div class="standard plus" id="hsg-srt-10" data-type="prove" data-dependencies="">
+							<div class="standard plus" data-code="hsg-srt-10" data-type="prove" data-dependencies="">
 								Prove the laws of sines and cosines
-								<br><a class="standard-code">hsg.srt.10</a>
+								<span class="standard-code">hsg.srt.10</span>
 							</div>
-							<div class="standard plus" id="hsg-srt-11" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsg-srt-11" data-type="real-world" data-dependencies="">
 								Unknown measurements in non-right triangles
-								<br><a class="standard-code">hsg.srt.11</a>
+								<span class="standard-code">hsg.srt.11</span>
 							</div>
 					</div>
 				</div>
@@ -4204,19 +4203,19 @@ var standardTypes = {
 						<h3 class="cluster-name">circle-o theorems</h3>
 							<div class="standard" data-code="hsg-c-1" data-type="prove" data-dependencies="">
 								Prove all circles are similar
-								<br><a class="standard-code">hsg.c.1</a>
+								<span class="standard-code">hsg.c.1</span>
 							</div>
 							<div class="standard" data-code="hsg-c-2" data-type="skill" data-dependencies="">
 								Inscribed angles, radii, and chords
-								<br><a class="standard-code">hsg.c.2</a>
+								<span class="standard-code">hsg.c.2</span>
 							</div>
 							<div class="standard" data-code="hsg-c-3" data-type="skill" data-dependencies="">
 								Inscribed and circumscribed circles
-								<br><a class="standard-code">hsg.c.3</a>
+								<span class="standard-code">hsg.c.3</span>
 							</div>
-							<div class="standard plus" id="hsg-c-4" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsg-c-4" data-type="skill" data-dependencies="">
 								Construct tangent line
-								<br><a class="standard-code">hsg.c.4</a>
+								<span class="standard-code">hsg.c.4</span>
 							</div>
 					</div>
 
@@ -4224,7 +4223,7 @@ var standardTypes = {
 						<h3 class="cluster-name">arcs and sectors</h3>
 							<div class="standard" data-code="hsg-c-5" data-type="prove" data-dependencies="">
 								Arc length, radius, radians, and area
-								<br><a class="standard-code">hsg.c.5</a>
+								<span class="standard-code">hsg.c.5</span>
 							</div>
 					</div>
 				</div>
@@ -4247,15 +4246,15 @@ var standardTypes = {
 						<h3 class="cluster-name">derive equations</h3>
 							<div class="standard" data-code="hsg-gpe-1" data-type="prove" data-dependencies="">
 								Equation of a circles
-								<br><a class="standard-code">hsg.gpe.2</a>
+								<span class="standard-code">hsg.gpe.2</span>
 							</div>
 							<div class="standard" data-code="hsg-gpe-2" data-type="prove" data-dependencies="">
 								Equation of a parabola
-								<br><a class="standard-code">hsg.gpe.3</a>
+								<span class="standard-code">hsg.gpe.3</span>
 							</div>
-							<div class="standard plus" id="hsg-gpe-3" data-type="prove" data-dependencies="">
+							<div class="standard plus" data-code="hsg-gpe-3" data-type="prove" data-dependencies="">
 								Equations of ellipses and hyperbolas
-								<br><a class="standard-code">hsg.gpe.3</a>
+								<span class="standard-code">hsg.gpe.3</span>
 							</div>
 					</div>
 
@@ -4263,19 +4262,19 @@ var standardTypes = {
 						<h3 class="cluster-name">coordinate plane geometry</h3>
 							<div class="standard" data-code="hsg-gpe-4" data-type="prove" data-dependencies="">
 								Simple proofs with coordinates
-								<br><a class="standard-code">hsg.gpe.4</a>
+								<span class="standard-code">hsg.gpe.4</span>
 							</div>
 							<div class="standard" data-code="hsg-gpe-5" data-type="prove" data-dependencies="">
 								Prove slope criteria for parallel and perpendicular lines
-								<br><a class="standard-code">hsg.gpe.5</a>
+								<span class="standard-code">hsg.gpe.5</span>
 							</div>
 							<div class="standard" data-code="hsg-gpe-6" data-type="skill" data-dependencies="">
 								Partition line segments
-								<br><a class="standard-code">hsg.gpe.6</a>
+								<span class="standard-code">hsg.gpe.6</span>
 							</div>
 							<div class="standard" data-code="hsg-gpe-7" data-type="real-world" data-dependencies="">
 								Perimeter and area with coordinates
-								<br><a class="standard-code">hsg.gpe.7</a>
+								<span class="standard-code">hsg.gpe.7</span>
 							</div>
 					</div>
 				</div>
@@ -4298,15 +4297,15 @@ var standardTypes = {
 						<h3 class="cluster-name">volume formulas</h3>
 							<div class="standard" data-code="hsg-gmd-1" data-type="prove" data-dependencies="">
 								Informal arguments for formulas
-								<br><a class="standard-code">hsg.gmd.2</a>
+								<span class="standard-code">hsg.gmd.2</span>
 							</div>
-							<div class="standard plus" id="hsg-gmd-2" data-type="prove" data-dependencies="">
+							<div class="standard plus" data-code="hsg-gmd-2" data-type="prove" data-dependencies="">
 								Cavalieri's principle
-								<br><a class="standard-code">hsg.gmd.3</a>
+								<span class="standard-code">hsg.gmd.3</span>
 							</div>
 							<div class="standard" data-code="hsg-gmd-3" data-type="real-world" data-dependencies="">
 								Apply volume formulas
-								<br><a class="standard-code">hsg.gmd.3</a>
+								<span class="standard-code">hsg.gmd.3</span>
 							</div>
 					</div>
 
@@ -4314,7 +4313,7 @@ var standardTypes = {
 						<h3 class="cluster-name">link 2D and 3D shapes</h3>
 							<div class="standard" data-code="hsg-gmd-4" data-type="skill" data-dependencies="">
 								Cross sections and 3D shapes from rotations of 2D objects
-								<br><a class="standard-code">hsg.gmd.4</a>
+								<span class="standard-code">hsg.gmd.4</span>
 							</div>
 					</div>
 				</div>
@@ -4337,15 +4336,15 @@ var standardTypes = {
 						<h3 class="cluster-name">modeling</h3>
 							<div class="standard" data-code="hsg-mg-1" data-type="real-world" data-dependencies="">
 								Describe objects with shapes
-								<br><a class="standard-code">hsg.mg.1</a>
+								<span class="standard-code">hsg.mg.1</span>
 							</div>
 							<div class="standard" data-code="hsg-mg-2" data-type="real-world" data-dependencies="">
 								Density
-								<br><a class="standard-code">hsg.mg.2</a>
+								<span class="standard-code">hsg.mg.2</span>
 							</div>
-							<div class="standard plus" id="hsg-mg-3" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsg-mg-3" data-type="real-world" data-dependencies="">
 								Solve design problems
-								<br><a class="standard-code">hsg.mg.3</a>
+								<span class="standard-code">hsg.mg.3</span>
 							</div>
 					</div>
 				</div>
