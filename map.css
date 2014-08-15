@@ -232,7 +232,7 @@ h3.cluster-name {
 	width: 100%;
 	font-size: 1.2em;
 	z-index: 100;
-	background-color: rgba(30,30,30,0.98);
+	background-color: #222;
 	box-sizing: border-box;
 	padding: 0 14%;
 	color: #ddd;
