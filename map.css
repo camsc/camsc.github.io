@@ -234,7 +234,7 @@ h3.cluster-name {
 	z-index: 100;
 	background-color: #222;
 	box-sizing: border-box;
-	padding: 0 14%;
+	padding: 0 1em;
 	color: #ddd;
 	position: fixed;
 	bottom: -100px;
