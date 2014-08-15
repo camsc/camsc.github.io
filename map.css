@@ -145,9 +145,6 @@ h3.cluster-name {
 	width: 1em;
 	opacity: 0.7;
 }
-.standard-icon:hover {
-	text-shadow: 1px 1px #ddd;
-}
 .icon-on > i {
 	color: #fff;
 }
@@ -157,13 +154,13 @@ h3.cluster-name {
 }
 .icon-on {
 }
-.standard-on, .standard-on>i{
+.standard-on, .standard-on>i, .standard-on>i:hover{
 	color: #fff;
 }
-.standard-on {
+.standard-on  {
 	background-color: rgba(30,30,30,0.9);
 }
-.standard-on > .standard-code {
+.standard-on > .standard-code, .standard-on > .standard-code:hover {
 	color: #aaa;
 }
 
@@ -234,10 +231,11 @@ h3.cluster-name {
 	z-index: 100;
 	background-color: #222;
 	box-sizing: border-box;
-	padding: 0 1em;
+	padding: 0 1em 0.5em;
 	color: #ddd;
 	position: fixed;
 	bottom: -100px;
+	max-height: 400px;
 }
 
 #st-type {
@@ -252,16 +250,13 @@ h3.cluster-name {
 
 .close {
 	position: absolute;
-	top: 0.2em;
+	top: 0.6em;
 	right: 1em;
 	opacity: 0.7;
+	cursor: pointer;
 }
 
 .close:hover {
-	position: absolute;
-	top: 0.2em;
-	right: 1em;
-	cursor: pointer;
 	opacity: 1;
 }
 .footnote {

@@ -65,7 +65,7 @@ var standardTypes = {
 	var standardData = [];
 	var svgOverlay;
 
-	var showStandard = function(type, code, text, footnote) {
+	var showStandard = function(type, title, text, footnote) {
 		var standardText = $( "#standard-text" );
 
 		text = text.replace("{footnote}", "<sup><i class='fa fa-paw'></i></sup>")
@@ -78,7 +78,7 @@ var standardTypes = {
 			standardText.find( "#st-type" ).attr("class", "");
 			standardText.find( "#st-type" ).attr("title", "");
 		}
-		standardText.find( "#st-code" ).html(code.toUpperCase());
+		standardText.find( "#st-code" ).html(title);
 		standardText.find( "#st-main" ).html(text);
 
 		if ("" === footnote) {
@@ -88,8 +88,20 @@ var standardTypes = {
 		}
 		
 		standardText.animate({
+			bottom: "-800"
+		}, 0).animate({
 			bottom: "0"
-		}, 200);
+		}, 400);
+
+		// if ( parseInt(standardText.css("bottom")) < 0 ) {
+		// 	standardText.animate({
+		// 		bottom: "0"
+		// 	}, 200);
+		// } else {
+		// 	standardText.animate({
+		// 		bottom: "0"
+		// 	}, 200);
+		// }
 	}
 	var hideStandard = function() {
 			$( "#standard-text" ).animate({
@@ -252,7 +264,7 @@ var standardTypes = {
 			$("div[data-type='" + key + "']").each( function() {
 				var standard = $( this );
 				var html = standard.html();
-				html = "<i class='standard-icon fa " + value.iconClass + "' title='" + value.description + "''></i>" + html;
+				html = "<i class='standard-icon fa " + value.iconClass + "'></i>" + html;
 				standard.html(html);
 			});
 		});
