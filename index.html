@@ -65,21 +65,27 @@ var standardTypes = {
 	var standardData = [];
 	var svgOverlay;
 
-	var showStandard = function(text) {
+	var showStandard = function(type, code, text, footnote) {
 		var standardText = $( "#standard-text" );
-		standardText.html(text);
-		standardText.css("bottom", "-100");
+		standardText.find( "#st-type" ).attr("class", "fa "+standardTypes[type].iconClass);
+		standardText.find( "#st-code" ).html(code.toUpperCase());
+		standardText.find( "#st-main" ).html(text);
+		standardText.find( "#st-footnote" ).html(footnote);
 		standardText.animate({
-			bottom: "50"
+			bottom: "0"
 		}, 200);
 	}
+	var hideStandard = function() {
+			$( "#standard-text" ).animate({
+				bottom: "-500"
+			}, 80);
+	};
 
-	var hideStandard = function(text) {
-		$( "#standard-text" ).html(text);
-		$( "#standard-text" ).animate({
-			bottom: "-100"
-		}, 80);
-	}
+	$( document ).ready(function() {
+		$(".close").click(function() {
+			hideStandard();
+		});
+	});
 
 	$( document ).ready(function() {
 
@@ -100,7 +106,8 @@ var standardTypes = {
 					var letter = alphabet[clusterNumber];
 					clusterNumber++;
 					$( this ).find(".standard").each( function() {
-						var text = $( this ).data("code");
+						var standard = $(this);
+						var text = standard.data("code");
 						var codeParts = text.split("-");
 
 						var c = codeParts[0] + "." +
@@ -120,7 +127,16 @@ var standardTypes = {
 
 						if (ccmath[c]) {
 							$( this ).click(function(){
-								showStandard(ccmath[c].text);
+								if (standard.hasClass("standard-on")) {
+									standard.removeClass("standard-on");
+									hideStandard();
+								} else {
+									showStandard(standard.data("type"), c, ccmath[c].text, ccmath[c].footnote);
+									$( ".standard" ).each( function() {
+										$(this).removeClass("standard-on");
+									});
+									standard.addClass("standard-on");
+								}
 							});
 						}
 					});
@@ -274,7 +290,10 @@ var standardTypes = {
 	</script>
 
 	<div id="standard-text">
-		
+		<div class="close">close</div>
+		<h2><i id="st-type" class="fa"></i><span id="st-code"></span></h2>
+		<p id="st-main"></p>
+		<p id="st-footnote"></p>
 	</div>
 
 	<svg id="svg-overlay"></svg>
