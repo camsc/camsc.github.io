@@ -156,10 +156,15 @@ h3.cluster-name {
 	text-shadow: 1px 1px #222;
 }
 .icon-on {
-	background-color: rgba(0,101,185,0.5);
+}
+.standard-on, .standard-on>i{
+	color: #fff;
 }
 .standard-on {
-	background-color: rgba(0,101,185,0.5);
+	background-color: rgba(30,30,30,0.9);
+}
+.standard-on > .standard-code {
+	color: #aaa;
 }
 
 /* SUB CLUSTERS */
@@ -229,14 +234,20 @@ h3.cluster-name {
 	z-index: 100;
 	background-color: rgba(30,30,30,0.98);
 	box-sizing: border-box;
-	padding: 0 14% 1em;
+	padding: 0 14%;
 	color: #ddd;
 	position: fixed;
 	bottom: -100px;
 }
 
-#st-code {
-	padding-left: 0.5em;
+#st-type {
+	float:left;
+	margin-right: 0.5em;
+}
+#st-footnote {
+	color: #aaa;
+	font-weight: 100;
+	font-size: 0.85em;
 }
 
 .close {
@@ -252,4 +263,7 @@ h3.cluster-name {
 	right: 1em;
 	cursor: pointer;
 	opacity: 1;
+}
+.footnote {
+	padding-right: 0.5em;
 }

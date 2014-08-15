@@ -67,10 +67,26 @@ var standardTypes = {
 
 	var showStandard = function(type, code, text, footnote) {
 		var standardText = $( "#standard-text" );
-		standardText.find( "#st-type" ).attr("class", "fa "+standardTypes[type].iconClass);
+
+		text = text.replace("{footnote}", "<sup><i class='fa fa-paw'></i></sup>")
+
+		if (type) {
+			standardText.find( "#st-type" ).attr("class", "fa "+standardTypes[type].iconClass);
+			standardText.find( "#st-type" ).attr("title", standardTypes[type].description);
+		} else {
+			standardText.find( "#st-type" ).attr("class", "");
+			standardText.find( "#st-type" ).attr("class", "");
+			standardText.find( "#st-type" ).attr("title", "");
+		}
 		standardText.find( "#st-code" ).html(code.toUpperCase());
 		standardText.find( "#st-main" ).html(text);
-		standardText.find( "#st-footnote" ).html(footnote);
+
+		if ("" === footnote) {
+			standardText.find( "#st-footnote" ).html(footnote);
+		} else {
+			standardText.find( "#st-footnote" ).html("<i class='footnote fa fa-paw'></i>" + footnote);
+		}
+		
 		standardText.animate({
 			bottom: "0"
 		}, 200);
@@ -78,7 +94,7 @@ var standardTypes = {
 	var hideStandard = function() {
 			$( "#standard-text" ).animate({
 				bottom: "-500"
-			}, 80);
+			}, 200);
 	};
 
 	$( document ).ready(function() {
@@ -89,59 +105,41 @@ var standardTypes = {
 
 	$( document ).ready(function() {
 
-		//Make links go to standards pages
 		var alphabetString = "abcdefghijklmnopqrstuvwxyz";
 		var alphabet = alphabetString.split("");
-		// var khan_grades = ["k", "1", "2", "3", "4", "5", "6", "7", "8", "HSN-N", "HSA-A", "HSF-F", "HSG-G", "HSS-S"];
-		// var grade = 0;
+		$( this ).find(".standard").each( function() {
+			var standard = $(this);
+			var text = standard.data("code");
+			var codeParts = text.split("-");
 
-		$( ".grade-level" ).each( function() {
-			// var khan_grade = khan_grades[grade];
-			// grade++;
+			var c = codeParts[0] + "." +
+				codeParts[1] + ".";
 
-			$( this ).find( ".strand" ).each( function() {
-				var clusterNumber = 0;
-				// var khan_url = "https://www.khanacademy.org/commoncore/grade-" + khan_grade + "";
-				$( this ).find(".cluster").each( function() {
-					var letter = alphabet[clusterNumber];
-					clusterNumber++;
-					$( this ).find(".standard").each( function() {
-						var standard = $(this);
-						var text = standard.data("code");
-						var codeParts = text.split("-");
+			var ending = codeParts[2];
+			if (alphabetString.indexOf(ending.substring(ending.length-1, ending.length)) > -1) {
 
-						var c = codeParts[0] + "." +
-							codeParts[1] + "." +
-							letter + ".";
+				var indexInCluster = ending.substring(0, ending.length-1);
+				var subClusterLetter = ending.substring(ending.length-1, ending.length);
 
-						var ending = codeParts[2];
-						if (alphabetString.indexOf(ending.substring(ending.length-1, ending.length)) > -1) {
+				c = c + indexInCluster + subClusterLetter;
+			} else {;
+				c = c + ending;
+			}
 
-							var indexInCluster = ending.substring(0, ending.length-1);
-							var subClusterLetter = ending.substring(ending.length-1, ending.length);
-
-							c = c + indexInCluster + subClusterLetter;
-						} else {;
-							c = c + ending;
-						}
-
-						if (ccmath[c]) {
-							$( this ).click(function(){
-								if (standard.hasClass("standard-on")) {
-									standard.removeClass("standard-on");
-									hideStandard();
-								} else {
-									showStandard(standard.data("type"), c, ccmath[c].text, ccmath[c].footnote);
-									$( ".standard" ).each( function() {
-										$(this).removeClass("standard-on");
-									});
-									standard.addClass("standard-on");
-								}
-							});
-						}
-					});
+			if (ccmath[c]) {
+				$( this ).click(function(){
+					if (standard.hasClass("standard-on")) {
+						standard.removeClass("standard-on");
+						hideStandard();
+					} else {
+						showStandard(standard.data("type"), c, ccmath[c].text, ccmath[c].footnote);
+						$( ".standard" ).each( function() {
+							$(this).removeClass("standard-on");
+						});
+						standard.addClass("standard-on");
+					}
 				});
-			});
+			}
 		});
 	});
 
@@ -291,7 +289,7 @@ var standardTypes = {
 
 	<div id="standard-text">
 		<div class="close">close</div>
-		<h2><i id="st-type" class="fa"></i><span id="st-code"></span></h2>
+		<h2><i id="st-type" title="icon" class="fa"></i><span id="st-code"></span></h2>
 		<p id="st-main"></p>
 		<p id="st-footnote"></p>
 	</div>
@@ -984,7 +982,7 @@ var standardTypes = {
 							Line plot with whole numbers
 							<span class="standard-code">2.md.9</span>
 						</div>
-						<div class="standard" data-code="2-md-10" data-type="real-world" data-dependencies="">
+						<div class="standard" data-code="2-md-10" data-type="skill" data-dependencies="">
 							Picture and bar graphs (1)
 							<span class="standard-code">2.md.10</span>
 						</div>
@@ -1957,7 +1955,7 @@ var standardTypes = {
 							Subcategories of shapes
 							<span class="standard-code">5.g.3</span>
 						</div>
-						<div class="standard" data-code="5-g-2=4" data-type="skill" data-dependencies="">
+						<div class="standard" data-code="5-g-4" data-type="skill" data-dependencies="">
 							Hierarchy of 2D shapes
 							<span class="standard-code">5.g.4</span>
 						</div>
