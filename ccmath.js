@@ -1448,8 +1448,8 @@ var ccmath = {
     "footnote": ""
   },
   "hsa.apr.5": {
-    "text": "Know and apply the Binomial Theorem for the expansion of (<i>x</i> + <i>y</i>)<sup><i>n</i></sup> in powers of <i>x</i> and <i>y</i> for a positive integer <i>n</i>, where <i>x</i> and <i>y</i> are any numbers, with coefficients determined for example by Pascal&rsquo;s Triangle.",
-    "footnote": ""
+    "text": "Know and apply the Binomial Theorem for the expansion of (<i>x</i> + <i>y</i>)<sup><i>n</i></sup> in powers of <i>x</i> and <i>y</i> for a positive integer <i>n</i>, where <i>x</i> and <i>y</i> are any numbers, with coefficients determined for example by Pascal's Triangle.{footnote}",
+    "footnote": "The Binomial Theorem can be proved by mathematical induction or by a com- binatorial argument."
   },
   "hsa.apr.6": {
     "text": "Rewrite simple rational expressions in different forms; write <sup><i>a</i>(<i>x</i>)</sup>/<sub><i>b</i>(<i>x</i>)</sub> in the form <i>q</i>(<i>x</i>) + <sup><i>r</i>(<i>x</i>)</sup>/<sub><i>b</i>(<i>x</i>)</sub>, where <i>a</i>(<i>x</i>), <i>b</i>(<i>x</i>), <i>q</i>(<i>x</i>), and <i>r</i>(<i>x</i>) are polynomials with the degree of <i>r</i>(<i>x</i>) less than the degree of <i>b</i>(<i>x</i>), using inspection, long division, or, for the more complicated examples, a computer algebra system.",
@@ -1815,23 +1815,23 @@ var ccmath = {
     "text": "Understand and apply the Law of Sines and the Law of Cosines to find unknown measurements in right and non-right triangles.",
     "footnote": ""
   },
-  "hsg.1": {
+  "hsg.c.1": {
     "text": "Prove that all circles are similar.",
     "footnote": ""
   },
-  "hsg.2": {
+  "hsg.c.2": {
     "text": "Identify and describe relationships among inscribed angles, radii, and chords. <i>Include the relationship between central, inscribed, and circumscribed angles; inscribed angles on a diameter are right angles; the radius of a circle is perpendicular to the tangent where the radius intersects the circle.",
     "footnote": ""
   },
-  "hsg.3": {
+  "hsg.c.3": {
     "text": "Construct the inscribed and circumscribed circles of a triangle, and prove properties of angles for a quadrilateral inscribed in a circle.",
     "footnote": ""
   },
-  "hsg.4": {
+  "hsg.c.4": {
     "text": "Construct a tangent line from a point outside a given circle to the circle.",
     "footnote": ""
   },
-  "hsg.5": {
+  "hsg.c.5": {
     "text": "Derive using similarity the fact that the length of the arc intercepted by an angle is proportional to the radius, and define the radian measure of the angle as the constant of proportionality; derive the formula for the area of a sector.",
     "footnote": ""
   },

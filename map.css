@@ -158,7 +158,7 @@ h3.cluster-name {
 	color: #fff;
 }
 .standard-on  {
-	background-color: rgba(30,30,30,0.9);
+	background-color: #222;
 }
 .standard-on > .standard-code, .standard-on > .standard-code:hover {
 	color: #aaa;
@@ -225,40 +225,16 @@ h3.cluster-name {
 	text-shadow: 1px 1px #ddd;
 }
 
-#standard-text {
-	width: 100%;
-	font-size: 1.2em;
-	z-index: 100;
-	background-color: #222;
-	box-sizing: border-box;
-	padding: 0 1em 0.5em;
-	color: #ddd;
-	position: fixed;
-	bottom: -100px;
-	max-height: 400px;
+.st-name {
+	color: #555;
+	font-weight: normal;
 }
-
-#st-type {
-	float:left;
-	margin-right: 0.5em;
-}
-#st-footnote {
-	color: #aaa;
-	font-weight: 100;
-	font-size: 0.85em;
-}
-
-.close {
-	position: absolute;
-	top: 0.6em;
-	right: 1em;
-	opacity: 0.7;
-	cursor: pointer;
-}
-
-.close:hover {
-	opacity: 1;
+.st-main {
+	color: #555;
 }
 .footnote {
-	padding-right: 0.5em;
+	margin-right: 0.5em;
+}
+.ka-icon {
+	margin-right: 0.5em;
 }
