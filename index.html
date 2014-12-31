@@ -2,100 +2,42 @@
 <html>
 <head>
 	<title>Common Core Map</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="map.css" rel="stylesheet">
-	<link href="cc-modal.css" rel="stylesheet">
 	<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="jquery.qtip.custom/jquery.qtip.min.css" rel="stylesheet">
 </head>
 <body>
 
-
 	<script src="jquery-1.11.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="ccmath.js"></script>
+	<script src="map.js"></script>
 
-<script>
-var parallelStandards = {
-	"k-cc-2": ["k-cc-4c"],
-	"k-cc-4c": ["k-cc-2", "k-cc-6"],
-	"k-cc-5": ["k-cc-6"],
-	"k-cc-6": ["k-cc-5", "k-cc-4c"]
-};
-
-var standardTypes = {
-	"skill": {
-		description: "A skill to be mastered",
-		iconClass: "fa-rocket"
-		},
-	"understand": {
-		description: "A concept to be understood",
-		iconClass: "fa-cloud"
-		},
-	"capstone": {
-		description: "Solve capstone problems that draw skills and concepts together across domains.",
-		iconClass: "fa-graduation-cap"
-		},
-	"fluency": {
-		description: "Compute fluently.",
-		iconClass: "fa-flash"
-		},
-	"real-world": {
-		description: "Solve real-world problems.",
-		iconClass: "fa-globe"
-		},
-	"compare": {
-		description: "Compare or sort",
-		iconClass: "fa-filter"
-		},
-	"verify": {
-		description: "Verify a property or formula experimentally.",
-		iconClass: "fa-flask"
-		},
-	"justify": {
-		description: "Justify or explain",
-		iconClass: "fa-gavel"
-		},
-	"prove": {
-		description: "Prove",
-		iconClass: "fa-bank"
-		}
-};
-</script>
-
-	<script src="map.js">
-
-	
-	</script>
-
-	<script>
-		$( document ).ready( function() {
-			$('[title]').qtip();
-		});
-	</script>
-
-	<div class="st-modal cc-modal-open fade-in">
-		<div class="st-modal-dialog">
-			<div class="st-modal-content">
-				<div class="st-modal-header">
-					<h2 class="st-heading">
-						<i class="st-type" title="icon" class="fa"></i>
-						<span class="st-code"></span>
-						<small class="st-name"></small>
-					</h2>
-					<p class="st-main"></p>
-				</div>
-
-				<div class="st-modal-body">
-					<h2 style="display:none"><i class="ka-icon fa fa-leaf"></i>Khan Academy</h2>
-					<ul style="display:none" class="ka-exercises">
-						<li>Parabola intuition</li>
-					</ul>
-					<p class="st-footnote"></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<svg id="svg-overlay"></svg>
+	<div class="modal fade" tabindex="-1" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h2 class="st-heading modal-title">
+				<i class="st-type" title="icon" class="fa"></i>
+				<span class="st-code"></span>
+				<small class="st-name"></small>
+			</h2>
+	      </div>
+	      <div class="modal-body">
+	      	<p class="st-main"></p>
+	        <h2 style="display:none"><i class="ka-icon fa fa-leaf"></i>Khan Academy</h2>
+			<ul style="display:none" class="ka-exercises">
+				<li>Parabola intuition</li>
+			</ul>
+			<p class="st-footnote"></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 
 	<div id="heading">
 		<h1>Common Core Math</h1>
@@ -149,15 +91,15 @@ var standardTypes = {
 					</h2>
 					<div class="cluster">
 						<h3 class="cluster-name">number names and counting</h3>
-						<div class="standard" data-code="k-cc-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-1" data-type="skill">
 							Count to 100 (by ones and tens)
 							<span class="standard-code">k.cc.1</span>
 						</div>
-						<div class="standard" data-code="k-cc-2" data-type="skill" data-dependencies="k-cc-1">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-2" data-type="skill">
 							Count up from a number
 							<span class="standard-code">k.cc.2</span>
 						</div>
-						<div class="standard" data-code="k-cc-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-3" data-type="skill">
 							Write numbers within 20
 							<span class="standard-code">k.cc.3</span>
 						</div>
@@ -166,25 +108,25 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">counting objects</h3>
 
-						<div class="standard parent-standard" data-code="k-cc-4" data-dependencies="">
+						<div class="standard parent-standard" data-code="k-cc-4">
 							Counting and quantities
 							<span class="standard-code">k.cc.4</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="k-cc-4a" data-type="skill" data-dependencies="k-cc-1">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-4a" data-type="skill">
 								Count objects aloud
 								<span class="standard-code">k.cc.4a</span>
 							</div>
-							<div class="standard" data-code="k-cc-4b" data-type="understand" data-dependencies="k-cc-4a">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-4b" data-type="understand">
 								Last number counted = number of objects
 								<span class="standard-code">k.cc.4b</span>
 							</div>
-							<div class="standard" data-code="k-cc-4c" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-4c" data-type="understand">
 								The next number is always one larger
 								<span class="standard-code">k.cc.4c</span>
 							</div>
 						</div>
-						<div class="standard" data-code="k-cc-5" data-type="real-world" data-dependencies="k-cc-4b">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-5" data-type="real-world">
 							How many?
 							<span class="standard-code">k.cc.5</span>
 						</div>
@@ -192,11 +134,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">comparing numbers</h3>
-						<div class="standard" data-code="k-cc-6" data-type="compare" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-6" data-type="compare">
 							Which group has more?
 							<span class="standard-code">k.cc.6</span>
 						</div>
-						<div class="standard" data-code="k-cc-7" data-type="compare" data-dependencies="k-cc-6">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-7" data-type="compare">
 							One-digit comparison
 							<span class="standard-code">k.cc.7</span>
 						</div>
@@ -220,23 +162,23 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">addition and subtraction</h3>
-						<div class="standard" data-code="k-oa-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-oa-1" data-type="skill">
 							Add and subtract using a variety of strategies
 							<span class="standard-code">k.oa.1</span>
 						</div>
-						<div class="standard" data-code="k-oa-2" data-type="real-world" data-dependencies="k-oa-1">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-oa-2" data-type="real-world">
 							Add and subtract within 10
 							<span class="standard-code">k.oa.2</span>
 						</div>
-						<div class="standard" data-code="k-oa-3" data-type="skill" data-dependencies="k-oa-2">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-oa-3" data-type="skill">
 							Decompose numbers
 							<span class="standard-code">k.oa.3</span>
 						</div>
-						<div class="standard" data-code="k-oa-4" data-type="skill" data-dependencies="k-oa-3">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-oa-4" data-type="skill">
 							Make 10
 							<span class="standard-code">k.oa.4</span>
 						</div>
-						<div class="standard" data-code="k-oa-5" data-type="fluency" data-dependencies="k-oa-3">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-oa-5" data-type="fluency">
 							Fluently add and subtract within 5
 							<span class="standard-code">k.oa.5</span>
 						</div>
@@ -259,7 +201,7 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">place value foundation</h3>
-						<div class="standard" data-code="k-nbt-1" data-type="skill" data-dependencies="k-oa-3">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-nbt-1" data-type="skill">
 							Teens from ten (1)
 							<span class="standard-code">k.nbt.1</span>
 						</div>
@@ -283,11 +225,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">compare objects</h3>
-						<div class="standard" data-code="k-md-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-md-1" data-type="skill">
 							Describe measurable attributes of objects
 							<span class="standard-code">k.md.1</span>
 						</div>
-						<div class="standard" data-code="k-md-2" data-type="compare" data-dependencies="k-md-1">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-md-2" data-type="compare">
 							Directly compare objects
 							<span class="standard-code">k.md.2</span>
 						</div>
@@ -295,7 +237,7 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">sorting</h3>
-						<div class="standard" data-code="k-md-3" data-type="real-world" data-dependencies="k-md-2 k-cc-6">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-md-3" data-type="real-world">
 							Categorize, count, then sort
 							<span class="standard-code">k.md.3</span>
 						</div>
@@ -319,15 +261,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">identify and describe shapes</h3>
-						<div class="standard" data-code="k-g-1" data-type="skill" data-dependencies="real-world">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-g-1" data-type="skill">
 							Describe relative positions of objects
 							<span class="standard-code">k.g.1</span>
 						</div>
-						<div class="standard" data-code="k-g-2" data-type="skill" data-dependencies="k-g-3 k-g-4">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-g-2" data-type="skill">
 							Name shapes
 							<span class="standard-code">k.g.2</span>
 						</div>
-						<div class="standard" data-code="k-g-3" data-type="compare" data-dependencies="k-g-1 k-g-2">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-g-3" data-type="compare">
 							2D vs 3D
 							<span class="standard-code">k.g.3</span>
 						</div>
@@ -335,15 +277,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">compare, create, and compose</h3>
-						<div class="standard" data-code="k-g-4" data-type="compare" data-dependencies="k-g-1 k-g-2">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-g-4" data-type="compare">
 							Compare shapes
 							<span class="standard-code">k.g.4</span>
 						</div>
-						<div class="standard" data-code="k-g-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-g-5" data-type="real-world">
 							Make shapes
 							<span class="standard-code">k.g.5</span>
 						</div>
-						<div class="standard" data-code="k-g-6" data-type="skill" data-dependencies="k-g-2">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-g-6" data-type="skill">
 							Compose shapes
 							<span class="standard-code">k.g.6</span>
 						</div>
@@ -384,11 +326,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">addition and subtraction problems</h3>
-						<div class="standard" data-code="1-oa-1" data-type="real-world" data-dependencies="1-oa-6 k-oa-2 1-oa-8">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-1" data-type="real-world">
 							Add and subtract within 20
 							<span class="standard-code">1.oa.1</span>
 						</div>
-						<div class="standard" data-code="1-oa-2" data-type="real-world" data-dependencies="1-oa-1 1-oa-8">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-2" data-type="real-world">
 							Add 3 numbers within 20
 							<span class="standard-code">1.oa.2</span>
 						</div>
@@ -396,11 +338,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">understand addition and subtraction</h3>
-						<div class="standard" data-code="1-oa-3" data-type="skill" data-dependencies="1-oa-4 k-oa-2">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-3" data-type="skill">
 							Apply properties of addition and subtraction
 							<span class="standard-code">1.oa.3</span>
 						</div>
-						<div class="standard" data-code="1-oa-4" data-type="understand" data-dependencies="1-oa-3 k-oa-3">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-4" data-type="understand">
 							Link subtraction to addition
 							<span class="standard-code">1.oa.4</span>
 						</div>
@@ -408,11 +350,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">fluency in addition and subtraction</h3>
-						<div class="standard" data-code="1-oa-5" data-type="understand" data-dependencies="k-cc-4c">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-5" data-type="understand">
 							Link counting to addition and subtraction
 							<span class="standard-code">1.oa.5</span>
 						</div>
-						<div class="standard" data-code="1-oa-6" data-type="fluency" data-dependencies="1-oa-5 1-oa-3 1-oa-4 1-oa-1 k-oa-2 k-oa-4 k-oa-5 k-oa-3">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-6" data-type="fluency">
 							Fluently add and subtract within 10
 							<span class="standard-code">1.oa.6</span>
 						</div>
@@ -420,11 +362,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">equations and unknowns</h3>
-						<div class="standard" data-code="1-oa-7" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-7" data-type="understand">
 							Equals sign
 							<span class="standard-code">1.oa.7</span>
 						</div>
-						<div class="standard" data-code="1-oa-8" data-type="skill" data-dependencies="1-oa-1">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-8" data-type="skill">
 							Find the unknown (1)
 							<span class="standard-code">1.oa.8</span>
 						</div>
@@ -448,7 +390,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">count higher</h3>
 
-						<div class="standard" data-code="1-nbt-1" data-type="skill" data-dependencies="k-cc-1">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-1" data-type="skill">
 							Count and write to 120
 							<span class="standard-code">1.nbt.1</span>
 						</div>
@@ -457,26 +399,26 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">understanding place value</h3>
 
-						<div class="standard parent-standard" data-code="1-nbt-2" data-dependencies="k-nbt-1 1-nbt-1">
+						<div class="standard parent-standard" data-code="1-nbt-2">
 							2-digit place value
 							<span class="standard-code">1.nbt.2</span>
 						</div>
 
 						<div class="sub-cluster">
-							<div class="standard" data-code="1-nbt-2a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-2a" data-type="understand">
 								Bundles of 10
 								<span class="standard-code">1.nbt.2a</span>
 							</div>
-							<div class="standard" data-code="1-nbt-2b" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-2b" data-type="understand">
 								Teens from ten (2)
 								<span class="standard-code">1.nbt.2b</span>
 							</div>
-							<div class="standard" data-code="1-nbt-2c" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-2c" data-type="understand">
 								Multiples of 10
 								<span class="standard-code">1.nbt.2c</span>
 							</div>
 						</div>
-						<div class="standard" data-code="1-nbt-3" data-type="compare" data-dependencies="1-nbt-2 k-cc-7">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-3" data-type="compare">
 							Two-digit comparison
 							<span class="standard-code">1.nbt.3</span>
 						</div>
@@ -485,15 +427,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">addition and subtraction</h3>
 
-						<div class="standard" data-code="1-nbt-4" data-type="skill" data-dependencies="1-nbt-2 1-nbt-1">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-4" data-type="skill">
 							Add and subtract within 100 using a variety of strategies
 							<span class="standard-code">1.nbt.4</span>
 						</div>
-						<div class="standard" data-code="1-nbt-5" data-type="skill" data-dependencies="1-nbt-2">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-5" data-type="skill">
 							Mentally add and subtract by 10
 							<span class="standard-code">1.nbt.5</span>
 						</div>
-						<div class="standard" data-code="1-nbt-6" data-type="skill" data-dependencies="1-nbt-2">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-6" data-type="skill">
 							Subtract multiples of 10 using a variety of strategies
 							<span class="standard-code">1.nbt.6</span>
 						</div>
@@ -518,11 +460,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">length measurement</h3>
 
-						<div class="standard" data-code="1-md-1" data-type="compare" data-dependencies="k-md-1">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-md-1" data-type="compare">
 							Compare lengths indirectly
 							<span class="standard-code">1.md.1</span>
 						</div>
-						<div class="standard" data-code="1-md-2" data-type="skill" data-dependencies="1-md-1">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-md-2" data-type="skill">
 							Measure lengths by stacking
 							<span class="standard-code">1.md.2</span>
 						</div>
@@ -531,7 +473,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">tell and write time</h3>
 
-						<div class="standard" data-code="1-md-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-md-3" data-type="skill">
 							Time by half hours
 							<span class="standard-code">1.md.3</span>
 						</div>
@@ -540,7 +482,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">work with data</h3>
 
-						<div class="standard" data-code="1-md-4" data-type="compare" data-dependencies="1-oa-1 1-oa-2 k-md-3">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-md-4" data-type="compare">
 							Categorize &#8594; compare
 							<span class="standard-code">1.md.4</span>
 						</div>
@@ -565,15 +507,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">shapes and their attributes</h3>
 
-						<div class="standard" data-code="1-g-1" data-type="compare" data-dependencies="k-g-2 k-g-3 k-g-4">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-g-1" data-type="compare">
 							Attributes that define shapes vs. other attributes of shapes
 							<span class="standard-code">1.g.1</span>
 						</div>
-						<div class="standard" data-code="1-g-2" data-type="skill" data-dependencies="k-g-6">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-g-2" data-type="skill">
 							Compose 2D and 3D shapes
 							<span class="standard-code">1.g.2</span>
 						</div>
-						<div class="standard" data-code="1-g-3" data-type="skill" data-dependencies="1-g-1">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-g-3" data-type="skill">
 							Make fractions of shapes (1)
 							<span class="standard-code">1.g.3</span>
 						</div>
@@ -615,7 +557,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">problem solving</h3>
 
-						<div class="standard" data-code="2-oa-1" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-oa-1" data-type="real-world">
 							Addition and subtraction word problems within 100
 							<span class="standard-code">2.oa.1</span>
 						</div>
@@ -624,7 +566,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">addition and subtraction</h3>
 
-						<div class="standard" data-code="2-oa-1" data-type="fluency" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-oa-1" data-type="fluency">
 							Fluently add and subtract within 20
 							<span class="standard-code">2.oa.2</span>
 						</div>
@@ -633,11 +575,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">equal groups of objects</h3>
 
-						<div class="standard" data-code="2-oa-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-oa-3" data-type="skill">
 							Odds and evens
 							<span class="standard-code">2.oa.3</span>
 						</div>
-						<div class="standard" data-code="2-oa-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-oa-4" data-type="skill">
 							Work with rows of objects
 							<span class="standard-code">2.oa.4</span>
 						</div>
@@ -661,53 +603,53 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">place value within 1000</h3>
 						
-						<div class="standard parent-standard" data-code="2-nbt-1" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="2-nbt-1" data-type="">
 							3-digit place value
 							<span class="standard-code">2.nbt.1</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="2-nbt-1a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-1a" data-type="understand">
 								Bundles of 10 tens
 								<span class="standard-code">2.nbt.1a</span>
 							</div>
-							<div class="standard" data-code="2-nbt-1b" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-1b" data-type="understand">
 								Multiples of 100
 								<span class="standard-code">2.nbt.1b</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="2-nbt-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-2" data-type="skill">
 							Count by 5s, 10s, and 100s
 							<span class="standard-code">2.nbt.2</span>
 						</div>
-						<div class="standard" data-code="2-nbt-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-3" data-type="skill">
 							Numerals, number names, and expanded form (whole numbers)
 							<span class="standard-code">2.nbt.3</span>
 						</div>
-						<div class="standard" data-code="2-nbt-4" data-type="compare" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-4" data-type="compare">
 							Compare 3-Digit numbers
 							<span class="standard-code">2.nbt.4</span>
 						</div>
 					</div>
 
 					<div class="cluster"><h3 class="cluster-name">addition and subtraction</h3>
-						<div class="standard" data-code="2-nbt-5" data-type="fluency" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-5" data-type="fluency">
 							Fluently add and subtract within 100
 							<span class="standard-code">2.nbt.5</span>
 						</div>
-						<div class="standard" data-code="2-nbt-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-6" data-type="skill">
 							Add several 2-digit numbers
 							<span class="standard-code">2.nbt.6</span>
 						</div>
-						<div class="standard" data-code="2-nbt-7" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-7" data-type="skill">
 							Add and subtract within 1000 using a variety of strategies
 							<span class="standard-code">2.nbt.7</span>
 						</div>
-						<div class="standard" data-code="2-nbt-8" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-8" data-type="skill">
 							Mentally add and subtract by 10 and 100
 							<span class="standard-code">2.nbt.8</span>
 						</div>
-						<div class="standard" data-code="2-nbt-9" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-9" data-type="justify">
 							Explain addition and subtraction strategies
 							<span class="standard-code">2.nbt.9</span>
 						</div>
@@ -732,19 +674,19 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">lengths in standard units</h3>
 
-						<div class="standard" data-code="2-md-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-md-1" data-type="skill">
 							Measure lengths of objects
 							<span class="standard-code">2.md.1</span>
 						</div>
-						<div class="standard" data-code="2-md-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-md-2" data-type="skill">
 							Measure with different units
 							<span class="standard-code">2.md.2</span>
 						</div>
-						<div class="standard" data-code="2-md-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-md-3" data-type="skill">
 							Estimate lengths
 							<span class="standard-code">2.md.3</span>
 						</div>
-						<div class="standard" data-code="2-md-4" data-type="compare" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-md-4" data-type="compare">
 							Measure &#8594; compare lengths
 							<span class="standard-code">2.md.4</span>
 						</div>
@@ -753,11 +695,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">work with lengths</h3>
 
-						<div class="standard" data-code="2-md-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-md-5" data-type="real-world">
 							Add and subtract lengths within 1000
 							<span class="standard-code">2.md.5</span>
 						</div>
-						<div class="standard" data-code="2-md-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-md-6" data-type="skill">
 							Number line
 							<span class="standard-code">2.md.6</span>
 						</div>
@@ -766,11 +708,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">time and money</h3>
 
-						<div class="standard" data-code="2-md-7" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-md-7" data-type="skill">
 							Time in 5-minute intervals
 							<span class="standard-code">2.md.7</span>
 						</div>
-						<div class="standard" data-code="2-md-8" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-md-8" data-type="skill">
 							Working with money
 							<span class="standard-code">2.md.8</span>
 						</div>
@@ -779,11 +721,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">work with data</h3>
 
-						<div class="standard" data-code="2-md-9" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-md-9" data-type="skill">
 							Line plot with whole numbers
 							<span class="standard-code">2.md.9</span>
 						</div>
-						<div class="standard" data-code="2-md-10" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-md-10" data-type="skill">
 							Picture and bar graphs (1)
 							<span class="standard-code">2.md.10</span>
 						</div>
@@ -808,15 +750,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">shapes and their attributes</h3>
 						
-						<div class="standard" data-code="2-g-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-g-1" data-type="skill">
 							Recognize and draw shapes
 							<span class="standard-code">2.g.1</span>
 						</div>
-						<div class="standard" data-code="2-g-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-g-2" data-type="skill">
 							Split rectangle into row and columns
 							<span class="standard-code">2.g.2</span>
 						</div>
-						<div class="standard" data-code="2-g-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-g-3" data-type="skill">
 							Make fractions of shapes (2)
 							<span class="standard-code">2.g.3</span>
 						</div>
@@ -856,44 +798,44 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">fractions as numbers</h3>
 						
-						<div class="standard" data-code="3-nf-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-1" data-type="understand">
 							Understand fractions
 							<span class="standard-code">3.nf.1</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="3-nf-2" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="3-nf-2" data-type="">
 							number line and fractions
 							<span class="standard-code">3.nf.2</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="3-nf-2a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-2a" data-type="skill">
 								1/b on the number line
 								<span class="standard-code">3.nf.2a</span>
 							</div>
-							<div class="standard" data-code="3-nf-2b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-2b" data-type="skill">
 								a/b on the number line
 								<span class="standard-code">3.nf.2b</span>
 							</div>
 						</div>
 						
-						<div class="standard parent-standard" data-code="3-nf-3" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="3-nf-3" data-type="">
 							equivalent fractions
 							<span class="standard-code">3.nf.3</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="3-nf-3a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-3a" data-type="understand">
 								Understand equivalent fractions
 								<span class="standard-code">3.nf.3a</span>
 							</div>
-							<div class="standard" data-code="3-nf-3b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-3b" data-type="skill">
 								Generate equivalent fractions
 								<span class="standard-code">3.nf.3b</span>
 							</div>
-							<div class="standard" data-code="3-nf-3c" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-3c" data-type="skill">
 								Express whole numbers as fractions
 								<span class="standard-code">3.nf.3c</span>
 							</div>
-							<div class="standard" data-code="3-nf-3d" data-type="compare" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-3d" data-type="compare">
 								Compare fractions of like numerators or like denominators
 								<span class="standard-code">3.nf.3d</span>
 							</div>
@@ -919,19 +861,19 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">multiplication and division</h3>
 						
-						<div class="standard" data-code="3-oa-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-oa-1" data-type="understand">
 							Multiplicitive comparisons (1)
 							<span class="standard-code">3.oa.1</span>
 						</div>
-						<div class="standard" data-code="3-oa-2" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-oa-2" data-type="understand">
 							Understand whole-number division
 							<span class="standard-code">3.oa.2</span>
 						</div>
-						<div class="standard" data-code="3-oa-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-oa-3" data-type="real-world">
 							Multiply and divide within 100
 							<span class="standard-code">3.oa.3</span>
 						</div>
-						<div class="standard" data-code="3-oa-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-oa-4" data-type="skill">
 							Find the unknown (2)
 							<span class="standard-code">3.oa.4</span>
 						</div>
@@ -940,11 +882,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">link multiplication and division</h3>
 						
-						<div class="standard" data-code="3-oa-5" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-oa-5" data-type="skill">
 							Apply properties of multiplication and division
 							<span class="standard-code">3.oa.5</span>
 						</div>
-						<div class="standard" data-code="3-oa-6" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-oa-6" data-type="understand">
 							Understand division as an unknown-factor problem
 							<span class="standard-code">3.oa.6</span>
 						</div>
@@ -953,7 +895,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">operate fluently</h3>
 						
-						<div class="standard" data-code="3-oa-7" data-type="fluency" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-oa-7" data-type="fluency">
 							Fluently multiply and divide within 100
 							<span class="standard-code">3.oa.7</span>
 						</div>
@@ -962,11 +904,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">use all four operations</h3>
 						
-						<div class="standard" data-code="3-oa-8" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-oa-8" data-type="real-world">
 							2-step word problems
 							<span class="standard-code">3.oa.8</span>
 						</div>
-						<div class="standard" data-code="3-oa-9" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-oa-9" data-type="skill">
 							Arithmetic patterns (1)
 							<span class="standard-code">3.oa.9</span>
 						</div>
@@ -990,15 +932,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">multi-digit arithmetic</h3>
 
-						<div class="standard" data-code="3-nbt-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nbt-1" data-type="skill">
 							Round to the nearest 10 or 100
 							<span class="standard-code">3.nbt.1</span>
 						</div>
-						<div class="standard" data-code="3-nbt-2" data-type="fluency" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nbt-2" data-type="fluency">
 							Fluently add and subtract within 1000
 							<span class="standard-code">3.nbt.2</span>
 						</div>
-						<div class="standard" data-code="3-nbt-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nbt-3" data-type="skill">
 							Multiply by multiples of 10
 							<span class="standard-code">3.nbt.3</span>
 						</div>
@@ -1022,11 +964,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">measure and estimate</h3>
-							<div class="standard" data-code="3-md-1" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-1" data-type="skill">
 								Tell time
 								<span class="standard-code">3.md.1</span>
 							</div>
-							<div class="standard" data-code="3-md-2" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-2" data-type="real-world">
 								Volume and mass
 								<span class="standard-code">3.md.2</span>
 							</div>
@@ -1034,11 +976,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">work with data</h3>
-							<div class="standard" data-code="3-md-3" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-3" data-type="real-world">
 								Picture and bar graphs (2)
 								<span class="standard-code">3.md.3</span>
 							</div>
-							<div class="standard" data-code="3-md-4" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-4" data-type="skill">
 								Line plot with fractions (1)
 								<span class="standard-code">3.md.4</span>
 							</div>
@@ -1047,44 +989,44 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">link area to multiplication</h3>
 
-						<div class="standard parent-standard" data-code="3-md-5" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="3-md-5" data-type="">
 							understand area
 							<span class="standard-code">3.md.5</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="3-md-5a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-5a" data-type="understand">
 								Length with unit squares
 								<span class="standard-code">3.md.5a</span>
 							</div>
-							<div class="standard" data-code="3-md-5b" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-5b" data-type="understand">
 								Area with unit squares
 								<span class="standard-code">3.md.5b</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="3-md-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-3" data-type="skill">
 							Find area by counting unit squares
 							<span class="standard-code">3.md.6</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="3-md-7" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="3-md-7" data-type="">
 							area to multiplication
 							<span class="standard-code">3.md.7</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="3-md-7a" data-type="verify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-7a" data-type="verify">
 								Verify A = l*w
 								<span class="standard-code">3.md.7a</span>
 							</div>
-							<div class="standard" data-code="3-md-7b" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-7b" data-type="real-world">
 								Multiply to find area
 								<span class="standard-code">3.md.7b</span>
 							</div>
-							<div class="standard" data-code="3-md-7c" data-type="verify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-7c" data-type="verify">
 								Verify the distributive property using area models
 								<span class="standard-code">3.md.7c</span>
 							</div>
-							<div class="standard" data-code="3-md-7d" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-7d" data-type="skill">
 								Decompose complex shapes to find area
 								<span class="standard-code">3.md.7d</span>
 							</div>
@@ -1094,7 +1036,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">perimeter</h3>
 
-						<div class="standard" data-code="3-md-8" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-md-8" data-type="real-world">
 							Perimeters of polygons
 							<span class="standard-code">3.md.8</span>
 						</div>
@@ -1118,11 +1060,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">shapes and their attributes</h3>
-							<div class="standard" data-code="3-g-1" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-g-1" data-type="understand">
 								Different shapes may share attributes
 								<span class="standard-code">3.g.1</span>
 							</div>
-							<div class="standard" data-code="3-g-2" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-g-2" data-type="skill">
 								Make fractions of shapes (3)
 								<span class="standard-code">3.g.2</span>
 							</div>
@@ -1162,11 +1104,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">understanding fractions</h3>
 						
-							<div class="standard" data-code="4-nf-1" data-type="justify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-1" data-type="justify">
 								a/b = (n*a)/(n*b)
 								<span class="standard-code">4.nf.1</span>
 							</div>
-							<div class="standard" data-code="4-nf-2" data-type="compare" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-2" data-type="compare">
 								Compare unlike fractions
 								<span class="standard-code">4.nf.2</span>
 							</div>
@@ -1175,43 +1117,43 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">unit fractions</h3>
 						
-						<div class="standard parent-standard" data-code="4-nf-3" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="4-nf-3" data-type="">
 							addition and subtraction
 							<span class="standard-code">4.nf.3</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="4-nf-3a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-3a" data-type="understand">
 								Joining and separating fractions
 								<span class="standard-code">4.nf.3a</span>
 							</div>
-							<div class="standard" data-code="4-nf-3b" data-type="skill" data-dependencies="k-oa-3">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-3b" data-type="skill" data-dependencies="k-oa-3">
 								Decompose fractions
 								<span class="standard-code">4.nf.3b</span>
 							</div>
-							<div class="standard" data-code="4-nf-3c" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-3c" data-type="skill">
 								Add and subtract mixed numbers
 								<span class="standard-code">4.nf.3c</span>
 							</div>
-							<div class="standard" data-code="4-nf-3d" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-3d" data-type="real-world">
 								Add and subtract fractions
 								<span class="standard-code">4.nf.3d</span>
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="4-nf-4" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="4-nf-4" data-type="">
 							multiplication and division
 							<span class="standard-code">4.nf.4</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="4-nf-4a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-4a" data-type="understand">
 								Understand fractions as multiples of unit fractions
 								<span class="standard-code">4.nf.4a</span>
 							</div>
-							<div class="standard" data-code="4-nf-4b" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-4b" data-type="understand">
 								Understand a * b/c as a*b * 1/c
 								<span class="standard-code">4.nf.4b</span>
 							</div>
-							<div class="standard" data-code="4-nf-4c" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-4c" data-type="real-world">
 								Multiply fractions by whole numbers
 								<span class="standard-code">4.nf.4c</span>
 							</div>
@@ -1221,15 +1163,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">decimal notation to hundredths</h3>
 						
-						<div class="standard" data-code="4-nf-5" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-5" data-type="skill">
 							Express a/10 as 10a/100
 							<span class="standard-code">4.nf.5</span>
 						</div>
-						<div class="standard" data-code="4-nf-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-6" data-type="skill">
 							Decimal notation
 							<span class="standard-code">4.nf.6</span>
 						</div>
-						<div class="standard" data-code="4-nf-7" data-type="compare" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-7" data-type="compare">
 							Compare decimals to hundredths
 							<span class="standard-code">4.nf.7</span>
 						</div>
@@ -1253,15 +1195,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">four operations</h3>
-						<div class="standard" data-code="4-oa-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-oa-1" data-type="understand">
 							Multiplicitive comparisons (2)
 							<span class="standard-code">4.oa.1</span>
 						</div>
-						<div class="standard" data-code="4-oa-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-oa-2" data-type="real-world">
 							Multiplication and division problems
 							<span class="standard-code">4.oa.2</span>
 						</div>
-						<div class="standard" data-code="4-oa-3" data-type="capstone" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-oa-3" data-type="capstone">
 							Multi-step problems with whole numbers
 							<span class="standard-code">4.oa.3</span>
 						</div>
@@ -1269,7 +1211,7 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">factors and multiples</h3>
-						<div class="standard" data-code="4-oa-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-oa-4" data-type="skill">
 							Factors, multiples, and primes
 							<span class="standard-code">4.oa.4</span>
 						</div>
@@ -1277,7 +1219,7 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">patterms</h3>
-						<div class="standard" data-code="4-oa-5" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-oa-5" data-type="skill">
 							Arithmetic patterns (2)
 							<span class="standard-code">4.oa.5</span>
 						</div>
@@ -1301,15 +1243,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">understanding place value</h3>
 						
-						<div class="standard" data-code="4-nbt-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nbt-1" data-type="understand">
 							Whole number place value and multiples of 10
 							<span class="standard-code">4.nbt.1</span>
 						</div>
-						<div class="standard" data-code="4-nbt-2" data-type="compare" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nbt-2" data-type="compare">
 							Compare whole numbers
 							<span class="standard-code">4.nbt.2</span>
 						</div>
-						<div class="standard" data-code="4-nbt-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nbt-3" data-type="skill">
 							Round whole numbers
 							<span class="standard-code">4.nbt.3</span>
 						</div>
@@ -1318,15 +1260,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">addition and subtraction</h3>
 
-						<div class="standard" data-code="4-nbt-4" data-type="fluency" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nbt-4" data-type="fluency">
 							Fluently add and subtract whole numbers using the standard algorithm
 							<span class="standard-code">4.nbt.4</span>
 						</div>
-						<div class="standard" data-code="4-nbt-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nbt-5" data-type="real-world">
 							Multiply multi-digit numbers
 							<span class="standard-code">4.nbt.5</span>
 						</div>
-						<div class="standard" data-code="4-nbt-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-nbt-6" data-type="skill">
 							Multi-digit dividends and 1-digit divisors
 							<span class="standard-code">4.nbt.6</span>
 						</div>
@@ -1351,15 +1293,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">measurement problems</h3>
 
-						<div class="standard" data-code="4-md-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-md-1" data-type="skill">
 							Measure with different units
 							<span class="standard-code">4.md.1</span>
 						</div>
-						<div class="standard" data-code="4-md-2" data-type="capstone" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-md-2" data-type="capstone">
 							Solve problems involving measurements
 							<span class="standard-code">4.md.2</span>
 						</div>
-						<div class="standard" data-code="4-md-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-md-3" data-type="real-world">
 							Area and perimeter
 							<span class="standard-code">4.md.3</span>
 						</div>
@@ -1367,7 +1309,7 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">work with data</h3>
-						<div class="standard" data-code="4-md-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-md-4" data-type="skill">
 							Line plot with fractions (2)
 							<span class="standard-code">4.md.4</span>
 						</div>
@@ -1376,26 +1318,26 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">angles</h3>
 
-						<div class="standard parent-standard" data-code="4-md-5" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="4-md-5" data-type="">
 							angles and degrees
 							<span class="standard-code">4.md.5</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="4-md-5a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-md-5a" data-type="understand">
 								Angles
 								<span class="standard-code">4.md.5a</span>
 							</div>
-							<div class="standard" data-code="4-md-5b" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-md-5b" data-type="understand">
 								Degrees
 								<span class="standard-code">4.md.5b</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="4-md-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-md-6" data-type="skill">
 							Protractors
 							<span class="standard-code">4.md.6</span>
 						</div>
-						<div class="standard" data-code="4-md-7" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-md-7" data-type="real-world">
 							Add and subtract angles
 							<span class="standard-code">4.md.7</span>
 						</div>
@@ -1420,15 +1362,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">lines, angles, and shapes</h3>
 						
-						<div class="standard" data-code="4-g-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-g-1" data-type="skill">
 							Point, line, segment, ray, angle, perpendicular, and parallel
 							<span class="standard-code">4.g.1</span>
 						</div>
-						<div class="standard" data-code="4-g-2" data-type="compare" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-g-2" data-type="compare">
 							Parallel and perpendicular
 							<span class="standard-code">4.g.2</span>
 						</div>
-						<div class="standard" data-code="4-g-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="4-g-3" data-type="skill">
 							Shape symmetry
 							<span class="standard-code">4.g.3</span>
 						</div>
@@ -1468,11 +1410,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">addition and subtraction</h3>
 						
-						<div class="standard" data-code="5-nf-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-1" data-type="skill">
 							Add and subtract fractions with unlike denominators
 							<span class="standard-code">5.nf.1</span>
 						</div>
-						<div class="standard" data-code="5-nf-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-2" data-type="real-world">
 							Add and subtract fractions
 							<span class="standard-code">5.nf.2</span>
 						</div>
@@ -1481,60 +1423,60 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">multiplication and division</h3>
 						
-						<div class="standard" data-code="5-nf-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-3" data-type="real-world">
 							Understand a/b as a &divide; b
 							<span class="standard-code">5.nf.3</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="5-nf-4" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="5-nf-4" data-type="">
 							multiplying with fractions
 							<span class="standard-code">5.nf.4</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="5-nf-4a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-4a" data-type="understand">
 								Understand (a/b)*c and (a*c)/b
 								<span class="standard-code">5.nf.4a</span>
 							</div>
-							<div class="standard" data-code="5-nf-4b" data-type="verify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-4b" data-type="verify">
 								Verify A = l*w for fractional side lengths
 								<span class="standard-code">5.nf.4b</span>
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="5-nf-5" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="5-nf-5" data-type="">
 							scaling with fractions
 							<span class="standard-code">5.nf.5</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="5-nf-5a" data-type="compare" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-5a" data-type="compare">
 								Compare products without multiplying the factors
 								<span class="standard-code">5.nf.5a</span>
 							</div>
-							<div class="standard" data-code="5-nf-5b" data-type="justify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-5b" data-type="justify">
 								Fraction multiplication as scaling
 								<span class="standard-code">5.nf.5b</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="5-nf-6" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-6" data-type="real-world">
 							Fraction multiplication problems
 							<span class="standard-code">5.nf.6</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="5-nf-7" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="5-nf-7" data-type="">
 							dividing with fractions
 							<span class="standard-code">5.nf.7</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="5-nf-7a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-7a" data-type="skill">
 								Divide a unit fraction by a whole number
 								<span class="standard-code">5.nf.7a</span>
 							</div>
-							<div class="standard" data-code="5-nf-7b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-7b" data-type="skill">
 								Divide a whole number by a unit fraction
 								<span class="standard-code">5.nf.7b</span>
 							</div>
-							<div class="standard" data-code="5-nf-7c" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-7c" data-type="real-world">
 								Fraction division problems
 								<span class="standard-code">5.nf.7c</span>
 							</div>
@@ -1559,11 +1501,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">numerical expressions</h3>
-						<div class="standard" data-code="5-oa-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-oa-1" data-type="skill">
 							Evaluate expressions with parenthesis
 							<span class="standard-code">5.oa.1</span>
 						</div>
-						<div class="standard" data-code="5-oa-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-oa-2" data-type="real-world">
 							Create expressions with parenthesis
 							<span class="standard-code">5.oa.2</span>
 						</div>
@@ -1571,7 +1513,7 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">patterns</h3>
-						<div class="standard" data-code="5-oa-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-oa-3" data-type="skill">
 							Analyze patterns and relationships
 							<span class="standard-code">5.oa.3</span>
 						</div>
@@ -1595,31 +1537,31 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">understanding place value</h3>
 
-						<div class="standard" data-code="5-nbt-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nbt-1" data-type="understand">
 							Decimal number place value and multiples of 10
 							<span class="standard-code">5.nbt.1</span>
 						</div>
-						<div class="standard" data-code="5-nbt-2" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nbt-2" data-type="justify">
 							Explain patterns when multiplying by powers of 10
 							<span class="standard-code">5.nbt.2</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="5-nbt-3" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="5-nbt-3" data-type="">
 							thousandths
 							<span class="standard-code">5.nbt.3</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="5-nbt-3a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nbt-3a" data-type="skill">
 								Numerals, number names, and expanded form (decimal numbers)
 								<span class="standard-code">5.nbt.3a</span>
 							</div>
-							<div class="standard" data-code="5-nbt-3b" data-type="compare" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nbt-3b" data-type="compare">
 								Compare decimals to thousandths
 								<span class="standard-code">5.nbt.3b</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="5-nbt-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nbt-4" data-type="skill">
 							Round to any place
 							<span class="standard-code">5.nbt.4</span>
 						</div>
@@ -1628,15 +1570,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">operations with decimals</h3>
 
-						<div class="standard" data-code="5-nbt-5" data-type="fluency" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nbt-5" data-type="fluency">
 							Fluently multiply whole numbers using the standard algorithm
 							<span class="standard-code">5.nbt.5</span>
 						</div>
-						<div class="standard" data-code="5-nbt-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nbt-6" data-type="skill">
 							Divide whole numbers
 							<span class="standard-code">5.nbt.6</span>
 						</div>
-						<div class="standard" data-code="5-nbt-7" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-nbt-7" data-type="skill">
 							Operate on decimals to hundredths
 							<span class="standard-code">5.nbt.7</span>
 						</div>
@@ -1661,7 +1603,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">units</h3>
 
-						<div class="standard" data-code="5-md-1" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-md-1" data-type="real-world">
 							Convert units (1)
 							<span class="standard-code">5.md.1</span>
 						</div>
@@ -1670,7 +1612,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">work with data</h3>
 
-						<div class="standard" data-code="5-md-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-md-2" data-type="real-world">
 							Line plot with fractions (3)
 							<span class="standard-code">5.md.2</span>
 						</div>
@@ -1679,40 +1621,40 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">link volume to multiplication</h3>
 
-						<div class="standard parent-standard" data-code="5-md-3" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="5-md-3" data-type="">
 							volume
 							<span class="standard-code">5.md.3</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="5-md-3a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-md-3a" data-type="understand">
 								Length with unit cubes
 								<span class="standard-code">5.md.3a</span>
 							</div>
-							<div class="standard" data-code="5-md-3b" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-md-3b" data-type="understand">
 								Volume with unit cubes
 								<span class="standard-code">5.md.3b</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="5-md-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-md-4" data-type="skill">
 							Find volume by counting cubes
 							<span class="standard-code">5.md.4</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="5-md-5" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="5-md-5" data-type="">
 							volume and multiplication
 							<span class="standard-code">5.md.5</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="5-md-5a" data-type="verify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-md-5a" data-type="verify">
 								Verify V = l*w*h
 								<span class="standard-code">5.md.5a</span>
 							</div>
-							<div class="standard" data-code="5-md-5b" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-md-5b" data-type="real-world">
 								Use the formulas V = l*w*h and V = b*h
 								<span class="standard-code">5.md.5b</span>
 							</div>
-							<div class="standard" data-code="5-md-5c" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-md-5c" data-type="real-world">
 								Volume addition and subtraction problems
 								<span class="standard-code">5.md.5c</span>
 							</div>
@@ -1739,11 +1681,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">graph points</h3>
 
-						<div class="standard" data-code="5-g-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-g-1" data-type="skill">
 							Make a coordinate system
 							<span class="standard-code">5.g.1</span>
 						</div>
-						<div class="standard" data-code="5-g-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-g-2" data-type="real-world">
 							First quadrant problems
 							<span class="standard-code">5.g.2</span>
 						</div>
@@ -1752,11 +1694,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">shape classifications</h3>
 
-						<div class="standard" data-code="5-g-3" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-g-3" data-type="understand">
 							Subcategories of shapes
 							<span class="standard-code">5.g.3</span>
 						</div>
-						<div class="standard" data-code="5-g-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="5-g-4" data-type="skill">
 							Hierarchy of 2D shapes
 							<span class="standard-code">5.g.4</span>
 						</div>
@@ -1797,33 +1739,33 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">work with ratios</h3>
 						
-						<div class="standard" data-code="6-rp-1" data-type="skill" data-type="" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-rp-1" data-type="skill" data-type="">
 							Use ratios to describe relationships
 							<span class="standard-code">6.rp.1</span>
 						</div>
-						<div class="standard" data-code="6-rp-2" data-type="understand" data-type="" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-rp-2" data-type="understand" data-type="">
 							Ratios and unit rates
 							<span class="standard-code">6.rp.2</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="6-rp-3" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="6-rp-3" data-type="">
 							ratio and rate
 							<span class="standard-code">6.rp.3</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="6-rp-3a" data-type="skill" data-type="link" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-rp-3a" data-type="skill" data-type="link">
 								Ratios in tables and coordinate planes
 								<span class="standard-code">6.rp.3a</span>
 							</div>
-							<div class="standard" data-code="6-rp-3b" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-rp-3b" data-type="real-world">
 								Unit rate problems
 								<span class="standard-code">6.rp.3b</span>
 							</div>
-							<div class="standard" data-code="6-rp-3c" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-rp-3c" data-type="skill">
 								Percents as rates per 100
 								<span class="standard-code">6.rp.3c</span>
 							</div>
-							<div class="standard" data-code="6-rp-3d" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-rp-3d" data-type="skill">
 								Convert units (2)
 								<span class="standard-code">6.rp.3d</span>
 							</div>
@@ -1848,35 +1790,35 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">algebraic expressions</h3>
 
-						<div class="standard" data-code="6-ee-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-1" data-type="skill">
 							Numerical expressions with exponents
 							<span class="standard-code">6.ee.1</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="6-ee-2" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="6-ee-2" data-type="">
 							algebraic expressions
 							<span class="standard-code">6.ee.2</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="6-ee-2a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-2a" data-type="skill">
 								Write simple algebraic expressions
 								<span class="standard-code">6.ee.2a</span>
 							</div>
-							<div class="standard" data-code="6-ee-2b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-2b" data-type="skill">
 								Identify parts of algebraic expressions
 								<span class="standard-code">6.ee.2b</span>
 							</div>
-							<div class="standard" data-code="6-ee-2c" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-2c" data-type="real-world">
 								Evaluate expressions
 								<span class="standard-code">6.ee.2c</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="6-ee-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-3" data-type="skill">
 							Generate equivalent expressions
 							<span class="standard-code">6.ee.3</span>
 						</div>
-						<div class="standard" data-code="6-ee-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-4" data-type="skill">
 							Identify equivalent expressions
 							<span class="standard-code">6.ee.4</span>
 						</div>
@@ -1885,19 +1827,19 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">one-variable relationships</h3>
 
-						<div class="standard" data-code="6-ee-5" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-5" data-type="understand">
 							Solutions make equations and inequalities true
 							<span class="standard-code">6.ee.5</span>
 						</div>
-						<div class="standard" data-code="6-ee-6" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-6" data-type="real-world">
 							Write expressions to solve problems
 							<span class="standard-code">6.ee.6</span>
 						</div>
-						<div class="standard" data-code="6-ee-7" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-7" data-type="real-world">
 							Solve x+p = q and px = q for (non-negative p, q, and x)
 							<span class="standard-code">6.ee.7</span>
 						</div>
-						<div class="standard" data-code="6-ee-8" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-8" data-type="real-world">
 							Write inequalities as constraint conditions
 							<span class="standard-code">6.ee.8</span>
 						</div>
@@ -1906,7 +1848,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">quantitative relationships</h3>
 
-						<div class="standard" data-code="6-ee-9" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-9" data-type="real-world">
 							Dependent and independent variables
 							<span class="standard-code">6.ee.9</span>
 						</div>
@@ -1931,7 +1873,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">divide fractions</h3>
 
-						<div class="standard" data-code="6-ns-1" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-1" data-type="real-world">
 							Divide fractions by fractions
 							<span class="standard-code">6.ns.1</span>
 						</div>
@@ -1940,15 +1882,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">fluent operations</h3>
 
-						<div class="standard" data-code="6-ns-2" data-type="fluency" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-2" data-type="fluency">
 							Fluently divide using the standard algorithm
 							<span class="standard-code">6.ns.2</span>
 						</div>
-						<div class="standard" data-code="6-ns-3" data-type="fluency" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-3" data-type="fluency">
 							Fluently operate on decimals using the standard algorithms
 							<span class="standard-code">6.ns.3</span>
 						</div>
-						<div class="standard" data-code="6-ns-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-4" data-type="skill">
 							GCF, LCM, and the distributive property
 							<span class="standard-code">6.ns.4</span>
 						</div>
@@ -1957,54 +1899,54 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">rational nubers</h3>
 
-						<div class="standard" data-code="6-ns-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-5" data-type="real-world">
 							Positive and negative numbers
 							<span class="standard-code">6.ns.5</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="6-ns-6" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="6-ns-6" data-type="">
 							rationals on number lines
 							<span class="standard-code">6.ns.6</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="6-ns-6a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-6a" data-type="understand">
 								Understand the negative sign as the "opposite sign"
 								<span class="standard-code">6.ns.6a</span>
 							</div>
-							<div class="standard" data-code="6-ns-6b" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-6b" data-type="understand">
 								Ordered pairs, points, and reflection over an axis
 								<span class="standard-code">6.ns.6b</span>
 							</div>
-							<div class="standard" data-code="6-ns-6c" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-6c" data-type="skill">
 								Plot points with integer coordinates
 								<span class="standard-code">6.ns.6c</span>
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="6-ns-7" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="6-ns-7" data-type="">
 							absolute value
 							<span class="standard-code">6.ns.7</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="6-ns-7a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-7a" data-type="skill">
 								Inequalities and relative position
 								<span class="standard-code">6.ns.7a</span>
 							</div>
-							<div class="standard" data-code="6-ns-7b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-7b" data-type="skill">
 								Interpret inequalities
 								<span class="standard-code">6.ns.7b</span>
 							</div>
-							<div class="standard" data-code="6-ns-7c" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-7c" data-type="understand">
 								Understand absolute value
 								<span class="standard-code">6.ns.7c</span>
 							</div>
-							<div class="standard" data-code="6-ns-7d" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-7d" data-type="skill">
 								Absolute value comparisons vs. statements of order
 								<span class="standard-code">6.ns.7d</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="6-ns-8" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-8" data-type="real-world">
 							All four quadrants
 							<span class="standard-code">6.ns.8</span>
 						</div>
@@ -2029,15 +1971,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">variability and center</h3>
 
-						<div class="standard" data-code="6-sp-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-sp-1" data-type="understand">
 							Statistical questions
 							<span class="standard-code">6.sp.1</span>
 						</div>
-						<div class="standard" data-code="6-sp-2" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-sp-2" data-type="understand">
 							Data distribution basics
 							<span class="standard-code">6.sp.2</span>
 						</div>
-						<div class="standard" data-code="6-sp-3" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-sp-3" data-type="understand">
 							Center vs. variability
 							<span class="standard-code">6.sp.3</span>
 						</div>
@@ -2046,29 +1988,29 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">distributions</h3>
 
-						<div class="standard" data-code="6-sp-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-sp-4" data-type="skill">
 							Dot plots, histograms, and box plots
 							<span class="standard-code">6.sp.4</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="6-sp-5" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="6-sp-5" data-type="">
 							summarize data sets
 							<span class="standard-code">6.sp.5</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="6-sp-5a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-sp-5a" data-type="skill">
 								Report the number of observations
 								<span class="standard-code">6.sp.5a</span>
 							</div>
-							<div class="standard" data-code="6-sp-5b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-sp-5b" data-type="skill">
 								Describe the attribute being observed
 								<span class="standard-code">6.sp.5b</span>
 							</div>
-							<div class="standard" data-code="6-sp-5c" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-sp-5c" data-type="real-world">
 								Measures of center and variability
 								<span class="standard-code">6.sp.5c</span>
 							</div>
-							<div class="standard" data-code="6-sp-5d" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-sp-5d" data-type="real-world">
 								Mean and MAD vs. median and IQR
 								<span class="standard-code">6.sp.5d</span>
 							</div>
@@ -2093,19 +2035,19 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">area, surface area, and volume</h3>
-						<div class="standard" data-code="6-g-1" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-g-1" data-type="real-world">
 							Areas of shapes
 							<span class="standard-code">6.g.1</span>
 						</div>
-						<div class="standard" data-code="6-g-2" data-type="verify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-g-2" data-type="verify">
 							Verify V=l*w*h for fractional side lengths
 							<span class="standard-code">6.g.2</span>
 						</div>
-						<div class="standard" data-code="6-g-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-g-3" data-type="real-world">
 							Shapes on the coordinate plane
 							<span class="standard-code">6.g.3</span>
 						</div>
-						<div class="standard" data-code="6-g-4" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="6-g-4" data-type="real-world">
 							2D nets &#8594; 3D figures
 							<span class="standard-code">6.g.4</span>
 						</div>
@@ -2145,35 +2087,35 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">proportional relationships</h3>
 
-						<div class="standard" data-code="7-rp-1" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-rp-1" data-type="real-world">
 							Unit rates from ratios of fractions
 							<span class="standard-code">7.rp.1</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="7-rp-2" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="7-rp-2" data-type="">
 							proportional relationships
 							<span class="standard-code">7.rp.2</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="7-rp-2a" data-type="verify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-rp-2a" data-type="verify">
 								Verify proportional relationships
 								<span class="standard-code">7.rp.2a</span>
 							</div>
-							<div class="standard" data-code="7-rp-2b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-rp-2b" data-type="skill">
 								Identify the constant of proportionality
 								<span class="standard-code">7.rp.2b</span>
 							</div>
-							<div class="standard" data-code="7-rp-2c" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-rp-2c" data-type="skill">
 								Proportion equations: a = pb
 								<span class="standard-code">7.rp.2c</span>
 							</div>
-							<div class="standard" data-code="7-rp-2d" data-type="justify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-rp-2d" data-type="justify">
 								Explain graphs of proportional relationships
 								<span class="standard-code">7.rp.2d</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="7-rp-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-rp-3" data-type="real-world">
 							Proportional relationship problems
 							<span class="standard-code">7.rp.3</span>
 						</div>
@@ -2196,11 +2138,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">equivalent expressions</h3>
-						<div class="standard" data-code="7-ee-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ee-1" data-type="skill">
 							Add, subtract, factor, and expand
 							<span class="standard-code">7.ee.1</span>
 						</div>
-						<div class="standard" data-code="7-ee-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ee-2" data-type="skill">
 							Rewrite to shed Llight
 							<span class="standard-code">7.ee.2</span>
 						</div>
@@ -2208,21 +2150,21 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">problem solving</h3>
-						<div class="standard" data-code="7-ee-3" data-type="capstone" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ee-3" data-type="capstone">
 							Multi-step problems
 							<span class="standard-code">7.ee.3</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="7-ee-4" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="7-ee-4" data-type="">
 							equations and inequalities
 							<span class="standard-code">7.ee.4</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="7-ee-4a" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ee-4a" data-type="real-world">
 								Solve equations (1)
 								<span class="standard-code">7.ee.4a</span>
 							</div>
-							<div class="standard" data-code="7-ee-4b" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ee-4b" data-type="real-world">
 								Solve inequalities
 								<span class="standard-code">7.ee.4b</span>
 							</div>
@@ -2248,53 +2190,53 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">work with rational nubers</h3>
 
-						<div class="standard parent-standard" data-code="7-ns-1" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="7-ns-1" data-type="">
 							addition and subtraction
 							<span class="standard-code">7.ns.1</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="7-ns-1a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-1a" data-type="skill">
 								Opposites combine to zero
 								<span class="standard-code">7.ns.1a</span>
 							</div>
-							<div class="standard" data-code="7-ns-1b" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-1b" data-type="understand">
 								p + q is located |q| units from p
 								<span class="standard-code">7.ns.1b</span>
 							</div>
-							<div class="standard" data-code="7-ns-1c" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-1c" data-type="real-world">
 								Understand and apply p - q = p + (-q)
 								<span class="standard-code">7.ns.1c</span>
 							</div>
-							<div class="standard" data-code="7-ns-1d" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-1d" data-type="skill">
 								Add and subtract rational numbers
 								<span class="standard-code">7.ns.1d</span>
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="7-ns-2" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="7-ns-2" data-type="">
 							multiplication and division
 							<span class="standard-code">7.ns.2</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="7-ns-2a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-2a" data-type="understand">
 								(-1)(-1) = 1 because distributive property
 								<span class="standard-code">7.ns.2a</span>
 							</div>
-							<div class="standard" data-code="7-ns-2b" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-2b" data-type="understand">
 								-(p/q) = (-p)/q = p/(-q)
 								<span class="standard-code">7.ns.2b</span>
 							</div>
-							<div class="standard" data-code="7-ns-2c" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-2c" data-type="skill">
 								Multiply and divide rational numbers
 								<span class="standard-code">7.ns.2c</span>
 							</div>
-							<div class="standard" data-code="7-ns-2d" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-2d" data-type="skill">
 								Convert fractions to decimals
 								<span class="standard-code">7.ns.2d</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="7-ns-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-3" data-type="real-world">
 							Rational number problems
 							<span class="standard-code">7.ns.3</span>
 						</div>
@@ -2319,11 +2261,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">random sampling</h3>
 						
-						<div class="standard" data-code="7-sp-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-1" data-type="understand">
 							Random samples
 							<span class="standard-code">7.sp.1</span>
 						</div>
-						<div class="standard" data-code="7-sp-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-2" data-type="skill">
 							Work with multiple samples of a single population
 							<span class="standard-code">7.sp.2</span>
 						</div>
@@ -2332,11 +2274,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">comparative inferences</h3>
 
-						<div class="standard" data-code="7-sp-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-3" data-type="skill">
 							Assess overlap of data distributions
 							<span class="standard-code">7.sp.3</span>
 						</div>
-						<div class="standard" data-code="7-sp-4" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-4" data-type="real-world">
 							Use samples to compare different populations
 							<span class="standard-code">7.sp.4</span>
 						</div>
@@ -2345,44 +2287,44 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">probability models</h3>
 
-						<div class="standard" data-code="7-sp-5" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-5" data-type="understand">
 							0 = never, 1 = always
 							<span class="standard-code">7.sp.5</span>
 						</div>
-						<div class="standard" data-code="7-sp-6" data-type="verify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-6" data-type="verify">
 							Verify probability experimentally
 							<span class="standard-code">7.sp.6</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="7-sp-7" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="7-sp-7" data-type="">
 							probability models
 							<span class="standard-code">7.sp.7</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="7-sp-7a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-7a" data-type="skill">
 								Develop a uniform probability model
 								<span class="standard-code">7.sp.7a</span>
 							</div>
-							<div class="standard" data-code="7-sp-7b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-7b" data-type="skill">
 								Develop a probability model from frequency data
 								<span class="standard-code">7.sp.7b</span>
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="7-sp-8" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="7-sp-8" data-type="">
 							compound events
 							<span class="standard-code">7.sp.8</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="7-sp-8a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-8a" data-type="understand">
 								Compound events and sample spaces
 								<span class="standard-code">7.sp.8a</span>
 							</div>
-							<div class="standard" data-code="7-sp-8b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-8b" data-type="skill">
 								Work with sample spaces
 								<span class="standard-code">7.sp.8b</span>
 							</div>
-							<div class="standard" data-code="7-sp-8c" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-8c" data-type="skill">
 								Simulate compound events
 								<span class="standard-code">7.sp.8c</span>
 							</div>
@@ -2408,15 +2350,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">geometric figures</h3>
 						
-						<div class="standard" data-code="7-g-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-g-1" data-type="skill">
 							Problems involving scale drawings
 							<span class="standard-code">7.g.1</span>
 						</div>
-						<div class="standard" data-code="7-g-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-g-2" data-type="skill">
 							Given 3 sides lengths or 3 angle measures, draw a triangle
 							<span class="standard-code">7.g.2</span>
 						</div>
-						<div class="standard" data-code="7-g-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-g-3" data-type="skill">
 							Cross sections of 3D figures
 							<span class="standard-code">7.g.3</span>
 						</div>
@@ -2425,15 +2367,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">angles, area, and volume</h3>
 						
-						<div class="standard" data-code="7-g-4" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-g-4" data-type="justify">
 							Area and circumference of a circle
 							<span class="standard-code">7.g.4</span>
 						</div>
-						<div class="standard" data-code="7-g-5" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-g-5" data-type="skill">
 							Supplementary, complementary, vertical, and adjacent angles
 							<span class="standard-code">7.g.5</span>
 						</div>
-						<div class="standard" data-code="7-g-6" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="7-g-6" data-type="real-world">
 							Area, volume, and surface area
 							<span class="standard-code">7.g.6</span>
 						</div>
@@ -2472,15 +2414,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">understand functions</h3>
 
-						<div class="standard" data-code="8-f-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-f-1" data-type="understand">
 							A function assigns each input to a single output
 							<span class="standard-code">8.f.1</span>
 						</div>
-						<div class="standard" data-code="8-f-2" data-type="compare" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-f-2" data-type="compare">
 							Compare properties of functions
 							<span class="standard-code">8.f.2</span>
 						</div>
-						<div class="standard" data-code="8-f-3" data-type="verify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-f-3" data-type="verify">
 							y = mx + b defines a linear function
 							<span class="standard-code">8.f.3</span>
 						</div>
@@ -2489,11 +2431,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">model with functions</h3>
 
-						<div class="standard" data-code="8-f-4" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-f-4" data-type="real-world">
 							Model linear relationships with functions
 							<span class="standard-code">8.f.4</span>
 						</div>
-						<div class="standard" data-code="8-f-5" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-f-5" data-type="skill">
 							Qualitative descriptions of functions and graphs
 							<span class="standard-code">8.f.5</span>
 						</div>
@@ -2517,19 +2459,19 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">radical and integer exponents</h3>
 
-						<div class="standard" data-code="8-ee-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-1" data-type="skill">
 							Properties of integer exponents
 							<span class="standard-code">8.ee.1</span>
 						</div>
-						<div class="standard" data-code="8-ee-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-2" data-type="skill">
 							x^2 = p and x^3 = p
 							<span class="standard-code">8.ee.2</span>
 						</div>
-						<div class="standard" data-code="8-ee-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-3" data-type="skill">
 							Multiplying by powers of 10
 							<span class="standard-code">8.ee.3</span>
 						</div>
-						<div class="standard" data-code="8-ee-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-4" data-type="skill">
 							Scientific notation
 							<span class="standard-code">8.ee.4</span>
 						</div>
@@ -2538,11 +2480,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">link proportionality and lines</h3>
 
-						<div class="standard" data-code="8-ee-5" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-5" data-type="understand">
 							Unit rate to slope
 							<span class="standard-code">8.ee.5</span>
 						</div>
-						<div class="standard" data-code="8-ee-6" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-6" data-type="prove">
 							Derive the equation for a line
 							<span class="standard-code">8.ee.6</span>
 						</div>
@@ -2551,35 +2493,35 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">linear equations</h3>
 
-						<div class="standard parent-standard" data-code="8-ee-7" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="8-ee-7" data-type="">
 							linear, one variable
 							<span class="standard-code">8.ee.7</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="8-ee-7a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-7a" data-type="skill">
 								One, infinite, or no solutions
 								<span class="standard-code">8.ee.7a</span>
 							</div>
-							<div class="standard" data-code="8-ee-7b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-7b" data-type="skill">
 								Solve equations (2)
 								<span class="standard-code">8.ee.7b</span>
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="8-ee-8" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="8-ee-8" data-type="">
 							simultaneous equations
 							<span class="standard-code">8.ee.8</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="8-ee-8a" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-8a" data-type="understand">
 								Simultaneous solutions and intersection
 								<span class="standard-code">8.ee.8a</span>
 							</div>
-							<div class="standard" data-code="8-ee-8b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-8b" data-type="skill">
 								Solve simultaneous linear equations
 								<span class="standard-code">8.ee.8b</span>
 							</div>
-							<div class="standard" data-code="8-ee-8c" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-8c" data-type="real-world">
 								Simultaneous equations problems
 								<span class="standard-code">8.ee.8c</span>
 							</div>
@@ -2605,11 +2547,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">irrational numbers</h3>
 							
-						<div class="standard" data-code="8-ns-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ns-1" data-type="understand">
 							Link irrational numbers and decimals
 							<span class="standard-code">8.ns.1</span>
 						</div>
-						<div class="standard" data-code="8-ns-2" data-type="compare" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-ns-2" data-type="compare">
 							Approximate and compare irrational numbers
 							<span class="standard-code">8.ns.2</span>
 						</div>
@@ -2634,19 +2576,19 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">bivariate data</h3>
 						
-						<div class="standard" data-code="8-sp-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-sp-1" data-type="skill">
 							Scatter plots
 							<span class="standard-code">8.sp.1</span>
 						</div>
-						<div class="standard" data-code="8-sp-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-sp-2" data-type="skill">
 							Informal line of best fit
 							<span class="standard-code">8.sp.2</span>
 						</div>
-						<div class="standard" data-code="8-sp-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-sp-3" data-type="real-world">
 							Linear models
 							<span class="standard-code">8.sp.3</span>
 						</div>
-						<div class="standard" data-code="8-sp-4" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-sp-4" data-type="real-world">
 							Two-way tables
 							<span class="standard-code">8.sp.4</span>
 						</div>
@@ -2671,38 +2613,38 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">congruence and similarity</h3>
 
-						<div class="standard parent-standard" data-code="8-g-1" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="8-g-1" data-type="">
 							transformation properties
 							<span class="standard-code">8.g.1</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="8-g-1a" data-type="verify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-1a" data-type="verify">
 								Segments &#8594; segments of same length 
 								<span class="standard-code">8.g.1a</span>
 							</div>
-							<div class="standard" data-code="8-g-1b" data-type="verify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-1b" data-type="verify">
 								Angles &#8594; angles of same measure
 								<span class="standard-code">8.g.1b</span>
 							</div>
-							<div class="standard" data-code="8-g-1c" data-type="verify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-1c" data-type="verify">
 								Parallel lines &#8594; parallel lines
 								<span class="standard-code">8.g.1c</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="8-g-2" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-2" data-type="understand">
 							Congruency
 							<span class="standard-code">8.g.2</span>
 						</div>
-						<div class="standard" data-code="8-g-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-3" data-type="skill">
 							Describe transformations on the coordinate plane
 							<span class="standard-code">8.g.3</span>
 						</div>
-						<div class="standard" data-code="8-g-4" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-4" data-type="understand">
 							Similarity
 							<span class="standard-code">8.g.4</span>
 						</div>
-						<div class="standard" data-code="8-g-5" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-5" data-type="justify">
 							Triangle angles, transversals, and AA similarity
 							<span class="standard-code">8.g.5</span>
 						</div>
@@ -2711,15 +2653,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">Pythagorean theorem</h3>
 
-						<div class="standard" data-code="8-g-6" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-6" data-type="justify">
 							Pythagorean theorem
 							<span class="standard-code">8.g.6</span>
 						</div>
-						<div class="standard" data-code="8-g-7" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-7" data-type="real-world">
 							Right triangle problems
 							<span class="standard-code">8.g.7</span>
 						</div>
-						<div class="standard" data-code="8-g-8" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-8" data-type="skill">
 							Distance between points
 							<span class="standard-code">8.g.8</span>
 						</div>
@@ -2728,7 +2670,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">volume</h3>
 
-						<div class="standard" data-code="8-g-9" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="8-g-9" data-type="real-world">
 							Volumes of cones, cylinders, and spheres
 							<span class="standard-code">8.g.9</span>
 						</div>
@@ -2768,15 +2710,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">understand functions</h3>
 
-						<div class="standard" data-code="hsf-if-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-1" data-type="understand">
 							Domain and range
 							<span class="standard-code">hsf.if.1</span>
 						</div>
-						<div class="standard" data-code="hsf-if-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-2" data-type="skill">
 							Work with function notation
 							<span class="standard-code">hsf.if.2</span>
 						</div>
-						<div class="standard" data-code="hsf-if-3" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-3" data-type="understand">
 							Sequences are functions
 							<span class="standard-code">hsf.if.3</span>
 						</div>
@@ -2785,15 +2727,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">interpret functions</h3>
 
-						<div class="standard" data-code="hsf-if-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-4" data-type="skill">
 							Features of functions
 							<span class="standard-code">hsf.if.4</span>
 						</div>
-						<div class="standard" data-code="hsf-if-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-5" data-type="real-world">
 							Domains and graphs
 							<span class="standard-code">hsf.if.5</span>
 						</div>
-						<div class="standard" data-code="hsf-if-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-6" data-type="skill">
 							Rate of change
 							<span class="standard-code">hsf.if.6</span>
 						</div>
@@ -2802,49 +2744,49 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">function representations</h3>
 
-						<div class="standard parent-standard" data-code="hsf-if-7" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hsf-if-7" data-type="">
 							Graph functions
 							<span class="standard-code">hsf.if.7</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="hsf-if-7a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-7a" data-type="skill">
 								Linear and quadratic graphs
 								<span class="standard-code">hsf.if.7a</span>
 							</div>
-							<div class="standard" data-code="hsf-if-7b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-7b" data-type="skill">
 								Square root, cube root, piecewise, and absolute value graphs
 								<span class="standard-code">hsf.if.7b</span>
 							</div>
-							<div class="standard" data-code="hsf-if-7c" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-7c" data-type="skill">
 								Polynomial graphs
 								<span class="standard-code">hsf.if.7c</span>
 							</div>
-							<div class="standard plus" data-code="hsf-if-7d" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-if-7d" data-type="skill">
 								Rational function graphs
 								<span class="standard-code">hsf.if.7d</span>
 							</div>
-							<div class="standard" data-code="hsf-if-7e" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-7e" data-type="skill">
 								Exponential, logarithmic, and trig graphs
 								<span class="standard-code">hsf.if.7e</span>
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="hsf-if-8" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hsf-if-8" data-type="">
 							Function properties
 							<span class="standard-code">hsf.if.8</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="hsf-if-8a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-8a" data-type="skill">
 								Polynomials properties
 								<span class="standard-code">hsf.if.8a</span>
 							</div>
-							<div class="standard" data-code="hsf-if-8b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-8b" data-type="skill">
 								Exponential properties
 								<span class="standard-code">hsf.if.8b</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="hsf-if-9" data-type="compare" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-9" data-type="compare">
 							Compare functions
 							<span class="standard-code">hsf.if.9</span>
 						</div>
@@ -2868,25 +2810,25 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">model with functions</h3>
 						
-						<div class="standard parent-standard" data-code="hsf-bf-1" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hsf-bf-1" data-type="">
 							Relate two quantities
 							<span class="standard-code">hsf.bf.1</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="hsf-bf-1a" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-bf-1a" data-type="real-world">
 								Build functions
 								<span class="standard-code">hsf.bf.1a</span>
 							</div>
-							<div class="standard" data-code="hsf-bf-1b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-bf-1b" data-type="skill">
 								Combine functions
 								<span class="standard-code">hsf.bf.1b</span>
 							</div>
-							<div class="standard plus" data-code="hsf-bf-1c" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-bf-1c" data-type="skill">
 								Compose functions
 								<span class="standard-code">hsf.bf.1c</span>
 							</div>
 						</div>
-						<div class="standard" data-code="hsf-bf-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-bf-2" data-type="real-world">
 							Explicit and recursive sequences
 							<span class="standard-code">hsf.bf.2</span>
 						</div>
@@ -2895,35 +2837,35 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">model with functions</h3>
 
-						<div class="standard" data-code="hsf-bf-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-bf-3" data-type="skill">
 							Shifting and stretching functions
 							<span class="standard-code">hsf.bf.3</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="hsf-bf-4" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hsf-bf-4" data-type="">
 							Inverse functions
 							<span class="standard-code">hsf.bf.4</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="hsf-bf-4a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-bf-4a" data-type="skill">
 								Find inverse by solving
 								<span class="standard-code">hsf.bf.4a</span>
 							</div>
-							<div class="standard plus" data-code="hsf-bf-4b" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-bf-4b" data-type="skill">
 								Verify inverse by composition
 								<span class="standard-code">hsf.bf.4b</span>
 							</div>
-							<div class="standard plus" data-code="hsf-bf-4c" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-bf-4c" data-type="skill">
 								Inverse graphs and tables
 								<span class="standard-code">hsf.bf.4c</span>
 							</div>
-							<div class="standard plus" data-code="hsf-bf-4d" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-bf-4d" data-type="skill">
 								restrict domain to make invertible
 								<span class="standard-code">hsf.bf.4d</span>
 							</div>
 						</div>
 
-						<div class="standard plus" data-code="hsf-bf-5" data-type="understand" data-dependencies="">
+						<div class="standard plus" data-code="hsf-bf-5" data-type="understand">
 							Relate exponents and logarithms
 							<span class="standard-code">hsf.bf.5</span>
 						</div>
@@ -2947,34 +2889,34 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">construct models</h3>
 
-						<div class="standard parent-standard" data-code="hsf-le-1" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hsf-le-1" data-type="">
 							Linear vs. exponential
 							<span class="standard-code">hsf.le.1</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="hsf-le-1a" data-type="prove" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-le-1a" data-type="prove">
 								Linear growth vs. exponential growth
 								<span class="standard-code">hsf.le.1a</span>
 							</div>
-							<div class="standard plus" data-code="hsf-le-1b" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsf-le-1b" data-type="real-world">
 								Constant rates
 								<span class="standard-code">hsf.le.1b</span>
 							</div>
-							<div class="standard plus" data-code="hsf-le-1c" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-le-1c" data-type="skill">
 								Growing and decaying rates
 								<span class="standard-code">hsf.le.1c</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="hsf-le-2" data-type="capstone" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-le-2" data-type="capstone">
 							Construct linear and exponential functions
 							<span class="standard-code">hsf.le.2</span>
 						</div>
-						<div class="standard" data-code="hsf-le-3" data-type="verify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-le-3" data-type="verify">
 							Exponential functions eventually surpass other functions
 							<span class="standard-code">hsf.le.3</span>
 						</div>
-						<div class="standard" data-code="hsf-le-4" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-le-4" data-type="real-world">
 							Exponential models and logarithmic solutions
 							<span class="standard-code">hsf.le.4</span>
 						</div>
@@ -2982,7 +2924,7 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">interpret expressions</h3>
-						<div class="standard" data-code="hsf-le-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-le-5" data-type="real-world">
 							Interpret function parameters
 							<span class="standard-code">hsf.le.5</span>
 						</div>
@@ -3005,19 +2947,19 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">unit circle trig</h3>
-							<div class="standard" data-code="hsf-tf-1" data-type="understand" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-tf-1" data-type="understand">
 								Understand radians
 								<span class="standard-code">hsf.tf.1</span>
 							</div>
-							<div class="standard" data-code="hsf-tf-2" data-type="justify" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-tf-2" data-type="justify">
 								Explain unit circle trig
 								<span class="standard-code">hsf.tf.2</span>
 							</div>
-							<div class="standard plus" data-code="hsf-tf-3" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-tf-3" data-type="skill">
 								Special triangles
 								<span class="standard-code">hsf.tf.3</span>
 							</div>
-							<div class="standard plus" data-code="hsf-tf-4" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsf-tf-4" data-type="skill">
 								Unit circle symmetry and periodicity
 								<span class="standard-code">hsf.tf.4</span>
 							</div>
@@ -3025,15 +2967,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">model with trig functions</h3>
-							<div class="standard" data-code="hsf-tf-5" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-tf-5" data-type="real-world">
 								Model periodic phenomena
 								<span class="standard-code">hsf.tf.5</span>
 							</div>
-							<div class="standard plus" data-code="hsf-tf-6" data-type="understand" data-dependencies="">
+							<div class="standard plus" data-code="hsf-tf-6" data-type="understand">
 								Understand inverse trig functions
 								<span class="standard-code">hsf.tf.6</span>
 							</div>
-							<div class="standard plus" data-code="hsf-tf-7" data-type="real-world" data-dependencies="">
+							<div class="standard plus" data-code="hsf-tf-7" data-type="real-world">
 								Apply inverse trig functions
 								<span class="standard-code">hsf.tf.7</span>
 							</div>
@@ -3041,11 +2983,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">graphs</h3>
-							<div class="standard" data-code="hsf-tf-8" data-type="prove" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsf-tf-8" data-type="prove">
 								Prove the Pythagorean identity
 								<span class="standard-code">hsf.tf.8</span>
 							</div>
-							<div class="standard plus" data-code="hsf-tf-9" data-type="prove" data-dependencies="">
+							<div class="standard plus" data-code="hsf-tf-9" data-type="prove">
 								Trig addition and subtraction formulas 
 								<span class="standard-code">hsf.tf.9</span>
 							</div>
@@ -3085,22 +3027,22 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">interpreting structure</h3>
 						
-						<div class="standard parent-standard" data-code="hsa-sse-1" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hsa-sse-1" data-type="">
 							Expressions in context
 							<span class="standard-code">hsa.sse.1</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="hsa-sse-1a" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-sse-1a" data-type="real-world">
 								Terms, factors, and coefficients
 								<span class="standard-code">hsa.sse.1a</span>
 							</div>
-							<div class="standard" data-code="hsa-sse-1b" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-sse-1b" data-type="real-world">
 								Interpret expressions
 								<span class="standard-code">hsa.sse.1b</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="hsa-sse-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-sse-2" data-type="skill">
 							Rewrite expressions
 							<span class="standard-code">hsa.sse.2</span>
 						</div>
@@ -3109,26 +3051,26 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">rewrite and solve</h3>
 						
-						<div class="standard parent-standard" data-code="hsa-sse-3" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hsa-sse-3" data-type="">
 							See and use structure
 							<span class="standard-code">hsa.sse.3</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="hsa-sse-3a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-sse-3a" data-type="skill">
 								Factor quadratics
 								<span class="standard-code">hsa.sse.3a</span>
 							</div>
-							<div class="standard" data-code="hsa-sse-3b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-sse-3b" data-type="skill">
 								Complete the square
 								<span class="standard-code">hsa.sse.3b</span>
 							</div>
-							<div class="standard" data-code="hsa-sse-3c" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-sse-3c" data-type="skill">
 								Properties of exponents
 								<span class="standard-code">hsa.sse.3c</span>
 							</div>
 						</div>
 
-						<div class="standard" data-code="hsa-sse-4" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-sse-4" data-type="prove">
 							Finite geometric series
 							<span class="standard-code">hsa.sse.4</span>
 						</div>
@@ -3152,7 +3094,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">work with polynomials</h3>
 						
-						<div class="standard" data-code="hsa-apr-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-apr-1" data-type="understand">
 							Polynomials as a system
 							<span class="standard-code">hsa.apr.1</span>
 						</div>
@@ -3161,11 +3103,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">link zeros and factors</h3>
 						
-						<div class="standard" data-code="hsa-apr-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-apr-2" data-type="skill">
 							Remainder theorem
 							<span class="standard-code">hsa.apr.2</span>
 						</div>
-						<div class="standard" data-code="hsa-apr-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-apr-3" data-type="skill">
 							Zeros of polynomials
 							<span class="standard-code">hsa.apr.3</span>
 						</div>
@@ -3174,11 +3116,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">polynomial identities</h3>
 						
-						<div class="standard" data-code="hsa-apr-4" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-apr-4" data-type="prove">
 							Prove polynomial identities
 							<span class="standard-code">hsa.apr.4</span>
 						</div>
-						<div class="standard plus" data-code="hsa-apr-5" data-type="prove" data-dependencies="">
+						<div class="standard plus" data-code="hsa-apr-5" data-type="prove">
 							Binomial theorem
 							<span class="standard-code">hsa.apr.5</span>
 						</div>
@@ -3187,11 +3129,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">rewrite rational expressions</h3>
 						
-						<div class="standard" data-code="hsa-apr-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-apr-6" data-type="skill">
 							Rewrite rational expressions
 							<span class="standard-code">hsa.apr.6</span>
 						</div>
-						<div class="standard plus" data-code="hsa-apr-7" data-type="understand" data-dependencies="">
+						<div class="standard plus" data-code="hsa-apr-7" data-type="understand">
 							Rational expressions as a system
 							<span class="standard-code">hsa.apr.7</span>
 						</div>
@@ -3215,19 +3157,19 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">create equations</h3>
 						
-						<div class="standard" data-code="hsa-ced-1" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-ced-1" data-type="real-world">
 							Create relations in one variable
 							<span class="standard-code">hsa.ced.1</span>
 						</div>
-						<div class="standard" data-code="hsa-ced-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-ced-2" data-type="real-world">
 							Create and graph equations in two variables
 							<span class="standard-code">hsa.ced.2</span>
 						</div>
-						<div class="standard" data-code="hsa-ced-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-ced-3" data-type="real-world">
 							Constraint problems
 							<span class="standard-code">hsa.ced.3</span>
 						</div>
-						<div class="standard" data-code="hsa-ced-4" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-ced-4" data-type="real-world">
 							Rearrange formulas
 							<span class="standard-code">hsa.ced.4</span>
 						</div>
@@ -3251,11 +3193,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">solve by reasoning</h3>
 						
-						<div class="standard" data-code="hsa-rei-1" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-1" data-type="justify">
 							Explain each step
 							<span class="standard-code">hsa.rei.1</span>
 						</div>
-						<div class="standard" data-code="hsa-rei-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-2" data-type="skill">
 							Extraneous solutions
 							<span class="standard-code">hsa.rei.2</span>
 						</div>
@@ -3264,21 +3206,21 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">1-variable relations</h3>
 
-						<div class="standard" data-code="hsa-rei-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-3" data-type="skill">
 							Linear relations
 							<span class="standard-code">hsa.rei.3</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="hsa-rei-4" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hsa-rei-4" data-type="">
 							Quadratic equations
 							<span class="standard-code">hsa.rei.4</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="hsa-rei-4a" data-type="prove" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-4a" data-type="prove">
 								Derive the quadratic formula
 								<span class="standard-code">hsa.rei.4a</span>
 							</div>
-							<div class="standard" data-code="hsa-rei-4b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-4b" data-type="skill">
 								Solve quadratic equations
 								<span class="standard-code">hsa.rei.4b</span>
 							</div>
@@ -3287,23 +3229,23 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">systems of equations</h3>
-						<div class="standard" data-code="hsa-rei-5" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-5" data-type="prove">
 							Equivalent systems
 							<span class="standard-code">hsa.rei.5</span>
 						</div>
-						<div class="standard" data-code="hsa-rei-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-6" data-type="skill">
 							Systems of linear equations
 							<span class="standard-code">hsa.rei.6</span>
 						</div>
-						<div class="standard" data-code="hsa-rei-7" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-7" data-type="skill">
 							One linear, one quadratic
 							<span class="standard-code">hsa.rei.7</span>
 						</div>
-						<div class="standard plus" data-code="hsa-rei-8" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsa-rei-8" data-type="skill">
 							Create a matix
 							<span class="standard-code">hsa.rei.8</span>
 						</div>
-						<div class="standard plus" data-code="hsa-rei-9" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsa-rei-9" data-type="skill">
 							Use a matix to solve a system
 							<span class="standard-code">hsa.rei.9</span>
 						</div>
@@ -3311,15 +3253,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">graphs</h3>
-						<div class="standard" data-code="hsa-rei-10" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-10" data-type="understand">
 							Understand graphs and solutions
 							<span class="standard-code">hsa.rei.10</span>
 						</div>
-						<div class="standard" data-code="hsa-rei-11" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-11" data-type="justify">
 							Explain intersection points
 							<span class="standard-code">hsa.rei.11</span>
 						</div>
-						<div class="standard" data-code="hsa-rei-12" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-12" data-type="skill">
 							Graph systems of linear inequalities
 							<span class="standard-code">hsa.rei.12</span>
 						</div>
@@ -3359,11 +3301,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">rational exponents</h3>
 						
-						<div class="standard" data-code="hsn-rn-1" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsn-rn-1" data-type="justify">
 							Properties of rational exponents
 							<span class="standard-code">hsn.rn.1</span>
 						</div>
-						<div class="standard" data-code="hsn-rn-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsn-rn-2" data-type="skill">
 							Radicals and rational exponents
 							<span class="standard-code">hsn.rn.2</span>
 						</div>
@@ -3372,7 +3314,7 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">rational vs irrational</h3>
 						
-						<div class="standard" data-code="hsn-rn-3" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsn-rn-3" data-type="justify">
 							Sums and products of rational and irrational numbers
 							<span class="standard-code">hsn.rn.3</span>
 						</div>
@@ -3396,15 +3338,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">reason quantitatively</h3>
 						
-						<div class="standard" data-code="hsn-q-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsn-q-1" data-type="skill">
 							Work with units
 							<span class="standard-code">hsn.q.1</span>
 						</div>
-						<div class="standard" data-code="hsn-q-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsn-q-2" data-type="real-world">
 							Define quantities
 							<span class="standard-code">hsn.q.2</span>
 						</div>
-						<div class="standard" data-code="hsn-q-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsn-q-3" data-type="real-world">
 							Appropriate accuracy
 							<span class="standard-code">hsn.q.3</span>
 						</div>
@@ -3427,15 +3369,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">complex number operations</h3>
 						
-						<div class="standard" data-code="hsn-cn-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsn-cn-1" data-type="understand">
 							Understand complex numbers
 							<span class="standard-code">hsn.cn.1</span>
 						</div>
-						<div class="standard" data-code="hsn-cn-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsn-cn-2" data-type="skill">
 							Operate on complex numbers
 							<span class="standard-code">hsn.cn.2</span>
 						</div>
-						<div class="standard plus" data-code="hsn-cn-3" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-3" data-type="skill">
 							Conjugates, moduli, and quotients
 							<span class="standard-code">hsn.cn.3</span>
 						</div>
@@ -3444,15 +3386,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">the complex plane</h3>
 						
-						<div class="standard plus" data-code="hsn-cn-4" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-4" data-type="skill">
 							Rectangular vs. polar
 							<span class="standard-code">hsn.cn.4</span>
 						</div>
-						<div class="standard plus" data-code="hsn-cn-5" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-5" data-type="skill">
 							Represent operations on the complex plane
 							<span class="standard-code">hsn.cn.5</span>
 						</div>
-						<div class="standard plus" data-code="hsn-cn-6" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-6" data-type="skill">
 							Distance and midpoints of complex numbers
 							<span class="standard-code">hsn.cn.6</span>
 						</div>
@@ -3461,15 +3403,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">apply complex numbers</h3>
 						
-						<div class="standard" data-code="hsn-cn-7" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsn-cn-7" data-type="skill">
 							Quadratics with complex solutions
 							<span class="standard-code">hsn.cn.7</span>
 						</div>
-						<div class="standard plus" data-code="hsn-cn-8" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-8" data-type="skill">
 							Polynomial identities with complex numbers
 							<span class="standard-code">hsn.cn.8</span>
 						</div>
-						<div class="standard plus" data-code="hsn-cn-9" data-type="justify" data-dependencies="">
+						<div class="standard plus" data-code="hsn-cn-9" data-type="justify">
 							The Fundament Theorem of Algebra
 							<span class="standard-code">hsn.cn.9</span>
 						</div>
@@ -3491,15 +3433,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">model with vectors</h3>
-						<div class="standard plus" data-code="hsn-vm-1" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-1" data-type="skill">
 							Magnitude and direction
 							<span class="standard-code">hsn.vm.1</span>
 						</div>
-						<div class="standard plus" data-code="hsn-vm-2" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-2" data-type="skill">
 							Vector components
 							<span class="standard-code">hsn.vm.2</span>
 						</div>
-						<div class="standard plus" data-code="hsn-vm-3" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-3" data-type="real-world">
 							Vector problems
 							<span class="standard-code">hsn.vm.3</span>
 						</div>
@@ -3508,35 +3450,35 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">work with vectors</h3>
 
-						<div class="standard plus parent-standard" data-code="hsn-vm-4" data-type="" data-dependencies="">
+						<div class="standard plus parent-standard" data-code="hsn-vm-4" data-type="">
 							add and subbtract vectors
 							<span class="standard-code">hsn.vm.4</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard plus" data-code="hsn-vm-4a" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-4a" data-type="skill">
 								Add vectors by components
 								<span class="standard-code">hsn.vm.4a</span>
 							</div>
-							<div class="standard plus" data-code="hsn-vm-4b" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-4b" data-type="skill">
 								Add vectors given magnitude and direction
 								<span class="standard-code">hsn.vm.4b</span>
 							</div>
-							<div class="standard plus" data-code="hsn-vm-4c" data-type="understand" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-4c" data-type="understand">
 								Understand vector subtraction
 								<span class="standard-code">hsn.vm.4c</span>
 							</div>
 						</div>
 
-						<div class="standard plus parent-standard" data-code="hsn-vm-5" data-type="" data-dependencies="">
+						<div class="standard plus parent-standard" data-code="hsn-vm-5" data-type="">
 							scalar multiples of vectors
 							<span class="standard-code">hsn.vm.5</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard plus" data-code="hsn-vm-5a" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-5a" data-type="skill">
 								Scalars times vectors
 								<span class="standard-code">hsn.vm.5a</span>
 							</div>
-							<div class="standard plus" data-code="hsn-vm-5b" data-type="skill" data-dependencies="">
+							<div class="standard plus" data-code="hsn-vm-5b" data-type="skill">
 								Magnitude of scalars times vectors
 								<span class="standard-code">hsn.vm.5b</span>
 							</div>
@@ -3545,31 +3487,31 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">matrices</h3>
-						<div class="standard plus" data-code="hsn-vm-6" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-6" data-type="real-world">
 							Use matrices to represent data
 							<span class="standard-code">hsn.vm.6</span>
 						</div>
-						<div class="standard plus" data-code="hsn-vm-7" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-7" data-type="skill">
 							Matrices times scalars
 							<span class="standard-code">hsn.vm.7</span>
 						</div>
-						<div class="standard plus" data-code="hsn-vm-8" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-8" data-type="skill">
 							Operations with matrices
 							<span class="standard-code">hsn.vm.8</span>
 						</div>
-						<div class="standard plus" data-code="hsn-vm-9" data-type="understand" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-9" data-type="understand">
 							Order matters in matrix multiplication
 							<span class="standard-code">hsn.vm.9</span>
 						</div>
-						<div class="standard plus" data-code="hsn-vm-10" data-type="understand" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-10" data-type="understand">
 							Zero, identity, and inverse matrices
 							<span class="standard-code">hsn.vm.10</span>
 						</div>
-						<div class="standard plus" data-code="hsn-vm-11" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-11" data-type="skill">
 							Transform vectors with matrices
 							<span class="standard-code">hsn.vm.11</span>
 						</div>
-						<div class="standard plus" data-code="hsn-vm-12" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsn-vm-12" data-type="skill">
 							Determinants and area
 							<span class="standard-code">hsn.vm.12</span>
 						</div>
@@ -3609,19 +3551,19 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">data on one variable</h3>
 
-						<div class="standard" data-code="hss-id-1" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-1" data-type="skill">
 							Real number dot plots, histograms, and box plots
 							<span class="standard-code">hss.id.1</span>
 						</div>
-						<div class="standard" data-code="hss-id-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-2" data-type="skill">
 							Center and spread
 							<span class="standard-code">hss.id.2</span>
 						</div>
-						<div class="standard" data-code="hss-id-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-3" data-type="real-world">
 							Interpret shape, center, and spread
 							<span class="standard-code">hss.id.3</span>
 						</div>
-						<div class="standard" data-code="hss-id-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-4" data-type="skill">
 							Normal distributions
 							<span class="standard-code">hss.id.4</span>
 						</div>
@@ -3630,25 +3572,25 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">data on two variables</h3>
 
-						<div class="standard" data-code="hss-id-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-5" data-type="real-world">
 							Two-way tables
 							<span class="standard-code">hss.id.5</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="hss-id-6" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hss-id-6" data-type="">
 							Fitting functions
 							<span class="standard-code">hss.id.6</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="hss-id-6a" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-6a" data-type="skill">
 								Work with fitting funcitons
 								<span class="standard-code">hss.id.6a</span>
 							</div>
-							<div class="standard" data-code="hss-id-6b" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-6b" data-type="skill">
 								Residuals
 								<span class="standard-code">hss.id.6b</span>
 							</div>
-							<div class="standard" data-code="hss-id-6c" data-type="skill" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-6c" data-type="skill">
 								Linear fit for a scatter plot
 								<span class="standard-code">hss.id.6c</span>
 							</div>
@@ -3658,15 +3600,15 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">linear models</h3>
 
-						<div class="standard" data-code="hss-id-7" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-7" data-type="real-world">
 							Interpret slope and intercept
 							<span class="standard-code">hss.id.7</span>
 						</div>
-						<div class="standard" data-code="hss-id-8" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-8" data-type="skill">
 							Correlation coefficient
 							<span class="standard-code">hss.id.8</span>
 						</div>
-						<div class="standard" data-code="hss-id-9" data-type="compare" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-9" data-type="compare">
 							Correlation vs. causation
 							<span class="standard-code">hss.id.9</span>
 						</div>
@@ -3690,11 +3632,11 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">random processes</h3>
 
-						<div class="standard" data-code="hss-ic-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-ic-1" data-type="understand">
 							Understand statistics
 							<span class="standard-code">hss.ic.1</span>
 						</div>
-						<div class="standard" data-code="hss-ic-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-ic-2" data-type="real-world">
 							Model vs. actual data
 							<span class="standard-code">hss.ic.2</span>
 						</div>
@@ -3703,19 +3645,19 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">inferences</h3>
 
-						<div class="standard" data-code="hss-ic-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-ic-3" data-type="real-world">
 							Experiments vs. observational studies
 							<span class="standard-code">hss.ic.3</span>
 						</div>
-						<div class="standard" data-code="hss-ic-4" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-ic-4" data-type="real-world">
 							Data from surveys
 							<span class="standard-code">hss.ic.4</span>
 						</div>
-						<div class="standard" data-code="hss-ic-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-ic-5" data-type="real-world">
 							Data from randomized experiments
 							<span class="standard-code">hss.ic.5</span>
 						</div>
-						<div class="standard" data-code="hss-ic-6" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-ic-6" data-type="real-world">
 							Evaluate reports based on data
 							<span class="standard-code">hss.ic.6</span>
 						</div>
@@ -3739,23 +3681,23 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">independent vs. conditional</h3>
 
-						<div class="standard" data-code="hss-cp-1" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-cp-1" data-type="real-world">
 							Subsets of sample spaces
 							<span class="standard-code">hss.cp.1</span>
 						</div>
-						<div class="standard" data-code="hss-cp-2" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-cp-2" data-type="understand">
 							Independent events
 							<span class="standard-code">hss.cp.2</span>
 						</div>
-						<div class="standard" data-code="hss-cp-3" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-cp-3" data-type="understand">
 							P(A) given B = P(A and B)/P(B)
 							<span class="standard-code">hss.cp.3</span>
 						</div>
-						<div class="standard" data-code="hss-cp-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-cp-4" data-type="skill">
 							Two-way frequency table
 							<span class="standard-code">hss.cp.4</span>
 						</div>
-						<div class="standard" data-code="hss-cp-5" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-cp-5" data-type="real-world">
 							Independent and conditional events
 							<span class="standard-code">hss.cp.5</span>
 						</div>
@@ -3764,19 +3706,19 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">uniform probability models</h3>
 
-						<div class="standard" data-code="hss-cp-6" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-cp-6" data-type="real-world">
 							P(A) given B
 							<span class="standard-code">hss.cp.6</span>
 						</div>
-						<div class="standard" data-code="hss-cp-7" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-cp-7" data-type="real-world">
 							P(A or B) = P(A) + P(B) - P(A and B)
 							<span class="standard-code">hss.cp.7</span>
 						</div>
-						<div class="standard plus" data-code="hss-cp-8" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hss-cp-8" data-type="real-world">
 							Apply the multiplication rule
 							<span class="standard-code">hss.cp.8</span>
 						</div>
-						<div class="standard plus" data-code="hss-cp-9" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hss-cp-9" data-type="real-world">
 							Permutations and combinations
 							<span class="standard-code">hss.cp.9</span>
 						</div>
@@ -3799,19 +3741,19 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">expected value</h3>
-						<div class="standard plus" data-code="hss-md-1" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hss-md-1" data-type="real-world">
 							Random variables
 							<span class="standard-code">hss.md.1</span>
 						</div>
-						<div class="standard plus" data-code="hss-md-2" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hss-md-2" data-type="real-world">
 							Expected value
 							<span class="standard-code">hss.md.2</span>
 						</div>
-						<div class="standard plus" data-code="hss-md-3" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hss-md-3" data-type="real-world">
 							Theoretical probability
 							<span class="standard-code">hss.md.3</span>
 						</div>
-						<div class="standard plus" data-code="hss-md-4" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hss-md-4" data-type="real-world">
 							Empirical probability
 							<span class="standard-code">hss.md.4</span>
 						</div>
@@ -3820,26 +3762,26 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">model with trig functions</h3>
 						
-						<div class="standard parent-standard" data-code="hss-md-5" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hss-md-5" data-type="">
 							possible outcomes
 							<span class="standard-code">t.md.5</span>
 						</div>
 						<div class="sub-cluster">
-							<div class="standard" data-code="hss-md-5a" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-md-5a" data-type="real-world">
 								Games of chance
 								<span class="standard-code">t.md.5a</span>
 							</div>
-							<div class="standard" data-code="hss-md-5b" data-type="real-world" data-dependencies="">
+							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hss-md-5b" data-type="real-world">
 								Compare strategies
 								<span class="standard-code">t.md.5b</span>
 							</div>
 						</div>
 
-						<div class="standard plus" data-code="hss-md-6" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hss-md-6" data-type="real-world">
 							Make fair decisions
 							<span class="standard-code">hss.md.6</span>
 						</div>
-						<div class="standard plus" data-code="hss-md-7" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hss-md-7" data-type="real-world">
 							Analyze decisions and strategies
 							<span class="standard-code">hss.md.7</span>
 						</div>
@@ -3879,23 +3821,23 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">transformations</h3>
-						<div class="standard" data-code="hsg-co-1" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-1" data-type="understand">
 							Precise geometry definitions
 							<span class="standard-code">hsg.co.1</span>
 						</div>
-						<div class="standard" data-code="hsg-co-2" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-2" data-type="understand">
 							Understand transformations
 							<span class="standard-code">hsg.co.2</span>
 						</div>
-						<div class="standard" data-code="hsg-co-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-3" data-type="skill">
 							Symmetry transformations
 							<span class="standard-code">hsg.co.3</span>
 						</div>
-						<div class="standard" data-code="hsg-co-4" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-4" data-type="prove">
 							Define rigid transformations
 							<span class="standard-code">hsg.co.4</span>
 						</div>
-						<div class="standard" data-code="hsg-co-5" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-5" data-type="skill">
 							Rigid transformation sequences
 							<span class="standard-code">hsg.co.5</span>
 						</div>
@@ -3903,15 +3845,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">congruence by rigid motions</h3>
-						<div class="standard" data-code="hsg-co-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-6" data-type="skill">
 							Determine congruence
 							<span class="standard-code">hsg.co.6</span>
 						</div>
-						<div class="standard" data-code="hsg-co-7" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-7" data-type="prove">
 							CPCTC (Corresponding parts of congruent triangles are congruent)
 							<span class="standard-code">hsg.co.7</span>
 						</div>
-						<div class="standard" data-code="hsg-co-8" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-8" data-type="justify">
 							ASA, SAS, and SSS
 							<span class="standard-code">hsg.co.8</span>
 						</div>
@@ -3919,15 +3861,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">prove theorems</h3>
-						<div class="standard" data-code="hsg-co-9" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-9" data-type="prove">
 							Prove theorems about lines and angles
 							<span class="standard-code">hsg.co.9</span>
 						</div>
-						<div class="standard" data-code="hsg-co-10" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-10" data-type="prove">
 							Prove theorems about triangles
 							<span class="standard-code">hsg.co.10</span>
 						</div>
-						<div class="standard" data-code="hsg-co-11" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-11" data-type="prove">
 							Prove theorems about parallelograms
 							<span class="standard-code">hsg.co.11</span>
 						</div>
@@ -3935,11 +3877,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">constructions</h3>
-						<div class="standard" data-code="hsg-co-12" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-12" data-type="skill">
 							Geometric constructions (1)
 							<span class="standard-code">hsg.co.12</span>
 						</div>
-						<div class="standard" data-code="hsg-co-13" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-co-13" data-type="skill">
 							Geometric constructions (2)
 							<span class="standard-code">hsg.co.13</span>
 						</div>
@@ -3963,26 +3905,26 @@ var standardTypes = {
 					<div class="cluster">
 						<h3 class="cluster-name">similarity transformations</h3>
 						
-						<div class="standard parent-standard" data-code="hsg-srt-1" data-type="" data-dependencies="">
+						<div class="standard parent-standard" data-code="hsg-srt-1" data-type="">
 							Properties of dilations
 							<span class="standard-code">hsg.srt.1</span>
 						</div>
 						<div class="sub-cluster">
-								<div class="standard" data-code="hsg-srt-1a" data-type="verify" data-dependencies="">
+								<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-srt-1a" data-type="verify">
 									Dilations map lines to parallel lines
 									<span class="standard-code">hsg.srt.1a</span>
 								</div>
-								<div class="standard" data-code="hsg-srt-1b" data-type="verify" data-dependencies="">
+								<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-srt-1b" data-type="verify">
 									Dilations and scale factors
 									<span class="standard-code">hsg.srt.1b</span>
 								</div>
 						</div>
 
-						<div class="standard" data-code="hsg-srt-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-srt-2" data-type="skill">
 							Determine similarity
 							<span class="standard-code">hsg.srt.2</span>
 						</div>
-						<div class="standard" data-code="hsg-srt-3" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-srt-3" data-type="justify">
 							Justify AA similarity
 							<span class="standard-code">hsg.srt.3</span>
 						</div>
@@ -3990,11 +3932,11 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">similarity theorems</h3>
-						<div class="standard" data-code="hsg-srt-4" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-srt-4" data-type="prove">
 							Prove theorems about triangles
 							<span class="standard-code">hsg.srt.4</span>
 						</div>
-						<div class="standard" data-code="hsg-srt-5" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-srt-5" data-type="prove">
 							Prove relationships in geometric figures
 							<span class="standard-code">hsg.srt.5</span>
 						</div>
@@ -4002,15 +3944,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">right triangle trig</h3>
-						<div class="standard" data-code="hsg-srt-6" data-type="understand" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-srt-6" data-type="understand">
 							Similarity and side ratios
 							<span class="standard-code">hsg.srt.6</span>
 						</div>
-						<div class="standard" data-code="hsg-srt-7" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-srt-7" data-type="justify">
 							Sin, cos, and complimentary angles
 							<span class="standard-code">hsg.srt.7</span>
 						</div>
-						<div class="standard" data-code="hsg-srt-8" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-srt-8" data-type="real-world">
 							Right triangle problems
 							<span class="standard-code">hsg.srt.8</span>
 						</div>
@@ -4018,15 +3960,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">non-right triangle trig</h3>
-						<div class="standard plus" data-code="hsg-srt-9" data-type="prove" data-dependencies="">
+						<div class="standard plus" data-code="hsg-srt-9" data-type="prove">
 							Derive A = 1/2 ab sin(C)
 							<span class="standard-code">hsg.srt.9</span>
 						</div>
-						<div class="standard plus" data-code="hsg-srt-10" data-type="prove" data-dependencies="">
+						<div class="standard plus" data-code="hsg-srt-10" data-type="prove">
 							Prove the laws of sines and cosines
 							<span class="standard-code">hsg.srt.10</span>
 						</div>
-						<div class="standard plus" data-code="hsg-srt-11" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hsg-srt-11" data-type="real-world">
 							Apply the laws of sines and cosines
 							<span class="standard-code">hsg.srt.11</span>
 						</div>
@@ -4049,19 +3991,19 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">circle-o theorems</h3>
-						<div class="standard" data-code="hsg-c-1" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-c-1" data-type="prove">
 							All circles are similar
 							<span class="standard-code">hsg.c.1</span>
 						</div>
-						<div class="standard" data-code="hsg-c-2" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-c-2" data-type="skill">
 							Inscribed angles, radii, and chords
 							<span class="standard-code">hsg.c.2</span>
 						</div>
-						<div class="standard" data-code="hsg-c-3" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-c-3" data-type="skill">
 							Inscribed and circumscribed circles
 							<span class="standard-code">hsg.c.3</span>
 						</div>
-						<div class="standard plus" data-code="hsg-c-4" data-type="skill" data-dependencies="">
+						<div class="standard plus" data-code="hsg-c-4" data-type="skill">
 							Tangent lines
 							<span class="standard-code">hsg.c.4</span>
 						</div>
@@ -4069,7 +4011,7 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">arcs and sectors</h3>
-						<div class="standard" data-code="hsg-c-5" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-c-5" data-type="prove">
 							Radian measure is a constant of proportionality
 							<span class="standard-code">hsg.c.5</span>
 						</div>
@@ -4092,15 +4034,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">derive equations</h3>
-						<div class="standard" data-code="hsg-gpe-1" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-gpe-1" data-type="prove">
 							Equation of a circle
 							<span class="standard-code">hsg.gpe.1</span>
 						</div>
-						<div class="standard" data-code="hsg-gpe-2" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-gpe-2" data-type="prove">
 							Equation of a parabola
 							<span class="standard-code">hsg.gpe.2</span>
 						</div>
-						<div class="standard plus" data-code="hsg-gpe-3" data-type="prove" data-dependencies="">
+						<div class="standard plus" data-code="hsg-gpe-3" data-type="prove">
 							Equations of ellipses and hyperbolas
 							<span class="standard-code">hsg.gpe.3</span>
 						</div>
@@ -4108,19 +4050,19 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">coordinate plane geometry</h3>
-						<div class="standard" data-code="hsg-gpe-4" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-gpe-4" data-type="prove">
 							Proofs with coordinates
 							<span class="standard-code">hsg.gpe.4</span>
 						</div>
-						<div class="standard" data-code="hsg-gpe-5" data-type="prove" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-gpe-5" data-type="prove">
 							Slopes of parallel and perpendicular lines
 							<span class="standard-code">hsg.gpe.5</span>
 						</div>
-						<div class="standard" data-code="hsg-gpe-6" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-gpe-6" data-type="skill">
 							Partition line segments
 							<span class="standard-code">hsg.gpe.6</span>
 						</div>
-						<div class="standard" data-code="hsg-gpe-7" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-gpe-7" data-type="real-world">
 							Perimeter and area with coordinates
 							<span class="standard-code">hsg.gpe.7</span>
 						</div>
@@ -4143,15 +4085,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">volume</h3>
-						<div class="standard" data-code="hsg-gmd-1" data-type="justify" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-gmd-1" data-type="justify">
 							Informal arguments for formulas
 							<span class="standard-code">hsg.gmd.1</span>
 						</div>
-						<div class="standard plus" data-code="hsg-gmd-2" data-type="justify" data-dependencies="">
+						<div class="standard plus" data-code="hsg-gmd-2" data-type="justify">
 							Cavalieri's principle
 							<span class="standard-code">hsg.gmd.2</span>
 						</div>
-						<div class="standard" data-code="hsg-gmd-3" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-gmd-3" data-type="real-world">
 							Apply volume formulas
 							<span class="standard-code">hsg.gmd.3</span>
 						</div>
@@ -4159,7 +4101,7 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">link 2D and 3D shapes</h3>
-						<div class="standard" data-code="hsg-gmd-4" data-type="skill" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-gmd-4" data-type="skill">
 							Cross sections, and 3D shapes from rotations of 2D shapes
 							<span class="standard-code">hsg.gmd.4</span>
 						</div>
@@ -4182,15 +4124,15 @@ var standardTypes = {
 
 					<div class="cluster">
 						<h3 class="cluster-name">modeling</h3>
-						<div class="standard" data-code="hsg-mg-1" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-mg-1" data-type="real-world">
 							Describe objects
 							<span class="standard-code">hsg.mg.1</span>
 						</div>
-						<div class="standard" data-code="hsg-mg-2" data-type="real-world" data-dependencies="">
+						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="hsg-mg-2" data-type="real-world">
 							Density
 							<span class="standard-code">hsg.mg.2</span>
 						</div>
-						<div class="standard plus" data-code="hsg-mg-3" data-type="real-world" data-dependencies="">
+						<div class="standard plus" data-code="hsg-mg-3" data-type="real-world">
 							Design problems
 							<span class="standard-code">hsg.mg.3</span>
 						</div>
@@ -4198,6 +4140,5 @@ var standardTypes = {
 				</div>
 			</div>
 		</div>
-	<script src="jquery.qtip.custom/jquery.qtip.js"></script>
 </body>
 </html>

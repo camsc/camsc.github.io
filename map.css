@@ -84,7 +84,7 @@ h3.cluster-name {
 	font-weight: normal;
 	opacity: 0.8;
 	position: absolute;
-	top: -28px;
+	top: -32px;
 	right: 4px;
 	color: #111;
 }
@@ -228,6 +228,9 @@ h3.cluster-name {
 .st-name {
 	color: #555;
 	font-weight: normal;
+}
+.st-code {
+	color: #333;
 }
 .st-main {
 	color: #555;

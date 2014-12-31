@@ -1,3 +1,49 @@
+var parallelStandards = {
+  "k-cc-2": ["k-cc-4c"],
+  "k-cc-4c": ["k-cc-2", "k-cc-6"],
+  "k-cc-5": ["k-cc-6"],
+  "k-cc-6": ["k-cc-5", "k-cc-4c"]
+};
+
+var standardTypes = {
+  "skill": {
+    description: "A skill to be mastered",
+    iconClass: "fa-rocket"
+    },
+  "understand": {
+    description: "A concept to be understood",
+    iconClass: "fa-cloud"
+    },
+  "capstone": {
+    description: "Solve capstone problems that draw skills and concepts together across domains.",
+    iconClass: "fa-graduation-cap"
+    },
+  "fluency": {
+    description: "Compute fluently.",
+    iconClass: "fa-flash"
+    },
+  "real-world": {
+    description: "Solve real-world problems.",
+    iconClass: "fa-globe"
+    },
+  "compare": {
+    description: "Compare or sort",
+    iconClass: "fa-filter"
+    },
+  "verify": {
+    description: "Verify a property or formula experimentally.",
+    iconClass: "fa-flask"
+    },
+  "justify": {
+    description: "Justify or explain",
+    iconClass: "fa-gavel"
+    },
+  "prove": {
+    description: "Prove",
+    iconClass: "fa-bank"
+    }
+};
+
 var ccmath = {
   "k.cc.1": {
     "text": "Count to 100 by ones and by tens.",
