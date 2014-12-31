@@ -4,12 +4,14 @@
 	<title>Common Core Map</title>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="map.css" rel="stylesheet">
+	<link href="katex/katex.min.css" rel="stylesheet">
 	<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 
 	<script src="jquery-1.11.1.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="katex/katex.min.js"></script>
 	<script src="ccmath.js"></script>
 	<script src="map.js"></script>
 
@@ -19,13 +21,13 @@
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h2 class="st-heading modal-title">
-				<i class="st-type" title="icon" class="fa"></i>
+				<i class="st-type fa"></i>
 				<span class="st-code"></span>
-				<small class="st-name"></small>
 			</h2>
 	      </div>
 	      <div class="modal-body">
 	      	<p class="st-main"></p>
+	      	<p class="st-example"></p>
 	        <h2 style="display:none"><i class="ka-icon fa fa-leaf"></i>Khan Academy</h2>
 			<ul style="display:none" class="ka-exercises">
 				<li>Parabola intuition</li>
@@ -41,23 +43,6 @@
 
 	<div id="heading">
 		<h1>Common Core Math</h1>
-		<!-- <div class="grade-menu">
-			<a class="menu-link" href="#kinder">K</span>
-			<a class="menu-link" href="#first">1</span>
-			<a class="menu-link" href="#second">2</span>
-			<a class="menu-link" href="#third">3</span>
-			<a class="menu-link" href="#fourth">4</span>
-			<a class="menu-link" href="#fifth">5</span>
-			<a class="menu-link" href="#sixth">6</span>
-			<a class="menu-link" href="#seventh">7</span>
-			<a class="menu-link" href="#eighth">8</span>
-			<a class="menu-link" href="#number">N</span>
-			<a class="menu-link" href="#algebra">A</span>
-			<a class="menu-link" href="#functions">F</span>
-			<a class="menu-link" href="#geometry">G</span>
-			<a class="menu-link" href="#statistics-and-probability">SP</span>
-		</div> -->
-
 		<p><a href="https://github.com/camsc/camsc.github.io" style="color: #555"><i class="fa fa-github"></i>camsc</a></p>
 	</div>
 
@@ -92,7 +77,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">number names and counting</h3>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-1" data-type="skill">
-							Count to 100 (by ones and tens)
+							Count to $100$
 							<span class="standard-code">k.cc.1</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-2" data-type="skill">
@@ -100,7 +85,7 @@
 							<span class="standard-code">k.cc.2</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-3" data-type="skill">
-							Write numbers within 20
+							Write numbers 0-20
 							<span class="standard-code">k.cc.3</span>
 						</div>
 					</div>
@@ -108,7 +93,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">counting objects</h3>
 
-						<div class="standard parent-standard" data-code="k-cc-4">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-4">
 							Counting and quantities
 							<span class="standard-code">k.cc.4</span>
 						</div>
@@ -399,7 +384,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">understanding place value</h3>
 
-						<div class="standard parent-standard" data-code="1-nbt-2">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-2">
 							2-digit place value
 							<span class="standard-code">1.nbt.2</span>
 						</div>
@@ -603,7 +588,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">place value within 1000</h3>
 						
-						<div class="standard parent-standard" data-code="2-nbt-1" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="2-nbt-1" data-type="">
 							3-digit place value
 							<span class="standard-code">2.nbt.1</span>
 						</div>
@@ -803,22 +788,22 @@
 							<span class="standard-code">3.nf.1</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="3-nf-2" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-2" data-type="">
 							number line and fractions
 							<span class="standard-code">3.nf.2</span>
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-2a" data-type="skill">
-								1/b on the number line
+								$\dfrac 1b$ on the number line
 								<span class="standard-code">3.nf.2a</span>
 							</div>
 							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-2b" data-type="skill">
-								a/b on the number line
+								$\dfrac ab$ on the number line
 								<span class="standard-code">3.nf.2b</span>
 							</div>
 						</div>
 						
-						<div class="standard parent-standard" data-code="3-nf-3" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="3-nf-3" data-type="">
 							equivalent fractions
 							<span class="standard-code">3.nf.3</span>
 						</div>
@@ -989,7 +974,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">link area to multiplication</h3>
 
-						<div class="standard parent-standard" data-code="3-md-5" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="3-md-5" data-type="">
 							understand area
 							<span class="standard-code">3.md.5</span>
 						</div>
@@ -1009,7 +994,7 @@
 							<span class="standard-code">3.md.6</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="3-md-7" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="3-md-7" data-type="">
 							area to multiplication
 							<span class="standard-code">3.md.7</span>
 						</div>
@@ -1117,7 +1102,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">unit fractions</h3>
 						
-						<div class="standard parent-standard" data-code="4-nf-3" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-3" data-type="">
 							addition and subtraction
 							<span class="standard-code">4.nf.3</span>
 						</div>
@@ -1140,7 +1125,7 @@
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="4-nf-4" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="4-nf-4" data-type="">
 							multiplication and division
 							<span class="standard-code">4.nf.4</span>
 						</div>
@@ -1318,7 +1303,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">angles</h3>
 
-						<div class="standard parent-standard" data-code="4-md-5" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="4-md-5" data-type="">
 							angles and degrees
 							<span class="standard-code">4.md.5</span>
 						</div>
@@ -1428,7 +1413,7 @@
 							<span class="standard-code">5.nf.3</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="5-nf-4" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-4" data-type="">
 							multiplying with fractions
 							<span class="standard-code">5.nf.4</span>
 						</div>
@@ -1443,7 +1428,7 @@
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="5-nf-5" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-5" data-type="">
 							scaling with fractions
 							<span class="standard-code">5.nf.5</span>
 						</div>
@@ -1463,7 +1448,7 @@
 							<span class="standard-code">5.nf.6</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="5-nf-7" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="5-nf-7" data-type="">
 							dividing with fractions
 							<span class="standard-code">5.nf.7</span>
 						</div>
@@ -1546,7 +1531,7 @@
 							<span class="standard-code">5.nbt.2</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="5-nbt-3" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="5-nbt-3" data-type="">
 							thousandths
 							<span class="standard-code">5.nbt.3</span>
 						</div>
@@ -1621,7 +1606,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">link volume to multiplication</h3>
 
-						<div class="standard parent-standard" data-code="5-md-3" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="5-md-3" data-type="">
 							volume
 							<span class="standard-code">5.md.3</span>
 						</div>
@@ -1641,7 +1626,7 @@
 							<span class="standard-code">5.md.4</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="5-md-5" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="5-md-5" data-type="">
 							volume and multiplication
 							<span class="standard-code">5.md.5</span>
 						</div>
@@ -1748,7 +1733,7 @@
 							<span class="standard-code">6.rp.2</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="6-rp-3" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="6-rp-3" data-type="">
 							ratio and rate
 							<span class="standard-code">6.rp.3</span>
 						</div>
@@ -1795,7 +1780,7 @@
 							<span class="standard-code">6.ee.1</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="6-ee-2" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="6-ee-2" data-type="">
 							algebraic expressions
 							<span class="standard-code">6.ee.2</span>
 						</div>
@@ -1904,7 +1889,7 @@
 							<span class="standard-code">6.ns.5</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="6-ns-6" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-6" data-type="">
 							rationals on number lines
 							<span class="standard-code">6.ns.6</span>
 						</div>
@@ -1923,7 +1908,7 @@
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="6-ns-7" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="6-ns-7" data-type="">
 							absolute value
 							<span class="standard-code">6.ns.7</span>
 						</div>
@@ -1993,7 +1978,7 @@
 							<span class="standard-code">6.sp.4</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="6-sp-5" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="6-sp-5" data-type="">
 							summarize data sets
 							<span class="standard-code">6.sp.5</span>
 						</div>
@@ -2092,7 +2077,7 @@
 							<span class="standard-code">7.rp.1</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="7-rp-2" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="7-rp-2" data-type="">
 							proportional relationships
 							<span class="standard-code">7.rp.2</span>
 						</div>
@@ -2155,7 +2140,7 @@
 							<span class="standard-code">7.ee.3</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="7-ee-4" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="7-ee-4" data-type="">
 							equations and inequalities
 							<span class="standard-code">7.ee.4</span>
 						</div>
@@ -2190,7 +2175,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">work with rational nubers</h3>
 
-						<div class="standard parent-standard" data-code="7-ns-1" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-1" data-type="">
 							addition and subtraction
 							<span class="standard-code">7.ns.1</span>
 						</div>
@@ -2213,7 +2198,7 @@
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="7-ns-2" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="7-ns-2" data-type="">
 							multiplication and division
 							<span class="standard-code">7.ns.2</span>
 						</div>
@@ -2296,7 +2281,7 @@
 							<span class="standard-code">7.sp.6</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="7-sp-7" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-7" data-type="">
 							probability models
 							<span class="standard-code">7.sp.7</span>
 						</div>
@@ -2311,7 +2296,7 @@
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="7-sp-8" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="7-sp-8" data-type="">
 							compound events
 							<span class="standard-code">7.sp.8</span>
 						</div>
@@ -2493,7 +2478,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">linear equations</h3>
 
-						<div class="standard parent-standard" data-code="8-ee-7" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-7" data-type="">
 							linear, one variable
 							<span class="standard-code">8.ee.7</span>
 						</div>
@@ -2508,7 +2493,7 @@
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="8-ee-8" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="8-ee-8" data-type="">
 							simultaneous equations
 							<span class="standard-code">8.ee.8</span>
 						</div>
@@ -2613,7 +2598,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">congruence and similarity</h3>
 
-						<div class="standard parent-standard" data-code="8-g-1" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="8-g-1" data-type="">
 							transformation properties
 							<span class="standard-code">8.g.1</span>
 						</div>
@@ -2744,7 +2729,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">function representations</h3>
 
-						<div class="standard parent-standard" data-code="hsf-if-7" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-7" data-type="">
 							Graph functions
 							<span class="standard-code">hsf.if.7</span>
 						</div>
@@ -2771,7 +2756,7 @@
 							</div>
 						</div>
 
-						<div class="standard parent-standard" data-code="hsf-if-8" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hsf-if-8" data-type="">
 							Function properties
 							<span class="standard-code">hsf.if.8</span>
 						</div>
@@ -2810,7 +2795,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">model with functions</h3>
 						
-						<div class="standard parent-standard" data-code="hsf-bf-1" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hsf-bf-1" data-type="">
 							Relate two quantities
 							<span class="standard-code">hsf.bf.1</span>
 						</div>
@@ -2842,7 +2827,7 @@
 							<span class="standard-code">hsf.bf.3</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="hsf-bf-4" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hsf-bf-4" data-type="">
 							Inverse functions
 							<span class="standard-code">hsf.bf.4</span>
 						</div>
@@ -2889,7 +2874,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">construct models</h3>
 
-						<div class="standard parent-standard" data-code="hsf-le-1" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hsf-le-1" data-type="">
 							Linear vs. exponential
 							<span class="standard-code">hsf.le.1</span>
 						</div>
@@ -3027,7 +3012,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">interpreting structure</h3>
 						
-						<div class="standard parent-standard" data-code="hsa-sse-1" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hsa-sse-1" data-type="">
 							Expressions in context
 							<span class="standard-code">hsa.sse.1</span>
 						</div>
@@ -3051,7 +3036,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">rewrite and solve</h3>
 						
-						<div class="standard parent-standard" data-code="hsa-sse-3" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hsa-sse-3" data-type="">
 							See and use structure
 							<span class="standard-code">hsa.sse.3</span>
 						</div>
@@ -3211,7 +3196,7 @@
 							<span class="standard-code">hsa.rei.3</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="hsa-rei-4" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hsa-rei-4" data-type="">
 							Quadratic equations
 							<span class="standard-code">hsa.rei.4</span>
 						</div>
@@ -3577,7 +3562,7 @@
 							<span class="standard-code">hss.id.5</span>
 						</div>
 
-						<div class="standard parent-standard" data-code="hss-id-6" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hss-id-6" data-type="">
 							Fitting functions
 							<span class="standard-code">hss.id.6</span>
 						</div>
@@ -3762,7 +3747,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">model with trig functions</h3>
 						
-						<div class="standard parent-standard" data-code="hss-md-5" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hss-md-5" data-type="">
 							possible outcomes
 							<span class="standard-code">t.md.5</span>
 						</div>
@@ -3905,7 +3890,7 @@
 					<div class="cluster">
 						<h3 class="cluster-name">similarity transformations</h3>
 						
-						<div class="standard parent-standard" data-code="hsg-srt-1" data-type="">
+						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="hsg-srt-1" data-type="">
 							Properties of dilations
 							<span class="standard-code">hsg.srt.1</span>
 						</div>

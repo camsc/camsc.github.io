@@ -235,6 +235,16 @@ h3.cluster-name {
 .st-main {
 	color: #555;
 }
+.st-type {
+	color: #333;
+}
+.st-example {
+	color: #555;
+	font-style: italic;
+}
+.st-footnote {
+	color: #555;
+}
 .footnote {
 	margin-right: 0.5em;
 }

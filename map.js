@@ -1,30 +1,55 @@
 var standardData = [];
 
+var mathItUp = function(html) {
+	var parts = [];
+	while (true) {
+		var i = html.indexOf("$");
+		if (i == -1) {
+			parts.push(html);
+			break;
+		} else {
+			var a = html.substring(0, i);
+			var bc = html.substring(i+1);
+			if (bc.indexOf("$") == -1) {
+				parts.push(html);
+				break;
+			} else {
+				parts.push(a);
+				var b = bc.substring(0, bc.indexOf("$"));
+				parts.push(katex.renderToString(b));
+				var c = bc.substring(bc.indexOf("$")+1);
+				html = c;
+			}
+		}
+	}
+	var newHtml = "";
+	for (var i=0; i<parts.length; i++) {
+		newHtml += parts[i];
+	}
+	return newHtml;
+}
+
 $( document ).ready(function() {
 	$('#myModal').on('show.bs.modal', function (event) {
 		var button = $(event.relatedTarget); // Button that triggered the modal
 		var modal = $(this);
 
-		var text = ccmath[button.find(".standard-code").text()].text;
-		var footnote = ccmath[button.find(".standard-code").text()].footnote;
-		var name = button.text().trim();
+		var text = ccmath[button.find(".standard-code").text()]["text"] || "";
+		var example = ccmath[button.find(".standard-code").text()]["example"] || "";
+		var footnote = ccmath[button.find(".standard-code").text()]["footnote"] || "";
+		var type = button.attr("data-type");
 
 		text = text.replace("{footnote}", "<sup><i class='fa fa-paw'></i></sup>");
-		name = name.substring(0, name.indexOf("\n"));
 
-		// if (type) {
-		// 	modal.find( ".st-type" ).attr("class", "fa " + standardTypes[type].iconClass);
-		// 	modal.find( ".st-type" ).attr("title", standardTypes[type].description);
-		// } else {
-		// 	modal.find( ".st-type" ).attr("class", "");
-		// 	modal.find( ".st-type" ).attr("class", "");
-		// 	modal.find( ".st-type" ).attr("title", "");
-		// }
-
+		if (type) {
+			modal.find( ".st-type" ).attr("class", "st-type fa " + standardTypes[type].iconClass);
+		} else {
+			modal.find( ".st-type" ).attr("class", "st-type fa");
+		}
 
 		modal.find( ".st-code" ).html(button.find(".standard-code").text().toUpperCase());
-		modal.find( ".st-main" ).html(text);
-		modal.find( ".st-name" ).html(name);
+		modal.find( ".st-main" ).html(mathItUp(text));
+		modal.find( ".st-example" ).html(mathItUp(example));
 
 		if ("" === footnote) {
 			modal.find( ".st-footnote" ).html(footnote);
@@ -40,8 +65,9 @@ $( document ).ready(function() {
 	var alphabet = alphabetString.split("");
 	$( this ).find(".standard").each( function() {
 		var standard = $(this);
-		var text = standard.data("code");
-		var codeParts = text.split("-");
+		standard.html(mathItUp(standard.html()));
+		var code = standard.data("code");
+		var codeParts = code.split("-");
 
 		var c = codeParts[0] + "." +
 			codeParts[1] + ".";
