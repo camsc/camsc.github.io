@@ -51,7 +51,7 @@ var ccmath = {
     "footnote": ""
   },
   "k.cc.2": {
-    "text": "Count forward beginning from a given number within the known sequence (instead of having to begin at 1).",
+    "text": "Count forward beginning from a given number within the known sequence (instead of having to begin at $1$).",
     "example": "",
     "footnote": ""
   },
