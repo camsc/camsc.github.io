@@ -117,36 +117,3 @@ $( document ).ready(function() {
 		}
 	});
 });
-
-$( document ).ready(function() {
-	$.each( standardTypes, function( key, value ) {;
-		$("div[data-type='" + key + "']").each( function() {
-			var standard = $( this );
-			var html = standard.html();
-			html = "<i class='standard-icon fa " + value.iconClass + "'></i>" + html;
-			standard.html(html);
-		});
-	});
-});
-
-$( document ).ready(function() {
-	var currentStandard;
-	var standardsByType = {};
-	$.each( standardTypes, function( key, value ) {
-		standardsByType[key] = $("div[data-type='" + key + "']");
-	});
-	$.each( standardsByType, function( key, elements ) {
-		$.each( elements, function(index, standard) {
-			$(standard).find("i").click( function() {
-				if ($( standard ).hasClass("icon-on")) {
-					elements.removeClass("icon-on");
-				} else {
-					$.each( standardsByType, function( k, v ) {
-						standardsByType[k].removeClass("icon-on");
-					});
-					elements.addClass("icon-on");
-				}
-			});
-		});
-	});
-});

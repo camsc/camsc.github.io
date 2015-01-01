@@ -2,8 +2,7 @@ body {
 	margin: 0;
 	font-family: 'Proxima Nova Semibold',sans-serif;
 	background-color: #333;
-	color: white;
-	min-width: 1100px;
+	min-width: 1060px;
 }
 h1 {
 	text-align: center;
@@ -22,7 +21,7 @@ h1 {
 	text-align: center;
 }
 h2.strand-name {
-	font-size: 1em;
+	font-size: 1.25em;
 	color: #222;
 	opacity: 0.9;
 	margin: 4px 8px;
@@ -71,7 +70,7 @@ h2.strand-name {
 .g, .gmd, .mg, .co, .srt, .c, .gpe {background-color: #C46E2B;}
 
 .cluster {
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.4);
 	position: relative;
 	margin-top: 40px;
 	padding: 0 0;
@@ -94,33 +93,34 @@ h3.cluster-name {
 	opacity: 0.6;
 	font-weight: 100;
 	font-size: 1.1em;
-	display: block;
 }
 .standard-code:hover {
 	opacity: 0.8;
 }
 .standard {
-	padding: 8px 4px 8px 3em;
-	font-size: 0.8em;
+	padding: 8px;
+	font-size: 0.9em;
 	font-weight: 100;
-	position: relative;
 	cursor: default;
 	min-height: 1em;
+	color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 .standard:hover {
 	background-color: rgba(0,101,185,0.8);
 }
 .parent-standard {
-	padding: 10px 0 0 8px;
-	font-size: 0.8em;
+	padding: 20px 0 0 8px;
 	min-height: 1em;
 	margin-bottom: 0;
 	color: #111;
+	font-weight: normal;
 }
 .parent-standard > .standard-code {
-	margin-right: 0.5em;
-	font-size: 1em;
-	display: inline;
+	font-weight: normal;
+}
+.sub-cluster .standard-code {
+	display: none;
 }
 .parent-standard > .standard-code:before {
 	content: '';
@@ -131,29 +131,6 @@ h3.cluster-name {
 	text-shadow: none;
 }
 
-/* GLOBE LINKS TO ANIMATE DEPENDENCIES */
-.standard-icon {
-	color: #222;
-	opacity: 0.7;
-	display: block;
-	position: absolute;
-	left: 8px;
-	z-index: 10;
-	text-shadow: none;
-	font-size: 1.4em;
-	text-align: center;
-	width: 1em;
-	opacity: 0.7;
-}
-.icon-on > i {
-	color: #fff;
-}
-.icon-on > i:hover {
-	color: #fff;
-	text-shadow: 1px 1px #222;
-}
-.icon-on {
-}
 .standard-on, .standard-on>i, .standard-on>i:hover{
 	color: #fff;
 }
@@ -166,46 +143,10 @@ h3.cluster-name {
 
 /* SUB CLUSTERS */
 .sub-cluster {
-	background-color: rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.1);
 	padding: 0;
-}
-
-/* SVG OVERLAY */
-#svg-overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	z-index: 100;
-	pointer-events: none;
-}
-
-#grade-menu {
-	width: 100%;
-	z-index: 200;
-}
-
-.menu-link {
-	display: block;
-	float:left;
-	padding: 4px 12px;
-	text-align: center;
-	width: 7.142857%;
-	box-sizing: border-box;
-	background: #222;
-	color: #aaa;
-	text-decoration: inherit;
-	cursor: pointer;
-	border-bottom: 1px solid #222;
-	border-top: 1px solid #222;
-}
-
-.menu-link:hover {
-	color: #fff;
-	background-color: #555;
-	border-bottom: 1px solid #fff;
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+	border-left: 4px solid rgba(0,0,0,0.2);
 }
 
 .khan-map, .im {
