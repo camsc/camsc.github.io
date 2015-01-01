@@ -13,6 +13,7 @@
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="katex/katex.min.js"></script>
 	<script src="ccmath.js"></script>
+	<script src="ccMappings.js"></script>
 	<script src="map.js"></script>
 
 	<div class="modal fade" tabindex="-1" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -28,11 +29,25 @@
 	      <div class="modal-body">
 	      	<p class="st-main"></p>
 	      	<p class="st-example"></p>
-	        <h2 style="display:none"><i class="ka-icon fa fa-leaf"></i>Khan Academy</h2>
-			<ul style="display:none" class="ka-exercises">
-				<li>Parabola intuition</li>
-			</ul>
+			<ul class="ka-exercises"></ul>
 			<p class="st-footnote"></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<div class="modal fade" tabindex="-1" id="videoModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h2 class="video-title modal-title">Name of video</h2>
+	      </div>
+	      <div class=" modal-body">
+	      	<iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -85,7 +100,7 @@
 							<span class="standard-code">k.cc.2</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-3" data-type="skill">
-							Write numbers 0-20
+							Write numbers $0\text{-}20$
 							<span class="standard-code">k.cc.3</span>
 						</div>
 					</div>
@@ -99,15 +114,15 @@
 						</div>
 						<div class="sub-cluster">
 							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-4a" data-type="skill">
-								Count objects aloud
+								Count objects
 								<span class="standard-code">k.cc.4a</span>
 							</div>
 							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-4b" data-type="understand">
-								Last number counted = number of objects
+								Last number counted $=$ number of objects
 								<span class="standard-code">k.cc.4b</span>
 							</div>
 							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-cc-4c" data-type="understand">
-								The next number is always one larger
+								The next number is one larger
 								<span class="standard-code">k.cc.4c</span>
 							</div>
 						</div>
@@ -152,7 +167,7 @@
 							<span class="standard-code">k.oa.1</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-oa-2" data-type="real-world">
-							Add and subtract within 10
+							Add and subtract within $10$
 							<span class="standard-code">k.oa.2</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-oa-3" data-type="skill">
@@ -160,11 +175,11 @@
 							<span class="standard-code">k.oa.3</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-oa-4" data-type="skill">
-							Make 10
+							Make $10$
 							<span class="standard-code">k.oa.4</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-oa-5" data-type="fluency">
-							Fluently add and subtract within 5
+							Fluently add and subtract within $5$
 							<span class="standard-code">k.oa.5</span>
 						</div>
 					</div>
@@ -181,13 +196,13 @@
 				-->
 				<div class="strand nbt">
 					<h2 class="strand-name">
-						<a href="https://www.khanacademy.org/coach-res/reference-for-coaches/common-core-conversations/v/ccc-place-value"><i class="fa fa-youtube-play" title="Sal and Bill on place value"></i></a> Place Value
+						<i data-toggle="modal" data-target="#videoModal" class="fa fa-youtube-play" title="Sal and Bill on place value" data-video="DTHdyDWmMbc"></i> Place Value
 					</h2>
 
 					<div class="cluster">
 						<h3 class="cluster-name">place value foundation</h3>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-nbt-1" data-type="skill">
-							Teens from ten (1)
+							Teen numbers (place value lead-in)
 							<span class="standard-code">k.nbt.1</span>
 						</div>
 					</div>
@@ -255,7 +270,7 @@
 							<span class="standard-code">k.g.2</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="k-g-3" data-type="compare">
-							2D vs 3D
+							2D vs. 3D
 							<span class="standard-code">k.g.3</span>
 						</div>
 					</div>
@@ -312,11 +327,11 @@
 					<div class="cluster">
 						<h3 class="cluster-name">addition and subtraction problems</h3>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-1" data-type="real-world">
-							Add and subtract within 20
+							Add and subtract within $20$
 							<span class="standard-code">1.oa.1</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-2" data-type="real-world">
-							Add 3 numbers within 20
+							Add three numbers within $20$
 							<span class="standard-code">1.oa.2</span>
 						</div>
 					</div>
@@ -340,7 +355,7 @@
 							<span class="standard-code">1.oa.5</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-6" data-type="fluency">
-							Fluently add and subtract within 10
+							Fluently add and subtract within $10$
 							<span class="standard-code">1.oa.6</span>
 						</div>
 					</div>
@@ -352,7 +367,7 @@
 							<span class="standard-code">1.oa.7</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-oa-8" data-type="skill">
-							Find the unknown (1)
+							Find the unknown
 							<span class="standard-code">1.oa.8</span>
 						</div>
 					</div>
@@ -376,7 +391,7 @@
 						<h3 class="cluster-name">count higher</h3>
 
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-1" data-type="skill">
-							Count and write to 120
+							Count and write to $120$
 							<span class="standard-code">1.nbt.1</span>
 						</div>
 					</div>
@@ -385,21 +400,21 @@
 						<h3 class="cluster-name">understanding place value</h3>
 
 						<div class="standard parent-standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-2">
-							2-digit place value
+							$2$-digit place value
 							<span class="standard-code">1.nbt.2</span>
 						</div>
 
 						<div class="sub-cluster">
 							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-2a" data-type="understand">
-								Bundles of 10
+								Bundles of $10$
 								<span class="standard-code">1.nbt.2a</span>
 							</div>
 							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-2b" data-type="understand">
-								Teens from ten (2)
+								Teens from ten
 								<span class="standard-code">1.nbt.2b</span>
 							</div>
 							<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-2c" data-type="understand">
-								Multiples of 10
+								Multiples of $10$
 								<span class="standard-code">1.nbt.2c</span>
 							</div>
 						</div>
@@ -413,15 +428,15 @@
 						<h3 class="cluster-name">addition and subtraction</h3>
 
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-4" data-type="skill">
-							Add and subtract within 100 using a variety of strategies
+							Add and subtract within $100$ using a variety of strategies
 							<span class="standard-code">1.nbt.4</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-5" data-type="skill">
-							Mentally add and subtract by 10
+							Mentally add and subtract by $10$
 							<span class="standard-code">1.nbt.5</span>
 						</div>
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="1-nbt-6" data-type="skill">
-							Subtract multiples of 10 using a variety of strategies
+							Subtract multiples of $10$ using a variety of strategies
 							<span class="standard-code">1.nbt.6</span>
 						</div>
 					</div>
@@ -543,7 +558,7 @@
 						<h3 class="cluster-name">problem solving</h3>
 
 						<div class="standard" data-toggle="modal" data-target="#myModal" data-code="2-oa-1" data-type="real-world">
-							Addition and subtraction word problems within 100
+							Addition and subtraction word problems within $100$
 							<span class="standard-code">2.oa.1</span>
 						</div>
 					</div>

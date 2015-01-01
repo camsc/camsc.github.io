@@ -40,6 +40,7 @@ $( document ).ready(function() {
 		var type = button.attr("data-type");
 
 		text = text.replace("{footnote}", "<sup><i class='fa fa-paw'></i></sup>");
+		footnote = mathItUp(footnote);
 
 		if (type) {
 			modal.find( ".st-type" ).attr("class", "st-type fa " + standardTypes[type].iconClass);
@@ -56,7 +57,23 @@ $( document ).ready(function() {
 		} else {
 			modal.find( ".st-footnote" ).html("<i class='footnote fa fa-paw'></i>" + footnote);
 		}
-	})
+
+		// khan exercises
+		var exerciseList = modal.find(".ka-exercises");
+		var exercises = ccMappings[button.find(".standard-code").text()] || [];
+		var s = "";
+		for (var i=0; i<exercises.length; i++) {
+			s += '<li><a href="http://khanacademy.org/exercise/' + exercises[i].slug + '" target="_blank">' + exercises[i].name + '</a></li>';
+		}
+		exerciseList.html(s);
+	});
+
+	$('#videoModal').on('show.bs.modal', function (event) {
+		var button = $(event.relatedTarget) // Button that triggered the modal
+		var modal = $(this)
+		modal.find('.video-title').text(button.attr("title"));
+		modal.find('iframe').attr("src", "//www.youtube.com/embed/" + button.data("video"));
+	});
 });
 
 $( document ).ready(function() {

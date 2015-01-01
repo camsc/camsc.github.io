@@ -219,6 +219,7 @@ h3.cluster-name {
 	display: block;
 	float: right;
 	margin: 0 3px;
+	cursor: pointer;
 }
 
 .fa-youtube-play:hover {
@@ -248,6 +249,9 @@ h3.cluster-name {
 .footnote {
 	margin-right: 0.5em;
 }
-.ka-icon {
-	margin-right: 0.5em;
+.ka-modal-header {
+	color: #333;
+}
+.video-title {
+	color: #333;
 }

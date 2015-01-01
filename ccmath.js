@@ -56,7 +56,7 @@ var ccmath = {
     "footnote": ""
   },
   "k.cc.3": {
-    "text": "Write numbers from 0 to 20. Represent a number of objects with a written numeral 0-20 (with 0 representing a count of no objects).",
+    "text": "Write numbers from $0$ to $20$. Represent a number of objects with a written numeral $0\\text{-}20$ (with $0$ representing a count of no objects).",
     "example": "",
     "footnote": ""
   },
@@ -111,18 +111,18 @@ var ccmath = {
     "footnote": ""
   },
   "k.g.4": {
-    "text": "Analyze and compare two- and three-dimensional shapes, in different sizes and orientations, using informal language to describe their similarities, differences, parts and other attributes.",
+    "text": "Analyze and compare two- and three-dimensional shapes, in different sizes and orientations, using informal language to describe their similarities, differences, parts (e.g., number of sides and vertices/\"corners\") and other attributes (e.g., having sides of equal length).",
     "example": "",
     "footnote": ""
   },
   "k.g.5": {
-    "text": "Model shapes in the world by building shapes from components and drawing shapes.",
+    "text": "Model shapes in the world by building shapes from components (e.g., sticks and clay balls) and drawing shapes.",
     "example": "",
     "footnote": ""
   },
   "k.g.6": {
     "text": "Compose simple shapes to form larger shapes.",
-    "example": "",
+    "example": "For example, \"Can you join these two triangles with full sides touching to make a rectangle?\"",
     "footnote": ""
   },
   "k.oa.1": {
@@ -131,17 +131,17 @@ var ccmath = {
     "footnote": "Drawings need not show details, but should show the mathematics in the problem. (This applies wherever drawings are mentioned in the Standards.)"
   },
   "k.oa.2": {
-    "text": "Solve addition and subtraction word problems, and add and subtract within 10, e.g., by using objects or drawings to represent the problem.",
+    "text": "Solve addition and subtraction word problems, and add and subtract within $10$, e.g., by using objects or drawings to represent the problem.",
     "example": "",
     "footnote": ""
   },
   "k.oa.3": {
-    "text": "Decompose numbers less than or equal to 10 into pairs in more than one way, e.g., by using objects or drawings, and record each decomposition by a drawing or equation.",
+    "text": "Decompose numbers less than or equal to $10$ into pairs in more than one way, e.g., by using objects or drawings, and record each decomposition by a drawing or equation (e.g., $5=2+3$ and $5=4+1$).",
     "example": "",
     "footnote": ""
   },
   "k.oa.4": {
-    "text": "For any number from 1 to 9, find the number that makes 10 when added to the given number, e.g., by using objects or drawings, and record the answer with a drawing or equation.",
+    "text": "For any number from $1$ to $9$, find the number that makes $10$ when added to the given number, e.g., by using objects or drawings, and record the answer with a drawing or equation.",
     "example": "",
     "footnote": ""
   },
@@ -151,7 +151,7 @@ var ccmath = {
     "footnote": ""
   },
   "k.nbt.1": {
-    "text": "Compose and decompose numbers from 11 to 19 into ten ones and some further ones, e.g., by using objects or drawings, and record each composition or decomposition by a drawing or equation (such as 18 = 10 + 8); understand that these numbers are composed of ten ones and one, two, three, four, five, six, seven, eight, or nine ones.",
+    "text": "Compose and decompose numbers from $11$ to $19$ into ten ones and some further ones, e.g., by using objects or drawings, and record each composition or decomposition by a drawing or equation (such as $18 = 10 + 8$); understand that these numbers are composed of ten ones and one, two, three, four, five, six, seven, eight, or nine ones.",
     "example": "",
     "footnote": ""
   },
@@ -161,14 +161,14 @@ var ccmath = {
     "footnote": ""
   },
   "k.md.2": {
-    "text": "Directly compare two objects with a measurable attribute in common, to see which object has &ldquo;more of&rdquo;/&ldquo;less of&rdquo; the attribute, and describe the difference.",
-    "example": "",
+    "text": "Directly compare two objects with a measurable attribute in common, to see which object has more/less of the attribute, and describe the difference.",
+    "example": "For example, directly compare the heights of two children and describe one child as taller/shorter.",
     "footnote": ""
   },
   "k.md.3": {
     "text": "Classify objects into given categories; count the numbers of objects in each category and sort the categories by count.",
     "example": "",
-    "footnote": ""
+    "footnote": "Limit category counts to be less than or equal to $10$."
   },
   "1.g.1": {
     "text": "Distinguish between defining attributes (e.g., triangles are closed and three-sided) versus non-defining attributes (e.g., color, orientation, overall size); build and draw shapes to possess defining attributes.",
@@ -176,9 +176,9 @@ var ccmath = {
     "footnote": ""
   },
   "1.g.2": {
-    "text": "Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape.",
+    "text": "Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape.{footnote}",
     "example": "",
-    "footnote": ""
+    "footnote": "Students do not need to learn formal names such as \"right rectangular prism.\""
   },
   "1.g.3": {
     "text": "Partition circles and rectangles into two and four equal shares, describe the shares using the words <i>halves</i>, <i>fourths</i>, and <i>quarters</i>, and use the phrases <i>half of</i>, <i>fourth of</i>, and <i>quarter of</i>. Describe the whole as two of, or four of the shares. Understand for these examples that decomposing into more equal shares creates smaller shares.",
@@ -186,43 +186,43 @@ var ccmath = {
     "footnote": ""
   },
   "1.oa.1": {
-    "text": "Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.",
+    "text": "Use addition and subtraction within $20$ to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.{footnote}",
     "example": "",
-    "footnote": ""
+    "footnote": "See Glossary, Table 1."
   },
   "1.oa.2": {
-    "text": "Solve word problems that call for addition of three whole numbers whose sum is less than or equal to 20, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.",
+    "text": "Solve word problems that call for addition of three whole numbers whose sum is less than or equal to $20$, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.",
     "example": "",
     "footnote": ""
   },
   "1.oa.3": {
-    "text": "Apply properties of operations as strategies to add and subtract.",
-    "example": "",
-    "footnote": ""
+    "text": "Apply properties of operations as strategies to add and subtract.{footnote}",
+    "example": "Examples: If $8 + 3 = 11$ is known, then $3 + 8 = 11$ is also known. (Commutative property of addition.) To add $2 + 6 + 4$, the second two numbers can be added to make a ten, so $2 + 6 + 4 = 2 + 10 = 12$. (Associative property of addition.)",
+    "footnote": "Students need not use formal terms for these properties."
   },
   "1.oa.4": {
     "text": "Understand subtraction as an unknown-addend problem.",
-    "example": "",
+    "example": "For example, subtract $10-8$ by finding the number that makes $10$ when added to $8$.",
     "footnote": ""
   },
   "1.oa.5": {
-    "text": "Relate counting to addition and subtraction (e.g., by counting on 2 to add 2).",
+    "text": "Relate counting to addition and subtraction (e.g., by counting on $2$ to add $2$).",
     "example": "",
     "footnote": ""
   },
   "1.oa.6": {
-    "text": "Add and subtract within 20, demonstrating fluency for addition and subtraction within 10. Use strategies such as counting on; making ten (e.g., 8 + 6 = 8 + 2 + 4 = 10 + 4 = 14); decomposing a number leading to a ten (e.g., 13 &ndash; 4 = 13 &ndash; 3 &ndash; 1 = 10 &ndash; 1 = 9); using the relationship between addition and subtraction (e.g., knowing that 8 + 4 = 12, one knows 12 &ndash; 8 = 4); and creating equivalent but easier or known sums (e.g., adding 6 + 7 by creating the known equivalent 6 + 6 + 1 = 12 + 1 = 13).",
+    "text": "Add and subtract within $20$, demonstrating fluency for addition and subtraction within $10$. Use strategies such as counting on; making ten (e.g., $8 + 6 = 8 + 2 + 4 = 10 + 4 = 14$); decomposing a number leading to a ten (e.g., $13 - 4 = 13 - 3 - 1 = 10 - 1 = 9$); using the relationship between addition and subtraction (e.g., knowing that $8 + 4 = 12$, one knows $12 - 8 = 4$); and creating equivalent but easier or known sums (e.g., adding $6 + 7$ by creating the known equivalent $6 + 6 + 1 = 12 + 1 = 13$).",
     "example": "",
     "footnote": ""
   },
   "1.oa.7": {
     "text": "Understand the meaning of the equal sign, and determine if equations involving addition and subtraction are true or false.",
-    "example": "",
+    "example": "For example, which of the following equations are true and which are false? $6 = 6$, $7 = 8-1$, $5 + 2 = 2 + 5$, $4 + 1 = 5 + 2$.",
     "footnote": ""
   },
   "1.oa.8": {
     "text": "Determine the unknown whole number in an addition or subtraction equation relating three whole numbers.",
-    "example": "",
+    "example": "For example, determine the unknown number that makes the equation true in each of the equations $8 + ? = 11$, $5 = ?-3$, $6 + 6 = ?$.",
     "footnote": ""
   },
   "1.nbt.1": {
