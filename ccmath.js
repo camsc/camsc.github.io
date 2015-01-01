@@ -1336,7 +1336,7 @@ var ccmath = {
     "footnote": ""
   },
   "7.ns.2b": {
-    "text": "Understand that integers can be divided, provided that the divisor is not zero, and every quotient of integers (with non-zero divisor) is a rational number. If <i>p</i> and <i>q</i> are integers, then &ndash;(<i>p</i>/<i>q</i>) = (&ndash;<i>p</i>)/<i>q</i> = <i>p</i>/(&ndash;<i>q</i>). Interpret quotients of rational numbers by describing real-world contexts.",
+    "text": "<ul><li>Understand that integers can be divided, provided that the divisor is not zero.</li><li>Every quotient of integers (with non-zero divisor) is a rational number.</li><li>If $p$ and $q$ are integers, then $-\\dfrac pq = \\dfrac{-p}{q} = \\dfrac{p}{-q}$.</li><li>Interpret quotients of rational numbers by describing real-world contexts.</li></ul>",
     "example": "",
     "footnote": ""
   },
