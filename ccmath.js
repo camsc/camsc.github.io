@@ -146,7 +146,7 @@ var ccmath = {
     "footnote": ""
   },
   "k.oa.5": {
-    "text": "Fluently add and subtract within 5.",
+    "text": "Fluently add and subtract within $5$.",
     "example": "",
     "footnote": ""
   },
