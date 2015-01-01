@@ -78,7 +78,7 @@ h2.strand-name {
 }
 
 h3.cluster-name {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	text-align: right;
 	font-weight: normal;
 	opacity: 0.8;
@@ -110,11 +110,12 @@ h3.cluster-name {
 	background-color: rgba(0,101,185,0.8);
 }
 .parent-standard {
-	padding: 20px 0 0 8px;
+	padding: 8px 0 0 8px;
 	min-height: 1em;
-	margin-bottom: 0;
+	line-height: 12px;
 	color: #111;
 	font-weight: normal;
+	background-color: rgba(255,255,255,0.1);
 }
 .parent-standard > .standard-code {
 	font-weight: normal;

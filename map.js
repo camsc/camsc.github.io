@@ -29,6 +29,13 @@ var mathItUp = function(html) {
 	return newHtml;
 }
 
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 $( document ).ready(function() {
 	$('#myModal').on('show.bs.modal', function (event) {
 		var button = $(event.relatedTarget); // Button that triggered the modal
@@ -37,16 +44,9 @@ $( document ).ready(function() {
 		var text = ccmath[button.find(".standard-code").text()]["text"] || "";
 		var example = ccmath[button.find(".standard-code").text()]["example"] || "";
 		var footnote = ccmath[button.find(".standard-code").text()]["footnote"] || "";
-		var type = button.attr("data-type");
 
 		text = text.replace("{footnote}", "<sup><i class='fa fa-paw'></i></sup>");
 		footnote = mathItUp(footnote);
-
-		if (type) {
-			modal.find( ".st-type" ).attr("class", "st-type fa " + standardTypes[type].iconClass);
-		} else {
-			modal.find( ".st-type" ).attr("class", "st-type fa");
-		}
 
 		modal.find( ".st-code" ).html(button.find(".standard-code").text().toUpperCase());
 		modal.find( ".st-main" ).html(mathItUp(text));
@@ -101,7 +101,7 @@ $( document ).ready(function() {
 		}
 
 		if (ccmath[c]) {
-			$( this ).click(function(){
+			standard.click(function(){
 				if (standard.hasClass("standard-on")) {
 					standard.removeClass("standard-on");
 				} else {
@@ -113,7 +113,18 @@ $( document ).ready(function() {
 					});
 					standard.addClass("standard-on");
 				}
+				var s = standard.find(".standard-code").text();
+				window.history.pushState(s, s.toUpperCase(), '?s=' + s);
 			});
 		}
 	});
+
+	var p = getParameterByName("s");
+	if (p.length !== 0) {
+		var e = $( ".standard[data-code='" + p.replace(".", "-").replace(".", "-") + "']" );
+		$('html, body').animate({
+	        scrollTop: e.closest( ".grade-level" ).offset().top
+	    }, 300);
+	    e.trigger( "click" );
+	}
 });
