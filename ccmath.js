@@ -166,7 +166,7 @@ var ccmath = {
     "footnote": ""
   },
   "k.md.3": {
-    "text": "Classify objects into given categories; count the numbers of objects in each category and sort the categories by count.",
+    "text": "Classify objects into given categories; count the numbers of objects in each category and sort the categories by count.{footnote}",
     "example": "",
     "footnote": "Limit category counts to be less than or equal to $10$."
   },
@@ -226,7 +226,7 @@ var ccmath = {
     "footnote": ""
   },
   "1.nbt.1": {
-    "text": "Count to 120, starting at any number less than 120. In this range, read and write numerals and represent a number of objects with a written numeral.",
+    "text": "Count to $120$, starting at any number less than $120$. In this range, read and write numerals and represent a number of objects with a written numeral.",
     "example": "",
     "footnote": ""
   },
@@ -236,37 +236,37 @@ var ccmath = {
     "footnote": ""
   },
   "1.nbt.2a": {
-    "text": "10 can be thought of as a bundle of ten ones &mdash; called a &ldquo;ten.&rdquo;",
+    "text": "$10$ can be thought of as a bundle of ten ones &mdash; called a \"ten.\"",
     "example": "",
     "footnote": ""
   },
   "1.nbt.2b": {
-    "text": "The numbers from 11 to 19 are composed of a ten and one, two, three, four, five, six, seven, eight, or nine ones.",
+    "text": "The numbers from $11$ to $19$ are composed of a ten and one, two, three, four, five, six, seven, eight, or nine ones.",
     "example": "",
     "footnote": ""
   },
   "1.nbt.2c": {
-    "text": "The numbers 10, 20, 30, 40, 50, 60, 70, 80, 90 refer to one, two, three, four, five, six, seven, eight, or nine tens (and 0 ones).",
+    "text": "The numbers $10$, $20$, $30$, $40$, $50$, $60$, $70$, $80$, $90$ refer to one, two, three, four, five, six, seven, eight, or nine tens (and $0$ ones).",
     "example": "",
     "footnote": ""
   },
   "1.nbt.3": {
-    "text": "Compare two two-digit numbers based on meanings of the tens and ones digits, recording the results of comparisons with the symbols &gt;, =, and &lt;.",
+    "text": "Compare two two-digit numbers based on meanings of the tens and ones digits, recording the results of comparisons with the symbols $<$, $=$, and $>$.",
     "example": "",
     "footnote": ""
   },
   "1.nbt.4": {
-    "text": "Add within 100, including adding a two-digit number and a one-digit number, and adding a two-digit number and a multiple of 10, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used. Understand that in adding two-digit numbers, one adds tens and tens, ones and ones; and sometimes it is necessary to compose a ten.",
+    "text": "Add within $100$, including adding a two-digit number and a one-digit number, and adding a two-digit number and a multiple of $10$, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used. Understand that in adding two-digit numbers, one adds tens and tens, ones and ones; and sometimes it is necessary to compose a ten.",
     "example": "",
     "footnote": ""
   },
   "1.nbt.5": {
-    "text": "Given a two-digit number, mentally find 10 more or 10 less than the number, without having to count; explain the reasoning used.",
+    "text": "Given a two-digit number, mentally find $10$ more or $10$ less than the number, without having to count; explain the reasoning used.",
     "example": "",
     "footnote": ""
   },
   "1.nbt.6": {
-    "text": "Subtract multiples of 10 in the range 10-90 from multiples of 10 in the range 10-90 (positive or zero differences), using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used.",
+    "text": "Subtract multiples of $10$ in the range $10\\text{-}90$ from multiples of $10$ in the range $10\\text{-}90$ (positive or zero differences), using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used.",
     "example": "",
     "footnote": ""
   },
@@ -276,7 +276,7 @@ var ccmath = {
     "footnote": ""
   },
   "1.md.2": {
-    "text": "Express the length of an object as a whole number of length units, by laying multiple copies of a shorter object (the length unit) end to end; understand that the length measurement of an object is the number of same-size length units that span it with no gaps or overlaps. <i>Limit to contexts where the object being measured is spanned by a whole number of length units with no gaps or overlaps</i>.",
+    "text": "Express the length of an object as a whole number of length units, by laying multiple copies of a shorter object (the length unit) end to end; understand that the length measurement of an object is the number of same-size length units that span it with no gaps or overlaps. <em>Limit to contexts where the object being measured is spanned by a whole number of length units with no gaps or overlaps</em>.",
     "example": "",
     "footnote": ""
   },
@@ -291,9 +291,9 @@ var ccmath = {
     "footnote": ""
   },
   "2.g.1": {
-    "text": "Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces. Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.",
+    "text": "Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces.{footnote} Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.",
     "example": "",
-    "footnote": ""
+    "footnote": "Sizes are compared directly or visually, not compared by measuring."
   },
   "2.g.2": {
     "text": "Partition a rectangle into rows and columns of same-size squares and count to find the total number of them.",
@@ -306,17 +306,17 @@ var ccmath = {
     "footnote": ""
   },
   "2.oa.1": {
-    "text": "Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem.",
+    "text": "Use addition and subtraction within $100$ to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem.{footnote}",
     "example": "",
-    "footnote": ""
+    "footnote": "See Glossary, Table 1."
   },
   "2.oa.2": {
-    "text": "Fluently add and subtract within 20 using mental strategies. By end of Grade 2, know from memory all sums of two one-digit numbers.",
+    "text": "Fluently add and subtract within $20$ using mental strategies.{footnote} By end of Grade 2, know from memory all sums of two one-digit numbers.",
     "example": "",
-    "footnote": ""
+    "footnote": "See standard 1.OA.6 for a list of mental strategies."
   },
   "2.oa.3": {
-    "text": "Determine whether a group of objects (up to 20) has an odd or even number of members, e.g., by pairing objects or counting them by 2s; write an equation to express an even number as a sum of two equal addends.",
+    "text": "Determine whether a group of objects (up to $20$) has an odd or even number of members, e.g., by pairing objects or counting them by 2s; write an equation to express an even number as a sum of two equal addends.",
     "example": "",
     "footnote": ""
   },
@@ -401,12 +401,12 @@ var ccmath = {
     "footnote": ""
   },
   "2.md.5": {
-    "text": "Use addition and subtraction within 100 to solve word problems involving lengths that are given in the same units, e.g., by using drawings (such as drawings of rulers) and equations with a symbol for the unknown number to represent the problem.",
+    "text": "Use addition and subtraction within $100$ to solve word problems involving lengths that are given in the same units, e.g., by using drawings (such as drawings of rulers) and equations with a symbol for the unknown number to represent the problem.",
     "example": "",
     "footnote": ""
   },
   "2.md.6": {
-    "text": "Represent whole numbers as lengths from 0 on a number line diagram with equally spaced points corresponding to the numbers 0, 1, 2, ..., and represent whole-number sums and differences within 100 on a number line diagram.",
+    "text": "Represent whole numbers as lengths from 0 on a number line diagram with equally spaced points corresponding to the numbers $0$, $1$, $2$, ..., and represent whole-number sums and differences within $100$ on a number line diagram.",
     "example": "",
     "footnote": ""
   },
@@ -417,7 +417,7 @@ var ccmath = {
   },
   "2.md.8": {
     "text": "Solve word problems involving dollar bills, quarters, dimes, nickels, and pennies, using $ and &cent; symbols appropriately.",
-    "example": "",
+    "example": "Example: If you have $2$ dimes and $3$ pennies, how many cents do you have?",
     "footnote": ""
   },
   "2.md.9": {
@@ -426,9 +426,9 @@ var ccmath = {
     "footnote": ""
   },
   "2.md.10": {
-    "text": "Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put-together, take-apart, and compare problems using information presented in a bar graph.",
+    "text": "Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put-together, take-apart, and compare problems{footnote} using information presented in a bar graph.",
     "example": "",
-    "footnote": ""
+    "footnote": "See Glossary, Table 1."
   },
   "3.g.1": {
     "text": " Understand that shapes in different categories (e.g., rhombuses, rectangles, and others) may share attributes (e.g., having four sides), and that the shared attributes can define a larger category (e.g., quadrilaterals). Recognize rhombuses, rectangles, and squares as examples of quadrilaterals, and draw examples of quadrilaterals that do not belong to any of these subcategories.",

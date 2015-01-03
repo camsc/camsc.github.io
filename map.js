@@ -36,36 +36,52 @@ function getParameterByName(name) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+var showStandard = function() {
+	var p = getParameterByName("s");
+	if (p.length !== 0) {
+		var e = $( ".standard[data-code='" + p.replace(".", "-").replace(".", "-") + "']" );
+		$('html, body').animate({
+	        scrollTop: e.closest( ".grade-level" ).offset().top
+	    }, 300);
+	    e.trigger( "click" );
+	}
+}
+
+var showModal = function(button, modal) {
+	var text = ccmath[button.find(".standard-code").text()]["text"] || "";
+	var example = ccmath[button.find(".standard-code").text()]["example"] || "";
+	var footnote = ccmath[button.find(".standard-code").text()]["footnote"] || "";
+
+	text = text.replace("{footnote}", "<sup><i class='fa fa-paw'></i></sup>");
+	footnote = mathItUp(footnote);
+
+	modal.find( ".st-code" ).html(button.find(".standard-code").text().toUpperCase());
+	modal.find( ".st-main" ).html(mathItUp(text));
+	modal.find( ".st-example" ).html(mathItUp(example));
+
+	if ("" === footnote) {
+		modal.find( ".st-footnote" ).html(footnote);
+	} else {
+		modal.find( ".st-footnote" ).html("<i class='footnote fa fa-paw'></i>" + footnote);
+	}
+
+	// khan exercises
+	var exerciseList = modal.find(".ka-exercises");
+	var exercises = ccMappings[button.find(".standard-code").text()] || [];
+	var s = "";
+	for (var i=0; i<exercises.length; i++) {
+		s += '<li><a href="http://khanacademy.org/exercise/' + exercises[i].slug + '" target="_blank">' + exercises[i].name + '</a></li>';
+	}
+	exerciseList.html(s);
+}
+
 $( document ).ready(function() {
 	$('#myModal').on('show.bs.modal', function (event) {
 		var button = $(event.relatedTarget); // Button that triggered the modal
 		var modal = $(this);
-
-		var text = ccmath[button.find(".standard-code").text()]["text"] || "";
-		var example = ccmath[button.find(".standard-code").text()]["example"] || "";
-		var footnote = ccmath[button.find(".standard-code").text()]["footnote"] || "";
-
-		text = text.replace("{footnote}", "<sup><i class='fa fa-paw'></i></sup>");
-		footnote = mathItUp(footnote);
-
-		modal.find( ".st-code" ).html(button.find(".standard-code").text().toUpperCase());
-		modal.find( ".st-main" ).html(mathItUp(text));
-		modal.find( ".st-example" ).html(mathItUp(example));
-
-		if ("" === footnote) {
-			modal.find( ".st-footnote" ).html(footnote);
-		} else {
-			modal.find( ".st-footnote" ).html("<i class='footnote fa fa-paw'></i>" + footnote);
-		}
-
-		// khan exercises
-		var exerciseList = modal.find(".ka-exercises");
-		var exercises = ccMappings[button.find(".standard-code").text()] || [];
-		var s = "";
-		for (var i=0; i<exercises.length; i++) {
-			s += '<li><a href="http://khanacademy.org/exercise/' + exercises[i].slug + '" target="_blank">' + exercises[i].name + '</a></li>';
-		}
-		exerciseList.html(s);
+		showModal(button, modal);
+		var s = button.find(".standard-code").text();
+		window.history.pushState(s, s.toUpperCase(), '?s=' + s);
 	});
 
 	$('#videoModal').on('show.bs.modal', function (event) {
@@ -74,6 +90,8 @@ $( document ).ready(function() {
 		modal.find('.video-title').text(button.attr("title"));
 		modal.find('iframe').attr("src", "//www.youtube.com/embed/" + button.data("video"));
 	});
+
+	
 });
 
 $( document ).ready(function() {
@@ -113,18 +131,9 @@ $( document ).ready(function() {
 					});
 					standard.addClass("standard-on");
 				}
-				var s = standard.find(".standard-code").text();
-				window.history.pushState(s, s.toUpperCase(), '?s=' + s);
 			});
 		}
 	});
 
-	var p = getParameterByName("s");
-	if (p.length !== 0) {
-		var e = $( ".standard[data-code='" + p.replace(".", "-").replace(".", "-") + "']" );
-		$('html, body').animate({
-	        scrollTop: e.closest( ".grade-level" ).offset().top
-	    }, 300);
-	    e.trigger( "click" );
-	}
+	showStandard();
 });
