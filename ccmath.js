@@ -696,7 +696,7 @@ var ccmath = {
     "footnote": ""
   },
   "4.nf.3": {
-    "text": "Understand a fraction <i>a</i>/<i>b</i> with <i>a</i> &gt; 1 as a sum of fractions 1/<i>b</i>.",
+    "text": "Understand a fraction $\\dfrac ab$ with $a > 1$ as a sum of fractions $\\dfrac 1b$.",
     "example": "",
     "footnote": ""
   },
@@ -1306,17 +1306,17 @@ var ccmath = {
     "footnote": ""
   },
   "7.ns.1a": {
-    "text": "Describe situations in which opposite quantities combine to make 0.",
-    "example": "",
+    "text": "Describe situations in which opposite quantities combine to make $0$.",
+    "example": "For example, a hydrogen atom has a $0$ charge because its two contituents are oppositely charged.",
     "footnote": ""
   },
   "7.ns.1b": {
-    "text": "Understand <i>p</i> + <i>q</i> as the number located a distance |<i>q</i>| from <i>p</i>, in the positive or negative direction depending on whether <i>q</i> is positive or negative. Show that a number and its opposite have a sum of 0 (are additive inverses). Interpret sums of rational numbers by describing real-world contexts.",
+    "text": "<ul><li>Understand $p+q$ as the number located a distance $|q|$ from $p$, in the positive or negative direction depending on whether $q$ is positive or negative.</li><li>Show that a number and its opposite have a sum of $0$ (are additive inverses).</li><li>Interpret sums of rational numbers by describing real-world contexts.</li></ul>",
     "example": "",
     "footnote": ""
   },
   "7.ns.1c": {
-    "text": "Understand subtraction of rational numbers as adding the additive inverse, <i>p</i> &ndash; <i>q</i> = <i>p</i> + (&ndash;<i>q</i>). Show that the distance between two rational numbers on the number line is the absolute value of their difference, and apply this principle in real-world contexts.",
+    "text": "<ul><li>Understand subtraction of rational numbers as adding the additive inverse, $p-q = p + (-q)$.</li><li>Show that the distance between two rational numbers on the number line is the absolute value of their difference, and apply this principle in real-world contexts.</li></ul>",
     "example": "",
     "footnote": ""
   },
@@ -1331,7 +1331,7 @@ var ccmath = {
     "footnote": ""
   },
   "7.ns.2a": {
-    "text": "Understand that multiplication is extended from fractions to rational numbers by requiring that operations continue to satisfy the properties of operations, particularly the distributive property, leading to products such as (&ndash;1)(&ndash;1) = 1 and the rules for multiplying signed numbers. Interpret products of rational numbers by describing real-world contexts.",
+    "text": "<ul><li>Understand that multiplication is extended from fractions to rational numbers by requiring that operations continue to satisfy the properties of operations, particularly the distributive property, leading to products such as $(-1)(-1)=1$ and the rules for multiplying signed numbers.</li><li>Interpret products of rational numbers by describing real-world contexts.</li></ul>",
     "example": "",
     "footnote": ""
   },
@@ -1346,14 +1346,14 @@ var ccmath = {
     "footnote": ""
   },
   "7.ns.2d": {
-    "text": "Convert a rational number to a decimal using long division; know that the decimal form of a rational number terminates in 0s or eventually repeats.",
+    "text": "Convert a rational number to a decimal using long division; know that the decimal form of a rational number terminates in $0$s or eventually repeats.",
     "example": "",
     "footnote": ""
   },
   "7.ns.3": {
-    "text": "Solve real-world and mathematical problems involving the four operations with rational numbers.",
+    "text": "Solve real-world and mathematical problems involving the four operations with rational numbers.{footnote}",
     "example": "",
-    "footnote": ""
+    "footnote": "Computations with rational numbers extend the rules for manipulating fractions to complex fractions."
   },
   "7.ee.1": {
     "text": "Apply properties of operations as strategies to add, subtract, factor, and expand linear expressions with rational coefficients.",
