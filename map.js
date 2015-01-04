@@ -81,7 +81,11 @@ $( document ).ready(function() {
 		var modal = $(this);
 		showModal(button, modal);
 		var s = button.find(".standard-code").text();
-		window.history.pushState(s, s.toUpperCase(), '?s=' + s);
+		try {
+			window.history.pushState(s, s.toUpperCase(), '?s=' + s);
+		} catch (e) {
+			
+		}
 	});
 
 	$('#videoModal').on('show.bs.modal', function (event) {
@@ -90,8 +94,6 @@ $( document ).ready(function() {
 		modal.find('.video-title').text(button.attr("title"));
 		modal.find('iframe').attr("src", "//www.youtube.com/embed/" + button.data("video"));
 	});
-
-	
 });
 
 $( document ).ready(function() {
