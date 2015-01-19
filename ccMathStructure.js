@@ -26,7 +26,7 @@ var ccMathStructure = [
                },
                {  
                   "name":"Counting objects",
-                  "standards":[  
+                  "standards":[
                      {  
                         "code":"k.cc.4",
                         "name":"Counting and quantities",
@@ -192,7 +192,12 @@ var ccMathStructure = [
    },
    {  
       "name":"1<sup>st</sup> Grade",
-      "strands":[  
+      "strands":[
+         {
+            "name":"",
+            "code":"",
+            "clusters":[]
+         },
          {  
             "name":"Road to Algebra",
             "code":"oa",
@@ -385,7 +390,12 @@ var ccMathStructure = [
    },
    {  
       "name":"2<sup>nd</sup> Grade",
-      "strands":[  
+      "strands":[
+         {
+            "name":"",
+            "code":"",
+            "clusters":[]
+         },
          {  
             "name":"Road to Algebra",
             "code":"oa",
@@ -588,7 +598,7 @@ var ccMathStructure = [
    },
    {  
       "name":"3<sup>rd</sup> Grade",
-      "strands":[  
+      "strands":[
          {  
             "name":"Fractions",
             "code":"nf",

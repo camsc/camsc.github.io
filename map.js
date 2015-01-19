@@ -1,5 +1,3 @@
-var standardData = [];
-
 var mathItUp = function(html) {
 	var parts = [];
 	while (true) {
@@ -55,6 +53,12 @@ var showModal = function(button, modal) {
 		modal.find( ".st-footnote" ).html("<i class='footnote fa fa-paw'></i>" + mathItUp(footnote));
 	}
 
+	// darken the standard that was clicked on
+	$( ".standard" ).each( function() {
+		$(this).removeClass("standard-on");
+	});
+	button.addClass("standard-on");
+
 	// khan exercises
 	// var exerciseList = modal.find(".ka-exercises");
 	// var exercises = ccMappings[button.find(".standard-code").text()] || [];
@@ -76,12 +80,5 @@ $( document ).ready(function() {
 		} catch (e) {
 			
 		}
-	});
-
-	$('#videoModal').on('show.bs.modal', function (event) {
-		var button = $(event.relatedTarget) // Button that triggered the modal
-		var modal = $(this)
-		modal.find('.video-title').text(button.attr("title"));
-		modal.find('iframe').attr("src", "//www.youtube.com/embed/" + button.data("video"));
 	});
 });
