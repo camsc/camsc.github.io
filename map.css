@@ -90,6 +90,7 @@ h3.cluster-name {
 	text-shadow: none;
 	color: #000;
 	opacity: 0.6;
+	margin-left: 0.3em;
 	font-weight: 100;
 	font-size: 1.1em;
 }
@@ -190,6 +191,12 @@ h3.cluster-name {
 	color: #555;
 }
 .footnote {
+	margin-right: 0.5em;
+}
+.st-thoughts {
+	color: #555;
+}
+.thoughts {
 	margin-right: 0.5em;
 }
 .ka-modal-header {

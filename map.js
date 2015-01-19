@@ -36,43 +36,33 @@ function getParameterByName(name) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-var showStandard = function() {
-	var p = getParameterByName("s");
-	if (p.length !== 0) {
-		var e = $( ".standard[data-code='" + p.replace(".", "-").replace(".", "-") + "']" );
-		$('html, body').animate({
-	        scrollTop: e.closest( ".grade-level" ).offset().top
-	    }, 300);
-	    e.trigger( "click" );
-	}
-}
-
 var showModal = function(button, modal) {
 	var text = ccmath[button.find(".standard-code").text()]["text"] || "";
 	var example = ccmath[button.find(".standard-code").text()]["example"] || "";
 	var footnote = ccmath[button.find(".standard-code").text()]["footnote"] || "";
+	var thoughts = ccmath[button.find(".standard-code").text()]["thoughts"] || "";
 
 	text = text.replace("{footnote}", "<sup><i class='fa fa-paw'></i></sup>");
-	footnote = mathItUp(footnote);
 
 	modal.find( ".st-code" ).html(button.find(".standard-code").text().toUpperCase());
 	modal.find( ".st-main" ).html(mathItUp(text));
 	modal.find( ".st-example" ).html(mathItUp(example));
+	modal.find( ".st-thoughts" ).html(mathItUp(thoughts));
 
 	if ("" === footnote) {
 		modal.find( ".st-footnote" ).html(footnote);
 	} else {
-		modal.find( ".st-footnote" ).html("<i class='footnote fa fa-paw'></i>" + footnote);
+		modal.find( ".st-footnote" ).html("<i class='footnote fa fa-paw'></i>" + mathItUp(footnote));
 	}
 
 	// khan exercises
-	var exerciseList = modal.find(".ka-exercises");
-	var exercises = ccMappings[button.find(".standard-code").text()] || [];
-	var s = "";
-	for (var i=0; i<exercises.length; i++) {
-		s += '<li><a href="http://khanacademy.org/exercise/' + exercises[i].slug + '" target="_blank">' + exercises[i].name + '</a></li>';
-	}
-	exerciseList.html(s);
+	// var exerciseList = modal.find(".ka-exercises");
+	// var exercises = ccMappings[button.find(".standard-code").text()] || [];
+	// var s = "";
+	// for (var i=0; i<exercises.length; i++) {
+	// 	s += '<li><a href="http://khanacademy.org/exercise/' + exercises[i].slug + '" target="_blank">' + exercises[i].name + '</a></li>';
+	// }
+	// exerciseList.html(s);
 }
 
 $( document ).ready(function() {
@@ -94,48 +84,4 @@ $( document ).ready(function() {
 		modal.find('.video-title').text(button.attr("title"));
 		modal.find('iframe').attr("src", "//www.youtube.com/embed/" + button.data("video"));
 	});
-});
-
-$( document ).ready(function() {
-
-	var alphabetString = "abcdefghijklmnopqrstuvwxyz";
-	var alphabet = alphabetString.split("");
-	$( this ).find(".standard").each( function() {
-		var standard = $(this);
-		standard.html(mathItUp(standard.html()));
-		var code = standard.data("code");
-		var codeParts = code.split("-");
-
-		var c = codeParts[0] + "." +
-			codeParts[1] + ".";
-
-		var ending = codeParts[2];
-		if (alphabetString.indexOf(ending.substring(ending.length-1, ending.length)) > -1) {
-
-			var indexInCluster = ending.substring(0, ending.length-1);
-			var subClusterLetter = ending.substring(ending.length-1, ending.length);
-
-			c = c + indexInCluster + subClusterLetter;
-		} else {;
-			c = c + ending;
-		}
-
-		if (ccmath[c]) {
-			standard.click(function(){
-				if (standard.hasClass("standard-on")) {
-					standard.removeClass("standard-on");
-				} else {
-					var name = "" + standard.html();
-					name = name.substring(name.indexOf("/i>")+3, name.indexOf("<span"));
-
-					$( ".standard" ).each( function() {
-						$(this).removeClass("standard-on");
-					});
-					standard.addClass("standard-on");
-				}
-			});
-		}
-	});
-
-	showStandard();
 });
