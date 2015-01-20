@@ -25,11 +25,11 @@ var ccMathStructure = [
                   "index":"a"
                },
                {  
-                  "name":"Counting objects",
+                  "name":"Count objects",
                   "standards":[
                      {  
                         "code":"k.cc.4",
-                        "name":"Counting and quantities",
+                        "name":"Counting and quantity",
                         "children":[  
                            {  
                               "code":"k.cc.4a",
@@ -53,7 +53,7 @@ var ccMathStructure = [
                   "index":"b"
                },
                {  
-                  "name":"Comparing numbers",
+                  "name":"Compare numbers",
                   "standards":[  
                      {  
                         "code":"k.cc.6",
@@ -203,7 +203,7 @@ var ccMathStructure = [
             "code":"oa",
             "clusters":[  
                {  
-                  "name":"Addition and subtraction",
+                  "name":"Addition and subtraction problems",
                   "standards":[  
                      {  
                         "code":"1.oa.1",
@@ -401,7 +401,7 @@ var ccMathStructure = [
             "code":"oa",
             "clusters":[  
                {  
-                  "name":"Problem solving",
+                  "name":"Addition and subtraction problems",
                   "standards":[  
                      {  
                         "code":"2.oa.1",
@@ -411,10 +411,10 @@ var ccMathStructure = [
                   "index":"a"
                },
                {  
-                  "name":"Addition and subtraction",
+                  "name":"Fluency in addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"2.oa.1",
+                        "code":"2.oa.2",
                         "name":"Fluency within $20$"
                      }
                   ],

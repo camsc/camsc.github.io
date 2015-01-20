@@ -42,15 +42,15 @@ var ccmath = {
     "thoughts": ""
   },
   "k.cc.5": {
-    "text": "<ul><li>Count to answer \"how many?\" questions about as many as $20$ things arranged in a line, a rectangular array, or a circle, or as many as $10$ things in a scattered configuration.</li><li>Given a number from $1$&ndash;$20$, count out that many objects.</li></ul>",
+    "text": "<ul><li>Count to answer \"how many?\" questions about as many as <ul><li>$20$ things arranged in a line, a rectangular array, or a circle</li><li>$10$ things in a scattered configuration</li></ul></li><li>Given a number from $1$&ndash;$20$, count out that many objects.</li></ul>",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "k.cc.6": {
-    "text": "Identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in another group, e.g., by using matching and counting strategies.{footnote}",
+    "text": "Identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in another group. Do this, for example, using matching and counting strategies. Include groups with up to ten objects.",
     "example": "",
-    "footnote": "Include groups with up to ten objects.",
+    "footnote": "",
     "thoughts": ""
   },
   "k.cc.7": {
@@ -60,7 +60,7 @@ var ccmath = {
     "thoughts": ""
   },
   "k.g.1": {
-    "text": "Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as <i>above</i>, <i>below</i>, <i>beside</i>, <i>in front of</i>, <i>behind</i>, and <i>next to</i>.",
+    "text": "<ul><li>Describe objects in the environment using names of shapes.</li><li>Describe the relative positions of these objects using terms such as <i>above</i>, <i>below</i>, <i>beside</i>, <i>in front of</i>, <i>behind</i>, and <i>next to</i>.</li></ul>",
     "example": "",
     "footnote": "",
     "thoughts": ""
@@ -102,13 +102,13 @@ var ccmath = {
     "thoughts": ""
   },
   "k.oa.2": {
-    "text": "Solve addition and subtraction word problems, and add and subtract within $10$, e.g., by using objects or drawings to represent the problem.",
+    "text": "Solve addition and subtraction word problems within $10$. Use objects or drawings, for example, to represent the problem.",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "k.oa.3": {
-    "text": "Decompose numbers less than or equal to $10$ into pairs in more than one way (e.g., by using objects or drawings) and record each decomposition by a drawing or equation (e.g., $5=2+3$ and $5=4+1$).",
+    "text": "Decompose numbers less than or equal to $10$ into pairs in more than one way (e.g., by using objects or drawings). Record each decomposition with a drawing or equation (e.g., $5=2+3$ and $5=4+1$).",
     "example": "",
     "footnote": "",
     "thoughts": ""
@@ -126,7 +126,7 @@ var ccmath = {
     "thoughts": ""
   },
   "k.nbt.1": {
-    "text": "<ul><li>Compose and decompose numbers from $11$ to $19$ into ten ones and some further ones (e.g., by using objects or drawings) and record each composition or decomposition by a drawing or equation (such as $18 = 10 + 8$)</li><li>Understand that teen numbers are composed of ten ones and one, two, three, four, five, six, seven, eight, or nine ones.</li></ul>",
+    "text": "<ul><li>Compose and decompose numbers from $11$ to $19$ into ten ones and some further ones (e.g., by using objects or drawings). Record each composition or decomposition with a drawing or equation (such as $18 = 10 + 8$)</li><li>Understand that teen numbers are composed of ten ones and one, two, three, four, five, six, seven, eight, or nine ones.</li></ul>",
     "example": "",
     "footnote": "",
     "thoughts": ""
@@ -138,40 +138,40 @@ var ccmath = {
     "thoughts": ""
   },
   "k.md.2": {
-    "text": "Directly compare two objects with a measurable attribute in common, to see which object has more/less of the attribute, and describe the difference.",
-    "example": "For example, directly compare the heights of two children and describe one child as taller/shorter.",
+    "text": "<p>Directly compare two objects with a measurable attribute in common to see which object has more/less of the attribute. Then, describe the difference.</p><blockquote>Directly compare the heights of two children and describe one child as taller/shorter.</blockquote>",
+    "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "k.md.3": {
-    "text": "Classify objects into given categories; count the numbers of objects in each category and sort the categories by count.{footnote}",
+    "text": "<ol><li>Classify objects into given categories.</li><li>Count the numbers of objects in each category.</li><li>Sort the categories by cardinality (the number of objects in each category).</li></ol><p>Limit category counts to be less than or equal to $10$.</p>",
     "example": "",
-    "footnote": "Limit category counts to be less than or equal to $10$.",
+    "footnote": "",
     "thoughts": ""
   },
   "1.g.1": {
-    "text": "Distinguish between defining attributes (e.g., triangles are closed and three-sided) versus non-defining attributes (e.g., color, orientation, overall size); build and draw shapes to possess defining attributes.",
+    "text": "<ul><li>Distinguish between defining attributes (e.g., triangles are closed and three-sided) and non-defining attributes (e.g., color, orientation, overall size).</li><li>Build and draw shapes to possess defining attributes.</li><ul>",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.g.2": {
-    "text": "Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape.{footnote}",
+    "text": "<p>Compose two-dimensional shapes<ul><li>rectangles</li><li>squares</li><li>trapezoids</li><li>triangles</li><li>half-circles</li><li>quarter-circles</li></ul>or three-dimensional shapes<ul><li>cubes</li><li>right rectangular prisms</li><li>right circular cones</li><li>right circular cylinders</li></ul>to create a composite shape, and compose new shapes from the composite shape.</p><p><em>Note: Students do not need to learn formal names such as \"right rectangular prism.\"</em></p>",
     "example": "",
-    "footnote": "Students do not need to learn formal names such as \"right rectangular prism.\"",
+    "footnote": "",
     "thoughts": ""
   },
   "1.g.3": {
-    "text": "Partition circles and rectangles into two and four equal shares, describe the shares using the words <i>halves</i>, <i>fourths</i>, and <i>quarters</i>, and use the phrases <i>half of</i>, <i>fourth of</i>, and <i>quarter of</i>. Describe the whole as two of, or four of the shares. Understand for these examples that decomposing into more equal shares creates smaller shares.",
+    "text": "<p>Partition circles and rectangles into two and four equal shares. Also:<ul><li>Describe the shares using the words <i>halves</i>, <i>fourths</i>, and <i>quarters</i>.</li><li>Use the phrases <i>half of</i>, <i>fourth of</i>, and <i>quarter of</i>.</li><li>Describe the whole as two of the shares or four of the shares.</li></ul>Understand for these examples that decomposing into more equal shares creates smaller shares.</p>",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.oa.1": {
-    "text": "Use addition and subtraction within $20$ to solve word problems involving situations of <ul><li>adding to</li><li>taking from</li><li>putting together</li><li>taking apart</li><li>comparing</li></ul> with unknowns in all positions (see examples below). Use, for example, <ul><li>objects</li><li>drawings</li><li>equations with a symbol for the unknown number</li></ul>to represent the problem.",
+    "text": "Use addition and subtraction within $20$ to solve word problems involving situations of <ul><li>adding to</li><li>taking from</li><li>putting together</li><li>taking apart</li><li>comparing</li></ul> with unknowns in all positions (see examples below). Use, for example, <ul><li>objects</li><li>drawings</li><li>equations with a symbol for the unknown number</li></ul>to represent the problem.      <hr>     <h3>Examples of \"adding to\"</h3>      <p><strong>Result unknown:</strong> Two bunnies sat on the grass. Three more bunnies hopped there. How many bunnies are on the grass now? $2+3=?$</p>        <p><strong>Change unknown:</strong> Two bunnies were sitting on the grass. Some more bunnies hopped there. Then there were five bunnies. How many bunnies hopped over to the first two? $2+?=5$</p>       <p><strong>Start unknown:</strong> Some bunnies were sitting on the grass. Three more bunnies hopped there. Then there were five bunnies. How many bunnies were on the grass before? $?+3=5$</p>       <h3>Examples of \"taking from\"</h3>      <p><strong>Result unknown:</strong> Five apples were on the table. I ate two apples. How many apples are on the table now? $5-2=?$</p>       <p><strong>Change unknown:</strong> Five apples were on the table. I ate some apples. Then there were three apples. How many apples did I eat? $5-?=3$</p>       <p><strong>Start unknown:</strong> Some apples were on the table. I ate two apples. Then there were three apples. How many apples were on the table before? $?-2=3$</p>       <h3>Examples of \"put together / take apart\"</h3>      <p><strong>Total unknown:</strong> Three red apples and two green apples are on the table. How many apples are on the table? $3+2=?$</p>       <p><strong>Addend unknown:</strong> Five apples are on the table. Three are red and the rest are green. How many apples are green? $3+?=5$ or $5-3=?$</p>       <p><strong>Both addends unknown:</strong> Grandma has five flowers. How many can she put in her red vase and how many in her blue vase? $5 = 0 + 5 = 5 + 0 = 1 + 4 = 4 + 1 = 2 + 3 = 3 + 2$</p>       <h3>Examples of \"compare\"</h3>      <p><strong>Difference unknown:</strong>Lucy has two apples. Julie has five apples. How many <strong>more</strong> apples does Julie have than Lucy? $2+?=5$ or $5-2=?$</p><p>Lucy has two apples. Julie has five apples. How many <strong>fewer</strong> apples does Lucy have than Julie? $2+?=5$ or $5-2=?$</p>       <p><strong>Bigger unknown:</strong> Julie has three <strong>more</strong> apples than Lucy. Lucy has two apples. How many apples does Julie have? $2+3=?$ or $3+2=?$</p><p>Lucy has three <strong>fewer</strong> apples than Julie. Lucy has two apples. How many apples does Julie have? $2+3=?$ or $3+2=?$</p>       <p><strong>Smaller unknown:</strong> Julie has three <strong>more</strong> apples than Lucy. Julie has five apples. How many apples does Lucy have? $5-3=?$ or $?+3=5$</p><p>Lucy has three <strong>fewer</strong> apples than Julie. Julie has five apples. How many apples does Lucy have? $5-3=?$ or $?+3=5$</p>",
     "example": "",
     "footnote": "",
-    "thoughts": "<hr>     <h3>Examples of \"adding to\"</h3>      <p><strong>Result unknown:</strong> Two bunnies sat on the grass. Three more bunnies hopped there. How many bunnies are on the grass now? $2+3=?$</p>        <p><strong>Change unknown:</strong> Two bunnies were sitting on the grass. Some more bunnies hopped there. Then there were five bunnies. How many bunnies hopped over to the first two? $2+?=5$</p>       <p><strong>Start unknown:</strong> Some bunnies were sitting on the grass. Three more bunnies hopped there. Then there were five bunnies. How many bunnies were on the grass before? $?+3=5$</p>       <h3>Examples of \"taking from\"</h3>      <p><strong>Result unknown:</strong> Five apples were on the table. I ate two apples. How many apples are on the table now? $5-2=?$</p>       <p><strong>Change unknown:</strong> Five apples were on the table. I ate some apples. Then there were three apples. How many apples did I eat? $5-?=3$</p>       <p><strong>Start unknown:</strong> Some apples were on the table. I ate two apples. Then there were three apples. How many apples were on the table before? $?-2=3$</p>       <h3>Examples of \"put together / take apart\"</h3>      <p><strong>Total unknown:</strong> Three red apples and two green apples are on the table. How many apples are on the table? $3+2=?$</p>       <p><strong>Addend unknown:</strong> Five apples are on the table. Three are red and the rest are green. How many apples are green? $3+?=5$ or $5-3=?$</p>       <p><strong>Both addends unknown:</strong> Grandma has five flowers. How many can she put in her red vase and how many in her blue vase? $5 = 0 + 5 = 5 + 0 = 1 + 4 = 4 + 1 = 2 + 3 = 3 + 2$</p>       <h3>Examples of \"compare\"</h3>      <p><strong>Difference unknown:</strong>Lucy has two apples. Julie has five apples. How many <strong>more</strong> apples does Julie have than Lucy? $2+?=5$ or $5-2=?$</p><p>Lucy has two apples. Julie has five apples. How many <strong>fewer</strong> apples does Lucy have than Julie? $2+?=5$ or $5-2=?$</p>       <p><strong>Bigger unknown:</strong> Julie has three <strong>more</strong> apples than Lucy. Lucy has two apples. How many apples does Julie have? $2+3=?$ or $3+2=?$</p><p>Lucy has three <strong>fewer</strong> apples than Julie. Lucy has two apples. How many apples does Julie have? $2+3=?$ or $3+2=?$</p>       <p><strong>Smaller unknown:</strong> Julie has three <strong>more</strong> apples than Lucy. Julie has five apples. How many apples does Lucy have? $5-3=?$ or $?+3=5$</p><p>Lucy has three <strong>fewer</strong> apples than Julie. Julie has five apples. How many apples does Lucy have? $5-3=?$ or $?+3=5$</p>"
+    "thoughts": ""
   },
   "1.oa.2": {
     "text": "Solve word problems that call for addition of three whole numbers whose sum is less than or equal to $20$ by using, for example,<ul><li>objects</li><li>drawings</li><li>equations with a symbol for the unknown number</li></ul> to represent the problem.",
@@ -180,14 +180,14 @@ var ccmath = {
     "thoughts": ""
   },
   "1.oa.3": {
-    "text": "Apply properties of operations as strategies to add and subtract.{footnote}",
-    "example": "<p><strong>Commutative property of addition:</strong> If $8 + 3 = 11$ is known, then $3 + 8 = 11$ is also known.</p><p><strong>Associative property of addition:</strong> To add $2 + 6 + 4$, the second two numbers can be added to make a ten, so $2 + 6 + 4 = 2 + 10 = 12$.",
-    "footnote": "Students need not use formal terms for these properties.",
+    "text": "<p>Apply properties of operations as strategies to add and subtract. Students need not use formal terms \"commutative\" and \"associative\" for these properties.</p><p><strong>Commutative property of addition: $a+b=b+a$</strong></p><blockquote>If $8 + 3 = 11$ is known, then $3 + 8 = 11$ is also known.</blockquote><p><strong>Associative property of addition: $(a+b)+c=a+(b+c)$</strong></p><blockquote>To add $2 + 6 + 4$, the second two numbers can be added to make a ten, so $2 + 6 + 4 = 2 + 10 = 12$.</blockquote>",
+    "example": "",
+    "footnote": "",
     "thoughts": ""
   },
   "1.oa.4": {
-    "text": "Understand subtraction as an unknown-addend problem.",
-    "example": "For example, subtract $10-8$ by finding the number that makes $10$ when added to $8$.",
+    "text": "<p>Understand subtraction as an unknown-addend problem.</p><blockquote>Subtract $10-8$ by finding the number that makes $10$ when added to $8$.</blockquote>",
+    "example": "",
     "footnote": "",
     "thoughts": ""
   },
@@ -198,31 +198,31 @@ var ccmath = {
     "thoughts": ""
   },
   "1.oa.6": {
-    "text": "Add and subtract within $20$, demonstrating fluency for addition and subtraction within $10$. Use strategies such as counting on; making ten (e.g., $8 + 6 = 8 + 2 + 4 = 10 + 4 = 14$); decomposing a number leading to a ten (e.g., $13 - 4 = 13 - 3 - 1 = 10 - 1 = 9$); using the relationship between addition and subtraction (e.g., knowing that $8 + 4 = 12$, one knows $12 - 8 = 4$); and creating equivalent but easier or known sums (e.g., adding $6 + 7$ by creating the known equivalent $6 + 6 + 1 = 12 + 1 = 13$).",
+    "text": "<p>Add and subtract within $20$, demonstrating fluency for addition and subtraction within $10$.</p><p>Use strategies, such as the following:</p><h4>Counting on</h4><li>Making ten<br>(e.g., $8 + 6 = 8 + 2 + 4 = 10 + 4 = 14$)</li><li>Decomposing a number leading to a ten<br>(e.g., $13 - 4 = 13 - 3 - 1 = 10 - 1 = 9$)</li><li>Using the relationship between addition and subtraction<br>(e.g., knowing that $8 + 4 = 12$, one knows $12 - 8 = 4$)</li><li>Creating equivalent but easier sums<br>(e.g., $6 + 7 = 6 + 6 + 1 = 12 + 1 = 13$)</li></ul>",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.oa.7": {
-    "text": "Understand the meaning of the equal sign, and determine if equations involving addition and subtraction are true or false.",
-    "example": "For example, which of the following equations are true and which are false? $6 = 6$, $7 = 8-1$, $5 + 2 = 2 + 5$, $4 + 1 = 5 + 2$.",
+    "text": "<ul><li>Understand the meaning of the equal sign.</li><li>Determine if equations involving addition and subtraction are true or false.</li></ul><blockquote>Which of the following equations are true? Which are false?<br><br>$6 = 6$<br><br>$7 = 8-1$<br><br>$5 + 2 = 2 + 5$<br><br>$4 + 1 = 5 + 2$.</blockquote>",
+    "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.oa.8": {
-    "text": "Determine the unknown whole number in an addition or subtraction equation relating three whole numbers.",
-    "example": "For example, determine the unknown number that makes the equation true in each of the equations $8 + ? = 11$, $5 = ?-3$, $6 + 6 = ?$.",
+    "text": "<p>Determine the unknown whole number in an addition or subtraction equation relating three whole numbers.</p><blockquote>For each equation, determine the unknown number that makes it true. <br><br>$8 + ? = 11$<br><br>$5 = ?-3$<br><br>$6 + 6 = ?$</blockquote>",
+    "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.nbt.1": {
-    "text": "Count to $120$, starting at any number less than $120$. In this range, read and write numerals and represent a number of objects with a written numeral.",
+    "text": "<p><strong>Counting:</strong> Count to $120$, starting at any number less than $120$.</p><p><strong>Cardinality:</strong> In this range, represent a number of objects with a written numeral.</p>",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.nbt.2": {
-    "text": "Understand that the two digits of a two-digit number represent amounts of tens and ones. Understand the following as special cases:",
+    "text": "Understand that the two digits of a two-digit number represent amounts of tens and ones.",
     "example": "",
     "footnote": "",
     "thoughts": ""
@@ -246,37 +246,37 @@ var ccmath = {
     "thoughts": ""
   },
   "1.nbt.3": {
-    "text": "Compare two two-digit numbers based on meanings of the tens and ones digits, recording the results of comparisons with the symbols $<$, $=$, and $>$.",
+    "text": "<ul><li>Compare two two-digit numbers based on meanings of the tens and ones digits</li><li>Record the results of comparisons with the symbols $<$, $=$, and $>$.</li></ul>",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.nbt.4": {
-    "text": "Add within $100$, including adding a two-digit number and a one-digit number, and adding a two-digit number and a multiple of $10$, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used. Understand that in adding two-digit numbers, one adds tens and tens, ones and ones; and sometimes it is necessary to compose a ten.",
+    "text": "<ul><li>Add within $100$:<ul><li>Add a two-digit number and a one-digit number.</li><li>Add a two-digit number and a multiple of $10$.</li></ul><li>Add using one or many of the following strategies:<ul><li>Concrete models or drawings</li><li>Place value strategies</li><li>Properties of operations</li><li>The relationship between addition and subtraction</li></ul></li><li>Relate the strategy to a written method and explain the reasoning used.</li><li>Understand that in adding two-digit numbers, we add tens and tens, ones and ones (and sometimes it is necessary to compose a ten).</li></ul>",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.nbt.5": {
-    "text": "Given a two-digit number, mentally find $10$ more or $10$ less than the number, without having to count; explain the reasoning used.",
+    "text": "Given a two-digit number, mentally find $10$ more or $10$ less than the number without counting. Explain the reasoning used.",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.nbt.6": {
-    "text": "Subtract multiples of $10$ in the range $10\\text{-}90$ from multiples of $10$ in the range $10\\text{-}90$ (positive or zero differences), using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used.",
+    "text": "<p>Subtract multiples of $10$ in the range $10$&ndash;$90$ from multiples of $10$ in the range $10$&ndash;$90$ (positive or zero differences). Do this using one or more of the following strategies:</p><ul><li>Concrete models or drawings</li><li>Place value strategies</li><li>Properties of operations</li><li>The relationship between addition and subtraction</li></ul><p>Relate the strategy to a written method, and explain the reasoning used.</p>",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.md.1": {
-    "text": "Order three objects by length; compare the lengths of two objects indirectly by using a third object.",
+    "text": "<ul><li>Order three objects by length.</li><li>Compare the lengths of two objects indirectly by using a third object.</li></ul>",
     "example": "",
     "footnote": "",
     "thoughts": ""
   },
   "1.md.2": {
-    "text": "Express the length of an object as a whole number of length units, by laying multiple copies of a shorter object (the length unit) end to end; understand that the length measurement of an object is the number of same-size length units that span it with no gaps or overlaps. <em>Limit to contexts where the object being measured is spanned by a whole number of length units with no gaps or overlaps</em>.",
+    "text": "<ul><li>Express the length of an object as a whole number of length units.</li><li>Measure length by laying multiple copies of a shorter object (the length unit) end to end.</li><li>Understand that the length measurement of an object is the number of same-size length units that span it when \"stacked\" (i.e., no gaps or overlaps).</li></ul><p><em>Note: Limit to contexts where the object being measured is spanned by a whole number of length units with no gaps or overlaps.</em></p>",
     "example": "",
     "footnote": "",
     "thoughts": ""
@@ -288,7 +288,7 @@ var ccmath = {
     "thoughts": ""
   },
   "1.md.4": {
-    "text": "Organize, represent, and interpret data with up to three categories; ask and answer questions about the total number of data points, how many in each category, and how many more or less are in one category than in another.",
+    "text": "<ul><li>Organize, represent, and interpret data with up to three categories.</li><li>Ask and answer questions about<ul><li>The total number of data points</li><li>How many in each category</li><li>How many more or less are in one category than in another</li></ul></li></ul>",
     "example": "",
     "footnote": "",
     "thoughts": ""
@@ -312,9 +312,9 @@ var ccmath = {
     "thoughts": ""
   },
   "2.oa.1": {
-    "text": "Use addition and subtraction within $100$ to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem.{footnote}",
+    "text": "Use addition and subtraction within $100$ to solve one- and two-step word problems involving situations of<ul><li>adding to</li><li>taking from</li><li>putting together</li><li>taking apart</li><li>comparing</li></ul> with unknowns in all positions (see examples below). Use, for example, <ul><li>drawings</li><li>equations with a symbol for the unknown number</li></ul>to represent the problem.            <hr>     <h3>Examples of \"adding to\"</h3>      <p><strong>Result unknown:</strong> Two bunnies sat on the grass. Three more bunnies hopped there. How many bunnies are on the grass now? $2+3=?$</p>        <p><strong>Change unknown:</strong> Two bunnies were sitting on the grass. Some more bunnies hopped there. Then there were five bunnies. How many bunnies hopped over to the first two? $2+?=5$</p>       <p><strong>Start unknown:</strong> Some bunnies were sitting on the grass. Three more bunnies hopped there. Then there were five bunnies. How many bunnies were on the grass before? $?+3=5$</p>       <h3>Examples of \"taking from\"</h3>      <p><strong>Result unknown:</strong> Five apples were on the table. I ate two apples. How many apples are on the table now? $5-2=?$</p>       <p><strong>Change unknown:</strong> Five apples were on the table. I ate some apples. Then there were three apples. How many apples did I eat? $5-?=3$</p>       <p><strong>Start unknown:</strong> Some apples were on the table. I ate two apples. Then there were three apples. How many apples were on the table before? $?-2=3$</p>       <h3>Examples of \"put together / take apart\"</h3>      <p><strong>Total unknown:</strong> Three red apples and two green apples are on the table. How many apples are on the table? $3+2=?$</p>       <p><strong>Addend unknown:</strong> Five apples are on the table. Three are red and the rest are green. How many apples are green? $3+?=5$ or $5-3=?$</p>       <p><strong>Both addends unknown:</strong> Grandma has five flowers. How many can she put in her red vase and how many in her blue vase? $5 = 0 + 5 = 5 + 0 = 1 + 4 = 4 + 1 = 2 + 3 = 3 + 2$</p>       <h3>Examples of \"compare\"</h3>      <p><strong>Difference unknown:</strong>Lucy has two apples. Julie has five apples. How many <strong>more</strong> apples does Julie have than Lucy? $2+?=5$ or $5-2=?$</p><p>Lucy has two apples. Julie has five apples. How many <strong>fewer</strong> apples does Lucy have than Julie? $2+?=5$ or $5-2=?$</p>       <p><strong>Bigger unknown:</strong> Julie has three <strong>more</strong> apples than Lucy. Lucy has two apples. How many apples does Julie have? $2+3=?$ or $3+2=?$</p><p>Lucy has three <strong>fewer</strong> apples than Julie. Lucy has two apples. How many apples does Julie have? $2+3=?$ or $3+2=?$</p>       <p><strong>Smaller unknown:</strong> Julie has three <strong>more</strong> apples than Lucy. Julie has five apples. How many apples does Lucy have? $5-3=?$ or $?+3=5$</p><p>Lucy has three <strong>fewer</strong> apples than Julie. Julie has five apples. How many apples does Lucy have? $5-3=?$ or $?+3=5$</p>",
     "example": "",
-    "footnote": "See Glossary, Table 1.",
+    "footnote": "",
     "thoughts": ""
   },
   "2.oa.2": {
