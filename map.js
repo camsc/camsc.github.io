@@ -44,7 +44,7 @@ var showModal = function(button, modal) {
 
 	modal.find( ".st-code" ).html(button.find(".standard-code").text().toUpperCase());
 	modal.find( ".st-main" ).html(mathItUp(text));
-	modal.find( ".st-example" ).html(mathItUp(example));
+	modal.find( ".st-example" ).html(ccmath[example] ? ccmath[example].content || "" : "");
 	modal.find( ".st-thoughts" ).html(mathItUp(thoughts));
 
 	if ("" === footnote) {

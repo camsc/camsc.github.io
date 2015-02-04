@@ -239,7 +239,7 @@ var ccMathStructure = [
                      },
                      {  
                         "code":"1.oa.6",
-                        "name":"Fluency within $10$"
+                        "name":"Fluency within $10$, mediocrity within $20$"
                      }
                   ],
                   "index":"c"
