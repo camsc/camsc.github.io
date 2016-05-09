@@ -1,0 +1,118 @@
+<html>
+<head>
+
+<style>
+	td {
+		vertical-align: center;
+		text-align: center;
+	}
+	svg {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	body {
+		font-family: 'Proxima Nova';
+	}
+	text {
+		text-align: center;
+	}
+</style>
+
+<script type="text/javascript">
+    
+    var colorCounter = 0;
+    
+    var gimmeRadius = function(seconds) {
+    	return Math.sqrt(seconds)*0.02;
+    }
+    
+    var gimmeColor = function(colors) {
+    	return colors[colorCounter++ % colors.length];
+    }
+
+    var drawPie = function(subject, total, slices, colors) {    
+		// VIDEO PIE
+		var radius = gimmeRadius(total);
+		var width = radius*2;
+		var svgString = "";
+
+		// Begin the SVG
+		svgString += '<svg width="' + width + '" height="' + width + '" viewBox="0 0 ' + width + ' ' + width + '">' +
+						'<g transform="translate(' + radius + ',' + radius + ')" stroke="#000" stroke-width="0">'
+
+		// Add the sectors
+		var startAngle = 0;
+	    var endAngle = 0;
+	    var x1,x2,y1,y2 = 0;
+		for (var i=0; i<slices.length; i++) {
+			startAngle = endAngle;
+	        endAngle = startAngle + (2*Math.PI*slices[i]['time']/total);
+
+	        x1 = radius*Math.cos(startAngle);
+	        y1 = radius*Math.sin(startAngle);
+	        x2 = radius*Math.cos(endAngle);
+	        y2 = radius*Math.sin(endAngle);                
+	        
+	        // var d = ""+x1+","+y1+" "+x2+","+y2+" "+(x2/2)+","+(y2/2)+" "+(x1/2)+","+(y1/2);
+	        var d = "M0,0  L" + x1 + "," + y1 + "  A" + radius + "," + radius + " 0 0,1 " + x2 + "," + y2 + " z";
+
+			svgString +=	'<a href="' + slices[i]['url'] + '">' +
+						    	'<path d="' + d + '" fill="' + gimmeColor(colors) + '"/>' +
+						    '</a>';
+		}
+		
+		// End the SVG		
+		total = Math.round(total/60/100000)/10;			  
+		svgString += '<circle cx="0" cy="0" r="' + (radius/2) + '" fill="white" />' +
+			'<text x="0" y="8" font-size="16px" text-anchor="middle">' + total + ' M</text>' +
+			'</g></svg>';
+		return svgString;
+    }
+</script>
+</head>
+<body>
+<h1>KA math usage</h1>
+<table id="container">
+	<tr>
+		<th>Subject</th>
+		<th>Video usage</th>
+		<th>Exercise usage</th>
+		<th>Article usage</th>
+	</tr>
+</table>
+
+<script src="./usage.js"></script>
+<script>
+
+// sort by usage
+var subjectsArray = [];
+for (var subject in usage) {
+	subjectsArray.push([subject, usage[subject].videoUsage]);
+}
+
+subjectsArray.sort(function(a, b) {
+    return b[1] - a[1];
+});
+
+//draw a bunch of stuff
+var container = document.getElementById("container");
+for (var p=0; p<subjectsArray.length; p++) {
+	var subject = subjectsArray[p][0];
+
+	var htmlString = "<tr>";
+	
+	htmlString += "<td><a href='http://khanacademy.org/" + subject + "'>" + subject + "</a></td>";
+	
+	htmlString += "<td>" + drawPie(subject, usage[subject].videoUsage, usage[subject].videos, ["#468966","#FFF0A5","#FFB03B","#B64926","#8E2800"]) + "</td>";
+	
+	htmlString += "<td>" + drawPie(subject, usage[subject].exerciseUsage, usage[subject].exercises, ["#468966","#FFF0A5","#FFB03B","#B64926","#8E2800"]) + "</td>";
+	
+	htmlString += "<td>" + drawPie(subject, usage[subject].articleUsage, usage[subject].articles, ["#468966","#FFF0A5","#FFB03B","#B64926","#8E2800"]) + "</td>";
+
+	htmlString += "</tr>";
+    
+    container.innerHTML += htmlString;
+}
+</script>
+</body>
+</html>
