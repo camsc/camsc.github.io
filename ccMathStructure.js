@@ -7,47 +7,39 @@ var ccMathStructure = [
             "code":"cc",
             "clusters":[  
                {  
-                  "name":"Number names and counting",
+                  "name":"Counting",
                   "standards":[  
                      {  
-                        "code":"k.cc.1",
-                        "name":"Count to $100$"
+                        "code":"k.cc.1"
                      },
                      {  
-                        "code":"k.cc.2",
-                        "name":"Count up from a number"
+                        "code":"k.cc.2"
                      },
                      {  
-                        "code":"k.cc.3",
-                        "name":"Write numbers $0\\text{-}20$"
+                        "code":"k.cc.3"
                      }
                   ],
                   "index":"a"
                },
                {  
-                  "name":"Count objects",
-                  "standards":[
+                  "name":"Quantity",
+                  "standards":[  
                      {  
                         "code":"k.cc.4",
-                        "name":"Counting and quantity",
                         "children":[  
                            {  
-                              "code":"k.cc.4a",
-                              "name":"Count objects"
+                              "code":"k.cc.4a"
                            },
                            {  
-                              "code":"k.cc.4b",
-                              "name":"Last number counted"
+                              "code":"k.cc.4b"
                            },
                            {  
-                              "code":"k.cc.4c",
-                              "name":"Next number is one larger"
+                              "code":"k.cc.4c"
                            }
                         ]
                      },
                      {  
-                        "code":"k.cc.5",
-                        "name":"How many?"
+                        "code":"k.cc.5"
                      }
                   ],
                   "index":"b"
@@ -56,12 +48,10 @@ var ccMathStructure = [
                   "name":"Compare numbers",
                   "standards":[  
                      {  
-                        "code":"k.cc.6",
-                        "name":"Which group has more?"
+                        "code":"k.cc.6"
                      },
                      {  
-                        "code":"k.cc.7",
-                        "name":"One-digit comparison"
+                        "code":"k.cc.7"
                      }
                   ],
                   "index":"c"
@@ -76,24 +66,19 @@ var ccMathStructure = [
                   "name":"Addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"k.oa.1",
-                        "name":"Strategies"
+                        "code":"k.oa.1"
                      },
                      {  
-                        "code":"k.oa.2",
-                        "name":"Word problems within $10$"
+                        "code":"k.oa.2"
                      },
                      {  
-                        "code":"k.oa.3",
-                        "name":"Decompose within $10$"
+                        "code":"k.oa.3"
                      },
                      {  
-                        "code":"k.oa.4",
-                        "name":"Make $10$"
+                        "code":"k.oa.4"
                      },
                      {  
-                        "code":"k.oa.5",
-                        "name":"Fluency within $5$"
+                        "code":"k.oa.5"
                      }
                   ],
                   "index":"a"
@@ -108,8 +93,7 @@ var ccMathStructure = [
                   "name":"Place value foundation",
                   "standards":[  
                      {  
-                        "code":"k.nbt.1",
-                        "name":"Teen numbers"
+                        "code":"k.nbt.1"
                      }
                   ],
                   "index":"a"
@@ -124,12 +108,10 @@ var ccMathStructure = [
                   "name":"Compare objects",
                   "standards":[  
                      {  
-                        "code":"k.md.1",
-                        "name":"Measurable attributes"
+                        "code":"k.md.1"
                      },
                      {  
-                        "code":"k.md.2",
-                        "name":"Direct comparison"
+                        "code":"k.md.2"
                      }
                   ],
                   "index":"a"
@@ -138,8 +120,7 @@ var ccMathStructure = [
                   "name":"Sorting",
                   "standards":[  
                      {  
-                        "code":"k.md.3",
-                        "name":"Categorize, count, then sort"
+                        "code":"k.md.3"
                      }
                   ],
                   "index":"b"
@@ -154,16 +135,13 @@ var ccMathStructure = [
                   "name":"Shapes",
                   "standards":[  
                      {  
-                        "code":"k.g.1",
-                        "name":"Relative positions"
+                        "code":"k.g.1"
                      },
                      {  
-                        "code":"k.g.2",
-                        "name":"Name shapes"
+                        "code":"k.g.2"
                      },
                      {  
-                        "code":"k.g.3",
-                        "name":"2D vs. 3D"
+                        "code":"k.g.3"
                      }
                   ],
                   "index":"a"
@@ -172,16 +150,13 @@ var ccMathStructure = [
                   "name":"Compare, create, and compose",
                   "standards":[  
                      {  
-                        "code":"k.g.4",
-                        "name":"Compare shapes"
+                        "code":"k.g.4"
                      },
                      {  
-                        "code":"k.g.5",
-                        "name":"Create shapes"
+                        "code":"k.g.5"
                      },
                      {  
-                        "code":"k.g.6",
-                        "name":"Compose shapes"
+                        "code":"k.g.6"
                      }
                   ],
                   "index":"b"
@@ -192,11 +167,13 @@ var ccMathStructure = [
    },
    {  
       "name":"1<sup>st</sup> Grade",
-      "strands":[
-         {
+      "strands":[  
+         {  
             "name":"",
             "code":"",
-            "clusters":[]
+            "clusters":[  
+
+            ]
          },
          {  
             "name":"Road to Algebra",
@@ -206,12 +183,10 @@ var ccMathStructure = [
                   "name":"Addition and subtraction problems",
                   "standards":[  
                      {  
-                        "code":"1.oa.1",
-                        "name":"Word problems within $20$"
+                        "code":"1.oa.1"
                      },
                      {  
-                        "code":"1.oa.2",
-                        "name":"Add three numbers within $20$"
+                        "code":"1.oa.2"
                      }
                   ],
                   "index":"a"
@@ -220,12 +195,10 @@ var ccMathStructure = [
                   "name":"Understand addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"1.oa.3",
-                        "name":"Commutative and associative properties"
+                        "code":"1.oa.3"
                      },
                      {  
-                        "code":"1.oa.4",
-                        "name":"Unknown addend"
+                        "code":"1.oa.4"
                      }
                   ],
                   "index":"b"
@@ -234,12 +207,10 @@ var ccMathStructure = [
                   "name":"Fluency in addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"1.oa.5",
-                        "name":"Counting"
+                        "code":"1.oa.5"
                      },
                      {  
-                        "code":"1.oa.6",
-                        "name":"Fluency within $10$, mediocrity within $20$"
+                        "code":"1.oa.6"
                      }
                   ],
                   "index":"c"
@@ -248,12 +219,10 @@ var ccMathStructure = [
                   "name":"Equations and unknowns",
                   "standards":[  
                      {  
-                        "code":"1.oa.7",
-                        "name":"Equals sign"
+                        "code":"1.oa.7"
                      },
                      {  
-                        "code":"1.oa.8",
-                        "name":"Unknowns in equations"
+                        "code":"1.oa.8"
                      }
                   ],
                   "index":"d"
@@ -268,8 +237,7 @@ var ccMathStructure = [
                   "name":"Counting",
                   "standards":[  
                      {  
-                        "code":"1.nbt.1",
-                        "name":"Count and write to $120$"
+                        "code":"1.nbt.1"
                      }
                   ],
                   "index":"a"
@@ -279,25 +247,20 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"1.nbt.2",
-                        "name":"Tens and ones",
                         "children":[  
                            {  
-                              "code":"1.nbt.2a",
-                              "name":"A \"ten\" $=$ $10$ ones"
+                              "code":"1.nbt.2a"
                            },
                            {  
-                              "code":"1.nbt.2b",
-                              "name":"Teen numbers"
+                              "code":"1.nbt.2b"
                            },
                            {  
-                              "code":"1.nbt.2c",
-                              "name":"Multiples of $10$"
+                              "code":"1.nbt.2c"
                            }
                         ]
                      },
                      {  
-                        "code":"1.nbt.3",
-                        "name":"Two-digit comparison"
+                        "code":"1.nbt.3"
                      }
                   ],
                   "index":"b"
@@ -306,16 +269,13 @@ var ccMathStructure = [
                   "name":"Addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"1.nbt.4",
-                        "name":"Add within $100$"
+                        "code":"1.nbt.4"
                      },
                      {  
-                        "code":"1.nbt.5",
-                        "name":"Add and subtract $10$"
+                        "code":"1.nbt.5"
                      },
                      {  
-                        "code":"1.nbt.6",
-                        "name":"Subtract multiples of $10$"
+                        "code":"1.nbt.6"
                      }
                   ],
                   "index":"c"
@@ -330,12 +290,10 @@ var ccMathStructure = [
                   "name":"Length measurement",
                   "standards":[  
                      {  
-                        "code":"1.md.1",
-                        "name":"Indirect comparison"
+                        "code":"1.md.1"
                      },
                      {  
-                        "code":"1.md.2",
-                        "name":"Stacking units"
+                        "code":"1.md.2"
                      }
                   ],
                   "index":"a"
@@ -344,8 +302,7 @@ var ccMathStructure = [
                   "name":"Tell and write time",
                   "standards":[  
                      {  
-                        "code":"1.md.3",
-                        "name":"Half-hour intervals"
+                        "code":"1.md.3"
                      }
                   ],
                   "index":"b"
@@ -354,8 +311,7 @@ var ccMathStructure = [
                   "name":"Data",
                   "standards":[  
                      {  
-                        "code":"1.md.4",
-                        "name":"Categorize then compare"
+                        "code":"1.md.4"
                      }
                   ],
                   "index":"c"
@@ -370,16 +326,13 @@ var ccMathStructure = [
                   "name":"Shapes",
                   "standards":[  
                      {  
-                        "code":"1.g.1",
-                        "name":"Attributes of shapes"
+                        "code":"1.g.1"
                      },
                      {  
-                        "code":"1.g.2",
-                        "name":"Compose 2D and 3D shapes"
+                        "code":"1.g.2"
                      },
                      {  
-                        "code":"1.g.3",
-                        "name":"Equal partitions"
+                        "code":"1.g.3"
                      }
                   ],
                   "index":"a"
@@ -390,11 +343,13 @@ var ccMathStructure = [
    },
    {  
       "name":"2<sup>nd</sup> Grade",
-      "strands":[
-         {
+      "strands":[  
+         {  
             "name":"",
             "code":"",
-            "clusters":[]
+            "clusters":[  
+
+            ]
          },
          {  
             "name":"Road to Algebra",
@@ -404,8 +359,7 @@ var ccMathStructure = [
                   "name":"Addition and subtraction problems",
                   "standards":[  
                      {  
-                        "code":"2.oa.1",
-                        "name":"Word problems within $100$"
+                        "code":"2.oa.1"
                      }
                   ],
                   "index":"a"
@@ -414,8 +368,7 @@ var ccMathStructure = [
                   "name":"Fluency in addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"2.oa.2",
-                        "name":"Fluency within $20$"
+                        "code":"2.oa.2"
                      }
                   ],
                   "index":"b"
@@ -424,12 +377,10 @@ var ccMathStructure = [
                   "name":"Equal groups of objects",
                   "standards":[  
                      {  
-                        "code":"2.oa.3",
-                        "name":"Odds and evens"
+                        "code":"2.oa.3"
                      },
                      {  
-                        "code":"2.oa.4",
-                        "name":"Rows of objects"
+                        "code":"2.oa.4"
                      }
                   ],
                   "index":"c"
@@ -445,29 +396,23 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"2.nbt.1",
-                        "name":"Three-digit place value",
                         "children":[  
                            {  
-                              "code":"2.nbt.1a",
-                              "name":"A \"hundred\" $= 10$ tens"
+                              "code":"2.nbt.1a"
                            },
                            {  
-                              "code":"2.nbt.1b",
-                              "name":"Multiples of $100$"
+                              "code":"2.nbt.1b"
                            }
                         ]
                      },
                      {  
-                        "code":"2.nbt.2",
-                        "name":"Count by $5$s, $10$s, and $100$s"
+                        "code":"2.nbt.2"
                      },
                      {  
-                        "code":"2.nbt.3",
-                        "name":"Names and expanded form"
+                        "code":"2.nbt.3"
                      },
                      {  
-                        "code":"2.nbt.4",
-                        "name":"Compare"
+                        "code":"2.nbt.4"
                      }
                   ],
                   "index":"a"
@@ -476,24 +421,19 @@ var ccMathStructure = [
                   "name":"Addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"2.nbt.5",
-                        "name":"Fluency within $100$"
+                        "code":"2.nbt.5"
                      },
                      {  
-                        "code":"2.nbt.6",
-                        "name":"Add several two-digit numbers"
+                        "code":"2.nbt.6"
                      },
                      {  
-                        "code":"2.nbt.7",
-                        "name":"Add and subtract within $1000$"
+                        "code":"2.nbt.7"
                      },
                      {  
-                        "code":"2.nbt.8",
-                        "name":"Add and subtract $10$ and $100$"
+                        "code":"2.nbt.8"
                      },
                      {  
-                        "code":"2.nbt.9",
-                        "name":"Explain strategies"
+                        "code":"2.nbt.9"
                      }
                   ],
                   "index":"b"
@@ -508,20 +448,16 @@ var ccMathStructure = [
                   "name":"Lengths in standard units",
                   "standards":[  
                      {  
-                        "code":"2.md.1",
-                        "name":"Rulers"
+                        "code":"2.md.1"
                      },
                      {  
-                        "code":"2.md.2",
-                        "name":"Different units"
+                        "code":"2.md.2"
                      },
                      {  
-                        "code":"2.md.3",
-                        "name":"Estimate"
+                        "code":"2.md.3"
                      },
                      {  
-                        "code":"2.md.4",
-                        "name":"Compare"
+                        "code":"2.md.4"
                      }
                   ],
                   "index":"a"
@@ -530,12 +466,10 @@ var ccMathStructure = [
                   "name":"Add and subtract lengths",
                   "standards":[  
                      {  
-                        "code":"2.md.5",
-                        "name":"Word problems within $100$"
+                        "code":"2.md.5"
                      },
                      {  
-                        "code":"2.md.6",
-                        "name":"Number lines"
+                        "code":"2.md.6"
                      }
                   ],
                   "index":"b"
@@ -544,12 +478,10 @@ var ccMathStructure = [
                   "name":"Time and money",
                   "standards":[  
                      {  
-                        "code":"2.md.7",
-                        "name":"$5$-minute intervals"
+                        "code":"2.md.7"
                      },
                      {  
-                        "code":"2.md.8",
-                        "name":"Money problems"
+                        "code":"2.md.8"
                      }
                   ],
                   "index":"c"
@@ -558,12 +490,10 @@ var ccMathStructure = [
                   "name":"Data",
                   "standards":[  
                      {  
-                        "code":"2.md.9",
-                        "name":"Line plot"
+                        "code":"2.md.9"
                      },
                      {  
-                        "code":"2.md.10",
-                        "name":"Picture and bar graphs"
+                        "code":"2.md.10"
                      }
                   ],
                   "index":"d"
@@ -578,16 +508,13 @@ var ccMathStructure = [
                   "name":"Shapes",
                   "standards":[  
                      {  
-                        "code":"2.g.1",
-                        "name":"Attributes of shapes"
+                        "code":"2.g.1"
                      },
                      {  
-                        "code":"2.g.2",
-                        "name":"Rows and columns"
+                        "code":"2.g.2"
                      },
                      {  
-                        "code":"2.g.3",
-                        "name":"Equal partitions"
+                        "code":"2.g.3"
                      }
                   ],
                   "index":"a"
@@ -598,7 +525,7 @@ var ccMathStructure = [
    },
    {  
       "name":"3<sup>rd</sup> Grade",
-      "strands":[
+      "strands":[  
          {  
             "name":"Fractions",
             "code":"nf",
@@ -607,42 +534,33 @@ var ccMathStructure = [
                   "name":"Fractions as numbers",
                   "standards":[  
                      {  
-                        "code":"3.nf.1",
-                        "name":"Understand $\\dfrac 1b$"
+                        "code":"3.nf.1"
                      },
                      {  
                         "code":"3.nf.2",
-                        "name":"Number line and fractions",
                         "children":[  
                            {  
-                              "code":"3.nf.2a",
-                              "name":"$\\dfrac 1b$ on the number line"
+                              "code":"3.nf.2a"
                            },
                            {  
-                              "code":"3.nf.2b",
-                              "name":"$\\dfrac ab$ on the number line"
+                              "code":"3.nf.2b"
                            }
                         ]
                      },
                      {  
                         "code":"3.nf.3",
-                        "name":"Equivalent fractions",
                         "children":[  
                            {  
-                              "code":"3.nf.3a",
-                              "name":"\"Equivalent\" $=$ \"same size\""
+                              "code":"3.nf.3a"
                            },
                            {  
-                              "code":"3.nf.3b",
-                              "name":"Generate examples"
+                              "code":"3.nf.3b"
                            },
                            {  
-                              "code":"3.nf.3c",
-                              "name":"Whole numbers"
+                              "code":"3.nf.3c"
                            },
                            {  
-                              "code":"3.nf.3d",
-                              "name":"Compare $\\dfrac ab$ to $\\dfrac cb$ and $\\dfrac ab$ to $\\dfrac ac$"
+                              "code":"3.nf.3d"
                            }
                         ]
                      }
@@ -659,20 +577,16 @@ var ccMathStructure = [
                   "name":"Multiplication and division",
                   "standards":[  
                      {  
-                        "code":"3.oa.1",
-                        "name":"Products"
+                        "code":"3.oa.1"
                      },
                      {  
-                        "code":"3.oa.2",
-                        "name":"Quotients"
+                        "code":"3.oa.2"
                      },
                      {  
-                        "code":"3.oa.3",
-                        "name":"Word problems within $100$"
+                        "code":"3.oa.3"
                      },
                      {  
-                        "code":"3.oa.4",
-                        "name":"Unknowns in equations"
+                        "code":"3.oa.4"
                      }
                   ],
                   "index":"a"
@@ -681,12 +595,10 @@ var ccMathStructure = [
                   "name":"Understand multiplication and division",
                   "standards":[  
                      {  
-                        "code":"3.oa.5",
-                        "name":"Commutative, associative, and distributive properties"
+                        "code":"3.oa.5"
                      },
                      {  
-                        "code":"3.oa.6",
-                        "name":"Unknown factor"
+                        "code":"3.oa.6"
                      }
                   ],
                   "index":"b"
@@ -695,8 +607,7 @@ var ccMathStructure = [
                   "name":"Multiply and divide fluently",
                   "standards":[  
                      {  
-                        "code":"3.oa.7",
-                        "name":"Fluency within $100$"
+                        "code":"3.oa.7"
                      }
                   ],
                   "index":"c"
@@ -705,12 +616,10 @@ var ccMathStructure = [
                   "name":"All four operations",
                   "standards":[  
                      {  
-                        "code":"3.oa.8",
-                        "name":"Two-step word problems"
+                        "code":"3.oa.8"
                      },
                      {  
-                        "code":"3.oa.9",
-                        "name":"Patterns"
+                        "code":"3.oa.9"
                      }
                   ],
                   "index":"d"
@@ -725,16 +634,13 @@ var ccMathStructure = [
                   "name":"Multi-digit arithmetic",
                   "standards":[  
                      {  
-                        "code":"3.nbt.1",
-                        "name":"Round to nearest ten or hundred"
+                        "code":"3.nbt.1"
                      },
                      {  
-                        "code":"3.nbt.2",
-                        "name":"Fluency within $1000$ (addition and subtraction)"
+                        "code":"3.nbt.2"
                      },
                      {  
-                        "code":"3.nbt.3",
-                        "name":"$a \\cdot 10b$"
+                        "code":"3.nbt.3"
                      }
                   ],
                   "index":"a"
@@ -749,12 +655,10 @@ var ccMathStructure = [
                   "name":"Measurement",
                   "standards":[  
                      {  
-                        "code":"3.md.1",
-                        "name":"Time"
+                        "code":"3.md.1"
                      },
                      {  
-                        "code":"3.md.2",
-                        "name":"Volume and mass"
+                        "code":"3.md.2"
                      }
                   ],
                   "index":"a"
@@ -763,12 +667,10 @@ var ccMathStructure = [
                   "name":"Data",
                   "standards":[  
                      {  
-                        "code":"3.md.3",
-                        "name":"Picture and bar graphs"
+                        "code":"3.md.3"
                      },
                      {  
-                        "code":"3.md.4",
-                        "name":"Line plot with fractions"
+                        "code":"3.md.4"
                      }
                   ],
                   "index":"b"
@@ -778,41 +680,32 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"3.md.5",
-                        "name":"Understand area",
                         "children":[  
                            {  
-                              "code":"3.md.5a",
-                              "name":"Length with unit squares"
+                              "code":"3.md.5a"
                            },
                            {  
-                              "code":"3.md.5b",
-                              "name":"Area with unit squares"
+                              "code":"3.md.5b"
                            }
                         ]
                      },
                      {  
-                        "code":"3.md.3",
-                        "name":"Area by counting"
+                        "code":"3.md.3"
                      },
                      {  
                         "code":"3.md.7",
-                        "name":"Area and operations",
                         "children":[  
                            {  
-                              "code":"3.md.7a",
-                              "name":"Verify $A = lw$"
+                              "code":"3.md.7a"
                            },
                            {  
-                              "code":"3.md.7b",
-                              "name":"Apply $A = lw$"
+                              "code":"3.md.7b"
                            },
                            {  
-                              "code":"3.md.7c",
-                              "name":"Verify distributive property"
+                              "code":"3.md.7c"
                            },
                            {  
-                              "code":"3.md.7d",
-                              "name":"Area is additive"
+                              "code":"3.md.7d"
                            }
                         ]
                      }
@@ -823,8 +716,7 @@ var ccMathStructure = [
                   "name":"Perimeter",
                   "standards":[  
                      {  
-                        "code":"3.md.8",
-                        "name":"Perimeters of polygons"
+                        "code":"3.md.8"
                      }
                   ],
                   "index":"d"
@@ -839,12 +731,10 @@ var ccMathStructure = [
                   "name":"Shapes",
                   "standards":[  
                      {  
-                        "code":"3.g.1",
-                        "name":"Shapes may share attributes"
+                        "code":"3.g.1"
                      },
                      {  
-                        "code":"3.g.2",
-                        "name":"Fractions of shapes"
+                        "code":"3.g.2"
                      }
                   ],
                   "index":"a"
@@ -864,12 +754,10 @@ var ccMathStructure = [
                   "name":"Understanding fractions",
                   "standards":[  
                      {  
-                        "code":"4.nf.1",
-                        "name":"$\\dfrac ab = \\dfrac{n \\cdot a}{n \\cdot b}$"
+                        "code":"4.nf.1"
                      },
                      {  
-                        "code":"4.nf.2",
-                        "name":"Compare unlike fractions"
+                        "code":"4.nf.2"
                      }
                   ],
                   "index":"a"
@@ -879,41 +767,32 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"4.nf.3",
-                        "name":"Addition and subtraction",
                         "children":[  
                            {  
-                              "code":"4.nf.3a",
-                              "name":"Joining and separating"
+                              "code":"4.nf.3a"
                            },
                            {  
-                              "code":"4.nf.3b",
-                              "name":"Decomposing"
+                              "code":"4.nf.3b"
                            },
                            {  
-                              "code":"4.nf.3c",
-                              "name":"Mixed numbers"
+                              "code":"4.nf.3c"
                            },
                            {  
-                              "code":"4.nf.3d",
-                              "name":"Word problems"
+                              "code":"4.nf.3d"
                            }
                         ]
                      },
                      {  
                         "code":"4.nf.4",
-                        "name":"Multiplication and division",
                         "children":[  
                            {  
-                              "code":"4.nf.4a",
-                              "name":"$\\dfrac ab$ is a multiple of $\\dfrac 1b$"
+                              "code":"4.nf.4a"
                            },
                            {  
-                              "code":"4.nf.4b",
-                              "name":"Understand $a \\cdot \\dfrac bc$ as $ab \\cdot \\dfrac 1c$"
+                              "code":"4.nf.4b"
                            },
                            {  
-                              "code":"4.nf.4c",
-                              "name":"Multiply fractions by whole numbers"
+                              "code":"4.nf.4c"
                            }
                         ]
                      }
@@ -924,16 +803,13 @@ var ccMathStructure = [
                   "name":"Decimal notation to hundredths",
                   "standards":[  
                      {  
-                        "code":"4.nf.5",
-                        "name":"Express $\\dfrac{a}{10}$ as $\\dfrac{10 \\cdot a}{100}$"
+                        "code":"4.nf.5"
                      },
                      {  
-                        "code":"4.nf.6",
-                        "name":"Decimal notation"
+                        "code":"4.nf.6"
                      },
                      {  
-                        "code":"4.nf.7",
-                        "name":"Compare decimals"
+                        "code":"4.nf.7"
                      }
                   ],
                   "index":"c"
@@ -948,16 +824,13 @@ var ccMathStructure = [
                   "name":"Four operations",
                   "standards":[  
                      {  
-                        "code":"4.oa.1",
-                        "name":"Multiplicative comparisons"
+                        "code":"4.oa.1"
                      },
                      {  
-                        "code":"4.oa.2",
-                        "name":"Multiplicative vs. additive"
+                        "code":"4.oa.2"
                      },
                      {  
-                        "code":"4.oa.3",
-                        "name":"Multi-step problems"
+                        "code":"4.oa.3"
                      }
                   ],
                   "index":"a"
@@ -966,8 +839,7 @@ var ccMathStructure = [
                   "name":"Factors and multiples",
                   "standards":[  
                      {  
-                        "code":"4.oa.4",
-                        "name":"Factors, multiples, and primes"
+                        "code":"4.oa.4"
                      }
                   ],
                   "index":"b"
@@ -976,8 +848,7 @@ var ccMathStructure = [
                   "name":"Patterms",
                   "standards":[  
                      {  
-                        "code":"4.oa.5",
-                        "name":"Patterns"
+                        "code":"4.oa.5"
                      }
                   ],
                   "index":"c"
@@ -992,16 +863,13 @@ var ccMathStructure = [
                   "name":"Understand place value",
                   "standards":[  
                      {  
-                        "code":"4.nbt.1",
-                        "name":"Whole number place value"
+                        "code":"4.nbt.1"
                      },
                      {  
-                        "code":"4.nbt.2",
-                        "name":"Compare whole numbers"
+                        "code":"4.nbt.2"
                      },
                      {  
-                        "code":"4.nbt.3",
-                        "name":"Round whole numbers"
+                        "code":"4.nbt.3"
                      }
                   ],
                   "index":"a"
@@ -1010,16 +878,13 @@ var ccMathStructure = [
                   "name":"Multi-digit operations",
                   "standards":[  
                      {  
-                        "code":"4.nbt.4",
-                        "name":"Standard algorithms (addition and subtraction)"
+                        "code":"4.nbt.4"
                      },
                      {  
-                        "code":"4.nbt.5",
-                        "name":"Multiply"
+                        "code":"4.nbt.5"
                      },
                      {  
-                        "code":"4.nbt.6",
-                        "name":"Divide"
+                        "code":"4.nbt.6"
                      }
                   ],
                   "index":"b"
@@ -1034,16 +899,13 @@ var ccMathStructure = [
                   "name":"Measurement",
                   "standards":[  
                      {  
-                        "code":"4.md.1",
-                        "name":"Equivalent measurements"
+                        "code":"4.md.1"
                      },
                      {  
-                        "code":"4.md.2",
-                        "name":"Word problems"
+                        "code":"4.md.2"
                      },
                      {  
-                        "code":"4.md.3",
-                        "name":"Area and perimeter"
+                        "code":"4.md.3"
                      }
                   ],
                   "index":"a"
@@ -1052,8 +914,7 @@ var ccMathStructure = [
                   "name":"Data",
                   "standards":[  
                      {  
-                        "code":"4.md.4",
-                        "name":"Line plots with fractions"
+                        "code":"4.md.4"
                      }
                   ],
                   "index":"b"
@@ -1063,25 +924,20 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"4.md.5",
-                        "name":"Angles and degrees",
                         "children":[  
                            {  
-                              "code":"4.md.5a",
-                              "name":"Angles"
+                              "code":"4.md.5a"
                            },
                            {  
-                              "code":"4.md.5b",
-                              "name":"Degrees"
+                              "code":"4.md.5b"
                            }
                         ]
                      },
                      {  
-                        "code":"4.md.6",
-                        "name":"Protractors"
+                        "code":"4.md.6"
                      },
                      {  
-                        "code":"4.md.7",
-                        "name":"Angle measure is additive"
+                        "code":"4.md.7"
                      }
                   ],
                   "index":"c"
@@ -1096,16 +952,13 @@ var ccMathStructure = [
                   "name":"Geometry foundations",
                   "standards":[  
                      {  
-                        "code":"4.g.1",
-                        "name":"Geometric objects"
+                        "code":"4.g.1"
                      },
                      {  
-                        "code":"4.g.2",
-                        "name":"Perpendicular, right, and parallel"
+                        "code":"4.g.2"
                      },
                      {  
-                        "code":"4.g.3",
-                        "name":"Shape symmetry"
+                        "code":"4.g.3"
                      }
                   ],
                   "index":"a"
@@ -1125,12 +978,10 @@ var ccMathStructure = [
                   "name":"Addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"5.nf.1",
-                        "name":"Unlike denominators"
+                        "code":"5.nf.1"
                      },
                      {  
-                        "code":"5.nf.2",
-                        "name":"Word problems"
+                        "code":"5.nf.2"
                      }
                   ],
                   "index":"a"
@@ -1139,56 +990,44 @@ var ccMathStructure = [
                   "name":"Multiplication and division",
                   "standards":[  
                      {  
-                        "code":"5.nf.3",
-                        "name":"$\\dfrac ab = a \\div b$"
+                        "code":"5.nf.3"
                      },
                      {  
                         "code":"5.nf.4",
-                        "name":"Multiplying with fractions",
                         "children":[  
                            {  
-                              "code":"5.nf.4a",
-                              "name":"Understand $\\dfrac ab \\cdot c$ and $\\dfrac{ac}{b}$"
+                              "code":"5.nf.4a"
                            },
                            {  
-                              "code":"5.nf.4b",
-                              "name":"Verify $A = lw$ (fractions)"
+                              "code":"5.nf.4b"
                            }
                         ]
                      },
                      {  
                         "code":"5.nf.5",
-                        "name":"Multiplication as scaling",
                         "children":[  
                            {  
-                              "code":"5.nf.5a",
-                              "name":"Product size vs. factor size"
+                              "code":"5.nf.5a"
                            },
                            {  
-                              "code":"5.nf.5b",
-                              "name":"Factors greater and less than one"
+                              "code":"5.nf.5b"
                            }
                         ]
                      },
                      {  
-                        "code":"5.nf.6",
-                        "name":"Multiplication problems"
+                        "code":"5.nf.6"
                      },
                      {  
                         "code":"5.nf.7",
-                        "name":"Dividing with fractions",
                         "children":[  
                            {  
-                              "code":"5.nf.7a",
-                              "name":"$\\dfrac 1a \\div b$"
+                              "code":"5.nf.7a"
                            },
                            {  
-                              "code":"5.nf.7b",
-                              "name":"$a \\div \\dfrac 1b$"
+                              "code":"5.nf.7b"
                            },
                            {  
-                              "code":"5.nf.7c",
-                              "name":"Division problems"
+                              "code":"5.nf.7c"
                            }
                         ]
                      }
@@ -1205,12 +1044,10 @@ var ccMathStructure = [
                   "name":"Expressions with parenthesis",
                   "standards":[  
                      {  
-                        "code":"5.oa.1",
-                        "name":"Evaluate"
+                        "code":"5.oa.1"
                      },
                      {  
-                        "code":"5.oa.2",
-                        "name":"Write and interpret"
+                        "code":"5.oa.2"
                      }
                   ],
                   "index":"a"
@@ -1219,8 +1056,7 @@ var ccMathStructure = [
                   "name":"Patterns",
                   "standards":[  
                      {  
-                        "code":"5.oa.3",
-                        "name":"Two patterns at once"
+                        "code":"5.oa.3"
                      }
                   ],
                   "index":"b"
@@ -1235,30 +1071,24 @@ var ccMathStructure = [
                   "name":"Understanding place value",
                   "standards":[  
                      {  
-                        "code":"5.nbt.1",
-                        "name":"Decimal place value"
+                        "code":"5.nbt.1"
                      },
                      {  
-                        "code":"5.nbt.2",
-                        "name":"Powers of $10$ (multiplying and dividing)"
+                        "code":"5.nbt.2"
                      },
                      {  
                         "code":"5.nbt.3",
-                        "name":"Thousandths",
                         "children":[  
                            {  
-                              "code":"5.nbt.3a",
-                              "name":"Names and expanded form"
+                              "code":"5.nbt.3a"
                            },
                            {  
-                              "code":"5.nbt.3b",
-                              "name":"Compare"
+                              "code":"5.nbt.3b"
                            }
                         ]
                      },
                      {  
-                        "code":"5.nbt.4",
-                        "name":"Round to any place"
+                        "code":"5.nbt.4"
                      }
                   ],
                   "index":"a"
@@ -1267,16 +1097,13 @@ var ccMathStructure = [
                   "name":"Operations",
                   "standards":[  
                      {  
-                        "code":"5.nbt.5",
-                        "name":"Standard algorithm (whole number multiplication)"
+                        "code":"5.nbt.5"
                      },
                      {  
-                        "code":"5.nbt.6",
-                        "name":"Divide whole numbers"
+                        "code":"5.nbt.6"
                      },
                      {  
-                        "code":"5.nbt.7",
-                        "name":"Operate on decimals"
+                        "code":"5.nbt.7"
                      }
                   ],
                   "index":"b"
@@ -1291,8 +1118,7 @@ var ccMathStructure = [
                   "name":"Units",
                   "standards":[  
                      {  
-                        "code":"5.md.1",
-                        "name":"Unit conversion"
+                        "code":"5.md.1"
                      }
                   ],
                   "index":"a"
@@ -1301,8 +1127,7 @@ var ccMathStructure = [
                   "name":"Data",
                   "standards":[  
                      {  
-                        "code":"5.md.2",
-                        "name":"Line plots with fractions"
+                        "code":"5.md.2"
                      }
                   ],
                   "index":"b"
@@ -1312,37 +1137,29 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"5.md.3",
-                        "name":"Understand volume",
                         "children":[  
                            {  
-                              "code":"5.md.3a",
-                              "name":"Length with unit cubes"
+                              "code":"5.md.3a"
                            },
                            {  
-                              "code":"5.md.3b",
-                              "name":"Volume with unit cubes"
+                              "code":"5.md.3b"
                            }
                         ]
                      },
                      {  
-                        "code":"5.md.4",
-                        "name":"Volume by counting"
+                        "code":"5.md.4"
                      },
                      {  
                         "code":"5.md.5",
-                        "name":"Volume and operations",
                         "children":[  
                            {  
-                              "code":"5.md.5a",
-                              "name":"Verify $V = lwh = bh$"
+                              "code":"5.md.5a"
                            },
                            {  
-                              "code":"5.md.5b",
-                              "name":"Apply $V = lwh = bh$"
+                              "code":"5.md.5b"
                            },
                            {  
-                              "code":"5.md.5c",
-                              "name":"Volume is additive"
+                              "code":"5.md.5c"
                            }
                         ]
                      }
@@ -1359,12 +1176,10 @@ var ccMathStructure = [
                   "name":"Graph points",
                   "standards":[  
                      {  
-                        "code":"5.g.1",
-                        "name":"Coordinate system"
+                        "code":"5.g.1"
                      },
                      {  
-                        "code":"5.g.2",
-                        "name":"First quadrant problems"
+                        "code":"5.g.2"
                      }
                   ],
                   "index":"a"
@@ -1373,12 +1188,10 @@ var ccMathStructure = [
                   "name":"Shape classification",
                   "standards":[  
                      {  
-                        "code":"5.g.3",
-                        "name":"Subcategories of shapes"
+                        "code":"5.g.3"
                      },
                      {  
-                        "code":"5.g.4",
-                        "name":"Hierarchy of 2D shapes"
+                        "code":"5.g.4"
                      }
                   ],
                   "index":"b"
@@ -1398,32 +1211,25 @@ var ccMathStructure = [
                   "name":"Ratios",
                   "standards":[  
                      {  
-                        "code":"6.rp.1",
-                        "name":"Describe relationships"
+                        "code":"6.rp.1"
                      },
                      {  
-                        "code":"6.rp.2",
-                        "name":"Unit rates"
+                        "code":"6.rp.2"
                      },
                      {  
                         "code":"6.rp.3",
-                        "name":"Ratio and rate problems",
                         "children":[  
                            {  
-                              "code":"6.rp.3a",
-                              "name":"Tables and coordinate planes"
+                              "code":"6.rp.3a"
                            },
                            {  
-                              "code":"6.rp.3b",
-                              "name":"Unit rates"
+                              "code":"6.rp.3b"
                            },
                            {  
-                              "code":"6.rp.3c",
-                              "name":"Percents"
+                              "code":"6.rp.3c"
                            },
                            {  
-                              "code":"6.rp.3d",
-                              "name":"Unit conversion"
+                              "code":"6.rp.3d"
                            }
                         ]
                      }
@@ -1440,34 +1246,27 @@ var ccMathStructure = [
                   "name":"Expressions",
                   "standards":[  
                      {  
-                        "code":"6.ee.1",
-                        "name":"Exponents"
+                        "code":"6.ee.1"
                      },
                      {  
                         "code":"6.ee.2",
-                        "name":"Algebraic expressions",
                         "children":[  
                            {  
-                              "code":"6.ee.2a",
-                              "name":"Write"
+                              "code":"6.ee.2a"
                            },
                            {  
-                              "code":"6.ee.2b",
-                              "name":"Identify parts"
+                              "code":"6.ee.2b"
                            },
                            {  
-                              "code":"6.ee.2c",
-                              "name":"Evaluate"
+                              "code":"6.ee.2c"
                            }
                         ]
                      },
                      {  
-                        "code":"6.ee.3",
-                        "name":"Generate equivalent expressions"
+                        "code":"6.ee.3"
                      },
                      {  
-                        "code":"6.ee.4",
-                        "name":"Identify equivalent expressions"
+                        "code":"6.ee.4"
                      }
                   ],
                   "index":"a"
@@ -1476,20 +1275,16 @@ var ccMathStructure = [
                   "name":"One-variable relationships",
                   "standards":[  
                      {  
-                        "code":"6.ee.5",
-                        "name":"Solutions"
+                        "code":"6.ee.5"
                      },
                      {  
-                        "code":"6.ee.6",
-                        "name":"Expressions"
+                        "code":"6.ee.6"
                      },
                      {  
-                        "code":"6.ee.7",
-                        "name":"Equations"
+                        "code":"6.ee.7"
                      },
                      {  
-                        "code":"6.ee.8",
-                        "name":"Inequalities"
+                        "code":"6.ee.8"
                      }
                   ],
                   "index":"b"
@@ -1498,8 +1293,7 @@ var ccMathStructure = [
                   "name":"Two-variable relationships",
                   "standards":[  
                      {  
-                        "code":"6.ee.9",
-                        "name":"Dependent and independent variables"
+                        "code":"6.ee.9"
                      }
                   ],
                   "index":"c"
@@ -1514,8 +1308,7 @@ var ccMathStructure = [
                   "name":"Fraction operations",
                   "standards":[  
                      {  
-                        "code":"6.ns.1",
-                        "name":"Divide fractions by fractions"
+                        "code":"6.ns.1"
                      }
                   ],
                   "index":"a"
@@ -1524,16 +1317,13 @@ var ccMathStructure = [
                   "name":"Operate fluently",
                   "standards":[  
                      {  
-                        "code":"6.ns.2",
-                        "name":"Standard algorithm (division)"
+                        "code":"6.ns.2"
                      },
                      {  
-                        "code":"6.ns.3",
-                        "name":"Standard algorithms (decimals)"
+                        "code":"6.ns.3"
                      },
                      {  
-                        "code":"6.ns.4",
-                        "name":"GCF, LCM, distributive property"
+                        "code":"6.ns.4"
                      }
                   ],
                   "index":"b"
@@ -1542,52 +1332,41 @@ var ccMathStructure = [
                   "name":"Negative nubers",
                   "standards":[  
                      {  
-                        "code":"6.ns.5",
-                        "name":"Interpret"
+                        "code":"6.ns.5"
                      },
                      {  
                         "code":"6.ns.6",
-                        "name":"Negative coordinates",
                         "children":[  
                            {  
-                              "code":"6.ns.6a",
-                              "name":"\"Negative\" $=$ \"opposite\""
+                              "code":"6.ns.6a"
                            },
                            {  
-                              "code":"6.ns.6b",
-                              "name":"Signs and quadrants"
+                              "code":"6.ns.6b"
                            },
                            {  
-                              "code":"6.ns.6c",
-                              "name":"Plot points"
+                              "code":"6.ns.6c"
                            }
                         ]
                      },
                      {  
                         "code":"6.ns.7",
-                        "name":"Absolute value",
                         "children":[  
                            {  
-                              "code":"6.ns.7a",
-                              "name":"Relative position"
+                              "code":"6.ns.7a"
                            },
                            {  
-                              "code":"6.ns.7b",
-                              "name":"Order"
+                              "code":"6.ns.7b"
                            },
                            {  
-                              "code":"6.ns.7c",
-                              "name":"Absolute value"
+                              "code":"6.ns.7c"
                            },
                            {  
-                              "code":"6.ns.7d",
-                              "name":"Order vs. absolute value"
+                              "code":"6.ns.7d"
                            }
                         ]
                      },
                      {  
-                        "code":"6.ns.8",
-                        "name":"All four quadrants"
+                        "code":"6.ns.8"
                      }
                   ],
                   "index":"c"
@@ -1602,16 +1381,13 @@ var ccMathStructure = [
                   "name":"Variability and center",
                   "standards":[  
                      {  
-                        "code":"6.sp.1",
-                        "name":"Statistical questions"
+                        "code":"6.sp.1"
                      },
                      {  
-                        "code":"6.sp.2",
-                        "name":"Distribution basics"
+                        "code":"6.sp.2"
                      },
                      {  
-                        "code":"6.sp.3",
-                        "name":"Center vs. variability"
+                        "code":"6.sp.3"
                      }
                   ],
                   "index":"a"
@@ -1620,28 +1396,22 @@ var ccMathStructure = [
                   "name":"Distributions",
                   "standards":[  
                      {  
-                        "code":"6.sp.4",
-                        "name":"Data displays"
+                        "code":"6.sp.4"
                      },
                      {  
                         "code":"6.sp.5",
-                        "name":"Summarize data sets",
                         "children":[  
                            {  
-                              "code":"6.sp.5a",
-                              "name":"Number of observations"
+                              "code":"6.sp.5a"
                            },
                            {  
-                              "code":"6.sp.5b",
-                              "name":"Attribute under investigation"
+                              "code":"6.sp.5b"
                            },
                            {  
-                              "code":"6.sp.5c",
-                              "name":"Center and variability"
+                              "code":"6.sp.5c"
                            },
                            {  
-                              "code":"6.sp.5d",
-                              "name":"Mean and MAD vs. median and IQR"
+                              "code":"6.sp.5d"
                            }
                         ]
                      }
@@ -1658,20 +1428,16 @@ var ccMathStructure = [
                   "name":"Area and volume",
                   "standards":[  
                      {  
-                        "code":"6.g.1",
-                        "name":"Areas"
+                        "code":"6.g.1"
                      },
                      {  
-                        "code":"6.g.2",
-                        "name":"Verify $V = lwh = bh$ (fractions)"
+                        "code":"6.g.2"
                      },
                      {  
-                        "code":"6.g.3",
-                        "name":"Shapes on the coordinate plane"
+                        "code":"6.g.3"
                      },
                      {  
-                        "code":"6.g.4",
-                        "name":"2D nets of 3D figures"
+                        "code":"6.g.4"
                      }
                   ],
                   "index":"a"
@@ -1691,34 +1457,27 @@ var ccMathStructure = [
                   "name":"Proportional relationships",
                   "standards":[  
                      {  
-                        "code":"7.rp.1",
-                        "name":"Unit rates"
+                        "code":"7.rp.1"
                      },
                      {  
                         "code":"7.rp.2",
-                        "name":"Proportionality",
                         "children":[  
                            {  
-                              "code":"7.rp.2a",
-                              "name":"Proportionality tests"
+                              "code":"7.rp.2a"
                            },
                            {  
-                              "code":"7.rp.2b",
-                              "name":"Constant of proportionality"
+                              "code":"7.rp.2b"
                            },
                            {  
-                              "code":"7.rp.2c",
-                              "name":"$a = pb$"
+                              "code":"7.rp.2c"
                            },
                            {  
-                              "code":"7.rp.2d",
-                              "name":"Graphs"
+                              "code":"7.rp.2d"
                            }
                         ]
                      },
                      {  
-                        "code":"7.rp.3",
-                        "name":"Multi-step problems"
+                        "code":"7.rp.3"
                      }
                   ],
                   "index":"a"
@@ -1733,12 +1492,10 @@ var ccMathStructure = [
                   "name":"Equivalent expressions",
                   "standards":[  
                      {  
-                        "code":"7.ee.1",
-                        "name":"Add, subtract, factor, and expand"
+                        "code":"7.ee.1"
                      },
                      {  
-                        "code":"7.ee.2",
-                        "name":"Rewrite to shed Llight"
+                        "code":"7.ee.2"
                      }
                   ],
                   "index":"a"
@@ -1747,20 +1504,16 @@ var ccMathStructure = [
                   "name":"Problem solving",
                   "standards":[  
                      {  
-                        "code":"7.ee.3",
-                        "name":"Multi-step problems"
+                        "code":"7.ee.3"
                      },
                      {  
                         "code":"7.ee.4",
-                        "name":"Solutions",
                         "children":[  
                            {  
-                              "code":"7.ee.4a",
-                              "name":"Equations"
+                              "code":"7.ee.4a"
                            },
                            {  
-                              "code":"7.ee.4b",
-                              "name":"Inequalities"
+                              "code":"7.ee.4b"
                            }
                         ]
                      }
@@ -1778,51 +1531,40 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"7.ns.1",
-                        "name":"Addition and subtraction",
                         "children":[  
                            {  
-                              "code":"7.ns.1a",
-                              "name":"Opposites"
+                              "code":"7.ns.1a"
                            },
                            {  
-                              "code":"7.ns.1b",
-                              "name":"$p + q$ is located $|q|$ units from $p$"
+                              "code":"7.ns.1b"
                            },
                            {  
-                              "code":"7.ns.1c",
-                              "name":"$p - q = p + (-q)$"
+                              "code":"7.ns.1c"
                            },
                            {  
-                              "code":"7.ns.1d",
-                              "name":"Rational numbers"
+                              "code":"7.ns.1d"
                            }
                         ]
                      },
                      {  
                         "code":"7.ns.2",
-                        "name":"Multiplication and division",
                         "children":[  
                            {  
-                              "code":"7.ns.2a",
-                              "name":"$(-a)(-b) = ab$"
+                              "code":"7.ns.2a"
                            },
                            {  
-                              "code":"7.ns.2b",
-                              "name":"$-\\dfrac pq = \\dfrac{-p}{q} = \\dfrac{p}{-q}$"
+                              "code":"7.ns.2b"
                            },
                            {  
-                              "code":"7.ns.2c",
-                              "name":"Rational numbers"
+                              "code":"7.ns.2c"
                            },
                            {  
-                              "code":"7.ns.2d",
-                              "name":"Convert fractions to decimals"
+                              "code":"7.ns.2d"
                            }
                         ]
                      },
                      {  
-                        "code":"7.ns.3",
-                        "name":"Rational number problems"
+                        "code":"7.ns.3"
                      }
                   ],
                   "index":"a"
@@ -1837,12 +1579,10 @@ var ccMathStructure = [
                   "name":"Sampling",
                   "standards":[  
                      {  
-                        "code":"7.sp.1",
-                        "name":"Random samples"
+                        "code":"7.sp.1"
                      },
                      {  
-                        "code":"7.sp.2",
-                        "name":"Multiple samples"
+                        "code":"7.sp.2"
                      }
                   ],
                   "index":"a"
@@ -1851,12 +1591,10 @@ var ccMathStructure = [
                   "name":"Comparative inferences",
                   "standards":[  
                      {  
-                        "code":"7.sp.3",
-                        "name":"Overlap of data distributions"
+                        "code":"7.sp.3"
                      },
                      {  
-                        "code":"7.sp.4",
-                        "name":"Compare populations by samples"
+                        "code":"7.sp.4"
                      }
                   ],
                   "index":"b"
@@ -1865,42 +1603,33 @@ var ccMathStructure = [
                   "name":"Probability",
                   "standards":[  
                      {  
-                        "code":"7.sp.5",
-                        "name":"$0 =$ never, $1 =$ always"
+                        "code":"7.sp.5"
                      },
                      {  
-                        "code":"7.sp.6",
-                        "name":"Experimental probability"
+                        "code":"7.sp.6"
                      },
                      {  
                         "code":"7.sp.7",
-                        "name":"Probability models",
                         "children":[  
                            {  
-                              "code":"7.sp.7a",
-                              "name":"Uniform probability models"
+                              "code":"7.sp.7a"
                            },
                            {  
-                              "code":"7.sp.7b",
-                              "name":"Experimental probability models"
+                              "code":"7.sp.7b"
                            }
                         ]
                      },
                      {  
                         "code":"7.sp.8",
-                        "name":"Compound events",
                         "children":[  
                            {  
-                              "code":"7.sp.8a",
-                              "name":"Understand sample spaces"
+                              "code":"7.sp.8a"
                            },
                            {  
-                              "code":"7.sp.8b",
-                              "name":"Use sample spaces"
+                              "code":"7.sp.8b"
                            },
                            {  
-                              "code":"7.sp.8c",
-                              "name":"Simulate"
+                              "code":"7.sp.8c"
                            }
                         ]
                      }
@@ -1917,16 +1646,13 @@ var ccMathStructure = [
                   "name":"Geometric figures",
                   "standards":[  
                      {  
-                        "code":"7.g.1",
-                        "name":"Scale drawings"
+                        "code":"7.g.1"
                      },
                      {  
-                        "code":"7.g.2",
-                        "name":"Draw geometric shapes"
+                        "code":"7.g.2"
                      },
                      {  
-                        "code":"7.g.3",
-                        "name":"Cross sections"
+                        "code":"7.g.3"
                      }
                   ],
                   "index":"a"
@@ -1935,16 +1661,13 @@ var ccMathStructure = [
                   "name":"Geometry problems",
                   "standards":[  
                      {  
-                        "code":"7.g.4",
-                        "name":"Area and circumference of circles"
+                        "code":"7.g.4"
                      },
                      {  
-                        "code":"7.g.5",
-                        "name":"Angles problems"
+                        "code":"7.g.5"
                      },
                      {  
-                        "code":"7.g.6",
-                        "name":"Area, volume, and surface area"
+                        "code":"7.g.6"
                      }
                   ],
                   "index":"b"
@@ -1964,16 +1687,13 @@ var ccMathStructure = [
                   "name":"Understand functions",
                   "standards":[  
                      {  
-                        "code":"8.f.1",
-                        "name":"Input-output"
+                        "code":"8.f.1"
                      },
                      {  
-                        "code":"8.f.2",
-                        "name":"Properties of functions"
+                        "code":"8.f.2"
                      },
                      {  
-                        "code":"8.f.3",
-                        "name":"$y = mx + b$"
+                        "code":"8.f.3"
                      }
                   ],
                   "index":"a"
@@ -1982,12 +1702,10 @@ var ccMathStructure = [
                   "name":"Model with functions",
                   "standards":[  
                      {  
-                        "code":"8.f.4",
-                        "name":"Rate of change"
+                        "code":"8.f.4"
                      },
                      {  
-                        "code":"8.f.5",
-                        "name":"Qualitative graphs"
+                        "code":"8.f.5"
                      }
                   ],
                   "index":"b"
@@ -2002,20 +1720,16 @@ var ccMathStructure = [
                   "name":"Exponents",
                   "standards":[  
                      {  
-                        "code":"8.ee.1",
-                        "name":"Exponent properties"
+                        "code":"8.ee.1"
                      },
                      {  
-                        "code":"8.ee.2",
-                        "name":"Solve $x^2 = p$ and $x^3 = p$"
+                        "code":"8.ee.2"
                      },
                      {  
-                        "code":"8.ee.3",
-                        "name":"$a \\cdot 10^b$"
+                        "code":"8.ee.3"
                      },
                      {  
-                        "code":"8.ee.4",
-                        "name":"Scientific notation"
+                        "code":"8.ee.4"
                      }
                   ],
                   "index":"a"
@@ -2024,12 +1738,10 @@ var ccMathStructure = [
                   "name":"Linearity and proportionality",
                   "standards":[  
                      {  
-                        "code":"8.ee.5",
-                        "name":"Unit rate vs. slope"
+                        "code":"8.ee.5"
                      },
                      {  
-                        "code":"8.ee.6",
-                        "name":"Derive the equation for a line"
+                        "code":"8.ee.6"
                      }
                   ],
                   "index":"b"
@@ -2039,33 +1751,26 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"8.ee.7",
-                        "name":"Solve one-variable equations",
                         "children":[  
                            {  
-                              "code":"8.ee.7a",
-                              "name":"One, infinite, or no solutions"
+                              "code":"8.ee.7a"
                            },
                            {  
-                              "code":"8.ee.7b",
-                              "name":"Solve equations"
+                              "code":"8.ee.7b"
                            }
                         ]
                      },
                      {  
                         "code":"8.ee.8",
-                        "name":"Simultaneous equations",
                         "children":[  
                            {  
-                              "code":"8.ee.8a",
-                              "name":"Solutions and intersection"
+                              "code":"8.ee.8a"
                            },
                            {  
-                              "code":"8.ee.8b",
-                              "name":"Solve systems"
+                              "code":"8.ee.8b"
                            },
                            {  
-                              "code":"8.ee.8c",
-                              "name":"Real-world problems"
+                              "code":"8.ee.8c"
                            }
                         ]
                      }
@@ -2082,12 +1787,10 @@ var ccMathStructure = [
                   "name":"Irrational numbers",
                   "standards":[  
                      {  
-                        "code":"8.ns.1",
-                        "name":"Rational vs. irrational"
+                        "code":"8.ns.1"
                      },
                      {  
-                        "code":"8.ns.2",
-                        "name":"Approximate and compare"
+                        "code":"8.ns.2"
                      }
                   ],
                   "index":"a"
@@ -2102,20 +1805,16 @@ var ccMathStructure = [
                   "name":"Bivariate data",
                   "standards":[  
                      {  
-                        "code":"8.sp.1",
-                        "name":"Scatter plots"
+                        "code":"8.sp.1"
                      },
                      {  
-                        "code":"8.sp.2",
-                        "name":"Informal line of best fit"
+                        "code":"8.sp.2"
                      },
                      {  
-                        "code":"8.sp.3",
-                        "name":"Linear models"
+                        "code":"8.sp.3"
                      },
                      {  
-                        "code":"8.sp.4",
-                        "name":"Two-way tables"
+                        "code":"8.sp.4"
                      }
                   ],
                   "index":"a"
@@ -2131,37 +1830,29 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"8.g.1",
-                        "name":"Transformation properties",
                         "children":[  
                            {  
-                              "code":"8.g.1a",
-                              "name":"Segments of same length"
+                              "code":"8.g.1a"
                            },
                            {  
-                              "code":"8.g.1b",
-                              "name":"Angles of same measure"
+                              "code":"8.g.1b"
                            },
                            {  
-                              "code":"8.g.1c",
-                              "name":"Parallel lines"
+                              "code":"8.g.1c"
                            }
                         ]
                      },
                      {  
-                        "code":"8.g.2",
-                        "name":"Congruency"
+                        "code":"8.g.2"
                      },
                      {  
-                        "code":"8.g.3",
-                        "name":"Transformations and coordinates"
+                        "code":"8.g.3"
                      },
                      {  
-                        "code":"8.g.4",
-                        "name":"Similarity"
+                        "code":"8.g.4"
                      },
                      {  
-                        "code":"8.g.5",
-                        "name":"Informal arguments"
+                        "code":"8.g.5"
                      }
                   ],
                   "index":"a"
@@ -2170,16 +1861,13 @@ var ccMathStructure = [
                   "name":"Pythagorean theorem",
                   "standards":[  
                      {  
-                        "code":"8.g.6",
-                        "name":"Pythagorean theorem proof"
+                        "code":"8.g.6"
                      },
                      {  
-                        "code":"8.g.7",
-                        "name":"Right triangle problems"
+                        "code":"8.g.7"
                      },
                      {  
-                        "code":"8.g.8",
-                        "name":"Distance between points"
+                        "code":"8.g.8"
                      }
                   ],
                   "index":"b"
@@ -2188,8 +1876,7 @@ var ccMathStructure = [
                   "name":"Volume",
                   "standards":[  
                      {  
-                        "code":"8.g.9",
-                        "name":"Volume problems"
+                        "code":"8.g.9"
                      }
                   ],
                   "index":"c"
@@ -2209,16 +1896,13 @@ var ccMathStructure = [
                   "name":"understand functions",
                   "standards":[  
                      {  
-                        "code":"hsf.if.1",
-                        "name":"Domain and range"
+                        "code":"hsf.if.1"
                      },
                      {  
-                        "code":"hsf.if.2",
-                        "name":"Work with function notation"
+                        "code":"hsf.if.2"
                      },
                      {  
-                        "code":"hsf.if.3",
-                        "name":"Sequences are functions"
+                        "code":"hsf.if.3"
                      }
                   ],
                   "index":"a"
@@ -2227,16 +1911,13 @@ var ccMathStructure = [
                   "name":"interpret functions",
                   "standards":[  
                      {  
-                        "code":"hsf.if.4",
-                        "name":"Features of functions"
+                        "code":"hsf.if.4"
                      },
                      {  
-                        "code":"hsf.if.5",
-                        "name":"Domains and graphs"
+                        "code":"hsf.if.5"
                      },
                      {  
-                        "code":"hsf.if.6",
-                        "name":"Rate of change"
+                        "code":"hsf.if.6"
                      }
                   ],
                   "index":"b"
@@ -2246,47 +1927,37 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"hsf.if.7",
-                        "name":"Graph functions",
                         "children":[  
                            {  
-                              "code":"hsf.if.7a",
-                              "name":"Linear and quadratic graphs"
+                              "code":"hsf.if.7a"
                            },
                            {  
-                              "code":"hsf.if.7b",
-                              "name":"Square root, cube root, piecewise, and absolute value graphs"
+                              "code":"hsf.if.7b"
                            },
                            {  
-                              "code":"hsf.if.7c",
-                              "name":"Polynomial graphs"
+                              "code":"hsf.if.7c"
                            },
                            {  
-                              "code":"hsf.if.7d",
-                              "name":"Rational function graphs"
+                              "code":"hsf.if.7d"
                            },
                            {  
-                              "code":"hsf.if.7e",
-                              "name":"Exponential, logarithmic, and trig graphs"
+                              "code":"hsf.if.7e"
                            }
                         ]
                      },
                      {  
                         "code":"hsf.if.8",
-                        "name":"Function properties",
                         "children":[  
                            {  
-                              "code":"hsf.if.8a",
-                              "name":"Polynomials properties"
+                              "code":"hsf.if.8a"
                            },
                            {  
-                              "code":"hsf.if.8b",
-                              "name":"Exponential properties"
+                              "code":"hsf.if.8b"
                            }
                         ]
                      },
                      {  
-                        "code":"hsf.if.9",
-                        "name":"Compare functions"
+                        "code":"hsf.if.9"
                      }
                   ],
                   "index":"c"
@@ -2302,25 +1973,20 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"hsf.bf.1",
-                        "name":"Relate two quantities",
                         "children":[  
                            {  
-                              "code":"hsf.bf.1a",
-                              "name":"Build functions"
+                              "code":"hsf.bf.1a"
                            },
                            {  
-                              "code":"hsf.bf.1b",
-                              "name":"Combine functions"
+                              "code":"hsf.bf.1b"
                            },
                            {  
-                              "code":"hsf.bf.1c",
-                              "name":"Compose functions"
+                              "code":"hsf.bf.1c"
                            }
                         ]
                      },
                      {  
-                        "code":"hsf.bf.2",
-                        "name":"Explicit and recursive sequences"
+                        "code":"hsf.bf.2"
                      }
                   ],
                   "index":"a"
@@ -2329,34 +1995,27 @@ var ccMathStructure = [
                   "name":"model with functions",
                   "standards":[  
                      {  
-                        "code":"hsf.bf.3",
-                        "name":"Shifting and stretching functions"
+                        "code":"hsf.bf.3"
                      },
                      {  
                         "code":"hsf.bf.4",
-                        "name":"Inverse functions",
                         "children":[  
                            {  
-                              "code":"hsf.bf.4a",
-                              "name":"Find inverse by solving"
+                              "code":"hsf.bf.4a"
                            },
                            {  
-                              "code":"hsf.bf.4b",
-                              "name":"Verify inverse by composition"
+                              "code":"hsf.bf.4b"
                            },
                            {  
-                              "code":"hsf.bf.4c",
-                              "name":"Inverse graphs and tables"
+                              "code":"hsf.bf.4c"
                            },
                            {  
-                              "code":"hsf.bf.4d",
-                              "name":"restrict domain to make invertible"
+                              "code":"hsf.bf.4d"
                            }
                         ]
                      },
                      {  
-                        "code":"hsf.bf.5",
-                        "name":"Relate exponents and logarithms"
+                        "code":"hsf.bf.5"
                      }
                   ],
                   "index":"b"
@@ -2372,33 +2031,26 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"hsf.le.1",
-                        "name":"Linear vs. exponential",
                         "children":[  
                            {  
-                              "code":"hsf.le.1a",
-                              "name":"Linear growth vs. exponential growth"
+                              "code":"hsf.le.1a"
                            },
                            {  
-                              "code":"hsf.le.1b",
-                              "name":"Constant rates"
+                              "code":"hsf.le.1b"
                            },
                            {  
-                              "code":"hsf.le.1c",
-                              "name":"Growing and decaying rates"
+                              "code":"hsf.le.1c"
                            }
                         ]
                      },
                      {  
-                        "code":"hsf.le.2",
-                        "name":"Construct linear and exponential functions"
+                        "code":"hsf.le.2"
                      },
                      {  
-                        "code":"hsf.le.3",
-                        "name":"Exponential functions eventually surpass other functions"
+                        "code":"hsf.le.3"
                      },
                      {  
-                        "code":"hsf.le.4",
-                        "name":"Exponential models and logarithmic solutions"
+                        "code":"hsf.le.4"
                      }
                   ],
                   "index":"a"
@@ -2407,8 +2059,7 @@ var ccMathStructure = [
                   "name":"interpret expressions",
                   "standards":[  
                      {  
-                        "code":"hsf.le.5",
-                        "name":"Interpret function parameters"
+                        "code":"hsf.le.5"
                      }
                   ],
                   "index":"b"
@@ -2423,20 +2074,16 @@ var ccMathStructure = [
                   "name":"unit circle trig",
                   "standards":[  
                      {  
-                        "code":"hsf.tf.1",
-                        "name":"Understand radians"
+                        "code":"hsf.tf.1"
                      },
                      {  
-                        "code":"hsf.tf.2",
-                        "name":"Explain unit circle trig"
+                        "code":"hsf.tf.2"
                      },
                      {  
-                        "code":"hsf.tf.3",
-                        "name":"Special triangles"
+                        "code":"hsf.tf.3"
                      },
                      {  
-                        "code":"hsf.tf.4",
-                        "name":"Unit circle symmetry and periodicity"
+                        "code":"hsf.tf.4"
                      }
                   ],
                   "index":"a"
@@ -2445,16 +2092,13 @@ var ccMathStructure = [
                   "name":"model with trig functions",
                   "standards":[  
                      {  
-                        "code":"hsf.tf.5",
-                        "name":"Model periodic phenomena"
+                        "code":"hsf.tf.5"
                      },
                      {  
-                        "code":"hsf.tf.6",
-                        "name":"Understand inverse trig functions"
+                        "code":"hsf.tf.6"
                      },
                      {  
-                        "code":"hsf.tf.7",
-                        "name":"Apply inverse trig functions"
+                        "code":"hsf.tf.7"
                      }
                   ],
                   "index":"b"
@@ -2463,12 +2107,10 @@ var ccMathStructure = [
                   "name":"graphs",
                   "standards":[  
                      {  
-                        "code":"hsf.tf.8",
-                        "name":"Prove the Pythagorean identity"
+                        "code":"hsf.tf.8"
                      },
                      {  
-                        "code":"hsf.tf.9",
-                        "name":"Trig addition and subtraction formulas"
+                        "code":"hsf.tf.9"
                      }
                   ],
                   "index":"c"
@@ -2489,21 +2131,17 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"hsa.sse.1",
-                        "name":"Expressions in context",
                         "children":[  
                            {  
-                              "code":"hsa.sse.1a",
-                              "name":"Terms, factors, and coefficients"
+                              "code":"hsa.sse.1a"
                            },
                            {  
-                              "code":"hsa.sse.1b",
-                              "name":"Interpret expressions"
+                              "code":"hsa.sse.1b"
                            }
                         ]
                      },
                      {  
-                        "code":"hsa.sse.2",
-                        "name":"Rewrite expressions"
+                        "code":"hsa.sse.2"
                      }
                   ],
                   "index":"a"
@@ -2513,25 +2151,20 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"hsa.sse.3",
-                        "name":"See and use structure",
                         "children":[  
                            {  
-                              "code":"hsa.sse.3a",
-                              "name":"Factor quadratics"
+                              "code":"hsa.sse.3a"
                            },
                            {  
-                              "code":"hsa.sse.3b",
-                              "name":"Complete the square"
+                              "code":"hsa.sse.3b"
                            },
                            {  
-                              "code":"hsa.sse.3c",
-                              "name":"Properties of exponents"
+                              "code":"hsa.sse.3c"
                            }
                         ]
                      },
                      {  
-                        "code":"hsa.sse.4",
-                        "name":"Finite geometric series"
+                        "code":"hsa.sse.4"
                      }
                   ],
                   "index":"b"
@@ -2546,8 +2179,7 @@ var ccMathStructure = [
                   "name":"work with polynomials",
                   "standards":[  
                      {  
-                        "code":"hsa.apr.1",
-                        "name":"Polynomials as a system"
+                        "code":"hsa.apr.1"
                      }
                   ],
                   "index":"a"
@@ -2556,12 +2188,10 @@ var ccMathStructure = [
                   "name":"link zeros and factors",
                   "standards":[  
                      {  
-                        "code":"hsa.apr.2",
-                        "name":"Remainder theorem"
+                        "code":"hsa.apr.2"
                      },
                      {  
-                        "code":"hsa.apr.3",
-                        "name":"Zeros of polynomials"
+                        "code":"hsa.apr.3"
                      }
                   ],
                   "index":"b"
@@ -2570,12 +2200,10 @@ var ccMathStructure = [
                   "name":"polynomial identities",
                   "standards":[  
                      {  
-                        "code":"hsa.apr.4",
-                        "name":"Prove polynomial identities"
+                        "code":"hsa.apr.4"
                      },
                      {  
-                        "code":"hsa.apr.5",
-                        "name":"Binomial theorem"
+                        "code":"hsa.apr.5"
                      }
                   ],
                   "index":"c"
@@ -2584,12 +2212,10 @@ var ccMathStructure = [
                   "name":"rewrite rational expressions",
                   "standards":[  
                      {  
-                        "code":"hsa.apr.6",
-                        "name":"Rewrite rational expressions"
+                        "code":"hsa.apr.6"
                      },
                      {  
-                        "code":"hsa.apr.7",
-                        "name":"Rational expressions as a system"
+                        "code":"hsa.apr.7"
                      }
                   ],
                   "index":"d"
@@ -2604,20 +2230,16 @@ var ccMathStructure = [
                   "name":"create equations",
                   "standards":[  
                      {  
-                        "code":"hsa.ced.1",
-                        "name":"Create relations in one variable"
+                        "code":"hsa.ced.1"
                      },
                      {  
-                        "code":"hsa.ced.2",
-                        "name":"Create and graph equations in two variables"
+                        "code":"hsa.ced.2"
                      },
                      {  
-                        "code":"hsa.ced.3",
-                        "name":"Constraint problems"
+                        "code":"hsa.ced.3"
                      },
                      {  
-                        "code":"hsa.ced.4",
-                        "name":"Rearrange formulas"
+                        "code":"hsa.ced.4"
                      }
                   ],
                   "index":"a"
@@ -2632,12 +2254,10 @@ var ccMathStructure = [
                   "name":"solve by reasoning",
                   "standards":[  
                      {  
-                        "code":"hsa.rei.1",
-                        "name":"Explain each step"
+                        "code":"hsa.rei.1"
                      },
                      {  
-                        "code":"hsa.rei.2",
-                        "name":"Extraneous solutions"
+                        "code":"hsa.rei.2"
                      }
                   ],
                   "index":"a"
@@ -2646,20 +2266,16 @@ var ccMathStructure = [
                   "name":"1-variable relations",
                   "standards":[  
                      {  
-                        "code":"hsa.rei.3",
-                        "name":"Linear relations"
+                        "code":"hsa.rei.3"
                      },
                      {  
                         "code":"hsa.rei.4",
-                        "name":"Quadratic equations",
                         "children":[  
                            {  
-                              "code":"hsa.rei.4a",
-                              "name":"Derive the quadratic formula"
+                              "code":"hsa.rei.4a"
                            },
                            {  
-                              "code":"hsa.rei.4b",
-                              "name":"Solve quadratic equations"
+                              "code":"hsa.rei.4b"
                            }
                         ]
                      }
@@ -2670,24 +2286,19 @@ var ccMathStructure = [
                   "name":"systems of equations",
                   "standards":[  
                      {  
-                        "code":"hsa.rei.5",
-                        "name":"Equivalent systems"
+                        "code":"hsa.rei.5"
                      },
                      {  
-                        "code":"hsa.rei.6",
-                        "name":"Systems of linear equations"
+                        "code":"hsa.rei.6"
                      },
                      {  
-                        "code":"hsa.rei.7",
-                        "name":"One linear, one quadratic"
+                        "code":"hsa.rei.7"
                      },
                      {  
-                        "code":"hsa.rei.8",
-                        "name":"Create a matix"
+                        "code":"hsa.rei.8"
                      },
                      {  
-                        "code":"hsa.rei.9",
-                        "name":"Use a matix to solve a system"
+                        "code":"hsa.rei.9"
                      }
                   ],
                   "index":"c"
@@ -2696,16 +2307,13 @@ var ccMathStructure = [
                   "name":"graphs",
                   "standards":[  
                      {  
-                        "code":"hsa.rei.10",
-                        "name":"Understand graphs and solutions"
+                        "code":"hsa.rei.10"
                      },
                      {  
-                        "code":"hsa.rei.11",
-                        "name":"Explain intersection points"
+                        "code":"hsa.rei.11"
                      },
                      {  
-                        "code":"hsa.rei.12",
-                        "name":"Graph systems of linear inequalities"
+                        "code":"hsa.rei.12"
                      }
                   ],
                   "index":"d"
@@ -2725,12 +2333,10 @@ var ccMathStructure = [
                   "name":"rational exponents",
                   "standards":[  
                      {  
-                        "code":"hsn.rn.1",
-                        "name":"Properties of rational exponents"
+                        "code":"hsn.rn.1"
                      },
                      {  
-                        "code":"hsn.rn.2",
-                        "name":"Radicals and rational exponents"
+                        "code":"hsn.rn.2"
                      }
                   ],
                   "index":"a"
@@ -2739,8 +2345,7 @@ var ccMathStructure = [
                   "name":"rational vs irrational",
                   "standards":[  
                      {  
-                        "code":"hsn.rn.3",
-                        "name":"Sums and products of rational and irrational numbers"
+                        "code":"hsn.rn.3"
                      }
                   ],
                   "index":"b"
@@ -2755,16 +2360,13 @@ var ccMathStructure = [
                   "name":"reason quantitatively",
                   "standards":[  
                      {  
-                        "code":"hsn.q.1",
-                        "name":"Work with units"
+                        "code":"hsn.q.1"
                      },
                      {  
-                        "code":"hsn.q.2",
-                        "name":"Define quantities"
+                        "code":"hsn.q.2"
                      },
                      {  
-                        "code":"hsn.q.3",
-                        "name":"Appropriate accuracy"
+                        "code":"hsn.q.3"
                      }
                   ],
                   "index":"a"
@@ -2779,16 +2381,13 @@ var ccMathStructure = [
                   "name":"complex number operations",
                   "standards":[  
                      {  
-                        "code":"hsn.cn.1",
-                        "name":"Understand complex numbers"
+                        "code":"hsn.cn.1"
                      },
                      {  
-                        "code":"hsn.cn.2",
-                        "name":"Operate on complex numbers"
+                        "code":"hsn.cn.2"
                      },
                      {  
-                        "code":"hsn.cn.3",
-                        "name":"Conjugates, moduli, and quotients"
+                        "code":"hsn.cn.3"
                      }
                   ],
                   "index":"a"
@@ -2797,16 +2396,13 @@ var ccMathStructure = [
                   "name":"the complex plane",
                   "standards":[  
                      {  
-                        "code":"hsn.cn.4",
-                        "name":"Rectangular vs. polar"
+                        "code":"hsn.cn.4"
                      },
                      {  
-                        "code":"hsn.cn.5",
-                        "name":"Represent operations on the complex plane"
+                        "code":"hsn.cn.5"
                      },
                      {  
-                        "code":"hsn.cn.6",
-                        "name":"Distance and midpoints of complex numbers"
+                        "code":"hsn.cn.6"
                      }
                   ],
                   "index":"b"
@@ -2815,16 +2411,13 @@ var ccMathStructure = [
                   "name":"apply complex numbers",
                   "standards":[  
                      {  
-                        "code":"hsn.cn.7",
-                        "name":"Quadratics with complex solutions"
+                        "code":"hsn.cn.7"
                      },
                      {  
-                        "code":"hsn.cn.8",
-                        "name":"Polynomial identities with complex numbers"
+                        "code":"hsn.cn.8"
                      },
                      {  
-                        "code":"hsn.cn.9",
-                        "name":"The Fundament Theorem of Algebra"
+                        "code":"hsn.cn.9"
                      }
                   ],
                   "index":"c"
@@ -2839,16 +2432,13 @@ var ccMathStructure = [
                   "name":"model with vectors",
                   "standards":[  
                      {  
-                        "code":"hsn.vm.1",
-                        "name":"Magnitude and direction"
+                        "code":"hsn.vm.1"
                      },
                      {  
-                        "code":"hsn.vm.2",
-                        "name":"Vector components"
+                        "code":"hsn.vm.2"
                      },
                      {  
-                        "code":"hsn.vm.3",
-                        "name":"Vector problems"
+                        "code":"hsn.vm.3"
                      }
                   ],
                   "index":"a"
@@ -2858,33 +2448,26 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"hsn.vm.4",
-                        "name":"Add and subbtract vectors",
                         "children":[  
                            {  
-                              "code":"hsn.vm.4a",
-                              "name":"Add vectors by components"
+                              "code":"hsn.vm.4a"
                            },
                            {  
-                              "code":"hsn.vm.4b",
-                              "name":"Add vectors given magnitude and direction"
+                              "code":"hsn.vm.4b"
                            },
                            {  
-                              "code":"hsn.vm.4c",
-                              "name":"Understand vector subtraction"
+                              "code":"hsn.vm.4c"
                            }
                         ]
                      },
                      {  
                         "code":"hsn.vm.5",
-                        "name":"Scalar multiples of vectors",
                         "children":[  
                            {  
-                              "code":"hsn.vm.5a",
-                              "name":"Scalars times vectors"
+                              "code":"hsn.vm.5a"
                            },
                            {  
-                              "code":"hsn.vm.5b",
-                              "name":"Magnitude of scalars times vectors"
+                              "code":"hsn.vm.5b"
                            }
                         ]
                      }
@@ -2895,32 +2478,25 @@ var ccMathStructure = [
                   "name":"matrices",
                   "standards":[  
                      {  
-                        "code":"hsn.vm.6",
-                        "name":"Use matrices to represent data"
+                        "code":"hsn.vm.6"
                      },
                      {  
-                        "code":"hsn.vm.7",
-                        "name":"Matrices times scalars"
+                        "code":"hsn.vm.7"
                      },
                      {  
-                        "code":"hsn.vm.8",
-                        "name":"Operations with matrices"
+                        "code":"hsn.vm.8"
                      },
                      {  
-                        "code":"hsn.vm.9",
-                        "name":"Order matters in matrix multiplication"
+                        "code":"hsn.vm.9"
                      },
                      {  
-                        "code":"hsn.vm.10",
-                        "name":"Zero, identity, and inverse matrices"
+                        "code":"hsn.vm.10"
                      },
                      {  
-                        "code":"hsn.vm.11",
-                        "name":"Transform vectors with matrices"
+                        "code":"hsn.vm.11"
                      },
                      {  
-                        "code":"hsn.vm.12",
-                        "name":"Determinants and area"
+                        "code":"hsn.vm.12"
                      }
                   ],
                   "index":"c"
@@ -2940,20 +2516,16 @@ var ccMathStructure = [
                   "name":"data on one variable",
                   "standards":[  
                      {  
-                        "code":"hss.id.1",
-                        "name":"Real number dot plots, histograms, and box plots"
+                        "code":"hss.id.1"
                      },
                      {  
-                        "code":"hss.id.2",
-                        "name":"Center and spread"
+                        "code":"hss.id.2"
                      },
                      {  
-                        "code":"hss.id.3",
-                        "name":"Interpret shape, center, and spread"
+                        "code":"hss.id.3"
                      },
                      {  
-                        "code":"hss.id.4",
-                        "name":"Normal distributions"
+                        "code":"hss.id.4"
                      }
                   ],
                   "index":"a"
@@ -2962,24 +2534,19 @@ var ccMathStructure = [
                   "name":"data on two variables",
                   "standards":[  
                      {  
-                        "code":"hss.id.5",
-                        "name":"Two-way tables"
+                        "code":"hss.id.5"
                      },
                      {  
                         "code":"hss.id.6",
-                        "name":"Fitting functions",
                         "children":[  
                            {  
-                              "code":"hss.id.6a",
-                              "name":"Work with fitting funcitons"
+                              "code":"hss.id.6a"
                            },
                            {  
-                              "code":"hss.id.6b",
-                              "name":"Residuals"
+                              "code":"hss.id.6b"
                            },
                            {  
-                              "code":"hss.id.6c",
-                              "name":"Linear fit for a scatter plot"
+                              "code":"hss.id.6c"
                            }
                         ]
                      }
@@ -2990,16 +2557,13 @@ var ccMathStructure = [
                   "name":"linear models",
                   "standards":[  
                      {  
-                        "code":"hss.id.7",
-                        "name":"Interpret slope and intercept"
+                        "code":"hss.id.7"
                      },
                      {  
-                        "code":"hss.id.8",
-                        "name":"Correlation coefficient"
+                        "code":"hss.id.8"
                      },
                      {  
-                        "code":"hss.id.9",
-                        "name":"Correlation vs. causation"
+                        "code":"hss.id.9"
                      }
                   ],
                   "index":"c"
@@ -3014,12 +2578,10 @@ var ccMathStructure = [
                   "name":"random processes",
                   "standards":[  
                      {  
-                        "code":"hss.ic.1",
-                        "name":"Understand statistics"
+                        "code":"hss.ic.1"
                      },
                      {  
-                        "code":"hss.ic.2",
-                        "name":"Model vs. actual data"
+                        "code":"hss.ic.2"
                      }
                   ],
                   "index":"a"
@@ -3028,20 +2590,16 @@ var ccMathStructure = [
                   "name":"inferences",
                   "standards":[  
                      {  
-                        "code":"hss.ic.3",
-                        "name":"Experiments vs. observational studies"
+                        "code":"hss.ic.3"
                      },
                      {  
-                        "code":"hss.ic.4",
-                        "name":"Data from surveys"
+                        "code":"hss.ic.4"
                      },
                      {  
-                        "code":"hss.ic.5",
-                        "name":"Data from randomized experiments"
+                        "code":"hss.ic.5"
                      },
                      {  
-                        "code":"hss.ic.6",
-                        "name":"Evaluate reports based on data"
+                        "code":"hss.ic.6"
                      }
                   ],
                   "index":"b"
@@ -3056,24 +2614,19 @@ var ccMathStructure = [
                   "name":"independent vs. conditional",
                   "standards":[  
                      {  
-                        "code":"hss.cp.1",
-                        "name":"Subsets of sample spaces"
+                        "code":"hss.cp.1"
                      },
                      {  
-                        "code":"hss.cp.2",
-                        "name":"Independent events"
+                        "code":"hss.cp.2"
                      },
                      {  
-                        "code":"hss.cp.3",
-                        "name":"P(A) given B = P(A and B)/P(B)"
+                        "code":"hss.cp.3"
                      },
                      {  
-                        "code":"hss.cp.4",
-                        "name":"Two-way frequency table"
+                        "code":"hss.cp.4"
                      },
                      {  
-                        "code":"hss.cp.5",
-                        "name":"Independent and conditional events"
+                        "code":"hss.cp.5"
                      }
                   ],
                   "index":"a"
@@ -3082,20 +2635,16 @@ var ccMathStructure = [
                   "name":"uniform probability models",
                   "standards":[  
                      {  
-                        "code":"hss.cp.6",
-                        "name":"P(A) given B"
+                        "code":"hss.cp.6"
                      },
                      {  
-                        "code":"hss.cp.7",
-                        "name":"P(A or B) = P(A) + P(B) - P(A and B)"
+                        "code":"hss.cp.7"
                      },
                      {  
-                        "code":"hss.cp.8",
-                        "name":"Apply the multiplication rule"
+                        "code":"hss.cp.8"
                      },
                      {  
-                        "code":"hss.cp.9",
-                        "name":"Permutations and combinations"
+                        "code":"hss.cp.9"
                      }
                   ],
                   "index":"b"
@@ -3110,20 +2659,16 @@ var ccMathStructure = [
                   "name":"expected value",
                   "standards":[  
                      {  
-                        "code":"hss.md.1",
-                        "name":"Random variables"
+                        "code":"hss.md.1"
                      },
                      {  
-                        "code":"hss.md.2",
-                        "name":"Expected value"
+                        "code":"hss.md.2"
                      },
                      {  
-                        "code":"hss.md.3",
-                        "name":"Theoretical probability"
+                        "code":"hss.md.3"
                      },
                      {  
-                        "code":"hss.md.4",
-                        "name":"Empirical probability"
+                        "code":"hss.md.4"
                      }
                   ],
                   "index":"a"
@@ -3133,25 +2678,20 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"hss.md.5",
-                        "name":"Possible outcomes",
                         "children":[  
                            {  
-                              "code":"hss.md.5a",
-                              "name":"Games of chance"
+                              "code":"hss.md.5a"
                            },
                            {  
-                              "code":"hss.md.5b",
-                              "name":"Compare strategies"
+                              "code":"hss.md.5b"
                            }
                         ]
                      },
                      {  
-                        "code":"hss.md.6",
-                        "name":"Make fair decisions"
+                        "code":"hss.md.6"
                      },
                      {  
-                        "code":"hss.md.7",
-                        "name":"Analyze decisions and strategies"
+                        "code":"hss.md.7"
                      }
                   ],
                   "index":"b"
@@ -3171,24 +2711,19 @@ var ccMathStructure = [
                   "name":"transformations",
                   "standards":[  
                      {  
-                        "code":"hsg.co.1",
-                        "name":"Precise geometry definitions"
+                        "code":"hsg.co.1"
                      },
                      {  
-                        "code":"hsg.co.2",
-                        "name":"Understand transformations"
+                        "code":"hsg.co.2"
                      },
                      {  
-                        "code":"hsg.co.3",
-                        "name":"Symmetry transformations"
+                        "code":"hsg.co.3"
                      },
                      {  
-                        "code":"hsg.co.4",
-                        "name":"Define rigid transformations"
+                        "code":"hsg.co.4"
                      },
                      {  
-                        "code":"hsg.co.5",
-                        "name":"Rigid transformation sequences"
+                        "code":"hsg.co.5"
                      }
                   ],
                   "index":"a"
@@ -3197,16 +2732,13 @@ var ccMathStructure = [
                   "name":"congruence by rigid motions",
                   "standards":[  
                      {  
-                        "code":"hsg.co.6",
-                        "name":"Determine congruence"
+                        "code":"hsg.co.6"
                      },
                      {  
-                        "code":"hsg.co.7",
-                        "name":"CPCTC (Corresponding parts of congruent triangles are congruent)"
+                        "code":"hsg.co.7"
                      },
                      {  
-                        "code":"hsg.co.8",
-                        "name":"ASA, SAS, and SSS"
+                        "code":"hsg.co.8"
                      }
                   ],
                   "index":"b"
@@ -3215,16 +2747,13 @@ var ccMathStructure = [
                   "name":"prove theorems",
                   "standards":[  
                      {  
-                        "code":"hsg.co.9",
-                        "name":"Prove theorems about lines and angles"
+                        "code":"hsg.co.9"
                      },
                      {  
-                        "code":"hsg.co.10",
-                        "name":"Prove theorems about triangles"
+                        "code":"hsg.co.10"
                      },
                      {  
-                        "code":"hsg.co.11",
-                        "name":"Prove theorems about parallelograms"
+                        "code":"hsg.co.11"
                      }
                   ],
                   "index":"c"
@@ -3233,12 +2762,10 @@ var ccMathStructure = [
                   "name":"constructions",
                   "standards":[  
                      {  
-                        "code":"hsg.co.12",
-                        "name":"Geometric constructions (1)"
+                        "code":"hsg.co.12"
                      },
                      {  
-                        "code":"hsg.co.13",
-                        "name":"Geometric constructions (2)"
+                        "code":"hsg.co.13"
                      }
                   ],
                   "index":"d"
@@ -3254,25 +2781,20 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"hsg.srt.1",
-                        "name":"Properties of dilations",
                         "children":[  
                            {  
-                              "code":"hsg.srt.1a",
-                              "name":"Dilations map lines to parallel lines"
+                              "code":"hsg.srt.1a"
                            },
                            {  
-                              "code":"hsg.srt.1b",
-                              "name":"Dilations and scale factors"
+                              "code":"hsg.srt.1b"
                            }
                         ]
                      },
                      {  
-                        "code":"hsg.srt.2",
-                        "name":"Determine similarity"
+                        "code":"hsg.srt.2"
                      },
                      {  
-                        "code":"hsg.srt.3",
-                        "name":"Justify AA similarity"
+                        "code":"hsg.srt.3"
                      }
                   ],
                   "index":"a"
@@ -3281,12 +2803,10 @@ var ccMathStructure = [
                   "name":"similarity theorems",
                   "standards":[  
                      {  
-                        "code":"hsg.srt.4",
-                        "name":"Prove theorems about triangles"
+                        "code":"hsg.srt.4"
                      },
                      {  
-                        "code":"hsg.srt.5",
-                        "name":"Prove relationships in geometric figures"
+                        "code":"hsg.srt.5"
                      }
                   ],
                   "index":"b"
@@ -3295,16 +2815,13 @@ var ccMathStructure = [
                   "name":"right triangle trig",
                   "standards":[  
                      {  
-                        "code":"hsg.srt.6",
-                        "name":"Similarity and side ratios"
+                        "code":"hsg.srt.6"
                      },
                      {  
-                        "code":"hsg.srt.7",
-                        "name":"Sin, cos, and complimentary angles"
+                        "code":"hsg.srt.7"
                      },
                      {  
-                        "code":"hsg.srt.8",
-                        "name":"Right triangle problems"
+                        "code":"hsg.srt.8"
                      }
                   ],
                   "index":"c"
@@ -3313,16 +2830,13 @@ var ccMathStructure = [
                   "name":"non-right triangle trig",
                   "standards":[  
                      {  
-                        "code":"hsg.srt.9",
-                        "name":"Derive A = 1/2 ab sin(C)"
+                        "code":"hsg.srt.9"
                      },
                      {  
-                        "code":"hsg.srt.10",
-                        "name":"Prove the laws of sines and cosines"
+                        "code":"hsg.srt.10"
                      },
                      {  
-                        "code":"hsg.srt.11",
-                        "name":"Apply the laws of sines and cosines"
+                        "code":"hsg.srt.11"
                      }
                   ],
                   "index":"d"
@@ -3337,20 +2851,16 @@ var ccMathStructure = [
                   "name":"circle-o theorems",
                   "standards":[  
                      {  
-                        "code":"hsg.c.1",
-                        "name":"All circles are similar"
+                        "code":"hsg.c.1"
                      },
                      {  
-                        "code":"hsg.c.2",
-                        "name":"Inscribed angles, radii, and chords"
+                        "code":"hsg.c.2"
                      },
                      {  
-                        "code":"hsg.c.3",
-                        "name":"Inscribed and circumscribed circles"
+                        "code":"hsg.c.3"
                      },
                      {  
-                        "code":"hsg.c.4",
-                        "name":"Tangent lines"
+                        "code":"hsg.c.4"
                      }
                   ],
                   "index":"a"
@@ -3359,8 +2869,7 @@ var ccMathStructure = [
                   "name":"arcs and sectors",
                   "standards":[  
                      {  
-                        "code":"hsg.c.5",
-                        "name":"Radian measure is a constant of proportionality"
+                        "code":"hsg.c.5"
                      }
                   ],
                   "index":"b"
@@ -3375,16 +2884,13 @@ var ccMathStructure = [
                   "name":"derive equations",
                   "standards":[  
                      {  
-                        "code":"hsg.gpe.1",
-                        "name":"Equation of a circle"
+                        "code":"hsg.gpe.1"
                      },
                      {  
-                        "code":"hsg.gpe.2",
-                        "name":"Equation of a parabola"
+                        "code":"hsg.gpe.2"
                      },
                      {  
-                        "code":"hsg.gpe.3",
-                        "name":"Equations of ellipses and hyperbolas"
+                        "code":"hsg.gpe.3"
                      }
                   ],
                   "index":"a"
@@ -3393,20 +2899,16 @@ var ccMathStructure = [
                   "name":"coordinate plane geometry",
                   "standards":[  
                      {  
-                        "code":"hsg.gpe.4",
-                        "name":"Proofs with coordinates"
+                        "code":"hsg.gpe.4"
                      },
                      {  
-                        "code":"hsg.gpe.5",
-                        "name":"Slopes of parallel and perpendicular lines"
+                        "code":"hsg.gpe.5"
                      },
                      {  
-                        "code":"hsg.gpe.6",
-                        "name":"Partition line segments"
+                        "code":"hsg.gpe.6"
                      },
                      {  
-                        "code":"hsg.gpe.7",
-                        "name":"Perimeter and area with coordinates"
+                        "code":"hsg.gpe.7"
                      }
                   ],
                   "index":"b"
@@ -3421,16 +2923,13 @@ var ccMathStructure = [
                   "name":"volume",
                   "standards":[  
                      {  
-                        "code":"hsg.gmd.1",
-                        "name":"Informal arguments for formulas"
+                        "code":"hsg.gmd.1"
                      },
                      {  
-                        "code":"hsg.gmd.2",
-                        "name":"Cavalieri's principle"
+                        "code":"hsg.gmd.2"
                      },
                      {  
-                        "code":"hsg.gmd.3",
-                        "name":"Apply volume formulas"
+                        "code":"hsg.gmd.3"
                      }
                   ],
                   "index":"a"
@@ -3439,8 +2938,7 @@ var ccMathStructure = [
                   "name":"link 2D and 3D shapes",
                   "standards":[  
                      {  
-                        "code":"hsg.gmd.4",
-                        "name":"Cross sections, and 3D shapes from rotations of 2D shapes"
+                        "code":"hsg.gmd.4"
                      }
                   ],
                   "index":"b"
@@ -3455,16 +2953,13 @@ var ccMathStructure = [
                   "name":"modeling",
                   "standards":[  
                      {  
-                        "code":"hsg.mg.1",
-                        "name":"Describe objects"
+                        "code":"hsg.mg.1"
                      },
                      {  
-                        "code":"hsg.mg.2",
-                        "name":"Density"
+                        "code":"hsg.mg.2"
                      },
                      {  
-                        "code":"hsg.mg.3",
-                        "name":"Design problems"
+                        "code":"hsg.mg.3"
                      }
                   ],
                   "index":"a"
@@ -3473,4 +2968,4 @@ var ccMathStructure = [
          }
       ]
    }
-];
+]

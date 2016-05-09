@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Common Core Math Standards</title>
+	<title>Common Core for Common Folk</title>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="map.css" rel="stylesheet">
 	<link href="katex/katex.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@
 	</div><!-- /.modal -->
 
 	<div id="heading">
-		<h1>Common Core Math Standards</h1>
+		<h1>Cameron Core</h1>
 	</div>
 
 	<div id="map-container"></div>
@@ -113,10 +113,10 @@ var Cluster = React.createClass({
       	{cluster.standards.map(function(standard) {
       	  if (standard.children) {
       	  	return (
-      	  		<SubCluster key={standard.name} standard={standard} />
+      	  		<SubCluster key={standard.code} standard={standard} />
       	  		)
       	  } else {
-      	  	return <Standard key={standard.name} standard={standard} />;
+      	  	return <Standard key={standard.code} standard={standard} />;
       	  }
         })}
       </div>
@@ -138,7 +138,7 @@ var SubCluster = React.createClass({
         dangerouslySetInnerHTML={{__html: innerHtml}} />
         <div className="sub-cluster">
       	  {standard.children.map(function(child) {
-      	    return <Standard key={child.name} standard={child} />;
+      	    return <Standard key={child.code} standard={child} />;
           })}
         </div>
       </div>
@@ -148,14 +148,14 @@ var SubCluster = React.createClass({
 
 var Standard = React.createClass({
   render: function() {
-    var standard = this.props.standard;
-    var innerHtml = "" + mathItUp(standard.name) + "<span class='standard-code'>" + standard.code + "</span>";
+    var code = this.props.standard.code;
+    var innerHtml = "" + mathItUp(ccmath[code].name) + "<span class='standard-code'>" + code + "</span>";
     return (
       <div 
         className="standard"
         data-toggle="modal"
         data-target="#myModal"
-        data-code={standard.code.replace(/\./, "-").replace(/\./, "-")}
+        data-code={code.replace(/\./, "-").replace(/\./, "-")}
         dangerouslySetInnerHTML={{__html: innerHtml}} />
     );
   }

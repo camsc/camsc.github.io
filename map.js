@@ -1,4 +1,5 @@
 var mathItUp = function(html) {
+	if(!html) {return "";}
 	var parts = [];
 	while (true) {
 		var i = html.indexOf("$");
@@ -36,37 +37,15 @@ function getParameterByName(name) {
 
 var showModal = function(button, modal) {
 	var text = ccmath[button.find(".standard-code").text()]["text"] || "";
-	var example = ccmath[button.find(".standard-code").text()]["example"] || "";
-	var footnote = ccmath[button.find(".standard-code").text()]["footnote"] || "";
-	var thoughts = ccmath[button.find(".standard-code").text()]["thoughts"] || "";
-
-	text = text.replace("{footnote}", "<sup><i class='fa fa-paw'></i></sup>");
 
 	modal.find( ".st-code" ).html(button.find(".standard-code").text().toUpperCase());
 	modal.find( ".st-main" ).html(mathItUp(text));
-	modal.find( ".st-example" ).html(ccmath[example] ? ccmath[example].content || "" : "");
-	modal.find( ".st-thoughts" ).html(mathItUp(thoughts));
-
-	if ("" === footnote) {
-		modal.find( ".st-footnote" ).html(footnote);
-	} else {
-		modal.find( ".st-footnote" ).html("<i class='footnote fa fa-paw'></i>" + mathItUp(footnote));
-	}
 
 	// darken the standard that was clicked on
 	$( ".standard" ).each( function() {
 		$(this).removeClass("standard-on");
 	});
 	button.addClass("standard-on");
-
-	// khan exercises
-	// var exerciseList = modal.find(".ka-exercises");
-	// var exercises = ccMappings[button.find(".standard-code").text()] || [];
-	// var s = "";
-	// for (var i=0; i<exercises.length; i++) {
-	// 	s += '<li><a href="http://khanacademy.org/exercise/' + exercises[i].slug + '" target="_blank">' + exercises[i].name + '</a></li>';
-	// }
-	// exerciseList.html(s);
 }
 
 $( document ).ready(function() {
