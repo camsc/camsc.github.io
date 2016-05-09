@@ -20,14 +20,8 @@
 
 <script type="text/javascript">
     
-    var colorCounter = 0;
-    
     var gimmeRadius = function(seconds) {
     	return Math.sqrt(seconds)*0.02;
-    }
-    
-    var gimmeColor = function(colors) {
-    	return colors[colorCounter++ % colors.length];
     }
 
     var drawPie = function(subject, total, slices, colors) {    
@@ -35,10 +29,11 @@
 		var radius = gimmeRadius(total);
 		var width = radius*2;
 		var svgString = "";
+		var colorCounter = 0;
 
 		// Begin the SVG
 		svgString += '<svg width="' + width + '" height="' + width + '" viewBox="0 0 ' + width + ' ' + width + '">' +
-						'<g transform="translate(' + radius + ',' + radius + ')" stroke="#000" stroke-width="0">'
+						'<g transform="translate(' + radius + ',' + radius + ')" stroke="#fff" stroke-width="0">'
 
 		// Add the sectors
 		var startAngle = 0;
@@ -53,11 +48,10 @@
 	        x2 = radius*Math.cos(endAngle);
 	        y2 = radius*Math.sin(endAngle);                
 	        
-	        // var d = ""+x1+","+y1+" "+x2+","+y2+" "+(x2/2)+","+(y2/2)+" "+(x1/2)+","+(y1/2);
 	        var d = "M0,0  L" + x1 + "," + y1 + "  A" + radius + "," + radius + " 0 0,1 " + x2 + "," + y2 + " z";
 
 			svgString +=	'<a href="' + slices[i]['url'] + '">' +
-						    	'<path d="' + d + '" fill="' + gimmeColor(colors) + '"/>' +
+						    	'<path d="' + d + '" fill="' + colors[colorCounter++ % colors.length] + '"/>' +
 						    '</a>';
 		}
 		
@@ -103,11 +97,11 @@ for (var p=0; p<subjectsArray.length; p++) {
 	
 	htmlString += "<td><a href='http://khanacademy.org/" + subject + "'>" + subject + "</a></td>";
 	
-	htmlString += "<td>" + drawPie(subject, usage[subject].videoUsage, usage[subject].videos, ["#468966","#FFF0A5","#FFB03B","#B64926","#8E2800"]) + "</td>";
+	htmlString += "<td>" + drawPie(subject, usage[subject].videoUsage, usage[subject].videos, ["#994500","#C45900","#F77000","#FF8A29","#FFA357"]) + "</td>";
 	
-	htmlString += "<td>" + drawPie(subject, usage[subject].exerciseUsage, usage[subject].exercises, ["#468966","#FFF0A5","#FFB03B","#B64926","#8E2800"]) + "</td>";
+	htmlString += "<td>" + drawPie(subject, usage[subject].exerciseUsage, usage[subject].exercises, ["#488A00","#5CB100","#74DF00","#8CEA26","#A2ED51"]) + "</td>";
 	
-	htmlString += "<td>" + drawPie(subject, usage[subject].articleUsage, usage[subject].articles, ["#468966","#FFF0A5","#FFB03B","#B64926","#8E2800"]) + "</td>";
+	htmlString += "<td>" + drawPie(subject, usage[subject].articleUsage, usage[subject].articles, ["#200869","#2B0C87","#3711AA","#522FB9","#6E51C3"]) + "</td>";
 
 	htmlString += "</tr>";
     
