@@ -58,7 +58,8 @@
 		// End the SVG		
 		total = Math.round(total/60/100000)/10;			  
 		svgString += '<circle cx="0" cy="0" r="' + (radius/2) + '" fill="white" />' +
-			'<text x="0" y="8" font-size="16px" text-anchor="middle">' + total + ' M</text>' +
+			'<text x="0" y="4" font-size="16px" text-anchor="middle">' + total + ' items</text>' +
+			'<text x="0" y="-4" font-size="16px" text-anchor="middle">' + slices.length+ ' M</text>' +
 			'</g></svg>';
 		return svgString;
     }
@@ -90,6 +91,7 @@ subjectsArray.sort(function(a, b) {
 
 //draw a bunch of stuff
 var container = document.getElementById("container");
+
 for (var p=0; p<subjectsArray.length; p++) {
 	var subject = subjectsArray[p][0];
 
