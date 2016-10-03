@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Common Core for Common Folk</title>
+	<title>Common Core for common folk</title>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="map.css" rel="stylesheet">
 	<link href="katex/katex.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 	<script src="react/build/react.js"></script>
     <script src="react/build/JSXTransformer.js"></script>
 
-	<script src="ccMappings.js"></script>
+	<!-- <script src="ccMappings.js"></script> -->
 	<script src="ccMathStructure.js"></script>
 	<script src="ccmath.js"></script>
 	<script src="map.js"></script>
@@ -56,7 +56,8 @@
 	</div><!-- /.modal -->
 
 	<div id="heading">
-		<h1>Cameron Core</h1>
+		<h1>Common Core</h1>
+		<p style="text-align: center">for common folk</p>
 	</div>
 
 	<div id="map-container"></div>
@@ -130,7 +131,7 @@ var SubCluster = React.createClass({
     var innerHtml = "" + mathItUp(standard.name) + "<span class='standard-code'>" + standard.code + "</span>";
     return (
       <div>
-        <div 
+        <div
         className="standard parent-standard"
         data-toggle="modal"
         data-target="#myModal"
@@ -151,7 +152,7 @@ var Standard = React.createClass({
     var code = this.props.standard.code;
     var innerHtml = "" + mathItUp(ccmath[code].name) + "<span class='standard-code'>" + code + "</span>";
     return (
-      <div 
+      <div
         className="standard"
         data-toggle="modal"
         data-target="#myModal"
@@ -166,18 +167,18 @@ React.render(
   document.getElementById('map-container'),
   function() {
   	var p = getParameterByName("s").replace(".", "-").replace(".", "-");
-	if (p.length !== 0) {
-		var standard = $( ".standard[data-code='" + p + "']" );
-		$('html, body').animate({
-	        scrollTop: standard.closest( ".grade-level" ).offset().top
-	    }, 1000, function() {
-			$( ".standard" ).each( function() {
-				$(this).removeClass("standard-on");
-			});
-			standard.addClass("standard-on");
-	    });
-	    standard.trigger( "click" );
-	}
+		if (p.length !== 0) {
+			var standard = $( ".standard[data-code='" + p + "']" );
+			$('html, body').animate({
+		        scrollTop: standard.closest( ".grade-level" ).offset().top
+		    }, 1000, function() {
+				$( ".standard" ).each( function() {
+					$(this).removeClass("standard-on");
+				});
+				standard.addClass("standard-on");
+		    });
+		    standard.trigger( "click" );
+		}
   }
 );
     </script>
