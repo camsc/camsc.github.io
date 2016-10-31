@@ -18,6 +18,7 @@ Josh/Kevin TODO:
 
 Here's some fake data that could be used for that second page:
 
+```
 {
   "Josh's awesome textbook": {
     [
@@ -88,3 +89,4 @@ Here's some fake data that could be used for that second page:
     ]
   }
 }
+```
