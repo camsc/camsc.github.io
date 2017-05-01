@@ -2968,4 +2968,4 @@ var ccMathStructure = [
          }
       ]
    }
-]
+];

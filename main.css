@@ -1,0 +1,17 @@
+.cc-substandard {
+    padding-left: 2em;
+}
+
+.cc-grade {
+    border: 1px solid black;
+    margin: 1em;
+    padding: 1em 3em;
+}
+
+#heading {
+    text-align: center;
+}
+
+.cc-standard-btn {
+    margin-bottom: 1em;
+}
