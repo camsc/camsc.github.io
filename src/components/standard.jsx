@@ -1,5 +1,6 @@
 import React from "react";
 import events from "../events.js";
+import mathItUp from "../util/math-it-up.js";
 
 class Substandard extends React.Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class Substandard extends React.Component {
     render() {
         return <div className="cc-substandard">
             <button
-                className="cc-standard-btn btn btn-default"
+                className="cc-standard-btn"
                 onClick={this.handleClick}
             >
                 {this.props.substandard.code}
@@ -40,9 +41,9 @@ export default class Standard extends React.Component {
         return <div className="cc-standard">
             <button
                 dangerouslySetInnerHTML={{
-                    __html: ccmath[this.props.standard.code].name
+                    __html: mathItUp(ccmath[this.props.standard.code].name)
                 }}
-                className="cc-standard-btn btn btn-default"
+                className="cc-standard-btn"
                 onClick={this.handleClick}
             ></button>
             <div>
