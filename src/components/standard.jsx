@@ -12,14 +12,16 @@ class Substandard extends React.Component {
         return <div className="cc-substandard">
             <button
                 className="cc-standard-btn"
+                dangerouslySetInnerHTML={{
+                    __html: mathItUp(ccmath[this.props.substandard.code].name)
+                }}
                 onClick={this.handleClick}
-            >
-                {this.props.substandard.code}
-            </button>
+            />
         </div>;
     }
     handleClick() {
-        events.emit("show-modal", this.props.substandard.code);
+        events.emit("show-modal", this.props.substandard.code,
+            this.props.substandard.standard);
     }
 }
 
@@ -52,6 +54,7 @@ export default class Standard extends React.Component {
         </div>;
     }
     handleClick() {
-        events.emit("show-modal", this.props.standard.code);
+        events.emit("show-modal", this.props.standard.code,
+            this.props.standard.standard);
     }
 }

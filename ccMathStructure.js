@@ -10,13 +10,16 @@ var ccMathStructure = [
                   "name":"Counting",
                   "standards":[  
                      {  
-                        "code":"k.cc.1"
+                        "code":"k.cc.1",
+                        "standard": "Math.CC.K.CC.A.1"
                      },
                      {  
-                        "code":"k.cc.2"
+                        "code":"k.cc.2",
+                        "standard": "Math.CC.K.CC.A.2"
                      },
                      {  
-                        "code":"k.cc.3"
+                        "code":"k.cc.3",
+                        "standard": "Math.CC.K.CC.A.3"
                      }
                   ],
                   "index":"a"
@@ -26,20 +29,25 @@ var ccMathStructure = [
                   "standards":[  
                      {  
                         "code":"k.cc.4",
+                        "standard": "Math.CC.K.CC.B.4",
                         "children":[  
                            {  
-                              "code":"k.cc.4a"
+                              "code":"k.cc.4a",
+                              "standard": "Math.CC.K.CC.B.4a"
                            },
                            {  
-                              "code":"k.cc.4b"
+                              "code":"k.cc.4b",
+                              "standard": "Math.CC.K.CC.B.4b"
                            },
                            {  
-                              "code":"k.cc.4c"
+                              "code":"k.cc.4c",
+                              "standard": "Math.CC.K.CC.B.4c"
                            }
                         ]
                      },
                      {  
-                        "code":"k.cc.5"
+                        "code":"k.cc.5",
+                        "standard": "Math.CC.K.CC.B.5"
                      }
                   ],
                   "index":"b"
@@ -48,10 +56,12 @@ var ccMathStructure = [
                   "name":"Compare numbers",
                   "standards":[  
                      {  
-                        "code":"k.cc.6"
+                        "code":"k.cc.6",
+                        "standard": "Math.CC.K.CC.C.6"
                      },
                      {  
-                        "code":"k.cc.7"
+                        "code":"k.cc.7",
+                        "standard": "Math.CC.K.CC.C.7"
                      }
                   ],
                   "index":"c"
@@ -66,19 +76,24 @@ var ccMathStructure = [
                   "name":"Addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"k.oa.1"
+                        "code":"k.oa.1",
+                        "standard": "Math.CC.K.OA.A.1"
                      },
                      {  
-                        "code":"k.oa.2"
+                        "code":"k.oa.2",
+                        "standard": "Math.CC.K.OA.A.2"
                      },
                      {  
-                        "code":"k.oa.3"
+                        "code":"k.oa.3",
+                        "standard": "Math.CC.K.OA.A.3"
                      },
                      {  
-                        "code":"k.oa.4"
+                        "code":"k.oa.4",
+                        "standard": "Math.CC.K.OA.A.4"
                      },
                      {  
-                        "code":"k.oa.5"
+                        "code":"k.oa.5",
+                        "standard": "Math.CC.K.OA.A.5"
                      }
                   ],
                   "index":"a"
@@ -93,7 +108,8 @@ var ccMathStructure = [
                   "name":"Place value foundation",
                   "standards":[  
                      {  
-                        "code":"k.nbt.1"
+                        "code":"k.nbt.1",
+                        "standard": "Math.CC.K.NBT.A.1"
                      }
                   ],
                   "index":"a"
@@ -108,10 +124,12 @@ var ccMathStructure = [
                   "name":"Compare objects",
                   "standards":[  
                      {  
-                        "code":"k.md.1"
+                        "code":"k.md.1",
+                        "standard": "Math.CC.K.MD.A.1"
                      },
                      {  
-                        "code":"k.md.2"
+                        "code":"k.md.2",
+                        "standard": "Math.CC.K.MD.A.2"
                      }
                   ],
                   "index":"a"
@@ -120,7 +138,8 @@ var ccMathStructure = [
                   "name":"Sorting",
                   "standards":[  
                      {  
-                        "code":"k.md.3"
+                        "code":"k.md.3",
+                        "standard": "Math.CC.K.MD.A.3"
                      }
                   ],
                   "index":"b"
@@ -135,13 +154,16 @@ var ccMathStructure = [
                   "name":"Shapes",
                   "standards":[  
                      {  
-                        "code":"k.g.1"
+                        "code":"k.g.1",
+                        "standard": "Math.CC.K.G.A.1"
                      },
                      {  
-                        "code":"k.g.2"
+                        "code":"k.g.2",
+                        "standard": "Math.CC.K.G.A.2"
                      },
                      {  
-                        "code":"k.g.3"
+                        "code":"k.g.3",
+                        "standard": "Math.CC.K.G.A.3"
                      }
                   ],
                   "index":"a"
@@ -150,13 +172,16 @@ var ccMathStructure = [
                   "name":"Compare, create, and compose",
                   "standards":[  
                      {  
-                        "code":"k.g.4"
+                        "code":"k.g.4",
+                        "standard": "Math.CC.K.G.B.4"
                      },
                      {  
-                        "code":"k.g.5"
+                        "code":"k.g.5",
+                        "standard": "Math.CC.K.G.B.5"
                      },
                      {  
-                        "code":"k.g.6"
+                        "code":"k.g.6",
+                        "standard": "Math.CC.K.G.B.6"
                      }
                   ],
                   "index":"b"
@@ -183,10 +208,12 @@ var ccMathStructure = [
                   "name":"Addition and subtraction problems",
                   "standards":[  
                      {  
-                        "code":"1.oa.1"
+                        "code":"1.oa.1",
+                        "standard": "Math.CC.1.OA.A.1"
                      },
                      {  
-                        "code":"1.oa.2"
+                        "code":"1.oa.2",
+                        "standard": "Math.CC.1.OA.A.2"
                      }
                   ],
                   "index":"a"
@@ -195,10 +222,12 @@ var ccMathStructure = [
                   "name":"Understand addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"1.oa.3"
+                        "code":"1.oa.3",
+                        "standard": "Math.CC.1.OA.B.3"
                      },
                      {  
-                        "code":"1.oa.4"
+                        "code":"1.oa.4",
+                        "standard": "Math.CC.1.OA.B.4"
                      }
                   ],
                   "index":"b"
@@ -207,10 +236,12 @@ var ccMathStructure = [
                   "name":"Fluency in addition and subtraction",
                   "standards":[  
                      {  
-                        "code":"1.oa.5"
+                        "code":"1.oa.5",
+                        "standard": "Math.CC.1.OA.C.5"
                      },
                      {  
-                        "code":"1.oa.6"
+                        "code":"1.oa.6",
+                        "standard": "Math.CC.1.OA.C.6"
                      }
                   ],
                   "index":"c"
@@ -219,10 +250,12 @@ var ccMathStructure = [
                   "name":"Equations and unknowns",
                   "standards":[  
                      {  
-                        "code":"1.oa.7"
+                        "code":"1.oa.7",
+                        "standard": "Math.CC.1.OA.D.7"
                      },
                      {  
-                        "code":"1.oa.8"
+                        "code":"1.oa.8",
+                        "standard": "Math.CC.1.OA.D.8"
                      }
                   ],
                   "index":"d"
