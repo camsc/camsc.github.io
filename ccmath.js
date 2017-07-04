@@ -358,7 +358,7 @@ var ccmath = {
         "name": "Commutative, associative, and distributive properties"
     },
     "3.oa.6": {
-        "text": "<p>Understand division as an unknown-factor problem.</p><p>For example, find 32 ÷ 8 by finding the number that makes 32 when multiplied by 8.</p>",
+        "text": "<p>Understand division as an unknown-factor problem.</p><p>For example, find $32 \\div 8$ by finding the number that makes 32 when multiplied by 8.</p>",
         "name": "Unknown factor"
     },
     "3.oa.7": {
