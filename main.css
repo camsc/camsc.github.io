@@ -1,0 +1,31 @@
+.cc-grade {
+    margin: 1em;
+    padding: 1em 3em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+}
+
+#heading {
+    text-align: center;
+}
+
+.cc-standard-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 8px;
+}
+
+.cc-standard-btn:hover {
+    background-color: rgba(0, 101, 185, 0.8)
+}
+
+.cc-substandard {
+    padding-left: 2em;
+}
+
+.cc-topic {
+    padding-bottom: 1em;
+}
