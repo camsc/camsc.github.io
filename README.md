@@ -6,15 +6,15 @@ Cam TODO:
 Josh/Kevin TODO:
 
 - Refactor existing code as needed
-- Upgrade the current page to show Khan Academy content for each standard
-- Build a new page with the following requirements:
-  - The user can select:
-    - Their textbook
-    - Their chapter
-    - Their lesson
-  - After selection, the user sees:
-    - The related Common Core standards
-    - The related Khan Academy content
+- ~~Upgrade the current page to show Khan Academy content for each standard~~
+- ~~Build a new page with the following requirements:~~
+  - ~~The user can select:~~
+    - ~~Their textbook~~
+    - ~~Their chapter~~
+    - ~~Their lesson~~
+  - ~~After selection, the user sees:~~
+    - ~~The related Common Core standards~~
+    - ~~The related Khan Academy content~~
 
 Here's some fake data that could be used for that second page:
 

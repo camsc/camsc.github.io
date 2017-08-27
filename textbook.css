@@ -1,0 +1,11 @@
+option[disabled] {
+    display: none !important;
+}
+
+.ccc-nav {
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.ccc-nav-title {
+    width: 100%;
+}
