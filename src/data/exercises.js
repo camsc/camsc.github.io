@@ -1,8 +1,10 @@
+const URL = "https://cdn.kastatic.org/ka-exercise-screenshots-3/types/problemTypes.json";
+
 let problemTypes = null;
 
 let callbacks = [];
 
-$.getJSON("https://cdn.kastatic.org/ka-exercise-screenshots-3/types/problemTypes.json").done(data => {
+$.getJSON(URL).done(data => {
     problemTypes = data;
     for (let callback of callbacks) {
         callback();
