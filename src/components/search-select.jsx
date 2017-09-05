@@ -2,7 +2,7 @@ import React from "react"
 import store from "../stores/textbook.js"
 import textbooks from "../data/get-textbook-data.js"
 
-const defaultValue = -1;
+const defaultValue = "not a textbook";
 
 let {dispatch, listenFor, actions} = store;
 
@@ -19,7 +19,10 @@ class _Select extends React.Component {
                     disabled={!!this.props.disabled}
                     value={this.props.value || defaultValue}
                 >
-                    <option disabled value={defaultValue}>{this.props.defaultText}</option>
+                    <option
+                        disabled={this.props.hideDefault}
+                        value={defaultValue}
+                    >{this.props.defaultText}</option>
                     {this.props.children}
                 </select>
             </div>
@@ -47,6 +50,7 @@ class _TextbookSelect extends React.Component {
                 defaultText="Select textbook"
                 value={this.state.textbook}
                 onChange={this.handleChange.bind(this)}
+                hideDefault
             >
                 {this.state.textbooks.map((textbook, i) =>
                     <option key={i} value={i}>{textbook.title}</option>)}
@@ -56,11 +60,16 @@ class _TextbookSelect extends React.Component {
     handleChange(evt) {
         dispatch(actions.CHANGE_LESSON, null);
         dispatch(actions.CHANGE_CHAPTER, null);
-        dispatch(actions.CHANGE_TEXTBOOK, {
-            textbook: this.state.textbooks[evt.target.value],
-            id: evt.target.value
-        });
-        this.setState({textbook: store.getData("textbook").id});
+        
+        if (evt.target.value === defaultValue) {
+            dispatch(actions.CHANGE_TEXTBOOK, null);
+        } else {
+            dispatch(actions.CHANGE_TEXTBOOK, {
+                textbook: this.state.textbooks[evt.target.value],
+                id: evt.target.value
+            });
+            this.setState({textbook: store.getData("textbook").id});
+        }
     }
 }
 
@@ -88,7 +97,7 @@ class _ChapterSelect extends React.Component {
         } else {
             return (
                 <_Select
-                    defaultText="Select chapter"
+                    defaultText="All chapters"
                     onChange={this.handleChange.bind(this)}
                     value={this.state.chapter}
                 >
@@ -99,11 +108,15 @@ class _ChapterSelect extends React.Component {
         }
     }
     handleChange(evt) {
-        dispatch(actions.CHANGE_CHAPTER, {
-            chapter: this.state.chapters[evt.target.value],
-            id: evt.target.value
-        });
-        this.setState({chapter: store.getData("chapter").id});
+        if (evt.target.value === defaultValue) {
+            dispatch(actions.CHANGE_CHAPTER, null);
+        } else {
+            dispatch(actions.CHANGE_CHAPTER, {
+                chapter: this.state.chapters[evt.target.value],
+                id: evt.target.value
+            });
+            this.setState({chapter: store.getData("chapter").id});
+        }
     }
     handleTextbookChange() {
         this.setState({
@@ -144,7 +157,7 @@ class _LessonSelect extends React.Component {
         } else {
             return (
                 <_Select
-                    defaultText="Select lesson"
+                    defaultText="All lessons"
                     onChange={this.handleChange.bind(this)}
                     value={this.state.lesson}
                 >
@@ -155,11 +168,15 @@ class _LessonSelect extends React.Component {
         }
     }
     handleChange(evt) {
-        dispatch(actions.CHANGE_LESSON, {
-            lesson: this.state.lessons[evt.target.value],
-            id: evt.target.value
-        });
-        this.setState({lesson: store.getData("lesson").id});
+        if (evt.target.value === defaultValue) {
+            dispatch(actions.CHANGE_LESSON, null);
+        } else {
+            dispatch(actions.CHANGE_LESSON, {
+                lesson: this.state.lessons[evt.target.value],
+                id: evt.target.value
+            });
+            this.setState({lesson: store.getData("lesson").id});
+        }
     }
     handleChapterChange() {
         this.setState({
@@ -170,7 +187,7 @@ class _LessonSelect extends React.Component {
         
         if (store.getData("chapter") != null) {
             textbooks.getLessons(store.getData("textbook").id, store.getData("chapter").id,
-                (lessons) => {
+                lessons => {
                     this.setState({disabled: false, lessons: lessons})
                 });
         }

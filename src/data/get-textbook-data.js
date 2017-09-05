@@ -5,7 +5,10 @@ export default {
         cb(data.textbooks.map(textbook => ({title: textbook.title})));
     },
     getChapters(textbook, cb) {
-        cb(data.textbooks[textbook].chapters.map(chapter => ({title: chapter.title})));
+        cb(data.textbooks[textbook].chapters.map((chapter, i) => ({
+            id: i,
+            title: chapter.title
+        })));
     },
     getLessons(textbook, chapter, cb) {
         cb(data.textbooks[textbook].chapters[chapter].lessons);
