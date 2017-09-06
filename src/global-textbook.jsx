@@ -11,7 +11,6 @@ $(document).ready(function() {
     );
     
     store.listenFor(store.actions.SHOW_RESULTS, () => {
-        console.log(store.getData("textbook"));
         $("#nav-title").text(store.getData("textbook").textbook.title);
     });
 });

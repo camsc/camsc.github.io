@@ -9,7 +9,7 @@ class SearchButton extends React.Component {
             disabled: true
         };
         
-        store.listenFor(store.actions.CHANGE_LESSON, this.handleLessonChange.bind(this));
+        store.listenFor(store.actions.CHANGE_TEXTBOOK, this.handleTextbookChange.bind(this));
     }
     render() {
         return (
@@ -25,8 +25,8 @@ class SearchButton extends React.Component {
     handleClick() {
         store.dispatch(store.actions.SHOW_RESULTS);
     }
-    handleLessonChange() {
-        this.setState({disabled: store.getData("lesson") == null})
+    handleTextbookChange() {
+        this.setState({disabled: store.getData("textbook") == null})
     }
 }
 
